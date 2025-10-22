@@ -3,7 +3,7 @@ import requests.exceptions
 import json
 import time
 
-from thoughtspot_rest_api_v1 import *
+from thoughtspot_rest_api import *
 
 gh_action_none = "{None}"
 #
