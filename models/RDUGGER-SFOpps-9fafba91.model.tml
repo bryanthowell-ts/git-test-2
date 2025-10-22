@@ -1,0 +1,210 @@
+obj_id: RDUGGER-SFOpps-9fafba91
+model:
+  name: RDUGGER - SF Opps
+  description: Dev org data
+  model_tables:
+  - name: rdugger__sf_dev_accounts
+  - name: rdugger_dev_org_opps
+    joins:
+    - with: rdugger__sf_dev_accounts
+      'on': '[rdugger_dev_org_opps::AccountId] = [rdugger__sf_dev_accounts::Id]'
+      type: INNER
+      cardinality: MANY_TO_ONE
+  columns:
+  - name: Accountnumber
+    column_id: rdugger__sf_dev_accounts::AccountNumber
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Account Number
+      - Account No.
+      synonym_type: AUTO_GENERATED
+  - name: Account Id
+    column_id: rdugger__sf_dev_accounts::Id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonym_type: AUTO_GENERATED
+  - name: Billingcity
+    column_id: rdugger__sf_dev_accounts::BillingCity
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Billing City
+      - Billing Town
+      synonym_type: AUTO_GENERATED
+  - name: Billingcountry
+    column_id: rdugger__sf_dev_accounts::BillingCountry
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Billing Country
+      - Billing Nation
+      synonym_type: AUTO_GENERATED
+  - name: Billinglatitude
+    column_id: rdugger__sf_dev_accounts::BillingLatitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Billing Latitude
+      - Billing Lat.
+      geo_config:
+        latitude: true
+      synonym_type: AUTO_GENERATED
+  - name: Billinglongitude
+    column_id: rdugger__sf_dev_accounts::BillingLongitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Billing Longitude
+      - Billing Long.
+      geo_config:
+        longitude: true
+      synonym_type: AUTO_GENERATED
+  - name: Billingstate
+    column_id: rdugger__sf_dev_accounts::BillingState
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Billing State
+      - Billing Province
+      geo_config:
+        region_name:
+          country: UNITED STATES
+          region_name: state
+      synonym_type: AUTO_GENERATED
+  - name: Account Name
+    column_id: rdugger__sf_dev_accounts::Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Account Title
+      - Account Label
+      synonym_type: AUTO_GENERATED
+  - name: Parentid
+    column_id: rdugger__sf_dev_accounts::ParentId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Parent ID
+      - Parent Identifier
+      synonym_type: AUTO_GENERATED
+  - name: Billingpostalcode
+    column_id: rdugger__sf_dev_accounts::BillingPostalCode
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Billing Postal Code
+      - Billing Zip Code
+      geo_config:
+        region_name:
+          country: UNITED STATES
+          region_name: zip code
+      synonym_type: AUTO_GENERATED
+  - name: Ownerid
+    column_id: rdugger__sf_dev_accounts::OwnerId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Owner ID
+      - Owner Identifier
+      synonym_type: AUTO_GENERATED
+  - name: Accountid
+    column_id: rdugger_dev_org_opps::AccountId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Account ID
+      - Account Reference
+      synonym_type: AUTO_GENERATED
+  - name: Amount
+    column_id: rdugger_dev_org_opps::Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Sum
+      - Value
+      synonym_type: AUTO_GENERATED
+  - name: Closedate
+    column_id: rdugger_dev_org_opps::CloseDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Close Date
+      - Closure Date
+      synonym_type: AUTO_GENERATED
+  - name: Contactid
+    column_id: rdugger_dev_org_opps::ContactId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Contact ID
+      - Contact Identifier
+      synonym_type: AUTO_GENERATED
+  - name: Expectedrevenue
+    column_id: rdugger_dev_org_opps::ExpectedRevenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Expected Revenue
+      - Projected Revenue
+      synonym_type: AUTO_GENERATED
+  - name: Opportunity Id
+    column_id: rdugger_dev_org_opps::Id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity Reference
+      - Opportunity Number
+      synonym_type: AUTO_GENERATED
+  - name: Opportunity Name
+    column_id: rdugger_dev_org_opps::Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity Title
+      - Opportunity Label
+      synonym_type: AUTO_GENERATED
+  - name: Stagename
+    column_id: rdugger_dev_org_opps::StageName
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Stage Name
+      - Stage Label
+      synonym_type: AUTO_GENERATED
+  - name: Type
+    column_id: rdugger_dev_org_opps::Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Category
+      - Classification
+      synonym_type: AUTO_GENERATED
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true
