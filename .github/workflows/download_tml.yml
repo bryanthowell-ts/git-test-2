@@ -44,6 +44,14 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    environment: |-
+        ${{
+          github.ref_name == 'prod' && 'production'
+        || github.ref_name == 'dev'    && 'dev'
+        || github.ref_name == 'test' && 'test'
+        || github.ref_name == 'uat' && 'uat'
+        || 'default'
+        }} 
 
     steps:
     - uses: actions/checkout@v4
@@ -61,7 +69,7 @@ jobs:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
        TS_USERNAME: ${{ secrets.TS_DOWNLOAD_USERNAME }}
-       TS_ORG_NAME: ${{ github.event.inputs.TS_ORG_NAME }}
+       TS_ORG_NAME: ${{ env.TS_ORG_NAME }}
        AUTHOR_FILTER: ${{ github.event.inputs.FILTER_AUTHOR_NAME }}
        TAG_FILTER: ${{ github.event.inputs.FILTER_TAG_NAME }}
        OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
