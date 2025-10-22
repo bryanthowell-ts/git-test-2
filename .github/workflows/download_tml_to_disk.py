@@ -10,9 +10,13 @@ gh_action_none = "{None}"
 #
 # Values passed into ENV from Workflow file, using GitHub Secrets and Workflow Variables
 #
+
+# Secrets
 server = os.environ.get('TS_SERVER') 
 username = os.environ.get('TS_USERNAME')
 secret_key = os.environ.get('TS_SECRET_KEY')
+
+# Variables from the workflow
 org_name = os.environ.get('TS_ORG_NAME')
 author_filter = os.environ.get('AUTHOR_FILTER')
 tag_filter = os.environ.get('TAG_FILTER')
