@@ -1,0 +1,110 @@
+obj_id: RADSuperstoreLB-Official
+liveboard:
+  name: RAD Superstore
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Sales by Region
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Region] [Sales]"
+      answer_columns:
+      - name: Region
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Region
+          show_headline: false
+        - column_id: Total Sales
+          show_headline: false
+        ordered_column_ids:
+        - Region
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"07f8df52-1e3b-4f32-b04e-13275e089e6d\",\"columnProperty\": {}},{\"columnId\": \"6c7f146a-8b06-470e-b4c3-310ab476960e\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"992798d7-1a98-4f9f-9479-ab9f7f33fd51\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"7e6b582b-ed48-4d1e-8cd7-aee78a8fbe77\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#B6313E\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 27165399-710d-4bd5-baaf-371cd42c4eb9
+  - id: Viz_2
+    answer:
+      name: Sales by Category/Region
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Region] [Sales] [Category]"
+      answer_columns:
+      - name: Category
+      - name: Region
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Category
+          show_headline: false
+        - column_id: Region
+          show_headline: false
+        - column_id: Total Sales
+          show_headline: false
+        ordered_column_ids:
+        - Region
+        - Category
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Region
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"07f8df52-1e3b-4f32-b04e-13275e089e6d\",\"columnProperty\": {}},{\"columnId\": \"6c7f146a-8b06-470e-b4c3-310ab476960e\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"992798d7-1a98-4f9f-9479-ab9f7f33fd51\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"7e6b582b-ed48-4d1e-8cd7-aee78a8fbe77\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#B6313E\"}]}"
+      display_mode: TABLE_MODE
+      dynamic_name: Sales by Category/Region
+    viz_guid: 2b2a67f9-035c-4e29-8a92-c12e5a9f5b42
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 8
+      width: 5
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "false"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M

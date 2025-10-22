@@ -1,0 +1,301 @@
+guid: 4145513c-c9bd-4e48-af44-8dc001b5f955
+liveboard:
+  name: "TS Stats: Latency Visualizations (See description for usage)"
+  description: https://<host_name>/?col1=Viz%20Id&op1=EQ&val1=<viz_id>#/pinboard/4145513c-c9bd-4e48-af44-8dc001b5f955       This can be used to get the latencies for any viz you care about. Replace the <host_name> with the name/ip of the machine where thoughtspot is running. Replace <viz_id> by the viz id of the visualization you want. You can get the viz id from the embed url link of the visualization.
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Avg Latency (secs), Max Latency (secs) by Daily (Timestamp)"
+      description: |-
+        Filters:
+        Viz Id
+        Timestamp : >= 07/27/2016 < 08/26/2016
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+      formulas:
+      - id: formula_Avg Latency (secs)
+        name: Avg Latency (secs)
+        expr: "average ( [Latency (us)] ) / 1000000"
+        properties:
+          aggregation: AVERAGE
+        was_auto_generated: false
+      - id: formula_Max Latency (secs)
+        name: Max Latency (secs)
+        expr: "max ( [Latency (us)] ) / 1000000"
+        was_auto_generated: false
+      search_query: "[Viz Id] [Viz Id] != '{null}' [Timestamp] [Timestamp].daily average [Latency (us)] sort by [Timestamp] [Timestamp].'last 30 days' max [Latency (us)] count [Viz Id] [formula_Avg Latency (secs)] [formula_Max Latency (secs)]"
+      answer_columns:
+      - name: Average Avg Latency (secs)
+      - name: Average Latency (us)
+      - name: Day(Timestamp)
+      - name: Maximum Latency (us)
+      - name: Number of Viz Id
+      - name: Total Max Latency (secs)
+      - name: Viz Id
+      table:
+        table_columns:
+        - column_id: Average Avg Latency (secs)
+        - column_id: Average Latency (us)
+          headline_aggregation: MIN
+        - column_id: Day(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Maximum Latency (us)
+          headline_aggregation: MAX
+        - column_id: Number of Viz Id
+          headline_aggregation: AVERAGE
+        - column_id: Total Max Latency (secs)
+        - column_id: Viz Id
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Viz Id
+        - Day(Timestamp)
+        - Average Latency (us)
+        - Maximum Latency (us)
+        - Number of Viz Id
+        - Average Avg Latency (secs)
+        - Total Max Latency (secs)
+        client_state: "{}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Average Avg Latency (secs)
+        - column_id: Day(Timestamp)
+        - column_id: Total Max Latency (secs)
+        axis_configs:
+        - x:
+          - Day(Timestamp)
+          "y":
+          - Average Avg Latency (secs)
+          - Total Max Latency (secs)
+        client_state: "{\"yAxisShared\":true}"
+      display_mode: CHART_MODE
+    viz_guid: 1ab0dc26-e837-4699-94c4-6760f65ff2c4
+  - id: Viz_2
+    answer:
+      name: "Avg Latency (secs), Max Latency (secs) by Weekly (Timestamp)"
+      description: |-
+        Filters:
+        Viz Id
+        Timestamp : >= 07/27/2016 < 08/26/2016
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+      formulas:
+      - id: formula_Avg Latency (secs)
+        name: Avg Latency (secs)
+        expr: "average ( [Latency (us)] ) / 1000000"
+        properties:
+          aggregation: AVERAGE
+        was_auto_generated: false
+      - id: formula_Max Latency (secs)
+        name: Max Latency (secs)
+        expr: "max ( [Latency (us)] ) / 1000000"
+        was_auto_generated: false
+      search_query: "[Viz Id] [Viz Id] != '{null}' [Timestamp] [Timestamp].weekly average [Latency (us)] sort by [Timestamp] [Timestamp].'last 30 weeks' max [Latency (us)] count [Viz Id] [formula_Avg Latency (secs)] [formula_Max Latency (secs)]"
+      answer_columns:
+      - name: Average Avg Latency (secs)
+      - name: Average Latency (us)
+      - name: Maximum Latency (us)
+      - name: Number of Viz Id
+      - name: Total Max Latency (secs)
+      - name: Viz Id
+      - name: Week(Timestamp)
+      table:
+        table_columns:
+        - column_id: Average Avg Latency (secs)
+        - column_id: Average Latency (us)
+          headline_aggregation: MIN
+        - column_id: Maximum Latency (us)
+          headline_aggregation: MAX
+        - column_id: Number of Viz Id
+          headline_aggregation: AVERAGE
+        - column_id: Total Max Latency (secs)
+        - column_id: Viz Id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Week(Timestamp)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Viz Id
+        - Week(Timestamp)
+        - Average Latency (us)
+        - Maximum Latency (us)
+        - Number of Viz Id
+        - Average Avg Latency (secs)
+        - Total Max Latency (secs)
+        client_state: "{\"dataOffset\":0.0}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Average Avg Latency (secs)
+        - column_id: Total Max Latency (secs)
+        - column_id: Week(Timestamp)
+        axis_configs:
+        - x:
+          - Week(Timestamp)
+          "y":
+          - Average Avg Latency (secs)
+          - Total Max Latency (secs)
+        client_state: "{\"yAxisShared\":true}"
+      display_mode: CHART_MODE
+    viz_guid: 15cd5e9a-d573-47b2-aed0-54d9e9b048b6
+  - id: Viz_3
+    answer:
+      name: Total Impressions Count by Weekly (Timestamp)
+      description: |-
+        Filters:
+        Viz Id
+        Timestamp : >= 07/27/2016 < 08/26/2016
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+      formulas:
+      - id: formula_Avg Latency (secs)
+        name: Avg Latency (secs)
+        expr: "average ( [Latency (us)] ) / 1000000"
+        properties:
+          aggregation: AVERAGE
+        was_auto_generated: false
+      - id: formula_Max Latency (secs)
+        name: Max Latency (secs)
+        expr: "max ( [Latency (us)] ) / 1000000"
+        was_auto_generated: false
+      - id: formula_Total Impressions Count
+        name: Total Impressions Count
+        expr: "count ( [Viz Id] )"
+        properties:
+          aggregation: COUNT
+        was_auto_generated: false
+      search_query: "[Viz Id] [Viz Id] != '{null}' [Timestamp] [Timestamp].weekly average [Latency (us)] sort by [Timestamp] [Timestamp].'last 30 weeks' max [Latency (us)] count [Viz Id] [formula_Avg Latency (secs)] [formula_Max Latency (secs)] [formula_Total Impressions Count]"
+      answer_columns:
+      - name: Average Avg Latency (secs)
+      - name: Average Latency (us)
+      - name: Maximum Latency (us)
+      - name: Number of Total Impressions Count
+      - name: Number of Viz Id
+      - name: Total Max Latency (secs)
+      - name: Viz Id
+      - name: Week(Timestamp)
+      table:
+        table_columns:
+        - column_id: Average Avg Latency (secs)
+        - column_id: Average Latency (us)
+          headline_aggregation: MIN
+        - column_id: Maximum Latency (us)
+          headline_aggregation: MAX
+        - column_id: Number of Total Impressions Count
+        - column_id: Number of Viz Id
+          headline_aggregation: AVERAGE
+        - column_id: Total Max Latency (secs)
+        - column_id: Viz Id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Week(Timestamp)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Viz Id
+        - Week(Timestamp)
+        - Average Latency (us)
+        - Maximum Latency (us)
+        - Number of Viz Id
+        - Average Avg Latency (secs)
+        - Total Max Latency (secs)
+        - Number of Total Impressions Count
+        client_state: "{\"dataOffset\":0.0}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Number of Total Impressions Count
+        - column_id: Week(Timestamp)
+        axis_configs:
+        - x:
+          - Week(Timestamp)
+          "y":
+          - Number of Total Impressions Count
+        client_state: "{\"yAxisShared\":false}"
+      display_mode: CHART_MODE
+    viz_guid: d5a3d3f3-1b1c-4061-bf17-6d94f5e6a774
+  - id: Viz_4
+    answer:
+      name: Total Impressions Count by Daily (Timestamp)
+      description: |-
+        Filters:
+        Viz Id
+        Timestamp : >= 07/27/2016 < 08/26/2016
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+      formulas:
+      - id: formula_Avg Latency (secs)
+        name: Avg Latency (secs)
+        expr: "average ( [Latency (us)] ) / 1000000"
+        properties:
+          aggregation: AVERAGE
+        was_auto_generated: false
+      - id: formula_Max Latency (secs)
+        name: Max Latency (secs)
+        expr: "max ( [Latency (us)] ) / 1000000"
+        was_auto_generated: false
+      - id: formula_Total Impressions Count
+        name: Total Impressions Count
+        expr: "count ( [Viz Id] )"
+        properties:
+          aggregation: COUNT
+        was_auto_generated: false
+      search_query: "[Viz Id] [Viz Id] != '{null}' [Timestamp] [Timestamp].daily average [Latency (us)] sort by [Timestamp] [Timestamp].'last 30 days' max [Latency (us)] count [Viz Id] [formula_Avg Latency (secs)] [formula_Max Latency (secs)] [formula_Total Impressions Count]"
+      answer_columns:
+      - name: Average Avg Latency (secs)
+      - name: Average Latency (us)
+      - name: Day(Timestamp)
+      - name: Maximum Latency (us)
+      - name: Number of Total Impressions Count
+      - name: Number of Viz Id
+      - name: Total Max Latency (secs)
+      - name: Viz Id
+      table:
+        table_columns:
+        - column_id: Average Avg Latency (secs)
+        - column_id: Average Latency (us)
+          headline_aggregation: MIN
+        - column_id: Day(Timestamp)
+          headline_aggregation: MIN-MAX
+        - column_id: Maximum Latency (us)
+          headline_aggregation: MAX
+        - column_id: Number of Total Impressions Count
+        - column_id: Number of Viz Id
+          headline_aggregation: AVERAGE
+        - column_id: Total Max Latency (secs)
+        - column_id: Viz Id
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Viz Id
+        - Day(Timestamp)
+        - Average Latency (us)
+        - Maximum Latency (us)
+        - Number of Viz Id
+        - Average Avg Latency (secs)
+        - Total Max Latency (secs)
+        - Number of Total Impressions Count
+        client_state: "{\"dataOffset\":0.0}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Day(Timestamp)
+        - column_id: Number of Total Impressions Count
+        axis_configs:
+        - x:
+          - Day(Timestamp)
+          "y":
+          - Number of Total Impressions Count
+        client_state: "{\"yAxisShared\":false}"
+      display_mode: CHART_MODE
+    viz_guid: 5959bf75-c163-4608-8b35-a2df80b64a6a
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
+    - visualization_id: Viz_4
+      size: MEDIUM
+    - visualization_id: Viz_2
+      size: MEDIUM
+    - visualization_id: Viz_3
+      size: MEDIUM

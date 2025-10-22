@@ -1,0 +1,42 @@
+obj_id: TotalsalesbyMonthlydateanditemtype-Demo-531a1b08
+answer:
+  name: Total sales by Monthly date and item type - Demo
+  tables:
+  - id: (Sample) Retail - Apparel
+    name: (Sample) Retail - Apparel
+    obj_id: SampleRetail-Apparel-cd252e5c
+  search_query: "[sales] [date].monthly by [item type] [date] = 'last 5 years'"
+  answer_columns:
+  - name: Month(date)
+  - name: Total sales
+  - name: item type
+  table:
+    table_columns:
+    - column_id: Month(date)
+      show_headline: false
+    - column_id: Total sales
+      show_headline: false
+    - column_id: item type
+      show_headline: false
+    ordered_column_ids:
+    - Month(date)
+    - item type
+    - Total sales
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: Month(date)
+    - column_id: Total sales
+    - column_id: item type
+    axis_configs:
+    - x:
+      - Month(date)
+      "y":
+      - Total sales
+      color:
+      - item type
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"item type\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"197838e9-4f80-4d16-a142-3eb5701e65e6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"aaba5754-b9c4-4831-91da-8eeeb070176e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bags\",\"color\": \"#B6313E\"},{\"serieName\": \"dresses\",\"color\": \"#785F1A\"},{\"serieName\": \"headwear\",\"color\": \"#FFA97E\"},{\"serieName\": \"jackets\",\"color\": \"#D1C0FB\"},{\"serieName\": \"jeans\",\"color\": \"#82DFE9\"},{\"serieName\": \"pants\",\"color\": \"#FFA97E\"},{\"serieName\": \"shirts\",\"color\": \"#d3838b\"},{\"serieName\": \"shorts\",\"color\": \"#ae9f76\"},{\"serieName\": \"skirts\",\"color\": \"#ffcbb2\"},{\"serieName\": \"socks\",\"color\": \"#e3d9fd\"},{\"serieName\": \"sweaters\",\"color\": \"#b4ecf2\"},{\"serieName\": \"sweatshirts\",\"color\": \"#ffcbb2\"},{\"serieName\": \"swimwear\",\"color\": \"#922732\"},{\"serieName\": \"underwear\",\"color\": \"#604c15\"},{\"serieName\": \"vests\",\"color\": \"#cc8765\"}]}"
+  display_mode: CHART_MODE
