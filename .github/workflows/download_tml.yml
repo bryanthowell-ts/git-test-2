@@ -60,7 +60,7 @@ jobs:
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
-       TS_USERNAME: ${{ secrets.TS_USERNAME }}
+       TS_USERNAME: ${{ secrets.TS_DOWNLOAD_USERNAME }}
        TS_ORG_NAME: ${{ github.event.inputs.TS_ORG_NAME }}
        AUTHOR_FILTER: ${{ github.event.inputs.FILTER_AUTHOR_NAME }}
        TAG_FILTER: ${{ github.event.inputs.FILTER_TAG_NAME }}
