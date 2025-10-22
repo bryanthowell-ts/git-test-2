@@ -67,7 +67,8 @@ jobs:
        OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
        RECORD_SIZE_LIMIT: ${{ github.event.inputs.RECORD_SIZE_LIMIT }}
       run: |
-        git config --local user.name "${{github.triggering_actor}}"
+        git config --local user.email git config user.email "${{ github.actor_id }}+${{ github.triggering_actor }}@users.noreply.github.com"
+        git config --local user.name "${{ github.triggering_actor }}"
         python .github/workflows/download_tml_to_disk.py > latest_download_run.log
         git add *
         git diff-index --quiet HEAD || git commit -a -m "Downloaded latest TML"
