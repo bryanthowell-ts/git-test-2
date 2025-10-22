@@ -1,0 +1,246 @@
+obj_id: MuzeStudio-353b6fd3
+liveboard:
+  name: Muze Studio
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Stacked Column
+      tables:
+      - id: Sample - Superstore - Orders.csv
+        name: Sample - Superstore - Orders.csv
+        obj_id: Sample-Superstore-Orders.csv-b03a6f0b
+      search_query: "[Sales] [Profit] [Category]"
+      answer_columns:
+      - name: Category
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Category
+          show_headline: false
+        - column_id: Total Profit
+          show_headline: false
+        - column_id: Total Sales
+          show_headline: false
+        ordered_column_ids:
+        - Category
+        - Total Sales
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_BAR
+        chart_columns:
+        - column_id: Category
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Category
+          "y":
+          - Total Sales
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"visibleSeriesNames\": [\"Total Profit\",\"Total Sales\"],\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true,\\\"borderWidth\\\":\\\"1\\\",\\\"opacity\\\":\\\"100\\\",\\\"label\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"value\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"regression\\\":{\\\"lineWidth\\\":\\\"2\\\",\\\"dashStyle\\\":\\\"Solid\\\"},\\\"gridlines\\\":{\\\"xAxis\\\":{\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"},\\\"yAxis\\\":{\\\"gridLineColor\\\":\\\"\\\",\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"}},\\\"answerLevelSettings\\\":{\\\"width\\\":\\\"50\\\",\\\"dashStyle\\\":\\\"Solid\\\",\\\"lineWidth\\\":\\\"\\\",\\\"markerType\\\":\\\"Circle\\\",\\\"markerRadius\\\":\\\"\\\",\\\"borderWidth\\\":\\\"0\\\",\\\"connectingLines\\\":false}}}\",\"pivotSummariesState\": {}},\"showStackedLabels\": false,\"allLabels\": false},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {\"dataLabels\": false}},{\"columnId\": \"Total Profit\",\"columnProperty\": {\"dataLabels\": false}}],\"axisProperties\": [{\"id\": \"7f45bc74-498e-4442-910f-8d96ba4cc774\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\",\"Total Profit\"],\"isOpposite\": false}},{\"id\": \"d6946ae0-bc8c-437c-b0b9-dfd4ce0ab5ba\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"seriesColors\": [{\"serieName\": \"Total Profit\",\"color\": \"#2F3947\"},{\"serieName\": \"Total Sales\",\"color\": \"#BEC6D0\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Profit\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 802b428c-68d1-4634-85d3-8a31c284556e
+  - id: Viz_2
+    answer:
+      name: Muze
+      tables:
+      - id: Sample - Superstore - Orders.csv
+        name: Sample - Superstore - Orders.csv
+        obj_id: Sample-Superstore-Orders.csv-b03a6f0b
+      search_query: "[Sales] [Profit] [Category]"
+      answer_columns:
+      - name: Category
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Category
+          show_headline: false
+        - column_id: Total Profit
+          show_headline: false
+        - column_id: Total Sales
+          show_headline: false
+        ordered_column_ids:
+        - Category
+        - Total Sales
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: CUSTOM_CHART
+        chart_columns:
+        - column_id: Category
+        - column_id: Total Profit
+        - column_id: Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"eb514ca7-219c-401b-9ad7-a24d9cd8c23e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"987980d4-7705-4928-8830-29e4189be2ef\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"ba92c441-1f36-462b-9ded-6d522f0f6f4b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Profit\",\"color\": \"#2E75F0\"}]}"
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: fields
+            columns:
+            - Category
+            - Total Sales
+            - Total Profit
+        custom_chart_name: Muze Studio (rad)
+        custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"Y29uc3QgeyBtdXplLCBnZXREYXRhRnJvbVNlYXJjaFF1ZXJ5IH0gPSB2aXo7CmNvbnN0IGRhdGEgPSBnZXREYXRhRnJvbVNlYXJjaFF1ZXJ5KCk7Cgpjb25zdCBSb3dGaWVsZCA9ICJDYXRlZ29yeSI7CmNvbnN0IENvbHVtbkZpZWxkMSA9ICJUb3RhbCBTYWxlcyI7CmNvbnN0IENvbHVtbkZpZWxkMiA9ICJUb3RhbCBQcm9maXQiOwpjb25zdCBDb2xvckZpZWxkID0gIlF1YWxpdGF0aXZlX1JhbmdlIjsKY29uc3QgWGF4aXNOYW1lID0gIlBlcmZvcm1hbmNlIChTYWxlcyB2cyBQcm9maXQpIjsKbXV6ZQogIC5jYW52YXMoKQogIC5yb3dzKFtSb3dGaWVsZF0pCiAgLmNvbHVtbnMoWwogICAgbXV6ZS5PcGVyYXRvcnMuc2hhcmUoQ29sdW1uRmllbGQxLCBDb2x1bW5GaWVsZDIpLAogIF0pCiAgLmxheWVycyhbCiAgICB7CiAgICAgIG1hcms6ICJiYXIiLAogICAgICBlbmNvZGluZzogewogICAgICAgICAgc2l6ZTogewogICAgICAgICAgdmFsdWU6ICgpID0+IDEsCiAgICAgICAgfSwKICAgICAgICB4OiBDb2x1bW5GaWVsZDEsCiAgICAgICAgY29sb3I6IHsKICAgICAgICAgIHZhbHVlOiAoKSA9PiAiI2YxZjFmMSIsCiAgICAgICAgfSwKICAgICAgfSwKICAgIH0sCiAgICB7CiAgICAgIG1hcms6ICJiYXIiLAogICAgICBlbmNvZGluZzogewogICAgICAgIHNpemU6IHsKICAgICAgICAgIHZhbHVlOiAoKSA9PiAwLjcsCiAgICAgICAgfSwKICAgICAgICB4OiBDb2x1bW5GaWVsZDIsCiAgICAgICAgY29sb3I6IHsKICAgICAgICAgIHZhbHVlOiAoKSA9PiAiYmxhY2siLAogICAgICAgIH0sCiAgICAgIH0sCiAgICB9LAogIF0pCiAgLmNvbmZpZyh7CiAgICBheGVzOiB7CiAgICAgIHg6IHsKICAgICAgICBuYW1lOiBYYXhpc05hbWUsCiAgICAgIH0sCiAgICB9LAogIH0pCiAgLmRhdGEoZGF0YSkKICAubW91bnQoIiNjaGFydCIpOyAvLyBtb3VudCB5b3VyIGNoYXJ0CgoK\\\",\\\"cssCodeBase64\\\":\\\"aHRtbCwgYm9keSB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwp9CgojY2hhcnQgewogICAgd2lkdGg6IDEwMHZ3OwogICAgaGVpZ2h0OiAxMDB2aDsKfQ==\\\",\\\"htmlCodeBase64\\\":\\\"PGRpdiBpZD0iY2hhcnQiPjwvZGl2Pg==\\\"},\\\"splitSizes\\\":[55.40509725539439,44.59490274460561]}}\"}"
+      display_mode: CHART_MODE
+    viz_guid: 6e1d6a28-3444-45cd-ba1e-fea95df66e0a
+  - id: Viz_3
+    answer:
+      name: Action Filter
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [region] [item type] [date].'year to date'"
+      answer_columns:
+      - name: Total sales
+      - name: item type
+      - name: region
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: item type
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        ordered_column_ids:
+        - region
+        - item type
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: CUSTOM_CHART
+        chart_columns:
+        - column_id: Total sales
+        - column_id: item type
+        - column_id: region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7eaf0429-1e3c-4c86-8e75-c485f65cfddd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"b4258791-a4b5-47dc-a1a9-d653083f4eeb\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\",\"item type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#2E75F0\"}]}"
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: fields
+            columns:
+            - region
+            - item type
+            - Total sales
+        custom_chart_name: Muze Studio (rad)
+        custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"Y29uc3QgeyBtdXplLCBnZXREYXRhRnJvbVNlYXJjaFF1ZXJ5LCBlbnYgfSA9IHZpejsKY29uc3QgZGF0YSA9IGdldERhdGFGcm9tU2VhcmNoUXVlcnkoKTsKCgpjb25zdCBDb2x1bW5GaWVsZHMxID0gWyJUb3RhbCBzYWxlcyIsInJlZ2lvbiJdOwpjb25zdCBSb3dGaWVsZHMxID0gWyJpdGVtIHR5cGUiXTsKY29uc3QgQ29sb3JGaWVsZDEgPSAiaXRlbSB0eXBlIjsKCgpjb25zdCBDb2x1bW5GaWVsZHMyID0gWyJUb3RhbCBzYWxlcyJdOwpjb25zdCBSb3dGaWVsZHMyID0gWyJpdGVtIHR5cGUiXTsKY29uc3QgQ29sb3JGaWVsZDIgPSAiaXRlbSB0eXBlIjsKCgovL2NvbnN0IFN0ZXBGaWVsZCA9ICJZZWFyIjsKCgpjb25zdCBjYW52YXMxID0gbXV6ZQogLmNhbnZhcygpCi5jb2x1bW5zKENvbHVtbkZpZWxkczEpCi5yb3dzKFtSb3dGaWVsZHMxXSkKLmhlaWdodCg0MDApCi5sYXllcnMoWwogewogICBtYXJrOiAiYmFyIiwKICAgZW5jb2Rpbmc6IHsKICAgICBjb2xvcjogQ29sb3JGaWVsZDEsCiAgIH0sCiB9LApdKQouY29uZmlnKHsKICAgYm9yZGVyOiB7CiAgICAgIHNob3dSb3dCb3JkZXJzOiB7CiAgICAgICAgdG9wOiBmYWxzZSwKICAgICAgICBib3R0b206IGZhbHNlLAogICAgICAgIGxlZnQ6IGZhbHNlLAogICAgICAgIHJpZ2h0OiBmYWxzZSwKICAgICAgfSwKICAgICAgc2hvd0NvbEJvcmRlcnM6IHsKICAgICAgICB0b3A6IGZhbHNlLAogICAgICAgIGJvdHRvbTogZmFsc2UsCiAgICAgICAgbGVmdDogZmFsc2UsCiAgICAgICAgcmlnaHQ6IGZhbHNlLAogICAgICB9LAogICAgICBzaG93VmFsdWVCb3JkZXJzOiB7CiAgICAgICAgdG9wOiBmYWxzZSwKICAgICAgICBib3R0b206IHRydWUsCiAgICAgICAgbGVmdDogdHJ1ZSwKICAgICAgICByaWdodDogZmFsc2UsCiAgICAgIH0sCiAgICB9LAogICByb3dzOiB7CiAgICBmYWNldHM6IHsgc2hvdzogdHJ1ZSB9LAogICAgaGVhZGVyczogeyBzaG93OiB0cnVlIH0sCiAgfSwKIGdyaWRMaW5lczogewogICB4OiB7CiAgICAgc2hvdzogZmFsc2UsCiAgIH0sCiAgIHk6IHsKICAgICBzaG93OiBmYWxzZSwKICAgfSwKIH0sCiBheGVzOiB7CiAgIHg6IHsKICAgICAgc2hvd0F4aXNOYW1lOiBmYWxzZSwKICAgICAgdGlja0ludGVydmFsOiB7CiAgICAgICAvL3N0ZXA6IFN0ZXBGaWVsZCwKICAgICB9LAogICB9LAogfSwKIGxlZ2VuZDogewogICAgIGNvbG9yOiB7CiAgICAgICAgIHJhbmdlOiBbImJsYWNrIiwgJ3JlZCcsICJncmV5IiwgInNpbHZlciJdLAogICBwb3NpdGlvbjogInRvcCIsCiAgICAgfSwKICAgfSwKCgoKCiB1bmlmb3JtQXhpc0RvbWFpbnM6IGZhbHNlLAp9KQouZGF0YShkYXRhKQoubW91bnQoIiNjaGFydDEiKTsKCgoKCmNvbnN0IGNhbnZhczIgPSBtdXplCiAuY2FudmFzKCkKIC5jb2x1bW5zKFtDb2x1bW5GaWVsZHMyXSkKIC5yb3dzKFtSb3dGaWVsZHMyXSkKIC5oZWlnaHQoNDAwKQogLmxheWVycyhbCiAgIHsKICAgICBtYXJrOiAiYmFyIiwKICAgICBlbmNvZGluZzogewogICAgICAgY29sb3I6IENvbG9yRmllbGQyLAogICAgICAgLy8gewogICAgICAgLy8gICB2YWx1ZTogKCkgPT4gewogICAgICAgLy8gICAgIHJldHVybiAiIzAwMCI7CiAgICAgICAvLyAgIH0sCiAgICAgICAvLyB9LAogICAgICAgc2l6ZTogewogICAgICAgICB2YWx1ZTogKCkgPT4gewogICAgICAgICAgIHJldHVybiAwLjAwMDE7CiAgICAgICAgIH0sCiAgICAgICB9LAogICAgIH0sCiAgIH0sCiAgIHsKICAgICBtYXJrOiAicG9pbnQiLAogICAgIGVuY29kaW5nOiB7CiAgICAgICBjb2xvcjogQ29sb3JGaWVsZDEsCiAgICAgICAvLyB7CiAgICAgICAvLyAgIHZhbHVlOiAoKSA9PiB7CiAgICAgICAvLyAgICAgcmV0dXJuICIjMDAwIjsKICAgICAgIC8vICAgfSwKICAgICAgIC8vIH0sCiAgICAgICBvcGFjaXR5OiB7CiAgICAgICAgIHZhbHVlOiAoKSA9PiB7CiAgICAgICAgICAgcmV0dXJuIDE7CiAgICAgICAgIH0sCiAgICAgICB9LAogICAgIH0sCiAgIH0sCiBdKQogLmNvbmZpZyh7CiAgICAgZ3JpZExpbmVzOiB7CiAgICAgIHk6IHsKICAgICAgICBzaG93OiBmYWxzZSwKICAgICAgfSwKICAgICAgeDogewogICAgICAgIHNob3c6IGZhbHNlLAogICAgICB9LAogICAgIH0sCgoKCgogICBheGVzOiB7CiAgICAgeDogewogICAgICAgbGFiZWxzOiB7CiAgICAgICAgIHJvdGF0aW9uOiAwLAogICAgICAgfSwKICAgICB9LAogICB9LAogICBsZWdlbmQ6IHsKICAgICBjb2xvcjogewogICAgICAgICByYW5nZTogWyJibGFjayIsICdyZWQnLCAiZ3JleSIsICJzaWx2ZXIiXSwKICAgcG9zaXRpb246IG51bGwsCiAgICAgfSwKICAgfSwKIH0pCiAuZGF0YShkYXRhKQogLm1vdW50KCIjY2hhcnQyIik7CgoKbXV6ZS5BY3Rpb25Nb2RlbC5mb3IoY2FudmFzMSwgY2FudmFzMikuZW5hYmxlQ3Jvc3NJbnRlcmFjdGl2aXR5KHsKICAgW2NhbnZhczEuYWxpYXMoKV06IHsKICAgICAgIHNlbGVjdDogewogICAgICAgICAgIHRhcmdldDogewogICAgICAgICAgICAgICBbY2FudmFzMi5hbGlhcygpXTogewogICAgICAgICAgICAgICAgICAgZmlsdGVyOiB7CiAgICAgICAgICAgICAgICAgICAgICAgc2lkZUVmZmVjdHM6IFsiZmlsdGVyIl0sCiAgICAgICAgICAgICAgICAgICAgICAgLy8gRXhwbGljaXRseSBzcGVjaWZ5IHdoaWNoIGZpZWxkcyB0byBmaWx0ZXIgb24KICAgICAgICAgICAgICAgICAgICAgICBmaWVsZHM6IFsiUmVnaW9uIl0gLy8gU2hhcmVkIGZpZWxkCiAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgIH0KICAgICAgICAgICB9CiAgICAgICB9CiAgIH0sCiAgIFtjYW52YXMyLmFsaWFzKCldOiB7CiAgICAgICBzZWxlY3Q6IHsKICAgICAgICAgICB0YXJnZXQ6IHsKICAgICAgICAgICAgICAgW2NhbnZhczEuYWxpYXMoKV06IHsKICAgICAgICAgICAgICAgICAgIGZpbHRlcjogewogICAgICAgICAgICAgICAgICAgICAgIHNpZGVFZmZlY3RzOiBbImZpbHRlciJdLAogICAgICAgICAgICAgICAgICAgICAgIGZpZWxkczogWyJSZWdpb24iXSAvLyBTaGFyZWQgZmllbGQKICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgfQogICAgICAgICAgIH0KICAgICAgIH0KICAgfQp9KTsK\\\",\\\"cssCodeBase64\\\":\\\"aHRtbCwgYm9keSB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwp9CgojY2hhcnQxIHsKICAgIHdpZHRoOiAxMDB2aDsKICAgIGhlaWdodDogMTAwdmg7Cn0KCiNjaGFydDIgewogICAgd2lkdGg6IDEwMHZoOwogICAgaGVpZ2h0OiAxMDB2aDsKfQ==\\\",\\\"htmlCodeBase64\\\":\\\"PGRpdiBzdHlsZT0iZGlzcGxheTogZmxleDsiPgogIDxkaXYgaWQ9ImNoYXJ0MSIgc3R5bGU9Im1hcmdpbi1yaWdodDogMTBweDsiPjwvZGl2PgogIDxkaXYgaWQ9ImNoYXJ0MiI+PC9kaXY+CjwvZGl2Pgo=\\\"},\\\"splitSizes\\\":[55,45]}}\"}"
+      display_mode: CHART_MODE
+    viz_guid: 714020f8-b161-470c-826e-204f5b6dfc08
+  - id: Viz_4
+    answer:
+      name: Bar & Tick
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      formulas:
+      - id: formula__target
+        name: _target
+        expr: "sum ( [sales] ) * .20"
+        was_auto_generated: false
+      search_query: "[region] [sales] [item type] [formula__target]"
+      answer_columns:
+      - name: Total sales
+      - name: _target
+      - name: item type
+      - name: region
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: _target
+          show_headline: false
+        - column_id: item type
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        ordered_column_ids:
+        - region
+        - item type
+        - Total sales
+        - _target
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: CUSTOM_CHART
+        chart_columns:
+        - column_id: Total sales
+        - column_id: _target
+        - column_id: item type
+        - column_id: region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"_target\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"45cbb4c4-4406-43da-850a-3bfb9e41b01f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"40eca04a-ac38-4754-a1a8-8fb009ed012b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"_target\"],\"isOpposite\": true}},{\"id\": \"80dbf7c4-f45f-4a45-b50f-e39f22f7087b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\",\"item type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#2E75F0\"}]}"
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: fields
+            columns:
+            - region
+            - item type
+            - Total sales
+            - _target
+        custom_chart_name: Muze Studio (rad)
+        custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"ICBjb25zdCB7IG11emUsIGdldERhdGFGcm9tU2VhcmNoUXVlcnkgfSA9IHZpejsKICAKICBjb25zdCBkYXRhID0gZ2V0RGF0YUZyb21TZWFyY2hRdWVyeSgpOwoKICAvL2NvbnN0IENvbHVtbkZpZWxkID0gWyJpdGVtIHR5cGUiLCAicmVnaW9uIl07CiAgY29uc3QgQ29sdW1uRmllbGQgPSBbIml0ZW0gdHlwZSJdOwogIC8vY29uc3QgUm93RmllbGQgPSAiVG90YWwgc2FsZXMiOwogIGNvbnN0IFJvd0ZpZWxkID0gWyJUb3RhbCBzYWxlcyIsICJyZWdpb24iXTsKCiAgbXV6ZQogICAgLmNhbnZhcygpCiAgICAuY29sdW1ucyhbUm93RmllbGRdKQogICAgLnJvd3MoW0NvbHVtbkZpZWxkXSkKICAgIC5sYXllcnMoWwogICAgICB7CiAgICAgICAgbWFyazogImJhciIsCiAgICAgICAgZW5jb2Rpbmc6IHsKICAgICAgICAvL3g6IFJvd0ZpZWxkLAogICAgICAgICAgY29sb3I6IHsKICAgICAgICAgICAgdmFsdWU6ICgpID0+ICIjOEREM0M3IiwKICAgICAgICAgIH0sCiAgICAgICAgfSwKICAgICAgfSwKICAgICAgewogICAgICAgIG1hcms6ICJ0aWNrIiwKICAgICAgICBlbmNvZGluZzogewogICAgICAgIC8veDogUm93RmllbGQsCiAgICAgICAgICBjb2xvcjogewogICAgICAgICAgICB2YWx1ZTogKCkgPT4gInJlZCIsCiAgICAgICAgICB9LAogICAgICAgIH0sCiAgICAgIH0sCiAgICBdKQogICAgLmRhdGEoZGF0YSkKICAgIC5tb3VudCgiI2NoYXJ0Iik7IC8vIG1vdW50IHlvdXIgY2hhcnQKCg==\\\",\\\"cssCodeBase64\\\":\\\"aHRtbCwgYm9keSB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwp9CgojY2hhcnQgewogICAgd2lkdGg6IDEwMHZ3OwogICAgaGVpZ2h0OiAxMDB2aDsKfQ==\\\",\\\"htmlCodeBase64\\\":\\\"PGRpdiBpZD0iY2hhcnQiPjwvZGl2Pg==\\\"},\\\"splitSizes\\\":[55,45]}}\"}"
+      display_mode: CHART_MODE
+    viz_guid: 79d93349-1a1e-4cfa-8bf6-b21f0f55d557
+  - id: Viz_5
+    answer:
+      name: Muze
+      description: Highchart
+      tables:
+      - id: Sample - Superstore - Orders.csv
+        name: Sample - Superstore - Orders.csv
+        obj_id: Sample-Superstore-Orders.csv-b03a6f0b
+      search_query: "[Sales] [Profit] [Category]"
+      answer_columns:
+      - name: Category
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Category
+          show_headline: false
+        - column_id: Total Profit
+          show_headline: false
+        - column_id: Total Sales
+          show_headline: false
+        ordered_column_ids:
+        - Category
+        - Total Sales
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Category
+          "y":
+          - Total Sales
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"eb514ca7-219c-401b-9ad7-a24d9cd8c23e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"987980d4-7705-4928-8830-29e4189be2ef\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"ba92c441-1f36-462b-9ded-6d522f0f6f4b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Profit\",\"color\": \"#2E75F0\"}]}"
+        custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"Y29uc3QgeyBtdXplLCBnZXREYXRhRnJvbVNlYXJjaFF1ZXJ5IH0gPSB2aXo7CmNvbnN0IGRhdGEgPSBnZXREYXRhRnJvbVNlYXJjaFF1ZXJ5KCk7Cgpjb25zdCBSb3dGaWVsZCA9ICJDYXRlZ29yeSI7CmNvbnN0IENvbHVtbkZpZWxkMSA9ICJUb3RhbCBTYWxlcyI7CmNvbnN0IENvbHVtbkZpZWxkMiA9ICJUb3RhbCBQcm9maXQiOwpjb25zdCBDb2xvckZpZWxkID0gIlF1YWxpdGF0aXZlX1JhbmdlIjsKY29uc3QgWGF4aXNOYW1lID0gIlBlcmZvcm1hbmNlIChTYWxlcyB2cyBQcm9maXQpIjsKbXV6ZQogIC5jYW52YXMoKQogIC5yb3dzKFtSb3dGaWVsZF0pCiAgLmNvbHVtbnMoWwogICAgbXV6ZS5PcGVyYXRvcnMuc2hhcmUoQ29sdW1uRmllbGQxLCBDb2x1bW5GaWVsZDIpLAogIF0pCiAgLmxheWVycyhbCiAgICB7CiAgICAgIG1hcms6ICJiYXIiLAogICAgICBlbmNvZGluZzogewogICAgICAgICAgc2l6ZTogewogICAgICAgICAgdmFsdWU6ICgpID0+IDEsCiAgICAgICAgfSwKICAgICAgICB4OiBDb2x1bW5GaWVsZDEsCiAgICAgICAgY29sb3I6IHsKICAgICAgICAgIHZhbHVlOiAoKSA9PiAiI2YxZjFmMSIsCiAgICAgICAgfSwKICAgICAgfSwKICAgIH0sCiAgICB7CiAgICAgIG1hcms6ICJiYXIiLAogICAgICBlbmNvZGluZzogewogICAgICAgIHNpemU6IHsKICAgICAgICAgIHZhbHVlOiAoKSA9PiAwLjcsCiAgICAgICAgfSwKICAgICAgICB4OiBDb2x1bW5GaWVsZDIsCiAgICAgICAgY29sb3I6IHsKICAgICAgICAgIHZhbHVlOiAoKSA9PiAiYmxhY2siLAogICAgICAgIH0sCiAgICAgIH0sCiAgICB9LAogIF0pCiAgLmNvbmZpZyh7CiAgICBheGVzOiB7CiAgICAgIHg6IHsKICAgICAgICBuYW1lOiBYYXhpc05hbWUsCiAgICAgIH0sCiAgICB9LAogIH0pCiAgLmRhdGEoZGF0YSkKICAubW91bnQoIiNjaGFydCIpOyAvLyBtb3VudCB5b3VyIGNoYXJ0CgoK\\\",\\\"cssCodeBase64\\\":\\\"aHRtbCwgYm9keSB7CiAgICBtYXJnaW46IDA7CiAgICBwYWRkaW5nOiAwOwp9CgojY2hhcnQgewogICAgd2lkdGg6IDEwMHZ3OwogICAgaGVpZ2h0OiAxMDB2aDsKfQ==\\\",\\\"htmlCodeBase64\\\":\\\"PGRpdiBpZD0iY2hhcnQiPjwvZGl2Pg==\\\"},\\\"splitSizes\\\":[55.40509725539439,44.59490274460561]}}\"}"
+      display_mode: CHART_MODE
+    viz_guid: eaa6d6e4-493b-408a-ac53-feb4e2d6179d
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+    - visualization_id: Viz_2
+    - visualization_id: Viz_3
+    - visualization_id: Viz_4
+    - visualization_id: Viz_5

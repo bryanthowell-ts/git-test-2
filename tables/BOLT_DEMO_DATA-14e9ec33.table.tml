@@ -1,0 +1,149 @@
+obj_id: BOLT_DEMO_DATA-14e9ec33
+table:
+  name: BOLT_DEMO_DATA
+  db: EMEA_SE_TEST
+  schema: PUBLIC
+  db_table: BOLT_DEMO_DATA
+  connection:
+    name: Manuel M Snowflake Connection
+    obj_id: ManuelMSnowflakeConnection-427589da
+  columns:
+  - name: DATE
+    db_column_name: DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: TIME_OF_DAY
+    db_column_name: TIME_OF_DAY
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ACCOUNT_ID
+    db_column_name: ACCOUNT_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ACCOUNT_SEGMENT
+    db_column_name: ACCOUNT_SEGMENT
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: REGION
+    db_column_name: REGION
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SITE_ID
+    db_column_name: SITE_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ORDERS_ACTUAL
+    db_column_name: ORDERS_ACTUAL
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ORDERS_TARGET
+    db_column_name: ORDERS_TARGET
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: SALES_ACTUAL
+    db_column_name: SALES_ACTUAL
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: SALES_TARGET
+    db_column_name: SALES_TARGET
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: REFUNDS
+    db_column_name: REFUNDS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: CHURN_RISK_SCORE
+    db_column_name: CHURN_RISK_SCORE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: CHURN_INDICATOR
+    db_column_name: CHURN_INDICATOR
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: COOKING_TIME
+    db_column_name: COOKING_TIME
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: DELIVERY_TIME
+    db_column_name: DELIVERY_TIME
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: TOTAL_EXPERIENCE_TIME
+    db_column_name: TOTAL_EXPERIENCE_TIME
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: SHORTFALL_REASON
+    db_column_name: SHORTFALL_REASON
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NARRATIVE_NOTES
+    db_column_name: NARRATIVE_NOTES
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    spotter_config:
+      is_spotter_enabled: false
