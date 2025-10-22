@@ -1,0 +1,61 @@
+obj_id: FACT_EMAIL_HISTORY-23dca9fb
+table:
+  name: FACT_EMAIL_HISTORY
+  db: PMMDB
+  schema: MARKSPOT
+  db_table: FACT_EMAIL_HISTORY
+  connection:
+    name: Ace Marketing
+  columns:
+  - name: RECORD_ID
+    db_column_name: RECORD_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CAMPAIGN_ID
+    db_column_name: CAMPAIGN_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CUSTOMER_ID
+    db_column_name: CUSTOMER_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: EMAIL
+    db_column_name: EMAIL
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ACTION
+    db_column_name: ACTION
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ACTIONDATE
+    db_column_name: ACTIONDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: ACTIONTIME
+    db_column_name: ACTIONTIME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: TIME
+  properties:
+    spotter_config:
+      is_spotter_enabled: false

@@ -1,0 +1,54 @@
+obj_id: pepsi.user1pepsi.comsfirstLiveboard-7b72c3ee
+liveboard:
+  name: pepsi.user1@pepsi.com's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Sales Amount by Region
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "[Region] [Sales Amount]"
+      answer_columns:
+      - name: Region
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: Region
+          show_headline: false
+        - column_id: Total Sales Amount
+          show_headline: false
+        ordered_column_ids:
+        - Region
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f55fe682-bf87-4a84-810e-471e7a16fbed\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"0f0dd5ff-7e2d-4c49-bb03-11075a6cd341\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 220ea17f-50fc-4280-9fc5-5236efdeabfd
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+  parameter_overrides:
+  - key: b8c424dd-a897-49be-b460-8feaa2a7d27d
+    value:
+      name: Retail Sales WS::Data Security
+      override_value: abgdezetiklmnzoprstupcpos
+  ordered_chips:
+  - name: Retail Sales WS::Data Security
+    type: PARAMETER
