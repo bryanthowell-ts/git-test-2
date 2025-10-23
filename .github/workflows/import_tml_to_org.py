@@ -88,17 +88,21 @@ print("Getting directories for {}".format(object_type))
 directories_to_import = directories_for_objects[object_type]
 tml_strings = []
 for dir in directories_to_import:
-    files_in_dir = os.listdir(dir)
-    print("These files in directory:")
-    print(files_in_dir)
-    for filename in files_in_dir:
-        full_file_path = "{}/{}".format(dir, filename)
-        try: 
-            with open(file=full_file_path, mode='r') as f:
-                tml_str= f.read()
-                tml_strings.append(tml_str)
-        except:
-            pass
+    try:
+        files_in_dir = os.listdir(dir)
+        print("These files in directory:")
+        print(files_in_dir)
+        for filename in files_in_dir:
+            full_file_path = "{}/{}".format(dir, filename)
+            try: 
+                with open(file=full_file_path, mode='r') as f:
+                    tml_str= f.read()
+                    tml_strings.append(tml_str)
+            except:
+                pass
+    except FileNotFoundError as e:
+        print("Directory doesn't exist, skipping")
+        print(e)
     
     # Publish the TMLs
     # Switch to Async
