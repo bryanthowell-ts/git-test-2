@@ -103,7 +103,7 @@ for dir in directories_to_import:
     # Publish the TMLs
     # Switch to Async
     try:
-        results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy="ALL_OR_NOTHING", create_new=False)
+        results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy="ALL_OR_NONE", create_new=False)
     except requests.exceptions.HTTPError as e:
         print(e)
         print(e.response.content)
