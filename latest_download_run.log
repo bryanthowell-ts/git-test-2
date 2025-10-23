@@ -1,0 +1,1693 @@
+Searching for org_id for Ron Dugger
+org_id 33363357 found
+Requesting object listing
+3 objects retrieved
+[
+  {
+    "edoc": "obj_id: SalesPerformanceDashboard-5de43a18\nliveboard:\n  name: Sales Performance Dashboard\n  visualizations:\n  - id: Viz_1\n    answer:\n      name: List all columns in the TSEMBED worksheet along with their descriptions.\n      tables:\n      - id: TSEMBED\n        name: TSEMBED\n        obj_id: TSEMBED-5f92ed57\n      search_query: \"[Description]\"\n      answer_columns:\n      - name: Description\n      table:\n        table_columns:\n        - column_id: Description\n          show_headline: false\n        ordered_column_ids:\n        - Description\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\",\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Description\\\",\\\"columnProperty\\\": {}}]}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Description\n        axis_configs:\n        - \"y\":\n          - Description\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"gridLines\\\": {},\\\"responsiveLayoutPreference\\\": \\\"USER_PREFERRED_ON\\\",\\\"chartSpecific\\\": {\\\"dataFieldArea\\\": \\\"column\\\"}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Description\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"d6cb7b97-4cb2-4ee6-bc7f-07020615decc\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Description\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"0b577268-ad1d-4a7d-89d3-a4a0d579f3d3\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\"}}]}\"\n      display_mode: TABLE_MODE\n    viz_guid: b779a51a-6278-4c2f-ba7a-f41d32afcf99\n  - id: Viz_2\n    answer:\n      name: Provide sample data values for each column in the TSEMBED worksheet.\n      tables:\n      - id: TSEMBED\n        name: TSEMBED\n        obj_id: TSEMBED-5f92ed57\n      search_query: \"[Iswon] [Billingpostalcode] [Annualrevenue] [Expectedrevenue] [Amount] [Numberofemployees] [Shippingpostalcode] [Isclosed] [Account Createddate] [Account Createddate].monthly [Createddate] [Createddate].monthly [Closedate] [Closedate].monthly [Tickersymbol] [Shippinglatitude] [Accountnumber] [Billingcity] [Billingstate] [Shippingcountry] [Website] [Account Name] [SF Opp Link] [Billingstreet] [Shippingcity] [Billinglongitude] [Account Type] [Lastactivitydate] [Id] [Billinglatitude] [Partneraccountid] [Account Id] [Ownerid] [Stagename] [Name] [Billingcountry] [Phone] [Parentid] [Shippinglongitude] [Account Ownerid] [Shippingstate] [_shipPostalCdString] [Description] [Shippingstreet] [_PostalCd_filter] [Billinggeocodeaccuracy] [Active C] [Forecastcategory] [Createdbyid] [Type]\"\n      answer_columns:\n      - name: Account Id\n      - name: Account Name\n      - name: Account Ownerid\n      - name: Account Type\n      - name: Accountnumber\n      - name: Active C\n      - name: Billingcity\n      - name: Billingcountry\n      - name: Billinggeocodeaccuracy\n      - name: Billinglatitude\n      - name: Billinglongitude\n      - name: Billingstate\n      - name: Billingstreet\n      - name: Createdbyid\n      - name: Description\n      - name: Forecastcategory\n      - name: Id\n      - name: Lastactivitydate\n      - name: Month(Account Createddate)\n      - name: Month(Closedate)\n      - name: Month(Createddate)\n      - name: Name\n      - name: Ownerid\n      - name: Parentid\n      - name: Partneraccountid\n      - name: Phone\n      - name: SF Opp Link\n      - name: Shippingcity\n      - name: Shippingcountry\n      - name: Shippinglatitude\n      - name: Shippinglongitude\n      - name: Shippingstate\n      - name: Shippingstreet\n      - name: Stagename\n      - name: Tickersymbol\n      - name: Total Amount\n      - name: Total Annualrevenue\n      - name: Total Billingpostalcode\n      - name: Total Expectedrevenue\n      - name: Total Isclosed\n      - name: Total Iswon\n      - name: Total Numberofemployees\n      - name: Total Shippingpostalcode\n      - name: Type\n      - name: Website\n      - name: _PostalCd_filter\n      - name: _shipPostalCdString\n      table:\n        table_columns:\n        - column_id: Account Id\n          show_headline: false\n        - column_id: Account Name\n          show_headline: false\n        - column_id: Account Ownerid\n          show_headline: false\n        - column_id: Account Type\n          show_headline: false\n        - column_id: Accountnumber\n          show_headline: false\n        - column_id: Active C\n          show_headline: false\n        - column_id: Billingcity\n          show_headline: false\n        - column_id: Billingcountry\n          show_headline: false\n        - column_id: Billinggeocodeaccuracy\n          show_headline: false\n        - column_id: Billinglatitude\n          show_headline: false\n        - column_id: Billinglongitude\n          show_headline: false\n        - column_id: Billingstate\n          show_headline: false\n        - column_id: Billingstreet\n          show_headline: false\n        - column_id: Createdbyid\n          show_headline: false\n        - column_id: Description\n          show_headline: false\n        - column_id: Forecastcategory\n          show_headline: false\n        - column_id: Id\n          show_headline: false\n        - column_id: Lastactivitydate\n          show_headline: false\n        - column_id: Month(Account Createddate)\n          show_headline: false\n        - column_id: Month(Closedate)\n          show_headline: false\n        - column_id: Month(Createddate)\n          show_headline: false\n        - column_id: Name\n          show_headline: false\n        - column_id: Ownerid\n          show_headline: false\n        - column_id: Parentid\n          show_headline: false\n        - column_id: Partneraccountid\n          show_headline: false\n        - column_id: Phone\n          show_headline: false\n        - column_id: SF Opp Link\n          show_headline: false\n        - column_id: Shippingcity\n          show_headline: false\n        - column_id: Shippingcountry\n          show_headline: false\n        - column_id: Shippinglatitude\n          show_headline: false\n        - column_id: Shippinglongitude\n          show_headline: false\n        - column_id: Shippingstate\n          show_headline: false\n        - column_id: Shippingstreet\n          show_headline: false\n        - column_id: Stagename\n          show_headline: false\n        - column_id: Tickersymbol\n          show_headline: false\n        - column_id: Total Amount\n          show_headline: false\n        - column_id: Total Annualrevenue\n          show_headline: false\n        - column_id: Total Billingpostalcode\n          show_headline: false\n        - column_id: Total Expectedrevenue\n          show_headline: false\n        - column_id: Total Isclosed\n          show_headline: false\n        - column_id: Total Iswon\n          show_headline: false\n        - column_id: Total Numberofemployees\n          show_headline: false\n        - column_id: Total Shippingpostalcode\n          show_headline: false\n        - column_id: Type\n          show_headline: false\n        - column_id: Website\n          show_headline: false\n        - column_id: _PostalCd_filter\n          show_headline: false\n        - column_id: _shipPostalCdString\n          show_headline: false\n        ordered_column_ids:\n        - Month(Account Createddate)\n        - Month(Createddate)\n        - Month(Closedate)\n        - Tickersymbol\n        - Shippinglatitude\n        - Accountnumber\n        - Billingcity\n        - Billingstate\n        - Shippingcountry\n        - Website\n        - Account Name\n        - SF Opp Link\n        - Billingstreet\n        - Shippingcity\n        - Billinglongitude\n        - Account Type\n        - Lastactivitydate\n        - Id\n        - Billinglatitude\n        - Partneraccountid\n        - Account Id\n        - Ownerid\n        - Stagename\n        - Name\n        - Billingcountry\n        - Phone\n        - Parentid\n        - Shippinglongitude\n        - Account Ownerid\n        - Shippingstate\n        - _shipPostalCdString\n        - Description\n        - Shippingstreet\n        - _PostalCd_filter\n        - Billinggeocodeaccuracy\n        - Active C\n        - Forecastcategory\n        - Createdbyid\n        - Type\n        - Total Iswon\n        - Total Billingpostalcode\n        - Total Annualrevenue\n        - Total Expectedrevenue\n        - Total Amount\n        - Total Numberofemployees\n        - Total Shippingpostalcode\n        - Total Isclosed\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\",\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Month(Account Createddate)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Month(Createddate)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Month(Closedate)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Tickersymbol\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippinglatitude\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Accountnumber\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billingcity\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billingstate\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippingcountry\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Website\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Account Name\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"SF Opp Link\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billingstreet\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippingcity\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billinglongitude\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Account Type\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Lastactivitydate\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Id\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billinglatitude\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Partneraccountid\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Account Id\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Ownerid\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Stagename\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Name\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billingcountry\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Phone\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Parentid\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippinglongitude\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Account Ownerid\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippingstate\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"_shipPostalCdString\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Description\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippingstreet\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"_PostalCd_filter\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billinggeocodeaccuracy\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Active C\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Forecastcategory\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Createdbyid\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Type\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Iswon\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Billingpostalcode\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Annualrevenue\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Expectedrevenue\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Numberofemployees\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Shippingpostalcode\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Isclosed\\\",\\\"columnProperty\\\": {}}]}\"\n      chart:\n        type: COLUMN\n        chart_columns:\n        - column_id: Account Id\n        - column_id: Account Name\n        - column_id: Account Ownerid\n        - column_id: Account Type\n        - column_id: Accountnumber\n        - column_id: Active C\n        - column_id: Billingcity\n        - column_id: Billingcountry\n        - column_id: Billinggeocodeaccuracy\n        - column_id: Billinglatitude\n        - column_id: Billinglongitude\n        - column_id: Billingstate\n        - column_id: Billingstreet\n        - column_id: Createdbyid\n        - column_id: Description\n        - column_id: Forecastcategory\n        - column_id: Id\n        - column_id: Lastactivitydate\n        - column_id: Month(Account Createddate)\n        - column_id: Month(Closedate)\n        - column_id: Month(Createddate)\n        - column_id: Name\n        - column_id: Ownerid\n        - column_id: Parentid\n        - column_id: Partneraccountid\n        - column_id: Phone\n        - column_id: SF Opp Link\n        - column_id: Shippingcity\n        - column_id: Shippingcountry\n        - column_id: Shippinglatitude\n        - column_id: Shippinglongitude\n        - column_id: Shippingstate\n        - column_id: Shippingstreet\n        - column_id: Stagename\n        - column_id: Tickersymbol\n        - column_id: Total Amount\n        - column_id: Total Annualrevenue\n        - column_id: Total Billingpostalcode\n        - column_id: Total Expectedrevenue\n        - column_id: Total Isclosed\n        - column_id: Total Iswon\n        - column_id: Total Numberofemployees\n        - column_id: Total Shippingpostalcode\n        - column_id: Type\n        - column_id: Website\n        - column_id: _PostalCd_filter\n        - column_id: _shipPostalCdString\n        axis_configs:\n        - x:\n          - Month(Account Createddate)\n          \"y\":\n          - Total Iswon\n          - Total Billingpostalcode\n          - Total Annualrevenue\n          - Total Expectedrevenue\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"gridLines\\\": {},\\\"responsiveLayoutPreference\\\": \\\"USER_PREFERRED_ON\\\",\\\"chartSpecific\\\": {\\\"dataFieldArea\\\": \\\"column\\\"}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Stagename\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Month(Account Createddate)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Accountnumber\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billingstate\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Annualrevenue\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Createdbyid\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Forecastcategory\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"_PostalCd_filter\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Expectedrevenue\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Isclosed\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Account Id\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Account Type\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Id\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Name\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billinggeocodeaccuracy\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Parentid\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Phone\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippingstreet\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Account Name\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippinglatitude\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billingcountry\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billingstreet\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billinglongitude\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Billingpostalcode\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Tickersymbol\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Iswon\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Website\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippingcountry\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippinglongitude\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"_shipPostalCdString\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Ownerid\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billinglatitude\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Billingcity\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Numberofemployees\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Month(Closedate)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"SF Opp Link\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippingstate\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Active C\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Description\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Account Ownerid\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Shippingpostalcode\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Lastactivitydate\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Month(Createddate)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Partneraccountid\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Type\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Shippingcity\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"a14481f1-b2eb-4228-af08-51c25d1e63af\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Iswon\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"44ee2500-a1df-48ea-b718-d0d4e84ada4b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Billingpostalcode\\\"],\\\"isOpposite\\\": true}},{\\\"id\\\": \\\"51d17fc1-47f6-40f0-8feb-9835711d7d24\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Annualrevenue\\\"],\\\"isOpposite\\\": true}},{\\\"id\\\": \\\"2fdad28e-aa31-4daa-9eb1-802324e619fb\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Expectedrevenue\\\"],\\\"isOpposite\\\": true}},{\\\"id\\\": \\\"0f8b9b67-6938-49d1-822c-d883caee9a35\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Month(Account Createddate)\\\"]}}]}\"\n      display_mode: TABLE_MODE\n    viz_guid: 60dd088e-f902-4c65-830d-37fba020d716\n  layout:\n    tiles:\n    - visualization_id: Viz_1\n      size: MEDIUM_SMALL\n    - visualization_id: Viz_2\n      size: MEDIUM_SMALL\n",
+    "info": {
+      "filename": "Sales Performance Dashboard.liveboard.tml",
+      "name": "Sales Performance Dashboard",
+      "id": "5de43a18-f18b-45dc-aff1-f8193b991614",
+      "type": "liveboard",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: SalesPerformanceDashboard-5de43a18
+liveboard:
+  name: Sales Performance Dashboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: List all columns in the TSEMBED worksheet along with their descriptions.
+      tables:
+      - id: TSEMBED
+        name: TSEMBED
+        obj_id: TSEMBED-5f92ed57
+      search_query: "[Description]"
+      answer_columns:
+      - name: Description
+      table:
+        table_columns:
+        - column_id: Description
+          show_headline: false
+        ordered_column_ids:
+        - Description
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Description\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Description
+        axis_configs:
+        - "y":
+          - Description
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Description\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d6cb7b97-4cb2-4ee6-bc7f-07020615decc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Description\"],\"isOpposite\": false}},{\"id\": \"0b577268-ad1d-4a7d-89d3-a4a0d579f3d3\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: b779a51a-6278-4c2f-ba7a-f41d32afcf99
+  - id: Viz_2
+    answer:
+      name: Provide sample data values for each column in the TSEMBED worksheet.
+      tables:
+      - id: TSEMBED
+        name: TSEMBED
+        obj_id: TSEMBED-5f92ed57
+      search_query: "[Iswon] [Billingpostalcode] [Annualrevenue] [Expectedrevenue] [Amount] [Numberofemployees] [Shippingpostalcode] [Isclosed] [Account Createddate] [Account Createddate].monthly [Createddate] [Createddate].monthly [Closedate] [Closedate].monthly [Tickersymbol] [Shippinglatitude] [Accountnumber] [Billingcity] [Billingstate] [Shippingcountry] [Website] [Account Name] [SF Opp Link] [Billingstreet] [Shippingcity] [Billinglongitude] [Account Type] [Lastactivitydate] [Id] [Billinglatitude] [Partneraccountid] [Account Id] [Ownerid] [Stagename] [Name] [Billingcountry] [Phone] [Parentid] [Shippinglongitude] [Account Ownerid] [Shippingstate] [_shipPostalCdString] [Description] [Shippingstreet] [_PostalCd_filter] [Billinggeocodeaccuracy] [Active C] [Forecastcategory] [Createdbyid] [Type]"
+      answer_columns:
+      - name: Account Id
+      - name: Account Name
+      - name: Account Ownerid
+      - name: Account Type
+      - name: Accountnumber
+      - name: Active C
+      - name: Billingcity
+      - name: Billingcountry
+      - name: Billinggeocodeaccuracy
+      - name: Billinglatitude
+      - name: Billinglongitude
+      - name: Billingstate
+      - name: Billingstreet
+      - name: Createdbyid
+      - name: Description
+      - name: Forecastcategory
+      - name: Id
+      - name: Lastactivitydate
+      - name: Month(Account Createddate)
+      - name: Month(Closedate)
+      - name: Month(Createddate)
+      - name: Name
+      - name: Ownerid
+      - name: Parentid
+      - name: Partneraccountid
+      - name: Phone
+      - name: SF Opp Link
+      - name: Shippingcity
+      - name: Shippingcountry
+      - name: Shippinglatitude
+      - name: Shippinglongitude
+      - name: Shippingstate
+      - name: Shippingstreet
+      - name: Stagename
+      - name: Tickersymbol
+      - name: Total Amount
+      - name: Total Annualrevenue
+      - name: Total Billingpostalcode
+      - name: Total Expectedrevenue
+      - name: Total Isclosed
+      - name: Total Iswon
+      - name: Total Numberofemployees
+      - name: Total Shippingpostalcode
+      - name: Type
+      - name: Website
+      - name: _PostalCd_filter
+      - name: _shipPostalCdString
+      table:
+        table_columns:
+        - column_id: Account Id
+          show_headline: false
+        - column_id: Account Name
+          show_headline: false
+        - column_id: Account Ownerid
+          show_headline: false
+        - column_id: Account Type
+          show_headline: false
+        - column_id: Accountnumber
+          show_headline: false
+        - column_id: Active C
+          show_headline: false
+        - column_id: Billingcity
+          show_headline: false
+        - column_id: Billingcountry
+          show_headline: false
+        - column_id: Billinggeocodeaccuracy
+          show_headline: false
+        - column_id: Billinglatitude
+          show_headline: false
+        - column_id: Billinglongitude
+          show_headline: false
+        - column_id: Billingstate
+          show_headline: false
+        - column_id: Billingstreet
+          show_headline: false
+        - column_id: Createdbyid
+          show_headline: false
+        - column_id: Description
+          show_headline: false
+        - column_id: Forecastcategory
+          show_headline: false
+        - column_id: Id
+          show_headline: false
+        - column_id: Lastactivitydate
+          show_headline: false
+        - column_id: Month(Account Createddate)
+          show_headline: false
+        - column_id: Month(Closedate)
+          show_headline: false
+        - column_id: Month(Createddate)
+          show_headline: false
+        - column_id: Name
+          show_headline: false
+        - column_id: Ownerid
+          show_headline: false
+        - column_id: Parentid
+          show_headline: false
+        - column_id: Partneraccountid
+          show_headline: false
+        - column_id: Phone
+          show_headline: false
+        - column_id: SF Opp Link
+          show_headline: false
+        - column_id: Shippingcity
+          show_headline: false
+        - column_id: Shippingcountry
+          show_headline: false
+        - column_id: Shippinglatitude
+          show_headline: false
+        - column_id: Shippinglongitude
+          show_headline: false
+        - column_id: Shippingstate
+          show_headline: false
+        - column_id: Shippingstreet
+          show_headline: false
+        - column_id: Stagename
+          show_headline: false
+        - column_id: Tickersymbol
+          show_headline: false
+        - column_id: Total Amount
+          show_headline: false
+        - column_id: Total Annualrevenue
+          show_headline: false
+        - column_id: Total Billingpostalcode
+          show_headline: false
+        - column_id: Total Expectedrevenue
+          show_headline: false
+        - column_id: Total Isclosed
+          show_headline: false
+        - column_id: Total Iswon
+          show_headline: false
+        - column_id: Total Numberofemployees
+          show_headline: false
+        - column_id: Total Shippingpostalcode
+          show_headline: false
+        - column_id: Type
+          show_headline: false
+        - column_id: Website
+          show_headline: false
+        - column_id: _PostalCd_filter
+          show_headline: false
+        - column_id: _shipPostalCdString
+          show_headline: false
+        ordered_column_ids:
+        - Month(Account Createddate)
+        - Month(Createddate)
+        - Month(Closedate)
+        - Tickersymbol
+        - Shippinglatitude
+        - Accountnumber
+        - Billingcity
+        - Billingstate
+        - Shippingcountry
+        - Website
+        - Account Name
+        - SF Opp Link
+        - Billingstreet
+        - Shippingcity
+        - Billinglongitude
+        - Account Type
+        - Lastactivitydate
+        - Id
+        - Billinglatitude
+        - Partneraccountid
+        - Account Id
+        - Ownerid
+        - Stagename
+        - Name
+        - Billingcountry
+        - Phone
+        - Parentid
+        - Shippinglongitude
+        - Account Ownerid
+        - Shippingstate
+        - _shipPostalCdString
+        - Description
+        - Shippingstreet
+        - _PostalCd_filter
+        - Billinggeocodeaccuracy
+        - Active C
+        - Forecastcategory
+        - Createdbyid
+        - Type
+        - Total Iswon
+        - Total Billingpostalcode
+        - Total Annualrevenue
+        - Total Expectedrevenue
+        - Total Amount
+        - Total Numberofemployees
+        - Total Shippingpostalcode
+        - Total Isclosed
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(Account Createddate)\",\"columnProperty\": {}},{\"columnId\": \"Month(Createddate)\",\"columnProperty\": {}},{\"columnId\": \"Month(Closedate)\",\"columnProperty\": {}},{\"columnId\": \"Tickersymbol\",\"columnProperty\": {}},{\"columnId\": \"Shippinglatitude\",\"columnProperty\": {}},{\"columnId\": \"Accountnumber\",\"columnProperty\": {}},{\"columnId\": \"Billingcity\",\"columnProperty\": {}},{\"columnId\": \"Billingstate\",\"columnProperty\": {}},{\"columnId\": \"Shippingcountry\",\"columnProperty\": {}},{\"columnId\": \"Website\",\"columnProperty\": {}},{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"SF Opp Link\",\"columnProperty\": {}},{\"columnId\": \"Billingstreet\",\"columnProperty\": {}},{\"columnId\": \"Shippingcity\",\"columnProperty\": {}},{\"columnId\": \"Billinglongitude\",\"columnProperty\": {}},{\"columnId\": \"Account Type\",\"columnProperty\": {}},{\"columnId\": \"Lastactivitydate\",\"columnProperty\": {}},{\"columnId\": \"Id\",\"columnProperty\": {}},{\"columnId\": \"Billinglatitude\",\"columnProperty\": {}},{\"columnId\": \"Partneraccountid\",\"columnProperty\": {}},{\"columnId\": \"Account Id\",\"columnProperty\": {}},{\"columnId\": \"Ownerid\",\"columnProperty\": {}},{\"columnId\": \"Stagename\",\"columnProperty\": {}},{\"columnId\": \"Name\",\"columnProperty\": {}},{\"columnId\": \"Billingcountry\",\"columnProperty\": {}},{\"columnId\": \"Phone\",\"columnProperty\": {}},{\"columnId\": \"Parentid\",\"columnProperty\": {}},{\"columnId\": \"Shippinglongitude\",\"columnProperty\": {}},{\"columnId\": \"Account Ownerid\",\"columnProperty\": {}},{\"columnId\": \"Shippingstate\",\"columnProperty\": {}},{\"columnId\": \"_shipPostalCdString\",\"columnProperty\": {}},{\"columnId\": \"Description\",\"columnProperty\": {}},{\"columnId\": \"Shippingstreet\",\"columnProperty\": {}},{\"columnId\": \"_PostalCd_filter\",\"columnProperty\": {}},{\"columnId\": \"Billinggeocodeaccuracy\",\"columnProperty\": {}},{\"columnId\": \"Active C\",\"columnProperty\": {}},{\"columnId\": \"Forecastcategory\",\"columnProperty\": {}},{\"columnId\": \"Createdbyid\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Total Iswon\",\"columnProperty\": {}},{\"columnId\": \"Total Billingpostalcode\",\"columnProperty\": {}},{\"columnId\": \"Total Annualrevenue\",\"columnProperty\": {}},{\"columnId\": \"Total Expectedrevenue\",\"columnProperty\": {}},{\"columnId\": \"Total Amount\",\"columnProperty\": {}},{\"columnId\": \"Total Numberofemployees\",\"columnProperty\": {}},{\"columnId\": \"Total Shippingpostalcode\",\"columnProperty\": {}},{\"columnId\": \"Total Isclosed\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Account Id
+        - column_id: Account Name
+        - column_id: Account Ownerid
+        - column_id: Account Type
+        - column_id: Accountnumber
+        - column_id: Active C
+        - column_id: Billingcity
+        - column_id: Billingcountry
+        - column_id: Billinggeocodeaccuracy
+        - column_id: Billinglatitude
+        - column_id: Billinglongitude
+        - column_id: Billingstate
+        - column_id: Billingstreet
+        - column_id: Createdbyid
+        - column_id: Description
+        - column_id: Forecastcategory
+        - column_id: Id
+        - column_id: Lastactivitydate
+        - column_id: Month(Account Createddate)
+        - column_id: Month(Closedate)
+        - column_id: Month(Createddate)
+        - column_id: Name
+        - column_id: Ownerid
+        - column_id: Parentid
+        - column_id: Partneraccountid
+        - column_id: Phone
+        - column_id: SF Opp Link
+        - column_id: Shippingcity
+        - column_id: Shippingcountry
+        - column_id: Shippinglatitude
+        - column_id: Shippinglongitude
+        - column_id: Shippingstate
+        - column_id: Shippingstreet
+        - column_id: Stagename
+        - column_id: Tickersymbol
+        - column_id: Total Amount
+        - column_id: Total Annualrevenue
+        - column_id: Total Billingpostalcode
+        - column_id: Total Expectedrevenue
+        - column_id: Total Isclosed
+        - column_id: Total Iswon
+        - column_id: Total Numberofemployees
+        - column_id: Total Shippingpostalcode
+        - column_id: Type
+        - column_id: Website
+        - column_id: _PostalCd_filter
+        - column_id: _shipPostalCdString
+        axis_configs:
+        - x:
+          - Month(Account Createddate)
+          "y":
+          - Total Iswon
+          - Total Billingpostalcode
+          - Total Annualrevenue
+          - Total Expectedrevenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Stagename\",\"columnProperty\": {}},{\"columnId\": \"Month(Account Createddate)\",\"columnProperty\": {}},{\"columnId\": \"Accountnumber\",\"columnProperty\": {}},{\"columnId\": \"Billingstate\",\"columnProperty\": {}},{\"columnId\": \"Total Annualrevenue\",\"columnProperty\": {}},{\"columnId\": \"Createdbyid\",\"columnProperty\": {}},{\"columnId\": \"Forecastcategory\",\"columnProperty\": {}},{\"columnId\": \"_PostalCd_filter\",\"columnProperty\": {}},{\"columnId\": \"Total Expectedrevenue\",\"columnProperty\": {}},{\"columnId\": \"Total Isclosed\",\"columnProperty\": {}},{\"columnId\": \"Account Id\",\"columnProperty\": {}},{\"columnId\": \"Account Type\",\"columnProperty\": {}},{\"columnId\": \"Id\",\"columnProperty\": {}},{\"columnId\": \"Name\",\"columnProperty\": {}},{\"columnId\": \"Billinggeocodeaccuracy\",\"columnProperty\": {}},{\"columnId\": \"Parentid\",\"columnProperty\": {}},{\"columnId\": \"Phone\",\"columnProperty\": {}},{\"columnId\": \"Shippingstreet\",\"columnProperty\": {}},{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"Shippinglatitude\",\"columnProperty\": {}},{\"columnId\": \"Billingcountry\",\"columnProperty\": {}},{\"columnId\": \"Billingstreet\",\"columnProperty\": {}},{\"columnId\": \"Billinglongitude\",\"columnProperty\": {}},{\"columnId\": \"Total Billingpostalcode\",\"columnProperty\": {}},{\"columnId\": \"Tickersymbol\",\"columnProperty\": {}},{\"columnId\": \"Total Iswon\",\"columnProperty\": {}},{\"columnId\": \"Website\",\"columnProperty\": {}},{\"columnId\": \"Shippingcountry\",\"columnProperty\": {}},{\"columnId\": \"Shippinglongitude\",\"columnProperty\": {}},{\"columnId\": \"_shipPostalCdString\",\"columnProperty\": {}},{\"columnId\": \"Ownerid\",\"columnProperty\": {}},{\"columnId\": \"Billinglatitude\",\"columnProperty\": {}},{\"columnId\": \"Billingcity\",\"columnProperty\": {}},{\"columnId\": \"Total Numberofemployees\",\"columnProperty\": {}},{\"columnId\": \"Month(Closedate)\",\"columnProperty\": {}},{\"columnId\": \"SF Opp Link\",\"columnProperty\": {}},{\"columnId\": \"Total Amount\",\"columnProperty\": {}},{\"columnId\": \"Shippingstate\",\"columnProperty\": {}},{\"columnId\": \"Active C\",\"columnProperty\": {}},{\"columnId\": \"Description\",\"columnProperty\": {}},{\"columnId\": \"Account Ownerid\",\"columnProperty\": {}},{\"columnId\": \"Total Shippingpostalcode\",\"columnProperty\": {}},{\"columnId\": \"Lastactivitydate\",\"columnProperty\": {}},{\"columnId\": \"Month(Createddate)\",\"columnProperty\": {}},{\"columnId\": \"Partneraccountid\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Shippingcity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a14481f1-b2eb-4228-af08-51c25d1e63af\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Iswon\"],\"isOpposite\": false}},{\"id\": \"44ee2500-a1df-48ea-b718-d0d4e84ada4b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Billingpostalcode\"],\"isOpposite\": true}},{\"id\": \"51d17fc1-47f6-40f0-8feb-9835711d7d24\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Annualrevenue\"],\"isOpposite\": true}},{\"id\": \"2fdad28e-aa31-4daa-9eb1-802324e619fb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Expectedrevenue\"],\"isOpposite\": true}},{\"id\": \"0f8b9b67-6938-49d1-822c-d883caee9a35\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Account Createddate)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 60dd088e-f902-4c65-830d-37fba020d716
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM_SMALL
+    - visualization_id: Viz_2
+      size: MEDIUM_SMALL
+
+-------
+[
+  {
+    "edoc": "obj_id: RetailSalesRAD-KPIs-b1a39ddf\nliveboard:\n  name: Retail Sales RAD - KPIs\n  visualizations:\n  - id: Viz_1\n    answer:\n      name: Total Sales Amount by Region\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Region] sort by [Sales Amount] descending\"\n      answer_columns:\n      - name: Region\n      - name: Total Sales Amount\n      table:\n        table_columns:\n        - column_id: Region\n          show_headline: false\n        - column_id: Total Sales Amount\n          show_headline: false\n        ordered_column_ids:\n        - Region\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: BAR\n        chart_columns:\n        - column_id: Region\n        - column_id: Total Sales Amount\n        axis_configs:\n        - x:\n          - Region\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Region\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {\\\"conditionalFormatting\\\": {\\\"rows\\\": [{\\\"operator\\\": \\\"LESS_THAN\\\",\\\"value\\\": \\\"70000000\\\",\\\"plotAsBand\\\": false,\\\"backgroundFormatType\\\": \\\"SOLID\\\",\\\"solidBackgroundAttrs\\\": {\\\"color\\\": \\\"#747E8C\\\"},\\\"comparisonType\\\": \\\"VALUE_BASED\\\",\\\"lhsColumnId\\\": \\\"Total Sales Amount\\\"}]}}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"80a5990a-f1ad-404c-aed9-ff0c031a1910\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"dd2c8142-fe5e-425b-98a6-af3ab2f763c5\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Region\\\"]}}],\\\"seriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"color\\\": \\\"#71A1F4\\\"}],\\\"systemSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"color\\\": \\\"#8C62F5\\\"}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: e869a830-31ff-4435-8dd4-2562b8abe2fa\n  - id: Viz_2\n    answer:\n      name: Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].monthly\"\n      answer_columns:\n      - name: Month(Sales Date)\n      - name: Total Sales Amount\n      table:\n        table_columns:\n        - column_id: Month(Sales Date)\n          show_headline: false\n        - column_id: Total Sales Amount\n          show_headline: false\n        ordered_column_ids:\n        - Month(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Month(Sales Date)\n        - column_id: Total Sales Amount\n        axis_configs:\n        - x:\n          - Month(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Month(Sales Date)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"a408bdd4-0fbc-49eb-943e-5a996f57bcbb\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"9106b0d3-93d4-420b-8f8e-cdf02ce262f2\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Month(Sales Date)\\\"]}}],\\\"systemSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"color\\\": \\\"#2770ef\\\"}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 8310e56d-2ff1-4543-b6ea-dd40841a9f1e\n  - id: Viz_3\n    answer:\n      name: Total Quantity Purchased by Product Name\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"top 10 by sum [Quantity Purchased] [Product Name]\"\n      answer_columns:\n      - name: Product Name\n      - name: Total Quantity Purchased\n      table:\n        table_columns:\n        - column_id: Product Name\n          show_headline: false\n        - column_id: Total Quantity Purchased\n          show_headline: false\n        ordered_column_ids:\n        - Product Name\n        - Total Quantity Purchased\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: BAR\n        chart_columns:\n        - column_id: Product Name\n        - column_id: Total Quantity Purchased\n        axis_configs:\n        - x:\n          - Product Name\n          \"y\":\n          - Total Quantity Purchased\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Product Name\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Quantity Purchased\\\",\\\"columnProperty\\\": {\\\"customProps\\\": \\\"{\\\\\\\"advancedProperties\\\\\\\":{\\\\\\\"dataLabels\\\\\\\":{\\\\\\\"backgroundColor\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"borderColor\\\\\\\":\\\\\\\"#F04152\\\\\\\",\\\\\\\"borderWidth\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"filter\\\\\\\":{\\\\\\\"operator\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"value\\\\\\\":\\\\\\\"\\\\\\\"},\\\\\\\"align\\\\\\\":\\\\\\\"center\\\\\\\",\\\\\\\"style\\\\\\\":{\\\\\\\"fontSize\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"boldFontWeight\\\\\\\":false,\\\\\\\"underlineTextDecoration\\\\\\\":false,\\\\\\\"italicFontStyle\\\\\\\":false},\\\\\\\"maxCharacters\\\\\\\":\\\\\\\"\\\\\\\"}}}\\\"}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"cd4d9b4b-3aed-4cdb-b8c4-9eeb1200cd3e\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Quantity Purchased\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"1ca86276-5711-4dee-bc3f-c56d6f850097\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Product Name\\\"]}}],\\\"systemSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Quantity Purchased\\\",\\\"color\\\": \\\"#06BF7F\\\"}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 1dacfc20-a589-4263-8fb6-bf6debdfa8cf\n  - id: Viz_4\n    answer:\n      name: Total Quantity Purchased by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Quantity Purchased] [Sales Date] [Sales Date].monthly\"\n      answer_columns:\n      - name: Month(Sales Date)\n      - name: Total Quantity Purchased\n      table:\n        table_columns:\n        - column_id: Month(Sales Date)\n          show_headline: false\n        - column_id: Total Quantity Purchased\n          show_headline: false\n        ordered_column_ids:\n        - Month(Sales Date)\n        - Total Quantity Purchased\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Month(Sales Date)\n        - column_id: Total Quantity Purchased\n        axis_configs:\n        - x:\n          - Month(Sales Date)\n          \"y\":\n          - Total Quantity Purchased\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Month(Sales Date)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Quantity Purchased\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"c685f746-739d-45e2-a7f2-60cb40043b4d\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Quantity Purchased\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"2eb36ca4-1373-4333-92c8-e9fac5bd62f3\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Month(Sales Date)\\\"]}}],\\\"systemSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Quantity Purchased\\\",\\\"color\\\": \\\"#2770ef\\\"}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 7142529f-5bed-4004-85bc-9fbdec1e9f95\n  - id: Viz_5\n    answer:\n      name: Total Sales Amount by State\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [State]\"\n      answer_columns:\n      - name: State\n      - name: Total Sales Amount\n      table:\n        table_columns:\n        - column_id: State\n          show_headline: false\n        - column_id: Total Sales Amount\n          show_headline: false\n        ordered_column_ids:\n        - State\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: GEO_AREA\n        chart_columns:\n        - column_id: State\n        - column_id: Total Sales Amount\n        axis_configs:\n        - x:\n          - State\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"mapviewport\\\": {\\\"center\\\": [-1.0815372462017208E7,4944187.994859374],\\\"zoomLevel\\\": 4.652779600649687,\\\"extent\\\": [-1.5239717874782735E7,2940654.9885434797,-6391027.049251681,6947721.001175269]},\\\"chartSpecific\\\": {\\\"customProps\\\": \\\"{\\\\\\\"tileType\\\\\\\":\\\\\\\"light-v9\\\\\\\"}\\\",\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"State\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"92a360f7-c72b-48d5-8379-577e8aab925e\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"7184c0d7-5665-46ab-a3a1-e34f3d5ad795\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"State\\\"]}}],\\\"multiColorSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"colorMap\\\": [{\\\"serieName\\\": \\\"State\\\",\\\"color\\\": [\\\"#a6d2ff\\\",\\\"#3873c1\\\"]}]}],\\\"systemMultiColorSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"colorMap\\\": [{\\\"serieName\\\": \\\"State\\\",\\\"color\\\": [\\\"#ffffb2\\\",\\\"#fddd87\\\",\\\"#fba35d\\\",\\\"#f75534\\\",\\\"#f9140a\\\",\\\"#d70315\\\",\\\"#b10026\\\"]}]}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 6f5f1cd4-c364-441b-ac80-1296b6dc64fc\n  - id: Viz_6\n    viz_guid: e92dd9e1-8ac8-4722-add7-84d41b144429\n    note_tile:\n      html_parsed_string: <h2 dir=\"ltr\"><span>Overall Commentary</span></h2><ul><li value=\"1\"><span>Lorem ipsum</span></li><li value=\"2\"><span>Lorem ipsum</span></li><li value=\"3\"><span>Lorem ipsum</span></li></ul>\n  - id: Viz_7\n    answer:\n      name: Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: f13ca8b7-6b02-41ab-bda4-6e98131e5389\n  - id: Viz_8\n    answer:\n      name: Copy of Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 4d4f5849-b868-46a9-a287-35f4bb22455f\n  - id: Viz_9\n    answer:\n      name: Copy of Copy of Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 8139c60c-07f0-4d87-8d92-ad13faf799d7\n  - id: Viz_10\n    answer:\n      name: Copy of Copy of Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 4c48ac83-ae4a-4e86-a1f3-c8d0f015bfd6\n  - id: Viz_11\n    answer:\n      name: Copy of Copy of Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 4369a462-ef89-4168-a45b-7de028ee38fd\n  - id: Viz_12\n    answer:\n      name: Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: d5a724d3-789d-4027-9a13-96e5347e124d\n  - id: Viz_13\n    answer:\n      name: Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 3cce6d56-9be9-4ec6-8ad9-7284e85b9228\n  - id: Viz_14\n    answer:\n      name: Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 4f5f94c1-fd5d-4b82-bb72-4986572ee7aa\n  - id: Viz_15\n    answer:\n      name: Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 2035563d-920f-4e52-a71b-123e78c94497\n  - id: Viz_16\n    answer:\n      name: Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: b372b022-96c8-48a1-803c-25953311391e\n  - id: Viz_17\n    answer:\n      name: Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: c58e3148-adde-4c4e-87f4-011e57844d5b\n  - id: Viz_18\n    answer:\n      name: Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 787c6aa1-37e8-437b-a7cc-9df108780846\n  - id: Viz_19\n    answer:\n      name: Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 25fe70f3-df34-488f-b1c2-c1086b8d407a\n  - id: Viz_20\n    answer:\n      name: Copy of Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 980d5200-04d6-4ccd-986d-a7a28f3e5623\n  filters:\n  - column:\n    - Product Type\n    oper: in\n    values:\n    - \"{null}\"\n    - Bags\n    - Dresses\n    - Headwear\n    - Jackets\n    - Jeans\n    - Pants\n    - Shirts\n    - Shorts\n    - Skirts\n    - Socks\n    - Sweaters\n    - Sweatshirts\n    - Swimwear\n    - Underwear\n    - Vests\n    is_mandatory: false\n    is_single_value: false\n    display_name: \"\"\n  layout:\n    tabs:\n    - name: Tab 1\n      description: \"\"\n      tiles:\n      - visualization_id: Viz_1\n        x: 0\n        \"y\": 18\n        height: 8\n        width: 6\n      - visualization_id: Viz_2\n        x: 3\n        \"y\": 0\n        height: 4\n        width: 3\n      - visualization_id: Viz_3\n        x: 0\n        \"y\": 26\n        height: 8\n        width: 6\n      - visualization_id: Viz_4\n        x: 0\n        \"y\": 0\n        height: 4\n        width: 3\n      - visualization_id: Viz_5\n        x: 0\n        \"y\": 10\n        height: 8\n        width: 6\n      - visualization_id: Viz_6\n        x: 0\n        \"y\": 8\n        height: 2\n        width: 6\n      - visualization_id: Viz_7\n        x: 6\n        \"y\": 0\n        height: 4\n        width: 3\n      - visualization_id: Viz_8\n        x: 9\n        \"y\": 0\n        height: 4\n        width: 3\n      - visualization_id: Viz_9\n        x: 0\n        \"y\": 4\n        height: 4\n        width: 3\n      - visualization_id: Viz_10\n        x: 9\n        \"y\": 4\n        height: 4\n        width: 3\n      - visualization_id: Viz_11\n        x: 6\n        \"y\": 4\n        height: 4\n        width: 3\n      - visualization_id: Viz_12\n        x: 3\n        \"y\": 4\n        height: 4\n        width: 3\n      id: 75b717da-94b6-42ae-ab93-110c677703fb\n    - name: Tab 2\n      description: \"\"\n      tiles:\n      - visualization_id: Viz_13\n        x: 3\n        \"y\": 0\n        height: 4\n        width: 3\n      - visualization_id: Viz_14\n        x: 6\n        \"y\": 0\n        height: 4\n        width: 3\n      - visualization_id: Viz_15\n        x: 9\n        \"y\": 0\n        height: 4\n        width: 3\n      - visualization_id: Viz_16\n        x: 0\n        \"y\": 2\n        height: 4\n        width: 3\n      - visualization_id: Viz_17\n        x: 3\n        \"y\": 4\n        height: 4\n        width: 3\n      - visualization_id: Viz_18\n        x: 6\n        \"y\": 4\n        height: 4\n        width: 3\n      - visualization_id: Viz_19\n        x: 9\n        \"y\": 4\n        height: 4\n        width: 3\n      - visualization_id: Viz_20\n        x: 0\n        \"y\": 6\n        height: 4\n        width: 3\n      id: 0ea4816b-c28e-4992-a8a3-fd16e86a63bb\n  parameter_overrides:\n  - key: b8c424dd-a897-49be-b460-8feaa2a7d27d\n    value:\n      name: Retail Sales WS::Data Security\n      override_value: abgdezetiklmnzoprstupcpos\n  ordered_chips:\n  - name: Product Type\n    type: FILTER\n  - name: Retail Sales WS::Data Security\n    type: PARAMETER\n  views:\n  - view_guid: eff64e9b-2233-4d50-818a-7e8449f7b88d\n    name: Jackets\n    view_filters:\n    - column:\n      - Product Type\n      oper: in\n      values:\n      - jackets\n    is_public: true\n    view_parameters:\n    - name: Retail Sales WS::Data Security\n      id: b8c424dd-a897-49be-b460-8feaa2a7d27d\n      override_value: abgdezetiklmnzoprstupcpos\n  - view_guid: ec5eb688-dbe1-4d0c-9246-7ecb90e93a83\n    name: Bags\n    view_filters:\n    - column:\n      - Product Type\n      oper: in\n      values:\n      - Bags\n    is_public: true\n    view_parameters:\n    - name: Retail Sales WS::Data Security\n      id: b8c424dd-a897-49be-b460-8feaa2a7d27d\n      override_value: abgdezetiklmnzoprstupcpos\n",
+    "info": {
+      "filename": "Retail Sales RAD - KPIs.liveboard.tml",
+      "name": "Retail Sales RAD - KPIs",
+      "id": "b1a39ddf-8dd8-4bfa-8194-190ee992b52e",
+      "type": "liveboard",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: RetailSalesRAD-KPIs-b1a39ddf
+liveboard:
+  name: Retail Sales RAD - KPIs
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Sales Amount by Region
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Region] sort by [Sales Amount] descending"
+      answer_columns:
+      - name: Region
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: Region
+          show_headline: false
+        - column_id: Total Sales Amount
+          show_headline: false
+        ordered_column_ids:
+        - Region
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"70000000\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#747E8C\"},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"Total Sales Amount\"}]}}}],\"axisProperties\": [{\"id\": \"80a5990a-f1ad-404c-aed9-ff0c031a1910\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"dd2c8142-fe5e-425b-98a6-af3ab2f763c5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}],\"seriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#71A1F4\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: e869a830-31ff-4435-8dd4-2562b8abe2fa
+  - id: Viz_2
+    answer:
+      name: Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].monthly"
+      answer_columns:
+      - name: Month(Sales Date)
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: Month(Sales Date)
+          show_headline: false
+        - column_id: Total Sales Amount
+          show_headline: false
+        ordered_column_ids:
+        - Month(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Sales Date)
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - Month(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Sales Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a408bdd4-0fbc-49eb-943e-5a996f57bcbb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"9106b0d3-93d4-420b-8f8e-cdf02ce262f2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Sales Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 8310e56d-2ff1-4543-b6ea-dd40841a9f1e
+  - id: Viz_3
+    answer:
+      name: Total Quantity Purchased by Product Name
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "top 10 by sum [Quantity Purchased] [Product Name]"
+      answer_columns:
+      - name: Product Name
+      - name: Total Quantity Purchased
+      table:
+        table_columns:
+        - column_id: Product Name
+          show_headline: false
+        - column_id: Total Quantity Purchased
+          show_headline: false
+        ordered_column_ids:
+        - Product Name
+        - Total Quantity Purchased
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Product Name
+        - column_id: Total Quantity Purchased
+        axis_configs:
+        - x:
+          - Product Name
+          "y":
+          - Total Quantity Purchased
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity Purchased\",\"columnProperty\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"#F04152\\\",\\\"borderWidth\\\":\\\"\\\",\\\"filter\\\":{\\\"operator\\\":\\\"\\\",\\\"value\\\":\\\"\\\"},\\\"align\\\":\\\"center\\\",\\\"style\\\":{\\\"fontSize\\\":\\\"\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"maxCharacters\\\":\\\"\\\"}}}\"}}],\"axisProperties\": [{\"id\": \"cd4d9b4b-3aed-4cdb-b8c4-9eeb1200cd3e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity Purchased\"],\"isOpposite\": false}},{\"id\": \"1ca86276-5711-4dee-bc3f-c56d6f850097\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity Purchased\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 1dacfc20-a589-4263-8fb6-bf6debdfa8cf
+  - id: Viz_4
+    answer:
+      name: Total Quantity Purchased by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Quantity Purchased] [Sales Date] [Sales Date].monthly"
+      answer_columns:
+      - name: Month(Sales Date)
+      - name: Total Quantity Purchased
+      table:
+        table_columns:
+        - column_id: Month(Sales Date)
+          show_headline: false
+        - column_id: Total Quantity Purchased
+          show_headline: false
+        ordered_column_ids:
+        - Month(Sales Date)
+        - Total Quantity Purchased
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Sales Date)
+        - column_id: Total Quantity Purchased
+        axis_configs:
+        - x:
+          - Month(Sales Date)
+          "y":
+          - Total Quantity Purchased
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Sales Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity Purchased\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c685f746-739d-45e2-a7f2-60cb40043b4d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity Purchased\"],\"isOpposite\": false}},{\"id\": \"2eb36ca4-1373-4333-92c8-e9fac5bd62f3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Sales Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity Purchased\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 7142529f-5bed-4004-85bc-9fbdec1e9f95
+  - id: Viz_5
+    answer:
+      name: Total Sales Amount by State
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [State]"
+      answer_columns:
+      - name: State
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: State
+          show_headline: false
+        - column_id: Total Sales Amount
+          show_headline: false
+        ordered_column_ids:
+        - State
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: State
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - State
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.0815372462017208E7,4944187.994859374],\"zoomLevel\": 4.652779600649687,\"extent\": [-1.5239717874782735E7,2940654.9885434797,-6391027.049251681,6947721.001175269]},\"chartSpecific\": {\"customProps\": \"{\\\"tileType\\\":\\\"light-v9\\\"}\",\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"92a360f7-c72b-48d5-8379-577e8aab925e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"7184c0d7-5665-46ab-a3a1-e34f3d5ad795\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"]}}],\"multiColorSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"colorMap\": [{\"serieName\": \"State\",\"color\": [\"#a6d2ff\",\"#3873c1\"]}]}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"colorMap\": [{\"serieName\": \"State\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 6f5f1cd4-c364-441b-ac80-1296b6dc64fc
+  - id: Viz_6
+    viz_guid: e92dd9e1-8ac8-4722-add7-84d41b144429
+    note_tile:
+      html_parsed_string: <h2 dir="ltr"><span>Overall Commentary</span></h2><ul><li value="1"><span>Lorem ipsum</span></li><li value="2"><span>Lorem ipsum</span></li><li value="3"><span>Lorem ipsum</span></li></ul>
+  - id: Viz_7
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: f13ca8b7-6b02-41ab-bda4-6e98131e5389
+  - id: Viz_8
+    answer:
+      name: Copy of Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 4d4f5849-b868-46a9-a287-35f4bb22455f
+  - id: Viz_9
+    answer:
+      name: Copy of Copy of Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 8139c60c-07f0-4d87-8d92-ad13faf799d7
+  - id: Viz_10
+    answer:
+      name: Copy of Copy of Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 4c48ac83-ae4a-4e86-a1f3-c8d0f015bfd6
+  - id: Viz_11
+    answer:
+      name: Copy of Copy of Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 4369a462-ef89-4168-a45b-7de028ee38fd
+  - id: Viz_12
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: d5a724d3-789d-4027-9a13-96e5347e124d
+  - id: Viz_13
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 3cce6d56-9be9-4ec6-8ad9-7284e85b9228
+  - id: Viz_14
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 4f5f94c1-fd5d-4b82-bb72-4986572ee7aa
+  - id: Viz_15
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 2035563d-920f-4e52-a71b-123e78c94497
+  - id: Viz_16
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: b372b022-96c8-48a1-803c-25953311391e
+  - id: Viz_17
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: c58e3148-adde-4c4e-87f4-011e57844d5b
+  - id: Viz_18
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 787c6aa1-37e8-437b-a7cc-9df108780846
+  - id: Viz_19
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 25fe70f3-df34-488f-b1c2-c1086b8d407a
+  - id: Viz_20
+    answer:
+      name: Copy of Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 980d5200-04d6-4ccd-986d-a7a28f3e5623
+  filters:
+  - column:
+    - Product Type
+    oper: in
+    values:
+    - "{null}"
+    - Bags
+    - Dresses
+    - Headwear
+    - Jackets
+    - Jeans
+    - Pants
+    - Shirts
+    - Shorts
+    - Skirts
+    - Socks
+    - Sweaters
+    - Sweatshirts
+    - Swimwear
+    - Underwear
+    - Vests
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tabs:
+    - name: Tab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 18
+        height: 8
+        width: 6
+      - visualization_id: Viz_2
+        x: 3
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_3
+        x: 0
+        "y": 26
+        height: 8
+        width: 6
+      - visualization_id: Viz_4
+        x: 0
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_5
+        x: 0
+        "y": 10
+        height: 8
+        width: 6
+      - visualization_id: Viz_6
+        x: 0
+        "y": 8
+        height: 2
+        width: 6
+      - visualization_id: Viz_7
+        x: 6
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_8
+        x: 9
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_9
+        x: 0
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_10
+        x: 9
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_11
+        x: 6
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_12
+        x: 3
+        "y": 4
+        height: 4
+        width: 3
+      id: 75b717da-94b6-42ae-ab93-110c677703fb
+    - name: Tab 2
+      description: ""
+      tiles:
+      - visualization_id: Viz_13
+        x: 3
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_14
+        x: 6
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_15
+        x: 9
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_16
+        x: 0
+        "y": 2
+        height: 4
+        width: 3
+      - visualization_id: Viz_17
+        x: 3
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_18
+        x: 6
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_19
+        x: 9
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_20
+        x: 0
+        "y": 6
+        height: 4
+        width: 3
+      id: 0ea4816b-c28e-4992-a8a3-fd16e86a63bb
+  parameter_overrides:
+  - key: b8c424dd-a897-49be-b460-8feaa2a7d27d
+    value:
+      name: Retail Sales WS::Data Security
+      override_value: abgdezetiklmnzoprstupcpos
+  ordered_chips:
+  - name: Product Type
+    type: FILTER
+  - name: Retail Sales WS::Data Security
+    type: PARAMETER
+  views:
+  - view_guid: eff64e9b-2233-4d50-818a-7e8449f7b88d
+    name: Jackets
+    view_filters:
+    - column:
+      - Product Type
+      oper: in
+      values:
+      - jackets
+    is_public: true
+    view_parameters:
+    - name: Retail Sales WS::Data Security
+      id: b8c424dd-a897-49be-b460-8feaa2a7d27d
+      override_value: abgdezetiklmnzoprstupcpos
+  - view_guid: ec5eb688-dbe1-4d0c-9246-7ecb90e93a83
+    name: Bags
+    view_filters:
+    - column:
+      - Product Type
+      oper: in
+      values:
+      - Bags
+    is_public: true
+    view_parameters:
+    - name: Retail Sales WS::Data Security
+      id: b8c424dd-a897-49be-b460-8feaa2a7d27d
+      override_value: abgdezetiklmnzoprstupcpos
+
+-------
+[
+  {
+    "edoc": "obj_id: RetailSalesRAD-7ffababd\nliveboard:\n  name: Retail Sales RAD\n  visualizations:\n  - id: Viz_1\n    answer:\n      name: Total Sales Amount by Region\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      formulas:\n      - id: formula__salesQty\n        name: _salesQty\n        expr: \"sum ( [Sales Amount] ) / sum ( [Quantity Purchased] ) \"\n        was_auto_generated: false\n      search_query: \"sum [Sales Amount] [Region] sort by [Sales Amount] descending\"\n      answer_columns:\n      - name: Region\n      - name: Total Sales Amount\n      table:\n        table_columns:\n        - column_id: Region\n          show_headline: false\n        - column_id: Total Sales Amount\n          show_headline: false\n        ordered_column_ids:\n        - Region\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: BAR\n        chart_columns:\n        - column_id: Region\n        - column_id: Total Sales Amount\n        axis_configs:\n        - x:\n          - Region\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"showLinearRegressionLine\\\": false,\\\"chartSpecific\\\": {\\\"customProps\\\": \\\"{\\\\\\\"advancedProperties\\\\\\\":{\\\\\\\"tooltip\\\\\\\":{\\\\\\\"enabled\\\\\\\":true,\\\\\\\"borderWidth\\\\\\\":\\\\\\\"1\\\\\\\",\\\\\\\"opacity\\\\\\\":\\\\\\\"100\\\\\\\",\\\\\\\"label\\\\\\\":{\\\\\\\"fontSize\\\\\\\":\\\\\\\"12\\\\\\\",\\\\\\\"boldFontWeight\\\\\\\":false,\\\\\\\"underlineTextDecoration\\\\\\\":false,\\\\\\\"italicFontStyle\\\\\\\":false},\\\\\\\"value\\\\\\\":{\\\\\\\"fontSize\\\\\\\":\\\\\\\"12\\\\\\\",\\\\\\\"boldFontWeight\\\\\\\":false,\\\\\\\"underlineTextDecoration\\\\\\\":false,\\\\\\\"italicFontStyle\\\\\\\":false}},\\\\\\\"regression\\\\\\\":{\\\\\\\"color\\\\\\\":\\\\\\\"#8C62F5\\\\\\\",\\\\\\\"lineWidth\\\\\\\":\\\\\\\"0\\\\\\\",\\\\\\\"dashStyle\\\\\\\":\\\\\\\"Solid\\\\\\\"},\\\\\\\"gridlines\\\\\\\":{\\\\\\\"xAxis\\\\\\\":{\\\\\\\"gridLineWidth\\\\\\\":\\\\\\\"2\\\\\\\",\\\\\\\"gridLineDashStyle\\\\\\\":\\\\\\\"Solid\\\\\\\"},\\\\\\\"yAxis\\\\\\\":{\\\\\\\"gridLineColor\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"gridLineWidth\\\\\\\":\\\\\\\"2\\\\\\\",\\\\\\\"gridLineDashStyle\\\\\\\":\\\\\\\"Solid\\\\\\\"}},\\\\\\\"answerLevelSettings\\\\\\\":{\\\\\\\"dashStyle\\\\\\\":\\\\\\\"Solid\\\\\\\",\\\\\\\"lineWidth\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"markerType\\\\\\\":\\\\\\\"Circle\\\\\\\",\\\\\\\"markerRadius\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"borderWidth\\\\\\\":\\\\\\\"0\\\\\\\",\\\\\\\"connectingLines\\\\\\\":false}}}\\\",\\\"pivotSummariesState\\\": {}},\\\"showStackedLabels\\\": false,\\\"allLabels\\\": false},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Region\\\",\\\"columnProperty\\\": {\\\"customProps\\\": \\\"{\\\\\\\"advancedProperties\\\\\\\":{\\\\\\\"dataLabels\\\\\\\":{\\\\\\\"backgroundColor\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"borderColor\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"borderWidth\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"filter\\\\\\\":{\\\\\\\"operator\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"value\\\\\\\":\\\\\\\"foo\\\\\\\"},\\\\\\\"align\\\\\\\":\\\\\\\"center\\\\\\\",\\\\\\\"style\\\\\\\":{\\\\\\\"fontSize\\\\\\\":\\\\\\\"12\\\\\\\",\\\\\\\"boldFontWeight\\\\\\\":false,\\\\\\\"underlineTextDecoration\\\\\\\":false,\\\\\\\"italicFontStyle\\\\\\\":false},\\\\\\\"maxCharacters\\\\\\\":\\\\\\\"\\\\\\\"}}}\\\"}},{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {\\\"dataLabels\\\": false,\\\"conditionalFormatting\\\": {\\\"rows\\\": [{\\\"operator\\\": \\\"LESS_THAN\\\",\\\"value\\\": \\\"120000000\\\",\\\"plotAsBand\\\": false,\\\"backgroundFormatType\\\": \\\"SOLID\\\",\\\"solidBackgroundAttrs\\\": {\\\"color\\\": \\\"#F04152\\\"},\\\"comparisonType\\\": \\\"VALUE_BASED\\\",\\\"lhsColumnId\\\": \\\"Total Sales Amount\\\",\\\"isHighlightRow\\\": false}]}}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"736ed815-4818-4336-80a1-fb82e5a91805\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"3a22c8b8-0564-48ba-a957-ff4d8f0fb4b6\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Region\\\"]}}],\\\"seriesColors\\\": [{\\\"serieName\\\": \\\"f027617a-9a65-4e78-af65-4f4d65183133\\\",\\\"color\\\": \\\"#2E75F0\\\"},{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"color\\\": \\\"#2F3947\\\"}],\\\"systemSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"color\\\": \\\"#71A1F4\\\"},{\\\"serieName\\\": \\\"f027617a-9a65-4e78-af65-4f4d65183133\\\",\\\"color\\\": \\\"#2E75F0\\\"}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 202a5b82-53ad-4220-a788-aed94d3f1a5d\n    action_object_associations:\n    - action_name: Get Answer Data\n      context: CONTEXT_MENU\n      enabled: true\n  - id: Viz_2\n    answer:\n      name: Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].monthly\"\n      answer_columns:\n      - name: Month(Sales Date)\n      - name: Total Sales Amount\n      table:\n        table_columns:\n        - column_id: Month(Sales Date)\n          show_headline: false\n        - column_id: Total Sales Amount\n          show_headline: false\n        ordered_column_ids:\n        - Month(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Month(Sales Date)\n        - column_id: Total Sales Amount\n        axis_configs:\n        - x:\n          - Month(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Month(Sales Date)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"a408bdd4-0fbc-49eb-943e-5a996f57bcbb\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"9106b0d3-93d4-420b-8f8e-cdf02ce262f2\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Month(Sales Date)\\\"]}}],\\\"seriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"color\\\": \\\"#2F3947\\\"}],\\\"systemSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"color\\\": \\\"#2770ef\\\"}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 35aa5631-0cc7-466c-b18d-29c71d8ee919\n  - id: Viz_3\n    answer:\n      name: Total Quantity Purchased by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Quantity Purchased] [Sales Date] [Sales Date].monthly\"\n      answer_columns:\n      - name: Month(Sales Date)\n      - name: Total Quantity Purchased\n      table:\n        table_columns:\n        - column_id: Month(Sales Date)\n          show_headline: false\n        - column_id: Total Quantity Purchased\n          show_headline: false\n        ordered_column_ids:\n        - Month(Sales Date)\n        - Total Quantity Purchased\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Month(Sales Date)\n        - column_id: Total Quantity Purchased\n        axis_configs:\n        - x:\n          - Month(Sales Date)\n          \"y\":\n          - Total Quantity Purchased\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Month(Sales Date)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Quantity Purchased\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"c685f746-739d-45e2-a7f2-60cb40043b4d\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Quantity Purchased\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"2eb36ca4-1373-4333-92c8-e9fac5bd62f3\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Month(Sales Date)\\\"]}}],\\\"seriesColors\\\": [{\\\"serieName\\\": \\\"Total Quantity Purchased\\\",\\\"color\\\": \\\"#2F3947\\\"}],\\\"systemSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Quantity Purchased\\\",\\\"color\\\": \\\"#2770ef\\\"}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 29e85356-b50d-42ab-90dc-819315337259\n  - id: Viz_4\n    answer:\n      name: Total Sales Amount by State\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [State] [Region] [Quantity Purchased]\"\n      answer_columns:\n      - name: Region\n      - name: State\n      - name: Total Quantity Purchased\n      - name: Total Sales Amount\n      table:\n        table_columns:\n        - column_id: Region\n          show_headline: false\n        - column_id: State\n          show_headline: false\n        - column_id: Total Quantity Purchased\n          show_headline: false\n        - column_id: Total Sales Amount\n          show_headline: false\n        ordered_column_ids:\n        - State\n        - Region\n        - Total Sales Amount\n        - Total Quantity Purchased\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: GEO_AREA\n        chart_columns:\n        - column_id: Region\n        - column_id: State\n        - column_id: Total Quantity Purchased\n        - column_id: Total Sales Amount\n        axis_configs:\n        - x:\n          - State\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"mapviewport\\\": {\\\"center\\\": [-1.0815372462017208E7,4944187.994859374],\\\"zoomLevel\\\": 4.423940561878792,\\\"extent\\\": [-1.60771353539544E7,1877561.1118938997,-5553609.570080015,8010814.8778248485]},\\\"chartSpecific\\\": {\\\"customProps\\\": \\\"{\\\\\\\"tileType\\\\\\\":\\\\\\\"light-v9\\\\\\\"}\\\",\\\"pivotSummariesState\\\": {}},\\\"showStackedLabels\\\": false,\\\"allLabels\\\": false},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"State\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {\\\"dataLabels\\\": false,\\\"conditionalFormatting\\\": {\\\"rows\\\": [{\\\"backgroundFormatType\\\": \\\"GRADIENT\\\",\\\"gradientBackgroundAttrs\\\": {\\\"colors\\\": [\\\"#F04152\\\",\\\"#BEC6D0\\\",\\\"#47515F\\\"],\\\"backgroundFormatRange\\\": [1.94172096E7,4.31395175E7,6.68618254E7]},\\\"solidBackgroundAttrs\\\": {},\\\"comparisonType\\\": \\\"VALUE_BASED\\\",\\\"isHighlightRow\\\": false}]}}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"92a360f7-c72b-48d5-8379-577e8aab925e\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"7184c0d7-5665-46ab-a3a1-e34f3d5ad795\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"State\\\"]}}],\\\"multiColorSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"colorMap\\\": [{\\\"serieName\\\": \\\"State\\\",\\\"color\\\": [\\\"#a6d2ff\\\",\\\"#3873c1\\\"]}]}],\\\"systemMultiColorSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"colorMap\\\": [{\\\"serieName\\\": \\\"State\\\",\\\"color\\\": [\\\"#ffffb2\\\",\\\"#fddd87\\\",\\\"#fba35d\\\",\\\"#f75534\\\",\\\"#f9140a\\\",\\\"#d70315\\\",\\\"#b10026\\\"]}]}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: c4613537-d1fe-4dac-9df5-52026b4fc950\n    action_object_associations:\n    - action_name: Open Case\n      context: MENU\n      enabled: true\n  - id: Viz_5\n    answer:\n      name: Total Sales Amount by Monthly Sales Date\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      search_query: \"sum [Sales Amount] [Sales Date].yearly\"\n      answer_columns:\n      - name: Total Sales Amount\n      - name: Year(Sales Date)\n      table:\n        table_columns:\n        - column_id: Total Sales Amount\n          show_headline: false\n        - column_id: Year(Sales Date)\n          show_headline: false\n        ordered_column_ids:\n        - Year(Sales Date)\n        - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: KPI\n        chart_columns:\n        - column_id: Total Sales Amount\n        - column_id: Year(Sales Date)\n        axis_configs:\n        - x:\n          - Year(Sales Date)\n          \"y\":\n          - Total Sales Amount\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Total Sales Amount\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Year(Sales Date)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"7da6d839-f0b5-463d-90cf-a29ad3dde60b\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Total Sales Amount\\\"],\\\"isOpposite\\\": false}},{\\\"id\\\": \\\"82567dc1-c416-4540-a37b-87fd4a1c5b65\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Year(Sales Date)\\\"]}}],\\\"seriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"color\\\": \\\"#2F3947\\\"}],\\\"systemSeriesColors\\\": [{\\\"serieName\\\": \\\"Total Sales Amount\\\",\\\"color\\\": \\\"#2E75F0\\\"}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 7eb3c623-8555-46dd-ab5b-d62f1ef9a4f3\n  - id: Viz_6\n    answer:\n      name: Total Sales Comparison\n      tables:\n      - id: Retail Sales WS\n        name: Retail Sales WS\n        obj_id: RetailSalesWS-9b1deb72\n      formulas:\n      - id: formula__salesQty\n        name: _salesQty\n        expr: \"sum ( [Sales Amount] ) / sum ( [Quantity Purchased] ) \"\n        was_auto_generated: false\n      search_query: \"sum [Sales Amount] [Region] sort by [Sales Amount] descending [Sales Date].2019 vs [Sales Date].2020 [Sales Date] [Sales Date].monthly\"\n      answer_columns:\n      - name: Month(Sales Date)\n      - name: Region\n      - name: Sales Amount(2019)\n      - name: Sales Amount(2020)\n      table:\n        table_columns:\n        - column_id: Month(Sales Date)\n          show_headline: false\n        - column_id: Region\n          show_headline: false\n        - column_id: Sales Amount(2019)\n          show_headline: false\n        - column_id: Sales Amount(2020)\n          show_headline: false\n        ordered_column_ids:\n        - Region\n        - Month(Sales Date)\n        - Sales Amount(2020)\n        - Sales Amount(2019)\n        client_state: \"\"\n        client_state_v2: \"{\\\"tableVizPropVersion\\\": \\\"V1\\\"}\"\n      chart:\n        type: BAR\n        chart_columns:\n        - column_id: Month(Sales Date)\n        - column_id: Region\n        - column_id: Sales Amount(2019)\n        - column_id: Sales Amount(2020)\n        axis_configs:\n        - x:\n          - Region\n          \"y\":\n          - Sales Amount(2020)\n          - Sales Amount(2019)\n        client_state: \"\"\n        client_state_v2: \"{\\\"version\\\": \\\"V4DOT2\\\",\\\"chartProperties\\\": {\\\"responsiveLayoutPreference\\\": \\\"AUTO_ON\\\",\\\"chartSpecific\\\": {\\\"pivotSummariesState\\\": {}}},\\\"columnProperties\\\": [{\\\"columnId\\\": \\\"Region\\\",\\\"columnProperty\\\": {\\\"customProps\\\": \\\"{\\\\\\\"advancedProperties\\\\\\\":{\\\\\\\"dataLabels\\\\\\\":{\\\\\\\"backgroundColor\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"borderColor\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"borderWidth\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"filter\\\\\\\":{\\\\\\\"operator\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"value\\\\\\\":\\\\\\\"foo\\\\\\\"},\\\\\\\"align\\\\\\\":\\\\\\\"center\\\\\\\",\\\\\\\"style\\\\\\\":{\\\\\\\"fontSize\\\\\\\":\\\\\\\"12\\\\\\\",\\\\\\\"boldFontWeight\\\\\\\":false,\\\\\\\"underlineTextDecoration\\\\\\\":false,\\\\\\\"italicFontStyle\\\\\\\":false},\\\\\\\"maxCharacters\\\\\\\":\\\\\\\"\\\\\\\"}}}\\\"}},{\\\"columnId\\\": \\\"Month(Sales Date)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Sales Amount(2020)\\\",\\\"columnProperty\\\": {}},{\\\"columnId\\\": \\\"Sales Amount(2019)\\\",\\\"columnProperty\\\": {}}],\\\"axisProperties\\\": [{\\\"id\\\": \\\"f138de0c-46a2-43e8-b62e-3b81494b145a\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"X\\\",\\\"linkedColumns\\\": [\\\"Region\\\"]}},{\\\"id\\\": \\\"a13e92c1-4033-41d2-b31e-ec255fe19f9e\\\",\\\"properties\\\": {\\\"axisType\\\": \\\"Y\\\",\\\"linkedColumns\\\": [\\\"Sales Amount(2020)\\\",\\\"Sales Amount(2019)\\\"],\\\"isOpposite\\\": true}}],\\\"seriesColors\\\": [{\\\"serieName\\\": \\\"f027617a-9a65-4e78-af65-4f4d65183133\\\",\\\"color\\\": \\\"#2E75F0\\\"},{\\\"serieName\\\": \\\"1dd22c3e-1ccb-4aef-bb3d-fabecbe1a908\\\",\\\"color\\\": \\\"#2F3947\\\"},{\\\"serieName\\\": \\\"Sales Amount(2020)\\\",\\\"color\\\": \\\"#F04152\\\"},{\\\"serieName\\\": \\\"Sales Amount(2019)\\\",\\\"color\\\": \\\"#2F3947\\\"}],\\\"systemSeriesColors\\\": [{\\\"serieName\\\": \\\"f027617a-9a65-4e78-af65-4f4d65183133\\\",\\\"color\\\": \\\"#2E75F0\\\"},{\\\"serieName\\\": \\\"1dd22c3e-1ccb-4aef-bb3d-fabecbe1a908\\\",\\\"color\\\": \\\"#2F3947\\\"},{\\\"serieName\\\": \\\"Sales Amount(2020)\\\",\\\"color\\\": \\\"#48D1E0\\\"},{\\\"serieName\\\": \\\"Sales Amount(2019)\\\",\\\"color\\\": \\\"#2E75F0\\\"}]}\"\n      display_mode: CHART_MODE\n      parameter_values:\n      - key: Data Security\n        value: abgdezetiklmnzoprstupcpos\n    viz_guid: 62d17f45-403d-4c83-bd09-7f9b7605ca49\n  groups:\n  - id: Group_1\n    name: Key Indicators\n    visualizations:\n    - Viz_5\n    - Viz_2\n    - Viz_3\n    group_guid: 3dfc789e-88bf-44e7-b437-7a4184c5be91\n  filters:\n  - column:\n    - Product Type\n    oper: in\n    values:\n    - \"{null}\"\n    - Bags\n    - Dresses\n    - Headwear\n    - Jackets\n    - Jeans\n    - Pants\n    - Shirts\n    - Shorts\n    - Skirts\n    - Socks\n    - Sweaters\n    - Sweatshirts\n    - Swimwear\n    - Underwear\n    - Vests\n    is_mandatory: false\n    is_single_value: false\n    display_name: \"\"\n  - column:\n    - Region\n    is_mandatory: false\n    is_single_value: false\n    display_name: \"\"\n  - column:\n    - State\n    is_mandatory: false\n    is_single_value: false\n    display_name: \"\"\n  layout:\n    tabs:\n    - name: Tab 1\n      description: \"\"\n      tiles:\n      - visualization_id: Viz_1\n        x: 5\n        \"y\": 5\n        height: 8\n        width: 5\n      - visualization_id: Viz_4\n        x: 0\n        \"y\": 5\n        height: 8\n        width: 5\n      - visualization_id: Viz_6\n        x: 0\n        \"y\": 13\n        height: 4\n        width: 10\n      - visualization_id: Group_1\n        x: 0\n        \"y\": 0\n        height: 5\n        width: 10\n      id: dce6c67b-c17b-4b74-a46d-209924a09b7b\n      group_layouts:\n      - id: Group_1\n        tiles:\n        - visualization_id: Viz_2\n          x: 4\n          \"y\": 0\n          height: 5\n          width: 4\n        - visualization_id: Viz_5\n          x: 8\n          \"y\": 0\n          height: 5\n          width: 4\n        - visualization_id: Viz_3\n          x: 0\n          \"y\": 0\n          height: 5\n          width: 4\n  ordered_chips:\n  - name: Product Type\n    type: FILTER\n  - name: Region\n    type: FILTER\n  - name: State\n    type: FILTER\n  views:\n  - view_guid: a09436be-b646-4432-bb9e-3148e6f11de1\n    name: Shorts\n    view_filters:\n    - column:\n      - Product Type\n      oper: in\n      values:\n      - shorts\n    - column:\n      - Region\n      oper: in\n    - column:\n      - State\n      oper: in\n    is_public: true\n  - view_guid: 1e6b7aca-7756-4711-9611-ad71a811a37f\n    name: Jeans\n    view_filters:\n    - column:\n      - Product Type\n      oper: in\n      values:\n      - Jeans\n    - column:\n      - Region\n      oper: in\n    - column:\n      - State\n      oper: in\n    is_public: true\n  style:\n    style_properties:\n    - name: lb_border_type\n      value: CURVED\n    - name: lb_brand_color\n      value: LBC_A\n    - name: hide_group_title\n      value: \"false\"\n    - name: hide_group_description\n      value: \"true\"\n    - name: hide_group_tile_description\n      value: \"true\"\n    - name: hide_tile_description\n      value: \"true\"\n",
+    "info": {
+      "filename": "Retail Sales RAD.liveboard.tml",
+      "name": "Retail Sales RAD",
+      "id": "7ffababd-a9ce-4acf-9b60-331f2ef7bf90",
+      "type": "liveboard",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: RetailSalesRAD-7ffababd
+liveboard:
+  name: Retail Sales RAD
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Sales Amount by Region
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      formulas:
+      - id: formula__salesQty
+        name: _salesQty
+        expr: "sum ( [Sales Amount] ) / sum ( [Quantity Purchased] ) "
+        was_auto_generated: false
+      search_query: "sum [Sales Amount] [Region] sort by [Sales Amount] descending"
+      answer_columns:
+      - name: Region
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: Region
+          show_headline: false
+        - column_id: Total Sales Amount
+          show_headline: false
+        ordered_column_ids:
+        - Region
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"showLinearRegressionLine\": false,\"chartSpecific\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true,\\\"borderWidth\\\":\\\"1\\\",\\\"opacity\\\":\\\"100\\\",\\\"label\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"value\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"regression\\\":{\\\"color\\\":\\\"#8C62F5\\\",\\\"lineWidth\\\":\\\"0\\\",\\\"dashStyle\\\":\\\"Solid\\\"},\\\"gridlines\\\":{\\\"xAxis\\\":{\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"},\\\"yAxis\\\":{\\\"gridLineColor\\\":\\\"\\\",\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"}},\\\"answerLevelSettings\\\":{\\\"dashStyle\\\":\\\"Solid\\\",\\\"lineWidth\\\":\\\"\\\",\\\"markerType\\\":\\\"Circle\\\",\\\"markerRadius\\\":\\\"\\\",\\\"borderWidth\\\":\\\"0\\\",\\\"connectingLines\\\":false}}}\",\"pivotSummariesState\": {}},\"showStackedLabels\": false,\"allLabels\": false},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"\\\",\\\"filter\\\":{\\\"operator\\\":\\\"\\\",\\\"value\\\":\\\"foo\\\"},\\\"align\\\":\\\"center\\\",\\\"style\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"maxCharacters\\\":\\\"\\\"}}}\"}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {\"dataLabels\": false,\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"120000000\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#F04152\"},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"Total Sales Amount\",\"isHighlightRow\": false}]}}}],\"axisProperties\": [{\"id\": \"736ed815-4818-4336-80a1-fb82e5a91805\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"3a22c8b8-0564-48ba-a957-ff4d8f0fb4b6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}],\"seriesColors\": [{\"serieName\": \"f027617a-9a65-4e78-af65-4f4d65183133\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Sales Amount\",\"color\": \"#2F3947\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#71A1F4\"},{\"serieName\": \"f027617a-9a65-4e78-af65-4f4d65183133\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 202a5b82-53ad-4220-a788-aed94d3f1a5d
+    action_object_associations:
+    - action_name: Get Answer Data
+      context: CONTEXT_MENU
+      enabled: true
+  - id: Viz_2
+    answer:
+      name: Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].monthly"
+      answer_columns:
+      - name: Month(Sales Date)
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: Month(Sales Date)
+          show_headline: false
+        - column_id: Total Sales Amount
+          show_headline: false
+        ordered_column_ids:
+        - Month(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Sales Date)
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - Month(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Sales Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a408bdd4-0fbc-49eb-943e-5a996f57bcbb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"9106b0d3-93d4-420b-8f8e-cdf02ce262f2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Sales Date)\"]}}],\"seriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#2F3947\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 35aa5631-0cc7-466c-b18d-29c71d8ee919
+  - id: Viz_3
+    answer:
+      name: Total Quantity Purchased by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Quantity Purchased] [Sales Date] [Sales Date].monthly"
+      answer_columns:
+      - name: Month(Sales Date)
+      - name: Total Quantity Purchased
+      table:
+        table_columns:
+        - column_id: Month(Sales Date)
+          show_headline: false
+        - column_id: Total Quantity Purchased
+          show_headline: false
+        ordered_column_ids:
+        - Month(Sales Date)
+        - Total Quantity Purchased
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Sales Date)
+        - column_id: Total Quantity Purchased
+        axis_configs:
+        - x:
+          - Month(Sales Date)
+          "y":
+          - Total Quantity Purchased
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(Sales Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity Purchased\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c685f746-739d-45e2-a7f2-60cb40043b4d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity Purchased\"],\"isOpposite\": false}},{\"id\": \"2eb36ca4-1373-4333-92c8-e9fac5bd62f3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Sales Date)\"]}}],\"seriesColors\": [{\"serieName\": \"Total Quantity Purchased\",\"color\": \"#2F3947\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity Purchased\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 29e85356-b50d-42ab-90dc-819315337259
+  - id: Viz_4
+    answer:
+      name: Total Sales Amount by State
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [State] [Region] [Quantity Purchased]"
+      answer_columns:
+      - name: Region
+      - name: State
+      - name: Total Quantity Purchased
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: Region
+          show_headline: false
+        - column_id: State
+          show_headline: false
+        - column_id: Total Quantity Purchased
+          show_headline: false
+        - column_id: Total Sales Amount
+          show_headline: false
+        ordered_column_ids:
+        - State
+        - Region
+        - Total Sales Amount
+        - Total Quantity Purchased
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: Region
+        - column_id: State
+        - column_id: Total Quantity Purchased
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - State
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.0815372462017208E7,4944187.994859374],\"zoomLevel\": 4.423940561878792,\"extent\": [-1.60771353539544E7,1877561.1118938997,-5553609.570080015,8010814.8778248485]},\"chartSpecific\": {\"customProps\": \"{\\\"tileType\\\":\\\"light-v9\\\"}\",\"pivotSummariesState\": {}},\"showStackedLabels\": false,\"allLabels\": false},\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {\"dataLabels\": false,\"conditionalFormatting\": {\"rows\": [{\"backgroundFormatType\": \"GRADIENT\",\"gradientBackgroundAttrs\": {\"colors\": [\"#F04152\",\"#BEC6D0\",\"#47515F\"],\"backgroundFormatRange\": [1.94172096E7,4.31395175E7,6.68618254E7]},\"solidBackgroundAttrs\": {},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}}],\"axisProperties\": [{\"id\": \"92a360f7-c72b-48d5-8379-577e8aab925e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"7184c0d7-5665-46ab-a3a1-e34f3d5ad795\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"]}}],\"multiColorSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"colorMap\": [{\"serieName\": \"State\",\"color\": [\"#a6d2ff\",\"#3873c1\"]}]}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"colorMap\": [{\"serieName\": \"State\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: c4613537-d1fe-4dac-9df5-52026b4fc950
+    action_object_associations:
+    - action_name: Open Case
+      context: MENU
+      enabled: true
+  - id: Viz_5
+    answer:
+      name: Total Sales Amount by Monthly Sales Date
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].yearly"
+      answer_columns:
+      - name: Total Sales Amount
+      - name: Year(Sales Date)
+      table:
+        table_columns:
+        - column_id: Total Sales Amount
+          show_headline: false
+        - column_id: Year(Sales Date)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales Amount
+        - column_id: Year(Sales Date)
+        axis_configs:
+        - x:
+          - Year(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales Amount\",\"columnProperty\": {}},{\"columnId\": \"Year(Sales Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7da6d839-f0b5-463d-90cf-a29ad3dde60b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales Amount\"],\"isOpposite\": false}},{\"id\": \"82567dc1-c416-4540-a37b-87fd4a1c5b65\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Sales Date)\"]}}],\"seriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#2F3947\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales Amount\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 7eb3c623-8555-46dd-ab5b-d62f1ef9a4f3
+  - id: Viz_6
+    answer:
+      name: Total Sales Comparison
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      formulas:
+      - id: formula__salesQty
+        name: _salesQty
+        expr: "sum ( [Sales Amount] ) / sum ( [Quantity Purchased] ) "
+        was_auto_generated: false
+      search_query: "sum [Sales Amount] [Region] sort by [Sales Amount] descending [Sales Date].2019 vs [Sales Date].2020 [Sales Date] [Sales Date].monthly"
+      answer_columns:
+      - name: Month(Sales Date)
+      - name: Region
+      - name: Sales Amount(2019)
+      - name: Sales Amount(2020)
+      table:
+        table_columns:
+        - column_id: Month(Sales Date)
+          show_headline: false
+        - column_id: Region
+          show_headline: false
+        - column_id: Sales Amount(2019)
+          show_headline: false
+        - column_id: Sales Amount(2020)
+          show_headline: false
+        ordered_column_ids:
+        - Region
+        - Month(Sales Date)
+        - Sales Amount(2020)
+        - Sales Amount(2019)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Month(Sales Date)
+        - column_id: Region
+        - column_id: Sales Amount(2019)
+        - column_id: Sales Amount(2020)
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Sales Amount(2020)
+          - Sales Amount(2019)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"\\\",\\\"filter\\\":{\\\"operator\\\":\\\"\\\",\\\"value\\\":\\\"foo\\\"},\\\"align\\\":\\\"center\\\",\\\"style\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"maxCharacters\\\":\\\"\\\"}}}\"}},{\"columnId\": \"Month(Sales Date)\",\"columnProperty\": {}},{\"columnId\": \"Sales Amount(2020)\",\"columnProperty\": {}},{\"columnId\": \"Sales Amount(2019)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f138de0c-46a2-43e8-b62e-3b81494b145a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}},{\"id\": \"a13e92c1-4033-41d2-b31e-ec255fe19f9e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Sales Amount(2020)\",\"Sales Amount(2019)\"],\"isOpposite\": true}}],\"seriesColors\": [{\"serieName\": \"f027617a-9a65-4e78-af65-4f4d65183133\",\"color\": \"#2E75F0\"},{\"serieName\": \"1dd22c3e-1ccb-4aef-bb3d-fabecbe1a908\",\"color\": \"#2F3947\"},{\"serieName\": \"Sales Amount(2020)\",\"color\": \"#F04152\"},{\"serieName\": \"Sales Amount(2019)\",\"color\": \"#2F3947\"}],\"systemSeriesColors\": [{\"serieName\": \"f027617a-9a65-4e78-af65-4f4d65183133\",\"color\": \"#2E75F0\"},{\"serieName\": \"1dd22c3e-1ccb-4aef-bb3d-fabecbe1a908\",\"color\": \"#2F3947\"},{\"serieName\": \"Sales Amount(2020)\",\"color\": \"#48D1E0\"},{\"serieName\": \"Sales Amount(2019)\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Data Security
+        value: abgdezetiklmnzoprstupcpos
+    viz_guid: 62d17f45-403d-4c83-bd09-7f9b7605ca49
+  groups:
+  - id: Group_1
+    name: Key Indicators
+    visualizations:
+    - Viz_5
+    - Viz_2
+    - Viz_3
+    group_guid: 3dfc789e-88bf-44e7-b437-7a4184c5be91
+  filters:
+  - column:
+    - Product Type
+    oper: in
+    values:
+    - "{null}"
+    - Bags
+    - Dresses
+    - Headwear
+    - Jackets
+    - Jeans
+    - Pants
+    - Shirts
+    - Shorts
+    - Skirts
+    - Socks
+    - Sweaters
+    - Sweatshirts
+    - Swimwear
+    - Underwear
+    - Vests
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - Region
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - State
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tabs:
+    - name: Tab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 5
+        "y": 5
+        height: 8
+        width: 5
+      - visualization_id: Viz_4
+        x: 0
+        "y": 5
+        height: 8
+        width: 5
+      - visualization_id: Viz_6
+        x: 0
+        "y": 13
+        height: 4
+        width: 10
+      - visualization_id: Group_1
+        x: 0
+        "y": 0
+        height: 5
+        width: 10
+      id: dce6c67b-c17b-4b74-a46d-209924a09b7b
+      group_layouts:
+      - id: Group_1
+        tiles:
+        - visualization_id: Viz_2
+          x: 4
+          "y": 0
+          height: 5
+          width: 4
+        - visualization_id: Viz_5
+          x: 8
+          "y": 0
+          height: 5
+          width: 4
+        - visualization_id: Viz_3
+          x: 0
+          "y": 0
+          height: 5
+          width: 4
+  ordered_chips:
+  - name: Product Type
+    type: FILTER
+  - name: Region
+    type: FILTER
+  - name: State
+    type: FILTER
+  views:
+  - view_guid: a09436be-b646-4432-bb9e-3148e6f11de1
+    name: Shorts
+    view_filters:
+    - column:
+      - Product Type
+      oper: in
+      values:
+      - shorts
+    - column:
+      - Region
+      oper: in
+    - column:
+      - State
+      oper: in
+    is_public: true
+  - view_guid: 1e6b7aca-7756-4711-9611-ad71a811a37f
+    name: Jeans
+    view_filters:
+    - column:
+      - Product Type
+      oper: in
+      values:
+      - Jeans
+    - column:
+      - Region
+      oper: in
+    - column:
+      - State
+      oper: in
+    is_public: true
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "true"
+    - name: hide_group_tile_description
+      value: "true"
+    - name: hide_tile_description
+      value: "true"
+
+-------
+Finished bringing all LIVEBOARD objects to disk
+Current epoch
+1761244481000
