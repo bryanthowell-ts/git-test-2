@@ -2,6 +2,3001 @@ Searching for org_id for Ron Dugger
 org_id 33363357 found
 Requesting object listing
 12 objects retrieved
+[
+  {
+    "edoc": "obj_id: RAD-DeleteMe-8da8c938\ntable:\n  name: RAD - Delete Me\n  db: CSVUPLOADS\n  schema: PUBLIC\n  db_table: rad - delete me_66b96479-2324-4392-8b27-48f592c2e8fa\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Account Name\n    db_column_name: Account Name\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Name\n    db_column_name: Opportunity Name\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Created Date\n    db_column_name: Created Date\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: Close Date\n    db_column_name: Close Date\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: Days Open\n    db_column_name: Days Open\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Stage\n    db_column_name: Stage\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: \"Opportunity: Prior Stage\"\n    db_column_name: \"Opportunity: Prior Stage\"\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Competitors\n    db_column_name: Competitors\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Deployment Forecast\n    db_column_name: Opportunity Deployment Forecast\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Disqualified/Downsell Reason\n    db_column_name: Opportunity Disqualified/Downsell Reason\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity DQ/Downsell Comment\n    db_column_name: Opportunity DQ/Downsell Comment\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Region\n    db_column_name: Opportunity Region\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Industry\n    db_column_name: Account Industry\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Cloud Data Warehouse\n    db_column_name: Opportunity Cloud Data Warehouse\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: TCV Currency\n    db_column_name: TCV Currency\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: TCV\n    db_column_name: TCV\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Opportunity Net ACV Currency\n    db_column_name: Opportunity Net ACV Currency\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Net ACV\n    db_column_name: Opportunity Net ACV\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Opportunity Type\n    db_column_name: Opportunity Type\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Product Type\n    db_column_name: Opportunity Product Type\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Owner\n    db_column_name: Account Owner\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Product Edition(s) Sold\n    db_column_name: Account Product Edition(s) Sold\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Product Offering(s) Sold\n    db_column_name: Account Product Offering(s) Sold\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Product Edition (s) Sold\n    db_column_name: Product Edition (s) Sold\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Product Category\n    db_column_name: Opportunity Product Category\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Secondary Loss/Downsell Reason\n    db_column_name: Secondary Loss/Downsell Reason\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Presale Notes\n    db_column_name: Opportunity Presale Notes\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity ID\n    db_column_name: Opportunity ID\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity BVA Next Steps\n    db_column_name: Opportunity BVA Next Steps\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CS Next Step\n    db_column_name: CS Next Step\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CS Next Step Detail\n    db_column_name: CS Next Step Detail\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: \"Opportunity: TSE Specialist Notes\"\n    db_column_name: \"Opportunity: TSE Specialist Notes\"\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Mode Next Steps (CSM Notes)\n    db_column_name: Mode Next Steps (CSM Notes)\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CS Next Step History\n    db_column_name: CS Next Step History\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SDR Next Step\n    db_column_name: SDR Next Step\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  properties:\n    spotter_config:\n      is_spotter_enabled: true\n",
+    "info": {
+      "filename": "RAD - Delete Me.table.tml",
+      "name": "RAD - Delete Me",
+      "id": "8da8c938-c8fa-4827-9b39-e4933e01ce40",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: RAD-DeleteMe-8da8c938
+table:
+  name: RAD - Delete Me
+  db: CSVUPLOADS
+  schema: PUBLIC
+  db_table: rad - delete me_66b96479-2324-4392-8b27-48f592c2e8fa
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Account Name
+    db_column_name: Account Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Name
+    db_column_name: Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Created Date
+    db_column_name: Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: Close Date
+    db_column_name: Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: Days Open
+    db_column_name: Days Open
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Stage
+    db_column_name: Stage
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: "Opportunity: Prior Stage"
+    db_column_name: "Opportunity: Prior Stage"
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Competitors
+    db_column_name: Competitors
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Deployment Forecast
+    db_column_name: Opportunity Deployment Forecast
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Disqualified/Downsell Reason
+    db_column_name: Opportunity Disqualified/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity DQ/Downsell Comment
+    db_column_name: Opportunity DQ/Downsell Comment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Region
+    db_column_name: Opportunity Region
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Industry
+    db_column_name: Account Industry
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Cloud Data Warehouse
+    db_column_name: Opportunity Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TCV Currency
+    db_column_name: TCV Currency
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TCV
+    db_column_name: TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Net ACV Currency
+    db_column_name: Opportunity Net ACV Currency
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Net ACV
+    db_column_name: Opportunity Net ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Type
+    db_column_name: Opportunity Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Type
+    db_column_name: Opportunity Product Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Owner
+    db_column_name: Account Owner
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Product Edition(s) Sold
+    db_column_name: Account Product Edition(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Product Offering(s) Sold
+    db_column_name: Account Product Offering(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Product Edition (s) Sold
+    db_column_name: Product Edition (s) Sold
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Category
+    db_column_name: Opportunity Product Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Secondary Loss/Downsell Reason
+    db_column_name: Secondary Loss/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Presale Notes
+    db_column_name: Opportunity Presale Notes
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity ID
+    db_column_name: Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity BVA Next Steps
+    db_column_name: Opportunity BVA Next Steps
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CS Next Step
+    db_column_name: CS Next Step
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CS Next Step Detail
+    db_column_name: CS Next Step Detail
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: "Opportunity: TSE Specialist Notes"
+    db_column_name: "Opportunity: TSE Specialist Notes"
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Mode Next Steps (CSM Notes)
+    db_column_name: Mode Next Steps (CSM Notes)
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CS Next Step History
+    db_column_name: CS Next Step History
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SDR Next Step
+    db_column_name: SDR Next Step
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    spotter_config:
+      is_spotter_enabled: true
+
+-------
+[
+  {
+    "edoc": "obj_id: Nov24_Apr25_TSE_WinAndLoss-ee840cb2\ntable:\n  name: Nov24_Apr25_TSE_WinAndLoss\n  db: CSVUPLOADS\n  schema: PUBLIC\n  db_table: nov24_apr25_tse_winandloss_8c3213a8-2418-4c92-bdf9-0d6e2c849de5\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Account Name\n    db_column_name: Account Name\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Name\n    db_column_name: Opportunity Name\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Created Date\n    db_column_name: Created Date\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: Close Date\n    db_column_name: Close Date\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: Days Open\n    db_column_name: Days Open\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Stage\n    db_column_name: Stage\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: \"Opportunity: Prior Stage\"\n    db_column_name: \"Opportunity: Prior Stage\"\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Competitors\n    db_column_name: Competitors\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Deployment Forecast\n    db_column_name: Opportunity Deployment Forecast\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Disqualified/Downsell Reason\n    db_column_name: Opportunity Disqualified/Downsell Reason\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity DQ/Downsell Comment\n    db_column_name: Opportunity DQ/Downsell Comment\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Region\n    db_column_name: Opportunity Region\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Industry\n    db_column_name: Account Industry\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Cloud Data Warehouse\n    db_column_name: Opportunity Cloud Data Warehouse\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: TCV Currency\n    db_column_name: TCV Currency\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: TCV\n    db_column_name: TCV\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Opportunity Net ACV Currency\n    db_column_name: Opportunity Net ACV Currency\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Net ACV\n    db_column_name: Opportunity Net ACV\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Opportunity Type\n    db_column_name: Opportunity Type\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Product Type\n    db_column_name: Opportunity Product Type\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Owner\n    db_column_name: Account Owner\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Product Edition(s) Sold\n    db_column_name: Account Product Edition(s) Sold\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Product Offering(s) Sold\n    db_column_name: Account Product Offering(s) Sold\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Product Edition (s) Sold\n    db_column_name: Product Edition (s) Sold\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Product Category\n    db_column_name: Opportunity Product Category\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Secondary Loss/Downsell Reason\n    db_column_name: Secondary Loss/Downsell Reason\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Presale Notes\n    db_column_name: Opportunity Presale Notes\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity ID\n    db_column_name: Opportunity ID\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity BVA Next Steps\n    db_column_name: Opportunity BVA Next Steps\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CS Next Step\n    db_column_name: CS Next Step\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CS Next Step Detail\n    db_column_name: CS Next Step Detail\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: \"Opportunity: TSE Specialist Notes\"\n    db_column_name: \"Opportunity: TSE Specialist Notes\"\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Mode Next Steps (CSM Notes)\n    db_column_name: Mode Next Steps (CSM Notes)\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CS Next Step History\n    db_column_name: CS Next Step History\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SDR Next Step\n    db_column_name: SDR Next Step\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  properties:\n    spotter_config:\n      is_spotter_enabled: false\n",
+    "info": {
+      "filename": "Nov24_Apr25_TSE_WinAndLoss.table.tml",
+      "name": "Nov24_Apr25_TSE_WinAndLoss",
+      "id": "ee840cb2-3238-42a0-9a9f-92a0857a5e8a",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: Nov24_Apr25_TSE_WinAndLoss-ee840cb2
+table:
+  name: Nov24_Apr25_TSE_WinAndLoss
+  db: CSVUPLOADS
+  schema: PUBLIC
+  db_table: nov24_apr25_tse_winandloss_8c3213a8-2418-4c92-bdf9-0d6e2c849de5
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Account Name
+    db_column_name: Account Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Name
+    db_column_name: Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Created Date
+    db_column_name: Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: Close Date
+    db_column_name: Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: Days Open
+    db_column_name: Days Open
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Stage
+    db_column_name: Stage
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: "Opportunity: Prior Stage"
+    db_column_name: "Opportunity: Prior Stage"
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Competitors
+    db_column_name: Competitors
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Deployment Forecast
+    db_column_name: Opportunity Deployment Forecast
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Disqualified/Downsell Reason
+    db_column_name: Opportunity Disqualified/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity DQ/Downsell Comment
+    db_column_name: Opportunity DQ/Downsell Comment
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Region
+    db_column_name: Opportunity Region
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Industry
+    db_column_name: Account Industry
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Cloud Data Warehouse
+    db_column_name: Opportunity Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TCV Currency
+    db_column_name: TCV Currency
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TCV
+    db_column_name: TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Net ACV Currency
+    db_column_name: Opportunity Net ACV Currency
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Net ACV
+    db_column_name: Opportunity Net ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Type
+    db_column_name: Opportunity Type
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Type
+    db_column_name: Opportunity Product Type
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Owner
+    db_column_name: Account Owner
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Product Edition(s) Sold
+    db_column_name: Account Product Edition(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Product Offering(s) Sold
+    db_column_name: Account Product Offering(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Product Edition (s) Sold
+    db_column_name: Product Edition (s) Sold
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Category
+    db_column_name: Opportunity Product Category
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Secondary Loss/Downsell Reason
+    db_column_name: Secondary Loss/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Presale Notes
+    db_column_name: Opportunity Presale Notes
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity ID
+    db_column_name: Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity BVA Next Steps
+    db_column_name: Opportunity BVA Next Steps
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CS Next Step
+    db_column_name: CS Next Step
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CS Next Step Detail
+    db_column_name: CS Next Step Detail
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: "Opportunity: TSE Specialist Notes"
+    db_column_name: "Opportunity: TSE Specialist Notes"
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Mode Next Steps (CSM Notes)
+    db_column_name: Mode Next Steps (CSM Notes)
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CS Next Step History
+    db_column_name: CS Next Step History
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SDR Next Step
+    db_column_name: SDR Next Step
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    spotter_config:
+      is_spotter_enabled: false
+
+-------
+[
+  {
+    "edoc": "obj_id: TSENovApr25Losses-bfbfed91\ntable:\n  name: TSE NovApr25 Losses\n  db: CSVUPLOADS\n  schema: PUBLIC\n  db_table: tse novapr25 losses_6087e7e8-136b-4bdc-82c3-3fb8dc5bb845\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Account Name\n    db_column_name: Account Name\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Name\n    db_column_name: Opportunity Name\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Created Date\n    db_column_name: Created Date\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: Close Date\n    db_column_name: Close Date\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: Days Open\n    db_column_name: Days Open\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Stage\n    db_column_name: Stage\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: \"Opportunity: Prior Stage\"\n    db_column_name: \"Opportunity: Prior Stage\"\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Competitors\n    db_column_name: Competitors\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Deployment Forecast\n    db_column_name: Opportunity Deployment Forecast\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Disqualified/Downsell Reason\n    db_column_name: Opportunity Disqualified/Downsell Reason\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity DQ/Downsell Comment\n    db_column_name: Opportunity DQ/Downsell Comment\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Region\n    db_column_name: Opportunity Region\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Industry\n    db_column_name: Account Industry\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Cloud Data Warehouse\n    db_column_name: Opportunity Cloud Data Warehouse\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: TCV Currency\n    db_column_name: TCV Currency\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: TCV\n    db_column_name: TCV\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Opportunity Net ACV Currency\n    db_column_name: Opportunity Net ACV Currency\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Net ACV\n    db_column_name: Opportunity Net ACV\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Opportunity Type\n    db_column_name: Opportunity Type\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Product Type\n    db_column_name: Opportunity Product Type\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Owner\n    db_column_name: Account Owner\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Product Edition(s) Sold\n    db_column_name: Account Product Edition(s) Sold\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Product Offering(s) Sold\n    db_column_name: Account Product Offering(s) Sold\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Product Edition (s) Sold\n    db_column_name: Product Edition (s) Sold\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Product Category\n    db_column_name: Opportunity Product Category\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Secondary Loss/Downsell Reason\n    db_column_name: Secondary Loss/Downsell Reason\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Presale Notes\n    db_column_name: Opportunity Presale Notes\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity ID\n    db_column_name: Opportunity ID\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  properties:\n    spotter_config:\n      is_spotter_enabled: false\n",
+    "info": {
+      "filename": "TSE NovApr25 Losses.table.tml",
+      "name": "TSE NovApr25 Losses",
+      "id": "bfbfed91-f97c-4eb3-8e40-be540ae0dba3",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: TSENovApr25Losses-bfbfed91
+table:
+  name: TSE NovApr25 Losses
+  db: CSVUPLOADS
+  schema: PUBLIC
+  db_table: tse novapr25 losses_6087e7e8-136b-4bdc-82c3-3fb8dc5bb845
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Account Name
+    db_column_name: Account Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Name
+    db_column_name: Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Created Date
+    db_column_name: Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: Close Date
+    db_column_name: Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: Days Open
+    db_column_name: Days Open
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Stage
+    db_column_name: Stage
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: "Opportunity: Prior Stage"
+    db_column_name: "Opportunity: Prior Stage"
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Competitors
+    db_column_name: Competitors
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Deployment Forecast
+    db_column_name: Opportunity Deployment Forecast
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Disqualified/Downsell Reason
+    db_column_name: Opportunity Disqualified/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity DQ/Downsell Comment
+    db_column_name: Opportunity DQ/Downsell Comment
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Region
+    db_column_name: Opportunity Region
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Industry
+    db_column_name: Account Industry
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Cloud Data Warehouse
+    db_column_name: Opportunity Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TCV Currency
+    db_column_name: TCV Currency
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TCV
+    db_column_name: TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Net ACV Currency
+    db_column_name: Opportunity Net ACV Currency
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Net ACV
+    db_column_name: Opportunity Net ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Type
+    db_column_name: Opportunity Type
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Type
+    db_column_name: Opportunity Product Type
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Owner
+    db_column_name: Account Owner
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Product Edition(s) Sold
+    db_column_name: Account Product Edition(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Product Offering(s) Sold
+    db_column_name: Account Product Offering(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Product Edition (s) Sold
+    db_column_name: Product Edition (s) Sold
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Category
+    db_column_name: Opportunity Product Category
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Secondary Loss/Downsell Reason
+    db_column_name: Secondary Loss/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Presale Notes
+    db_column_name: Opportunity Presale Notes
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity ID
+    db_column_name: Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    spotter_config:
+      is_spotter_enabled: false
+
+-------
+[
+  {
+    "edoc": "obj_id: Jan_Apr25_TSE_Loss3-a8f9869f\ntable:\n  name: Jan_Apr25_TSE_Loss3\n  db: CSVUPLOADS\n  schema: PUBLIC\n  db_table: jan_apr25_tse_loss3_83b915ed-40d3-4d67-b051-662c35c1f340\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Account Name\n    db_column_name: Account Name\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Name\n    db_column_name: Opportunity Name\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Created Date\n    db_column_name: Created Date\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: Close Date\n    db_column_name: Close Date\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: Open Days\n    db_column_name: Open Days\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Stage\n    db_column_name: Stage\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: \"Opportunity: Prior Stage\"\n    db_column_name: \"Opportunity: Prior Stage\"\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Competitors\n    db_column_name: Competitors\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Disqualified/Downsell Reason\n    db_column_name: Opportunity Disqualified/Downsell Reason\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Deployment Forecast\n    db_column_name: Opportunity Deployment Forecast\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Region\n    db_column_name: Opportunity Region\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Industry\n    db_column_name: Account Industry\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Cloud Data Warehouse\n    db_column_name: Opportunity Cloud Data Warehouse\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: TCV Currency\n    db_column_name: TCV Currency\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: TCV\n    db_column_name: TCV\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Opportunity Net ACV Currency\n    db_column_name: Opportunity Net ACV Currency\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Net ACV\n    db_column_name: Opportunity Net ACV\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Opportunity Type\n    db_column_name: Opportunity Type\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Product Type\n    db_column_name: Opportunity Product Type\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Owner\n    db_column_name: Account Owner\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Product Edition(s) Sold\n    db_column_name: Account Product Edition(s) Sold\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Account Product Offering(s) Sold\n    db_column_name: Account Product Offering(s) Sold\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Product Edition (s) Sold\n    db_column_name: Product Edition (s) Sold\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Product Category\n    db_column_name: Opportunity Product Category\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Secondary Loss/Downsell Reason\n    db_column_name: Secondary Loss/Downsell Reason\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity Presale Notes\n    db_column_name: Opportunity Presale Notes\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Opportunity ID\n    db_column_name: Opportunity ID\n    properties:\n      column_type: ATTRIBUTE\n    db_column_properties:\n      data_type: VARCHAR\n  properties:\n    spotter_config:\n      is_spotter_enabled: false\n",
+    "info": {
+      "filename": "Jan_Apr25_TSE_Loss3.table.tml",
+      "name": "Jan_Apr25_TSE_Loss3",
+      "id": "a8f9869f-0592-4b56-a1c0-0f36e9213d7d",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: Jan_Apr25_TSE_Loss3-a8f9869f
+table:
+  name: Jan_Apr25_TSE_Loss3
+  db: CSVUPLOADS
+  schema: PUBLIC
+  db_table: jan_apr25_tse_loss3_83b915ed-40d3-4d67-b051-662c35c1f340
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Account Name
+    db_column_name: Account Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Name
+    db_column_name: Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Created Date
+    db_column_name: Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: Close Date
+    db_column_name: Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: Open Days
+    db_column_name: Open Days
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Stage
+    db_column_name: Stage
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: "Opportunity: Prior Stage"
+    db_column_name: "Opportunity: Prior Stage"
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Competitors
+    db_column_name: Competitors
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Disqualified/Downsell Reason
+    db_column_name: Opportunity Disqualified/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Deployment Forecast
+    db_column_name: Opportunity Deployment Forecast
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Region
+    db_column_name: Opportunity Region
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Industry
+    db_column_name: Account Industry
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Cloud Data Warehouse
+    db_column_name: Opportunity Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TCV Currency
+    db_column_name: TCV Currency
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TCV
+    db_column_name: TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Net ACV Currency
+    db_column_name: Opportunity Net ACV Currency
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Net ACV
+    db_column_name: Opportunity Net ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Opportunity Type
+    db_column_name: Opportunity Type
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Type
+    db_column_name: Opportunity Product Type
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Owner
+    db_column_name: Account Owner
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Product Edition(s) Sold
+    db_column_name: Account Product Edition(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Account Product Offering(s) Sold
+    db_column_name: Account Product Offering(s) Sold
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Product Edition (s) Sold
+    db_column_name: Product Edition (s) Sold
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Product Category
+    db_column_name: Opportunity Product Category
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Secondary Loss/Downsell Reason
+    db_column_name: Secondary Loss/Downsell Reason
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity Presale Notes
+    db_column_name: Opportunity Presale Notes
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Opportunity ID
+    db_column_name: Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    spotter_config:
+      is_spotter_enabled: false
+
+-------
+[
+  {
+    "edoc": "obj_id: Sample-Superstore-Orders.csv-b03a6f0b\ntable:\n  name: Sample - Superstore - Orders.csv\n  db: CSVUPLOADS\n  schema: PUBLIC\n  db_table: sample - superstore - orders.csv_73ccd9a8-95f7-48ab-90b0-4acc985046e5\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Row ID\n    db_column_name: Row ID\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Order ID\n    db_column_name: Order ID\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Ship Date\n    db_column_name: Ship Date\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: Order Date\n    db_column_name: Order Date\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: Ship Mode\n    db_column_name: Ship Mode\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Customer ID\n    db_column_name: Customer ID\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Customer Name\n    db_column_name: Customer Name\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Segment\n    db_column_name: Segment\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Country\n    db_column_name: Country\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: City\n    db_column_name: City\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: State\n    db_column_name: State\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Postal Code\n    db_column_name: Postal Code\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Region\n    db_column_name: Region\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Product ID\n    db_column_name: Product ID\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Category\n    db_column_name: Category\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Sub-Category\n    db_column_name: Sub-Category\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Product Name\n    db_column_name: Product Name\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Sales\n    db_column_name: Sales\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Quantity\n    db_column_name: Quantity\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Discount\n    db_column_name: Discount\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Profit\n    db_column_name: Profit\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  properties:\n    spotter_config:\n      is_spotter_enabled: false\n",
+    "info": {
+      "filename": "Sample - Superstore - Orders.csv.table.tml",
+      "name": "Sample - Superstore - Orders.csv",
+      "id": "b03a6f0b-8370-4afe-9bdb-a792e27b83bb",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: Sample-Superstore-Orders.csv-b03a6f0b
+table:
+  name: Sample - Superstore - Orders.csv
+  db: CSVUPLOADS
+  schema: PUBLIC
+  db_table: sample - superstore - orders.csv_73ccd9a8-95f7-48ab-90b0-4acc985046e5
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Row ID
+    db_column_name: Row ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Order ID
+    db_column_name: Order ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Ship Date
+    db_column_name: Ship Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: Order Date
+    db_column_name: Order Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: Ship Mode
+    db_column_name: Ship Mode
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer ID
+    db_column_name: Customer ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer Name
+    db_column_name: Customer Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Segment
+    db_column_name: Segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Country
+    db_column_name: Country
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: City
+    db_column_name: City
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: State
+    db_column_name: State
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Postal Code
+    db_column_name: Postal Code
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Region
+    db_column_name: Region
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Product ID
+    db_column_name: Product ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Category
+    db_column_name: Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Sub-Category
+    db_column_name: Sub-Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Product Name
+    db_column_name: Product Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Sales
+    db_column_name: Sales
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Quantity
+    db_column_name: Quantity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Discount
+    db_column_name: Discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Profit
+    db_column_name: Profit
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  properties:
+    spotter_config:
+      is_spotter_enabled: false
+
+-------
+[
+  {
+    "edoc": "obj_id: TSEMBEDDevOrgExport-Leads-7f406ec1\ntable:\n  name: TSEMBED Dev Org Export - Leads\n  db: CSVUPLOADS\n  schema: PUBLIC\n  db_table: tsembed dev org export - leads_3720dabf-f3a0-4b9c-af53-5d8d6a3878c4\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Id\n    db_column_name: Id\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: IsDeleted\n    db_column_name: IsDeleted\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: MasterRecordId\n    db_column_name: MasterRecordId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Salutation\n    db_column_name: Salutation\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: FirstName\n    db_column_name: FirstName\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: LastName\n    db_column_name: LastName\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Title\n    db_column_name: Title\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Company\n    db_column_name: Company\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Street\n    db_column_name: Street\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: City\n    db_column_name: City\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: State\n    db_column_name: State\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: PostalCode\n    db_column_name: PostalCode\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Country\n    db_column_name: Country\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Latitude\n    db_column_name: Latitude\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Longitude\n    db_column_name: Longitude\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: GeocodeAccuracy\n    db_column_name: GeocodeAccuracy\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Phone\n    db_column_name: Phone\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: MobilePhone\n    db_column_name: MobilePhone\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Fax\n    db_column_name: Fax\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Email\n    db_column_name: Email\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Website\n    db_column_name: Website\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Description\n    db_column_name: Description\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: LeadSource\n    db_column_name: LeadSource\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Status\n    db_column_name: Status\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Industry\n    db_column_name: Industry\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Rating\n    db_column_name: Rating\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: AnnualRevenue\n    db_column_name: AnnualRevenue\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: NumberOfEmployees\n    db_column_name: NumberOfEmployees\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: OwnerId\n    db_column_name: OwnerId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: HasOptedOutOfEmail\n    db_column_name: HasOptedOutOfEmail\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: IsConverted\n    db_column_name: IsConverted\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: ConvertedDate\n    db_column_name: ConvertedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ConvertedAccountId\n    db_column_name: ConvertedAccountId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ConvertedContactId\n    db_column_name: ConvertedContactId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ConvertedOpportunityId\n    db_column_name: ConvertedOpportunityId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: IsUnreadByOwner\n    db_column_name: IsUnreadByOwner\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: CreatedDate\n    db_column_name: CreatedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: CreatedById\n    db_column_name: CreatedById\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: LastModifiedDate\n    db_column_name: LastModifiedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: LastModifiedById\n    db_column_name: LastModifiedById\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SystemModstamp\n    db_column_name: SystemModstamp\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: LastActivityDate\n    db_column_name: LastActivityDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: DoNotCall\n    db_column_name: DoNotCall\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: HasOptedOutOfFax\n    db_column_name: HasOptedOutOfFax\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: LastTransferDate\n    db_column_name: LastTransferDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: PartnerAccountId\n    db_column_name: PartnerAccountId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Jigsaw\n    db_column_name: Jigsaw\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: JigsawContactId\n    db_column_name: JigsawContactId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CleanStatus\n    db_column_name: CleanStatus\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CompanyDunsNumber\n    db_column_name: CompanyDunsNumber\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: DandbCompanyId\n    db_column_name: DandbCompanyId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: EmailBouncedReason\n    db_column_name: EmailBouncedReason\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: EmailBouncedDate\n    db_column_name: EmailBouncedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: IndividualId\n    db_column_name: IndividualId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Pronouns\n    db_column_name: Pronouns\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: GenderIdentity\n    db_column_name: GenderIdentity\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SICCode__c\n    db_column_name: SICCode__c\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: ProductInterest__c\n    db_column_name: ProductInterest__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Primary__c\n    db_column_name: Primary__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CurrentGenerators__c\n    db_column_name: CurrentGenerators__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: NumberofLocations__c\n    db_column_name: NumberofLocations__c\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  properties:\n    spotter_config:\n      is_spotter_enabled: false\n",
+    "info": {
+      "filename": "TSEMBED Dev Org Export - Leads.table.tml",
+      "name": "TSEMBED Dev Org Export - Leads",
+      "id": "7f406ec1-b579-4a41-8be4-6f716e6460df",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: TSEMBEDDevOrgExport-Leads-7f406ec1
+table:
+  name: TSEMBED Dev Org Export - Leads
+  db: CSVUPLOADS
+  schema: PUBLIC
+  db_table: tsembed dev org export - leads_3720dabf-f3a0-4b9c-af53-5d8d6a3878c4
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Id
+    db_column_name: Id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: IsDeleted
+    db_column_name: IsDeleted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: MasterRecordId
+    db_column_name: MasterRecordId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Salutation
+    db_column_name: Salutation
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: FirstName
+    db_column_name: FirstName
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LastName
+    db_column_name: LastName
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Title
+    db_column_name: Title
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Company
+    db_column_name: Company
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Street
+    db_column_name: Street
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: City
+    db_column_name: City
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: State
+    db_column_name: State
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PostalCode
+    db_column_name: PostalCode
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Country
+    db_column_name: Country
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Latitude
+    db_column_name: Latitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Longitude
+    db_column_name: Longitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: GeocodeAccuracy
+    db_column_name: GeocodeAccuracy
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Phone
+    db_column_name: Phone
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: MobilePhone
+    db_column_name: MobilePhone
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Fax
+    db_column_name: Fax
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Email
+    db_column_name: Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Website
+    db_column_name: Website
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Description
+    db_column_name: Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LeadSource
+    db_column_name: LeadSource
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Status
+    db_column_name: Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Industry
+    db_column_name: Industry
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Rating
+    db_column_name: Rating
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AnnualRevenue
+    db_column_name: AnnualRevenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: NumberOfEmployees
+    db_column_name: NumberOfEmployees
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: OwnerId
+    db_column_name: OwnerId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HasOptedOutOfEmail
+    db_column_name: HasOptedOutOfEmail
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: IsConverted
+    db_column_name: IsConverted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ConvertedDate
+    db_column_name: ConvertedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ConvertedAccountId
+    db_column_name: ConvertedAccountId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ConvertedContactId
+    db_column_name: ConvertedContactId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ConvertedOpportunityId
+    db_column_name: ConvertedOpportunityId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: IsUnreadByOwner
+    db_column_name: IsUnreadByOwner
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: CreatedDate
+    db_column_name: CreatedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: CreatedById
+    db_column_name: CreatedById
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LastModifiedDate
+    db_column_name: LastModifiedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: LastModifiedById
+    db_column_name: LastModifiedById
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SystemModstamp
+    db_column_name: SystemModstamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: LastActivityDate
+    db_column_name: LastActivityDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DoNotCall
+    db_column_name: DoNotCall
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: HasOptedOutOfFax
+    db_column_name: HasOptedOutOfFax
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LastTransferDate
+    db_column_name: LastTransferDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: PartnerAccountId
+    db_column_name: PartnerAccountId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Jigsaw
+    db_column_name: Jigsaw
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JigsawContactId
+    db_column_name: JigsawContactId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CleanStatus
+    db_column_name: CleanStatus
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CompanyDunsNumber
+    db_column_name: CompanyDunsNumber
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DandbCompanyId
+    db_column_name: DandbCompanyId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: EmailBouncedReason
+    db_column_name: EmailBouncedReason
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: EmailBouncedDate
+    db_column_name: EmailBouncedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: IndividualId
+    db_column_name: IndividualId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Pronouns
+    db_column_name: Pronouns
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: GenderIdentity
+    db_column_name: GenderIdentity
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SICCode__c
+    db_column_name: SICCode__c
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ProductInterest__c
+    db_column_name: ProductInterest__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Primary__c
+    db_column_name: Primary__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CurrentGenerators__c
+    db_column_name: CurrentGenerators__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NumberofLocations__c
+    db_column_name: NumberofLocations__c
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  properties:
+    spotter_config:
+      is_spotter_enabled: false
+
+-------
+[
+  {
+    "edoc": "obj_id: TSEMBEDDevOrgExport-Account-04a39745\ntable:\n  name: TSEMBED Dev Org Export - Account\n  db: CSVUPLOADS\n  schema: PUBLIC\n  db_table: tsembed dev org export - account_0f4f23bc-1023-4dfb-8352-b42419e6ce06\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Id\n    db_column_name: Id\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: IsDeleted\n    db_column_name: IsDeleted\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: MasterRecordId\n    db_column_name: MasterRecordId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Name\n    db_column_name: Name\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Type\n    db_column_name: Type\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ParentId\n    db_column_name: ParentId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: BillingStreet\n    db_column_name: BillingStreet\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: BillingCity\n    db_column_name: BillingCity\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: BillingState\n    db_column_name: BillingState\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: BillingPostalCode\n    db_column_name: BillingPostalCode\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: BillingCountry\n    db_column_name: BillingCountry\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: BillingLatitude\n    db_column_name: BillingLatitude\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: BillingLongitude\n    db_column_name: BillingLongitude\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: BillingGeocodeAccuracy\n    db_column_name: BillingGeocodeAccuracy\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ShippingStreet\n    db_column_name: ShippingStreet\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ShippingCity\n    db_column_name: ShippingCity\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ShippingState\n    db_column_name: ShippingState\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ShippingPostalCode\n    db_column_name: ShippingPostalCode\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: ShippingCountry\n    db_column_name: ShippingCountry\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ShippingLatitude\n    db_column_name: ShippingLatitude\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ShippingLongitude\n    db_column_name: ShippingLongitude\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ShippingGeocodeAccuracy\n    db_column_name: ShippingGeocodeAccuracy\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Phone\n    db_column_name: Phone\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Fax\n    db_column_name: Fax\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: AccountNumber\n    db_column_name: AccountNumber\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Website\n    db_column_name: Website\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Sic\n    db_column_name: Sic\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Industry\n    db_column_name: Industry\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: AnnualRevenue\n    db_column_name: AnnualRevenue\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: NumberOfEmployees\n    db_column_name: NumberOfEmployees\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Ownership\n    db_column_name: Ownership\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: TickerSymbol\n    db_column_name: TickerSymbol\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Description\n    db_column_name: Description\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Rating\n    db_column_name: Rating\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Site\n    db_column_name: Site\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: OwnerId\n    db_column_name: OwnerId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CreatedDate\n    db_column_name: CreatedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: CreatedById\n    db_column_name: CreatedById\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: LastModifiedDate\n    db_column_name: LastModifiedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: LastModifiedById\n    db_column_name: LastModifiedById\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SystemModstamp\n    db_column_name: SystemModstamp\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: LastActivityDate\n    db_column_name: LastActivityDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Jigsaw\n    db_column_name: Jigsaw\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: JigsawCompanyId\n    db_column_name: JigsawCompanyId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CleanStatus\n    db_column_name: CleanStatus\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: AccountSource\n    db_column_name: AccountSource\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: DunsNumber\n    db_column_name: DunsNumber\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Tradestyle\n    db_column_name: Tradestyle\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: NaicsCode\n    db_column_name: NaicsCode\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: NaicsDesc\n    db_column_name: NaicsDesc\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: YearStarted\n    db_column_name: YearStarted\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SicDesc\n    db_column_name: SicDesc\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: DandbCompanyId\n    db_column_name: DandbCompanyId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: OperatingHoursId\n    db_column_name: OperatingHoursId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CustomerPriority__c\n    db_column_name: CustomerPriority__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SLA__c\n    db_column_name: SLA__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Active__c\n    db_column_name: Active__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: NumberofLocations__c\n    db_column_name: NumberofLocations__c\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: UpsellOpportunity__c\n    db_column_name: UpsellOpportunity__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SLASerialNumber__c\n    db_column_name: SLASerialNumber__c\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: SLAExpirationDate__c\n    db_column_name: SLAExpirationDate__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: yyyy-MM-dd HH:mm:ss\n    db_column_properties:\n      data_type: DATE_TIME\n  properties:\n    spotter_config:\n      is_spotter_enabled: false\n",
+    "info": {
+      "filename": "TSEMBED Dev Org Export - Account.table.tml",
+      "name": "TSEMBED Dev Org Export - Account",
+      "id": "04a39745-d5e1-47d6-b6b7-a37bfd7a98a4",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: TSEMBEDDevOrgExport-Account-04a39745
+table:
+  name: TSEMBED Dev Org Export - Account
+  db: CSVUPLOADS
+  schema: PUBLIC
+  db_table: tsembed dev org export - account_0f4f23bc-1023-4dfb-8352-b42419e6ce06
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Id
+    db_column_name: Id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: IsDeleted
+    db_column_name: IsDeleted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: MasterRecordId
+    db_column_name: MasterRecordId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Name
+    db_column_name: Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Type
+    db_column_name: Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ParentId
+    db_column_name: ParentId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: BillingStreet
+    db_column_name: BillingStreet
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: BillingCity
+    db_column_name: BillingCity
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: BillingState
+    db_column_name: BillingState
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: BillingPostalCode
+    db_column_name: BillingPostalCode
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: BillingCountry
+    db_column_name: BillingCountry
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: BillingLatitude
+    db_column_name: BillingLatitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: BillingLongitude
+    db_column_name: BillingLongitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: BillingGeocodeAccuracy
+    db_column_name: BillingGeocodeAccuracy
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ShippingStreet
+    db_column_name: ShippingStreet
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ShippingCity
+    db_column_name: ShippingCity
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ShippingState
+    db_column_name: ShippingState
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ShippingPostalCode
+    db_column_name: ShippingPostalCode
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ShippingCountry
+    db_column_name: ShippingCountry
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ShippingLatitude
+    db_column_name: ShippingLatitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ShippingLongitude
+    db_column_name: ShippingLongitude
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ShippingGeocodeAccuracy
+    db_column_name: ShippingGeocodeAccuracy
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Phone
+    db_column_name: Phone
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Fax
+    db_column_name: Fax
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AccountNumber
+    db_column_name: AccountNumber
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Website
+    db_column_name: Website
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Sic
+    db_column_name: Sic
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Industry
+    db_column_name: Industry
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AnnualRevenue
+    db_column_name: AnnualRevenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: NumberOfEmployees
+    db_column_name: NumberOfEmployees
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Ownership
+    db_column_name: Ownership
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TickerSymbol
+    db_column_name: TickerSymbol
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Description
+    db_column_name: Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Rating
+    db_column_name: Rating
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Site
+    db_column_name: Site
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: OwnerId
+    db_column_name: OwnerId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CreatedDate
+    db_column_name: CreatedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: CreatedById
+    db_column_name: CreatedById
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LastModifiedDate
+    db_column_name: LastModifiedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: LastModifiedById
+    db_column_name: LastModifiedById
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SystemModstamp
+    db_column_name: SystemModstamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: LastActivityDate
+    db_column_name: LastActivityDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Jigsaw
+    db_column_name: Jigsaw
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: JigsawCompanyId
+    db_column_name: JigsawCompanyId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CleanStatus
+    db_column_name: CleanStatus
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AccountSource
+    db_column_name: AccountSource
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DunsNumber
+    db_column_name: DunsNumber
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Tradestyle
+    db_column_name: Tradestyle
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NaicsCode
+    db_column_name: NaicsCode
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NaicsDesc
+    db_column_name: NaicsDesc
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: YearStarted
+    db_column_name: YearStarted
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SicDesc
+    db_column_name: SicDesc
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DandbCompanyId
+    db_column_name: DandbCompanyId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: OperatingHoursId
+    db_column_name: OperatingHoursId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CustomerPriority__c
+    db_column_name: CustomerPriority__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SLA__c
+    db_column_name: SLA__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Active__c
+    db_column_name: Active__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NumberofLocations__c
+    db_column_name: NumberofLocations__c
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: UpsellOpportunity__c
+    db_column_name: UpsellOpportunity__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SLASerialNumber__c
+    db_column_name: SLASerialNumber__c
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: SLAExpirationDate__c
+    db_column_name: SLAExpirationDate__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: yyyy-MM-dd HH:mm:ss
+    db_column_properties:
+      data_type: DATE_TIME
+  properties:
+    spotter_config:
+      is_spotter_enabled: false
+
+-------
+[
+  {
+    "edoc": "obj_id: TSEMBEDDevOrgExport-Case-86a1fab3\ntable:\n  name: TSEMBED Dev Org Export - Case\n  db: CSVUPLOADS\n  schema: PUBLIC\n  db_table: tsembed dev org export - case_49d867fc-4610-468c-8a73-e26ca62ed56d\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Id\n    db_column_name: Id\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: IsDeleted\n    db_column_name: IsDeleted\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: MasterRecordId\n    db_column_name: MasterRecordId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CaseNumber\n    db_column_name: CaseNumber\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: ContactId\n    db_column_name: ContactId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: AccountId\n    db_column_name: AccountId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: AssetId\n    db_column_name: AssetId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ProductId\n    db_column_name: ProductId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: EntitlementId\n    db_column_name: EntitlementId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SourceId\n    db_column_name: SourceId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: BusinessHoursId\n    db_column_name: BusinessHoursId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ParentId\n    db_column_name: ParentId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SuppliedName\n    db_column_name: SuppliedName\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SuppliedEmail\n    db_column_name: SuppliedEmail\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SuppliedPhone\n    db_column_name: SuppliedPhone\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SuppliedCompany\n    db_column_name: SuppliedCompany\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Type\n    db_column_name: Type\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Status\n    db_column_name: Status\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Reason\n    db_column_name: Reason\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Origin\n    db_column_name: Origin\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Subject\n    db_column_name: Subject\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Priority\n    db_column_name: Priority\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Description\n    db_column_name: Description\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: IsClosed\n    db_column_name: IsClosed\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: ClosedDate\n    db_column_name: ClosedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: IsEscalated\n    db_column_name: IsEscalated\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: OwnerId\n    db_column_name: OwnerId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: IsClosedOnCreate\n    db_column_name: IsClosedOnCreate\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: SlaStartDate\n    db_column_name: SlaStartDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SlaExitDate\n    db_column_name: SlaExitDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: IsStopped\n    db_column_name: IsStopped\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: StopStartDate\n    db_column_name: StopStartDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CreatedDate\n    db_column_name: CreatedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: CreatedById\n    db_column_name: CreatedById\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: LastModifiedDate\n    db_column_name: LastModifiedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: LastModifiedById\n    db_column_name: LastModifiedById\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SystemModstamp\n    db_column_name: SystemModstamp\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: ServiceContractId\n    db_column_name: ServiceContractId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: EventsProcessedDate\n    db_column_name: EventsProcessedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: yyyy-MM-dd HH:mm:ss\n    db_column_properties:\n      data_type: DATE_TIME\n  - name: EngineeringReqNumber__c\n    db_column_name: EngineeringReqNumber__c\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: SLAViolation__c\n    db_column_name: SLAViolation__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Product__c\n    db_column_name: Product__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: PotentialLiability__c\n    db_column_name: PotentialLiability__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  properties:\n    spotter_config:\n      is_spotter_enabled: false\n",
+    "info": {
+      "filename": "TSEMBED Dev Org Export - Case.table.tml",
+      "name": "TSEMBED Dev Org Export - Case",
+      "id": "86a1fab3-baec-4ba1-ae65-3aae794d3be2",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: TSEMBEDDevOrgExport-Case-86a1fab3
+table:
+  name: TSEMBED Dev Org Export - Case
+  db: CSVUPLOADS
+  schema: PUBLIC
+  db_table: tsembed dev org export - case_49d867fc-4610-468c-8a73-e26ca62ed56d
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Id
+    db_column_name: Id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: IsDeleted
+    db_column_name: IsDeleted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: MasterRecordId
+    db_column_name: MasterRecordId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CaseNumber
+    db_column_name: CaseNumber
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ContactId
+    db_column_name: ContactId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AccountId
+    db_column_name: AccountId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AssetId
+    db_column_name: AssetId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ProductId
+    db_column_name: ProductId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: EntitlementId
+    db_column_name: EntitlementId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SourceId
+    db_column_name: SourceId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: BusinessHoursId
+    db_column_name: BusinessHoursId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ParentId
+    db_column_name: ParentId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SuppliedName
+    db_column_name: SuppliedName
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SuppliedEmail
+    db_column_name: SuppliedEmail
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SuppliedPhone
+    db_column_name: SuppliedPhone
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SuppliedCompany
+    db_column_name: SuppliedCompany
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Type
+    db_column_name: Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Status
+    db_column_name: Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Reason
+    db_column_name: Reason
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Origin
+    db_column_name: Origin
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Subject
+    db_column_name: Subject
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Priority
+    db_column_name: Priority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Description
+    db_column_name: Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: IsClosed
+    db_column_name: IsClosed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ClosedDate
+    db_column_name: ClosedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: IsEscalated
+    db_column_name: IsEscalated
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: OwnerId
+    db_column_name: OwnerId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: IsClosedOnCreate
+    db_column_name: IsClosedOnCreate
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: SlaStartDate
+    db_column_name: SlaStartDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SlaExitDate
+    db_column_name: SlaExitDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: IsStopped
+    db_column_name: IsStopped
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: StopStartDate
+    db_column_name: StopStartDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CreatedDate
+    db_column_name: CreatedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: CreatedById
+    db_column_name: CreatedById
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LastModifiedDate
+    db_column_name: LastModifiedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: LastModifiedById
+    db_column_name: LastModifiedById
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SystemModstamp
+    db_column_name: SystemModstamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: ServiceContractId
+    db_column_name: ServiceContractId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: EventsProcessedDate
+    db_column_name: EventsProcessedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: yyyy-MM-dd HH:mm:ss
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: EngineeringReqNumber__c
+    db_column_name: EngineeringReqNumber__c
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: SLAViolation__c
+    db_column_name: SLAViolation__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Product__c
+    db_column_name: Product__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PotentialLiability__c
+    db_column_name: PotentialLiability__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    spotter_config:
+      is_spotter_enabled: false
+
+-------
+[
+  {
+    "edoc": "obj_id: TSEMBEDDevOrg-Opps-02577521\ntable:\n  name: TSEMBED Dev Org - Opps\n  db: CSVUPLOADS\n  schema: PUBLIC\n  db_table: tsembed dev org export - opportunities_049affa4-032d-4a12-9d04-dc9a52ee26a3\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Id\n    db_column_name: Id\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: IsDeleted\n    db_column_name: IsDeleted\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: AccountId\n    db_column_name: AccountId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: IsPrivate\n    db_column_name: IsPrivate\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Name\n    db_column_name: Name\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Description\n    db_column_name: Description\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: StageName\n    db_column_name: StageName\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: StageSortOrder\n    db_column_name: StageSortOrder\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Amount\n    db_column_name: Amount\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Probability\n    db_column_name: Probability\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: ExpectedRevenue\n    db_column_name: ExpectedRevenue\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: TotalOpportunityQuantity\n    db_column_name: TotalOpportunityQuantity\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CloseDate\n    db_column_name: CloseDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: Type\n    db_column_name: Type\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: NextStep\n    db_column_name: NextStep\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: LeadSource\n    db_column_name: LeadSource\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: IsClosed\n    db_column_name: IsClosed\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: IsWon\n    db_column_name: IsWon\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: ForecastCategory\n    db_column_name: ForecastCategory\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ForecastCategoryName\n    db_column_name: ForecastCategoryName\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CampaignId\n    db_column_name: CampaignId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: HasOpportunityLineItem\n    db_column_name: HasOpportunityLineItem\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Pricebook2Id\n    db_column_name: Pricebook2Id\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: OwnerId\n    db_column_name: OwnerId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: CreatedDate\n    db_column_name: CreatedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: CreatedById\n    db_column_name: CreatedById\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: LastModifiedDate\n    db_column_name: LastModifiedDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: LastModifiedById\n    db_column_name: LastModifiedById\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: SystemModstamp\n    db_column_name: SystemModstamp\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      format_pattern: MM/dd/yyyy\n    db_column_properties:\n      data_type: DATE\n  - name: LastActivityDate\n    db_column_name: LastActivityDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: LastStageChangeDate\n    db_column_name: LastStageChangeDate\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: FiscalYear\n    db_column_name: FiscalYear\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: FiscalQuarter\n    db_column_name: FiscalQuarter\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: ContactId\n    db_column_name: ContactId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: PrimaryPartnerAccountId\n    db_column_name: PrimaryPartnerAccountId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: PartnerAccountId\n    db_column_name: PartnerAccountId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: ContractId\n    db_column_name: ContractId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: LastAmountChangedHistoryId\n    db_column_name: LastAmountChangedHistoryId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: LastCloseDateChangedHistoryId\n    db_column_name: LastCloseDateChangedHistoryId\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: DeliveryInstallationStatus__c\n    db_column_name: DeliveryInstallationStatus__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: TrackingNumber__c\n    db_column_name: TrackingNumber__c\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: OrderNumber__c\n    db_column_name: OrderNumber__c\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: CurrentGenerators__c\n    db_column_name: CurrentGenerators__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: MainCompetitors__c\n    db_column_name: MainCompetitors__c\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  properties:\n    spotter_config:\n      is_spotter_enabled: true\n",
+    "info": {
+      "filename": "TSEMBED Dev Org - Opps.table.tml",
+      "name": "TSEMBED Dev Org - Opps",
+      "id": "02577521-4e44-4484-8df2-916df76e1c52",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: TSEMBEDDevOrg-Opps-02577521
+table:
+  name: TSEMBED Dev Org - Opps
+  db: CSVUPLOADS
+  schema: PUBLIC
+  db_table: tsembed dev org export - opportunities_049affa4-032d-4a12-9d04-dc9a52ee26a3
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Id
+    db_column_name: Id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: IsDeleted
+    db_column_name: IsDeleted
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: AccountId
+    db_column_name: AccountId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: IsPrivate
+    db_column_name: IsPrivate
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Name
+    db_column_name: Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Description
+    db_column_name: Description
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: StageName
+    db_column_name: StageName
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: StageSortOrder
+    db_column_name: StageSortOrder
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Amount
+    db_column_name: Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Probability
+    db_column_name: Probability
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ExpectedRevenue
+    db_column_name: ExpectedRevenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: TotalOpportunityQuantity
+    db_column_name: TotalOpportunityQuantity
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CloseDate
+    db_column_name: CloseDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: Type
+    db_column_name: Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NextStep
+    db_column_name: NextStep
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LeadSource
+    db_column_name: LeadSource
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: IsClosed
+    db_column_name: IsClosed
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: IsWon
+    db_column_name: IsWon
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ForecastCategory
+    db_column_name: ForecastCategory
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ForecastCategoryName
+    db_column_name: ForecastCategoryName
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CampaignId
+    db_column_name: CampaignId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: HasOpportunityLineItem
+    db_column_name: HasOpportunityLineItem
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Pricebook2Id
+    db_column_name: Pricebook2Id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: OwnerId
+    db_column_name: OwnerId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CreatedDate
+    db_column_name: CreatedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: CreatedById
+    db_column_name: CreatedById
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LastModifiedDate
+    db_column_name: LastModifiedDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: LastModifiedById
+    db_column_name: LastModifiedById
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SystemModstamp
+    db_column_name: SystemModstamp
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      format_pattern: MM/dd/yyyy
+    db_column_properties:
+      data_type: DATE
+  - name: LastActivityDate
+    db_column_name: LastActivityDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LastStageChangeDate
+    db_column_name: LastStageChangeDate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: FiscalYear
+    db_column_name: FiscalYear
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: FiscalQuarter
+    db_column_name: FiscalQuarter
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ContactId
+    db_column_name: ContactId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PrimaryPartnerAccountId
+    db_column_name: PrimaryPartnerAccountId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PartnerAccountId
+    db_column_name: PartnerAccountId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ContractId
+    db_column_name: ContractId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LastAmountChangedHistoryId
+    db_column_name: LastAmountChangedHistoryId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LastCloseDateChangedHistoryId
+    db_column_name: LastCloseDateChangedHistoryId
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DeliveryInstallationStatus__c
+    db_column_name: DeliveryInstallationStatus__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TrackingNumber__c
+    db_column_name: TrackingNumber__c
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: OrderNumber__c
+    db_column_name: OrderNumber__c
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: CurrentGenerators__c
+    db_column_name: CurrentGenerators__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: MainCompetitors__c
+    db_column_name: MainCompetitors__c
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    spotter_config:
+      is_spotter_enabled: true
+
+-------
+[
+  {
+    "edoc": "obj_id: DIM_RETAPP_PRODUCTS-fe481140\ntable:\n  name: DIM_RETAPP_PRODUCTS\n  db: RETAILAPPAREL\n  schema: PUBLIC\n  db_table: DIM_RETAPP_PRODUCTS\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Product ID\n    db_column_name: PRODUCTID\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Product Name\n    db_column_name: PRODUCTNAME\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Product Type\n    db_column_name: PRODUCTTYPE\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  properties:\n    spotter_config:\n      is_spotter_enabled: true\n",
+    "info": {
+      "filename": "DIM_RETAPP_PRODUCTS.table.tml",
+      "name": "DIM_RETAPP_PRODUCTS",
+      "id": "fe481140-915f-425b-bbbf-3f309a59d079",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: DIM_RETAPP_PRODUCTS-fe481140
+table:
+  name: DIM_RETAPP_PRODUCTS
+  db: RETAILAPPAREL
+  schema: PUBLIC
+  db_table: DIM_RETAPP_PRODUCTS
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Product ID
+    db_column_name: PRODUCTID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Product Name
+    db_column_name: PRODUCTNAME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Product Type
+    db_column_name: PRODUCTTYPE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    spotter_config:
+      is_spotter_enabled: true
+
+-------
+[
+  {
+    "edoc": "obj_id: FACT_RETAPP_SALES-0908b1bf\ntable:\n  name: FACT_RETAPP_SALES\n  db: RETAILAPPAREL\n  schema: PUBLIC\n  db_table: FACT_RETAPP_SALES\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Sales ID\n    db_column_name: SALESID\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Product ID\n    db_column_name: PRODUCTID\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Store ID\n    db_column_name: STOREID\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n      is_additive: true\n    db_column_properties:\n      data_type: INT64\n  - name: Quantity Purchased\n    db_column_name: QUANTITYPURCHASED\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Item Price\n    db_column_name: ITEMPRICE\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n      currency_type:\n        iso_code: USD\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Sales Amount\n    db_column_name: SALES\n    properties:\n      column_type: MEASURE\n      aggregation: SUM\n      index_type: DONT_INDEX\n      currency_type:\n        iso_code: USD\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Sales Date\n    db_column_name: RECORDDATE\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DATE\n  joins_with:\n  - name: C_DIM_RETAPP_PRODUCTS\n    destination:\n      name: DIM_RETAPP_PRODUCTS\n      obj_id: DIM_RETAPP_PRODUCTS-fe481140\n    \"on\": \"[FACT_RETAPP_SALES::Product ID] = [DIM_RETAPP_PRODUCTS::Product ID]\"\n    type: INNER\n  - name: C_DIM_RETAPP_STORES\n    destination:\n      name: DIM_RETAPP_STORES\n      obj_id: DIM_RETAPP_STORES-41e4d630\n    \"on\": \"[FACT_RETAPP_SALES::Store ID] = [DIM_RETAPP_STORES::Store ID]\"\n    type: INNER\n  properties:\n    spotter_config:\n      is_spotter_enabled: true\n",
+    "info": {
+      "filename": "FACT_RETAPP_SALES.table.tml",
+      "name": "FACT_RETAPP_SALES",
+      "id": "0908b1bf-d077-46d7-9c03-bf9088c68ed8",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: FACT_RETAPP_SALES-0908b1bf
+table:
+  name: FACT_RETAPP_SALES
+  db: RETAILAPPAREL
+  schema: PUBLIC
+  db_table: FACT_RETAPP_SALES
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Sales ID
+    db_column_name: SALESID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Product ID
+    db_column_name: PRODUCTID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Store ID
+    db_column_name: STOREID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      is_additive: true
+    db_column_properties:
+      data_type: INT64
+  - name: Quantity Purchased
+    db_column_name: QUANTITYPURCHASED
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Item Price
+    db_column_name: ITEMPRICE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      currency_type:
+        iso_code: USD
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Sales Amount
+    db_column_name: SALES
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      currency_type:
+        iso_code: USD
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Sales Date
+    db_column_name: RECORDDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  joins_with:
+  - name: C_DIM_RETAPP_PRODUCTS
+    destination:
+      name: DIM_RETAPP_PRODUCTS
+      obj_id: DIM_RETAPP_PRODUCTS-fe481140
+    "on": "[FACT_RETAPP_SALES::Product ID] = [DIM_RETAPP_PRODUCTS::Product ID]"
+    type: INNER
+  - name: C_DIM_RETAPP_STORES
+    destination:
+      name: DIM_RETAPP_STORES
+      obj_id: DIM_RETAPP_STORES-41e4d630
+    "on": "[FACT_RETAPP_SALES::Store ID] = [DIM_RETAPP_STORES::Store ID]"
+    type: INNER
+  properties:
+    spotter_config:
+      is_spotter_enabled: true
+
+-------
+[
+  {
+    "edoc": "obj_id: DIM_RETAPP_STORES-41e4d630\ntable:\n  name: DIM_RETAPP_STORES\n  db: RETAILAPPAREL\n  schema: PUBLIC\n  db_table: DIM_RETAPP_STORES\n  connection:\n    name: Retail Sales Data\n    obj_id: RetailSalesData_rd\n  columns:\n  - name: Store ID\n    db_column_name: STOREID\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: INT64\n  - name: Store Name\n    db_column_name: STORENAME\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: City\n    db_column_name: CITY\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: State\n    db_column_name: STATE\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Zip Code\n    db_column_name: ZIPCODE\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: County\n    db_column_name: COUNTY\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  - name: Latitude\n    db_column_name: LATITUDE\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Longitude\n    db_column_name: LONGITUDE\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: DOUBLE\n  - name: Region\n    db_column_name: REGION\n    properties:\n      column_type: ATTRIBUTE\n      index_type: DONT_INDEX\n    db_column_properties:\n      data_type: VARCHAR\n  properties:\n    spotter_config:\n      is_spotter_enabled: true\n",
+    "info": {
+      "filename": "DIM_RETAPP_STORES.table.tml",
+      "name": "DIM_RETAPP_STORES",
+      "id": "41e4d630-e1ef-4770-908c-72c32d60ec12",
+      "type": "table",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: DIM_RETAPP_STORES-41e4d630
+table:
+  name: DIM_RETAPP_STORES
+  db: RETAILAPPAREL
+  schema: PUBLIC
+  db_table: DIM_RETAPP_STORES
+  connection:
+    name: Retail Sales Data
+    obj_id: RetailSalesData_rd
+  columns:
+  - name: Store ID
+    db_column_name: STOREID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Store Name
+    db_column_name: STORENAME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: City
+    db_column_name: CITY
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: State
+    db_column_name: STATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Zip Code
+    db_column_name: ZIPCODE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: County
+    db_column_name: COUNTY
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Latitude
+    db_column_name: LATITUDE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Longitude
+    db_column_name: LONGITUDE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Region
+    db_column_name: REGION
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    spotter_config:
+      is_spotter_enabled: true
+
+-------
 Finished bringing all DATA objects to disk
 Current epoch
-1761230784000
+1761230884000
