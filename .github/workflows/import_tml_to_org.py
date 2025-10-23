@@ -74,19 +74,23 @@ if len(search_resp) == 1:
 #
 # FINISH 
 #
-if object_filename != gh_action_none:
+#if object_filename != gh_action_none:
     # Assume everything is named {obj_id}.{obj_type}.tml
-    try: 
-        with open(file=object_filename, mode='r') as f:
-            tml_str= f.read()
-    except:
-        pass
+#    try: 
+#        with open(file=object_filename, mode='r') as f:
+#            tml_str= f.read()
+#    except:
+#        pass
 # Get all files in a directory 
-else:
-    directories_to_import = directories_for_objects[object_type]
-    tml_strings = []
-    for dir in directories_to_import:
+# else:
+
+print("Getting directories for {}".format(object_type))
+directories_to_import = directories_for_objects[object_type]
+tml_strings = []
+for dir in directories_to_import:
+    try:
         files_in_dir = os.listdir(dir)
+        print("These files in directory:")
         print(files_in_dir)
         for filename in files_in_dir:
             full_file_path = "{}/{}".format(dir, filename)
@@ -96,11 +100,14 @@ else:
                     tml_strings.append(tml_str)
             except:
                 pass
+    except FileNotFoundError as e:
+        print("Directory doesn't exist, skipping")
+        print(e)
     
     # Publish the TMLs
     # Switch to Async
     try:
-        results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy="ALL_OR_NOTHING", create_new=False)
+        results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy="ALL_OR_NONE", create_new=False)
     except requests.exceptions.HTTPError as e:
         print(e)
         print(e.response.content)
