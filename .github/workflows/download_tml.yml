@@ -19,6 +19,7 @@ on:
         - LIVEBOARD
         - ANSWER
         - DATA
+        - CONNECTION
         required: true
       RECORD_SIZE_LIMIT:
         type: number
