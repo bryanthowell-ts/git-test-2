@@ -2,6 +2,41 @@ Searching for org_id for Ron Dugger
 org_id 33363357 found
 Requesting object listing
 1 objects retrieved
+[
+  {
+    "edoc": "obj_id: RetailSalesData_rd\nconnection:\n  name: Retail Sales Data\n  type: RDBMS_SNOWFLAKE\n  authentication_type: KEY_PAIR\n  properties:\n  - key: accountName\n    value: thoughtspot_partner\n  - key: user\n    value: se_demo_kp\n  - key: role\n    value: SE_ROLE\n  - key: warehouse\n    value: SE_DEMO_WH\n  - key: private_key\n    value: \"${se_snow_keypair}\"\n  - key: passphrase\n    value: \"${se_snow_passphrase}\"\n  description: \"\"\n",
+    "info": {
+      "filename": "Retail Sales Data.connection.tml",
+      "name": "Retail Sales Data",
+      "id": "274ba27a-4ee4-4053-ade4-a8a708bcdf44",
+      "type": "connection",
+      "status": {
+        "status_code": "OK"
+      }
+    }
+  }
+]
+obj_id: RetailSalesData_rd
+connection:
+  name: Retail Sales Data
+  type: RDBMS_SNOWFLAKE
+  authentication_type: KEY_PAIR
+  properties:
+  - key: accountName
+    value: thoughtspot_partner
+  - key: user
+    value: se_demo_kp
+  - key: role
+    value: SE_ROLE
+  - key: warehouse
+    value: SE_DEMO_WH
+  - key: private_key
+    value: "${se_snow_keypair}"
+  - key: passphrase
+    value: "${se_snow_passphrase}"
+  description: ""
+
+-------
 Finished bringing all CONNECTION objects to disk
 Current epoch
-1761230573000
+1761230661000
