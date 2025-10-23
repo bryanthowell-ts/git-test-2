@@ -1,2 +1,0 @@
-400 Client Error: Bad Request for url: https://embed-1-do-not-delete.thoughtspotstaging.cloud/api/rest/2.0/auth/token/full
-b'{"error":{"message":{"debug":{"code":13090,"incident_id_guid":"9bca30cb-d793-4116-b5b3-5e1403e19879","trace_id_guid":"tracing-disabled","debug":"[\\"User 00000849-1b7c-ab5d-b69b-9c4ccb14c0fd do not have access to org 0\\"]"}}}}'
