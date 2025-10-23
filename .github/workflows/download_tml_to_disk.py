@@ -202,10 +202,25 @@ data_object_search_request = {
     "record_offset": 0
 }
 
+connection_search_request = {
+    "metadata": [
+    {
+      "type": "CONNECTION"
+    }
+  ],
+  "sort_options": {
+    "field_name": order_field,
+    "order": "DESC"
+  },
+    "record_size" : -1,
+    "record_offset": 0
+}
+
 obj_type_select = {
     'LIVEBOARD' : lb_search_request,
     'ANSWER' : answer_search_request,
-    'DATA' : data_object_search_request
+    'DATA' : data_object_search_request,
+    'CONNECTION' : connection_search_request
 }
 
 def retrieve_objects(request, record_size_override=-1): 

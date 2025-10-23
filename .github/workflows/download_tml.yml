@@ -6,7 +6,7 @@ name: Download TML from Org to Branch
 on: 
   workflow_dispatch:
     inputs:
-      TS_ORG_NAME:
+      TS_ORG_NAME_OVERRIDE:
         type: string
         description: 'ThoughtSpot org name (not org_id)'
         required: true
@@ -19,6 +19,7 @@ on:
         - LIVEBOARD
         - ANSWER
         - DATA
+        - CONNECTION
         required: true
       RECORD_SIZE_LIMIT:
         type: number
@@ -69,7 +70,7 @@ jobs:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
        TS_USERNAME: ${{ secrets.TS_DOWNLOAD_USERNAME }}
-       TS_ORG_NAME: ${{ env.TS_ORG_NAME }}
+       TS_ORG_NAME: ${{ vars.TS_ORG_NAME }}
        AUTHOR_FILTER: ${{ github.event.inputs.FILTER_AUTHOR_NAME }}
        TAG_FILTER: ${{ github.event.inputs.FILTER_TAG_NAME }}
        OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
@@ -79,5 +80,5 @@ jobs:
         git config --local user.name "${{ github.triggering_actor }}"
         python .github/workflows/download_tml_to_disk.py > latest_download_run.log
         git add *
-        git diff-index --quiet HEAD || git commit -a -m "Downloaded from Org ${{ github.event.inputs.TS_ORG_NAME }} from Run ID ${{ github.run_id }} / ${{github.run_attempt}} "
+        git diff-index --quiet HEAD || git commit -a -m "Downloaded from Org ${{ vars.TS_ORG_NAME }} from Run ID ${{ github.run_id }} / ${{github.run_attempt}} "
         git push
