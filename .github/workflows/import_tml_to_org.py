@@ -18,6 +18,7 @@ object_type = os.environ.get('OBJECT_TYPE')
 object_filename = os.environ.get('OBJECT_FILENAME')
 
 # Define the directory names to link to the workflow 
+# If you don't use 's', fix em up here
 directories_for_objects = {
     "CONNECTION": ["connections"],
     "DATA_MODEL": ["tables", "models", "sql_views", "views"],
