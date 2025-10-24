@@ -144,8 +144,8 @@ def export_tml_with_obj_id(guid:Optional[str] = None,
         obj_type = lines[1].replace(":", "")
     
         if save_to_disk is True:
-            print(yaml_tml[0]['edoc'])
-            print("-------")
+            # print(yaml_tml[0]['edoc'])
+            # print("-------")
     
             # Save the file with {obj_type}s/{obj_id}.{type}.{tml}
             # Feel free to change directory naming structure to not have 's' at end
@@ -154,11 +154,14 @@ def export_tml_with_obj_id(guid:Optional[str] = None,
             try: 
                 with open(file=filename, mode='w') as f:
                     f.write(yaml_tml[0]['edoc'])
+                    print("{} saved to disk".format(filename))
             # Catch if directory for type doesn't exist yet
             except:
                 os.mkdir(directory)
+                print("{} created for first time".format(directory))
                 with open(file=filename, mode='w') as f:
                     f.write(yaml_tml[0]['edoc'])
+                    print("{} saved to disk".format(filename))
 
 
     else:
@@ -166,10 +169,11 @@ def export_tml_with_obj_id(guid:Optional[str] = None,
 
     return yaml_tml
 
-if last_run_epoch is None:
-    order_field = 'CREATED'
-else:
-    order_field = 'MODIFIED'
+#if last_run_epoch is None:
+#    order_field = 'CREATED'
+#else:
+
+order_field = 'MODIFIED'
 
 # Request for LIVEBOARDS
 lb_search_request = {
@@ -259,16 +263,22 @@ def retrieve_objects(request, record_size_override=-1):
         print(e.response.content)
         exit()
 
-    print("{} objects retrieved".format(len(objs)))
+    print("{} objects retrieved from API".format(len(objs)))
     return objs
 
 def export_objects_to_disk(objects, last_run_epoch):
+    count_exported = 0
     for o in objects:
         if last_run_epoch is None:
+            print("No last_run file found, exporting all")
             export_tml_with_obj_id(guid=o["metadata_id"], save_to_disk=True)
+            count_exported += 1
         else:
+            print("GUID {}: last modified {} vs. last run epoch time: {}".format(o["metadata_id"], o["metadata_header"]["modified"], last_run_epoch))
             if o["metadata_header"]["modified"] > last_run_epoch:
                 export_tml_with_obj_id(guid=o["metadata_id"], save_to_disk=True)
+                count_exported += 1
+    print("Exported {} objects to disk".format(count_exported))
 
 
 # Main function to pull and download the variuos object types
@@ -293,7 +303,7 @@ def download_objects():
                 last_run_epoch = read_last_runtime_file(directory=d)
 
             export_objects_to_disk(objects=objs, last_run_epoch=last_run_epoch)
-            print("Finished bringing all {} objects to disk".format(type))
+            
             if type == 'DATA':
                 for d in data_directories:
                     update_last_runtime_file(directory=d)
@@ -304,7 +314,8 @@ def download_objects():
         # Only if valid value
         if object_type in obj_type_select:
             objs = retrieve_objects(request=obj_type_select[object_type], record_size_override=record_size)
-
+            
+            last_run_epoch = None
             if object_type == 'DATA':
                # last_data_run_epoch = None
                 for d in data_directories:
