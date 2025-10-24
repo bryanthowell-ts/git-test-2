@@ -166,10 +166,11 @@ def export_tml_with_obj_id(guid:Optional[str] = None,
 
     return yaml_tml
 
-if last_run_epoch is None:
-    order_field = 'CREATED'
-else:
-    order_field = 'MODIFIED'
+#if last_run_epoch is None:
+#    order_field = 'CREATED'
+#else:
+
+order_field = 'MODIFIED'
 
 # Request for LIVEBOARDS
 lb_search_request = {
