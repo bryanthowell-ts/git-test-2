@@ -144,8 +144,8 @@ def export_tml_with_obj_id(guid:Optional[str] = None,
         obj_type = lines[1].replace(":", "")
     
         if save_to_disk is True:
-            print(yaml_tml[0]['edoc'])
-            print("-------")
+            # print(yaml_tml[0]['edoc'])
+            # print("-------")
     
             # Save the file with {obj_type}s/{obj_id}.{type}.{tml}
             # Feel free to change directory naming structure to not have 's' at end
@@ -154,11 +154,14 @@ def export_tml_with_obj_id(guid:Optional[str] = None,
             try: 
                 with open(file=filename, mode='w') as f:
                     f.write(yaml_tml[0]['edoc'])
+                    print("{} saved to disk".format(filename))
             # Catch if directory for type doesn't exist yet
             except:
                 os.mkdir(directory)
+                print("{} created for first time".format(directory))
                 with open(file=filename, mode='w') as f:
                     f.write(yaml_tml[0]['edoc'])
+                    print("{} saved to disk".format(filename))
 
 
     else:
@@ -311,7 +314,8 @@ def download_objects():
         # Only if valid value
         if object_type in obj_type_select:
             objs = retrieve_objects(request=obj_type_select[object_type], record_size_override=record_size)
-
+            
+            last_run_epoch = None
             if object_type == 'DATA':
                # last_data_run_epoch = None
                 for d in data_directories:
