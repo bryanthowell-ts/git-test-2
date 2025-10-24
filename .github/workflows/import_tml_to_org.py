@@ -93,13 +93,16 @@ for dir in directories_to_import:
         print("These files in directory:")
         print(files_in_dir)
         for filename in files_in_dir:
-            full_file_path = "{}/{}".format(dir, filename)
-            try: 
-                with open(file=full_file_path, mode='r') as f:
-                    tml_str= f.read()
-                    tml_strings.append(tml_str)
-            except:
-                pass
+            # Skip files that aren't .tml
+            if filename.find(".tml") != -1:
+                full_file_path = "{}/{}".format(dir, filename)
+                
+                try: 
+                    with open(file=full_file_path, mode='r') as f:
+                        tml_str= f.read()
+                        tml_strings.append(tml_str)
+                except:
+                    pass
     except FileNotFoundError as e:
         print("Directory doesn't exist, skipping")
         print(e)
