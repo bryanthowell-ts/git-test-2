@@ -260,16 +260,22 @@ def retrieve_objects(request, record_size_override=-1):
         print(e.response.content)
         exit()
 
-    print("{} objects retrieved".format(len(objs)))
+    print("{} objects retrieved from API".format(len(objs)))
     return objs
 
 def export_objects_to_disk(objects, last_run_epoch):
+    count_exported = 0
     for o in objects:
         if last_run_epoch is None:
+            print("No last_run file found, exporting all")
             export_tml_with_obj_id(guid=o["metadata_id"], save_to_disk=True)
+            count_exported += 1
         else:
+            print("GUID {}: last modified {} vs. last run epoch time: {}".format(o["metadata_id"], o["metadata_header"]["modified"], last_run_epoch))
             if o["metadata_header"]["modified"] > last_run_epoch:
                 export_tml_with_obj_id(guid=o["metadata_id"], save_to_disk=True)
+                count_exported += 1
+    print("Exported {} objects to disk".format(count_exported))
 
 
 # Main function to pull and download the variuos object types
@@ -294,7 +300,7 @@ def download_objects():
                 last_run_epoch = read_last_runtime_file(directory=d)
 
             export_objects_to_disk(objects=objs, last_run_epoch=last_run_epoch)
-            print("Finished bringing all {} objects to disk".format(type))
+            
             if type == 'DATA':
                 for d in data_directories:
                     update_last_runtime_file(directory=d)
