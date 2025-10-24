@@ -6,11 +6,6 @@ name: Download TML from Org to Branch
 on: 
   workflow_dispatch:
     inputs:
-      TS_ORG_NAME_OVERRIDE:
-        type: string
-        description: 'ThoughtSpot org name (not org_id)'
-        required: true
-        default: 'Primary'
       OBJECT_TYPE:
         type: choice
         description: Type of Objects to Download
@@ -36,6 +31,11 @@ on:
         description: 'Filter on Tag name'
         required: true
         default: "{None}"
+#      TS_ORG_NAME_OVERRIDE:
+#        type: string
+#        description: 'ThoughtSpot org name (not org_id)'
+#        required: true
+#        default: '{None}'
       
 
 permissions:
@@ -80,5 +80,5 @@ jobs:
         git config --local user.name "${{ github.triggering_actor }}"
         python .github/workflows/download_tml_to_disk.py > latest_download_run.log
         git add *
-        git diff-index --quiet HEAD || git commit -a -m "Downloaded from Org ${{ vars.TS_ORG_NAME }} from Run ID ${{ github.run_id }} / ${{github.run_attempt}} "
+        git diff-index --quiet HEAD || git commit -a -m "Run ID ${{ github.run_id }}/${{github.run_attempt}} export from Org ${{ vars.TS_ORG_NAME }}"
         git push
