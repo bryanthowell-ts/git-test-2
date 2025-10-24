@@ -285,9 +285,11 @@ def export_objects_to_disk(objects, last_run_epoch):
 def download_objects():
     # Only look at select object_type if not ALL
     if object_type != 'ALL':
-        obj_type_select = [object_type]
+        final_obj_type_select = { object_type : obj_type_select[object_type]}
+    else:
+        final_obj_type_select = obj_type_select
     # Loop does all types on ALL condition
-    for type in obj_type_select:
+    for type in final_obj_type_select:
 
         objs = retrieve_objects(request=obj_type_select[type], record_size_override=record_size)
         # Retrieve the last update for this object_type
