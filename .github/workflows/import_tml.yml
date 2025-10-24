@@ -48,7 +48,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install thoughtspot_rest_api 
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test Commit and push files
+    - name: Import TML to ThoughtSpot Org ${{ vars.TS_ORG_NAME }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
