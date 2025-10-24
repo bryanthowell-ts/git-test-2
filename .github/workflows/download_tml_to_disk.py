@@ -28,12 +28,27 @@ object_type = os.environ.get('OBJECT_TYPE')
 #
 
 last_run_filename = "last_download_runtime.txt"
-last_run_epoch = None
-try: 
-    with open(file=last_run_filename, mode='r') as f:
-        last_run_epoch = int(f.readlines()[0])
-except:
-    pass
+
+def read_last_runtime_file(directory):
+    
+    last_run_epoch = None
+    try: 
+        with open(file="{}/{}".format(directory,last_run_filename), mode='r') as f:
+            last_run_epoch = int(f.readlines()[0])
+    except:
+        pass
+
+    return last_run_epoch
+
+def update_last_runtime_file(directory):
+    current_epoch_time_utc_int = int(time.time()) * 1000  # ThoughtSpot uses JavaScript style long epoch
+    print("Current epoch")
+    print(current_epoch_time_utc_int)
+    try: 
+        with open(file="{}/{}".format(directory,last_run_filename), mode='w') as f:
+            f.write(str(current_epoch_time_utc_int))
+    except:
+        pass
 
 
 # full_access_token = os.environ.get('TS_TOKEN')  #  Tokens are tied to a particular Org, so useful in an environment with only a few Orgs but not single-tenant
@@ -223,6 +238,9 @@ obj_type_select = {
     'CONNECTION' : connection_search_request
 }
 
+# Update if new types appear or you don't use 's' at the end:
+data_directories = ['tables', 'models', 'sql_views', 'views']
+
 def retrieve_objects(request, record_size_override=-1): 
     # Add filters if passed from workflow
     if author_filter != gh_action_none:
@@ -244,7 +262,7 @@ def retrieve_objects(request, record_size_override=-1):
     print("{} objects retrieved".format(len(objs)))
     return objs
 
-def export_objects_to_disk(objects):
+def export_objects_to_disk(objects, last_run_epoch):
     for o in objects:
         if last_run_epoch is None:
             export_tml_with_obj_id(guid=o["metadata_id"], save_to_disk=True)
@@ -257,24 +275,59 @@ def export_objects_to_disk(objects):
 def download_objects():
     if object_type == 'ALL':
         for type in obj_type_select:
+
             objs = retrieve_objects(request=obj_type_select[type], record_size_override=record_size)
-            export_objects_to_disk(objects=objs)
+            # Retrieve the last update for this object_type
+            last_run_epoch = None
+            if type == 'DATA':
+                # last_data_run_epoch = None
+                for d in data_directories:
+                    last_run = read_last_runtime_file(directory=d)
+                    if last_run is not None and last_run_epoch is None:
+                        last_run_epoch = last_run
+                    elif last_run is not None:
+                        if last_run < last_run_epoch:
+                            last_run_epoch = last_run
+            else:
+                d = "{}s".format(type.lower())
+                last_run_epoch = read_last_runtime_file(directory=d)
+
+            export_objects_to_disk(objects=objs, last_run_epoch=last_run_epoch)
             print("Finished bringing all {} objects to disk".format(type))
+            if type == 'DATA':
+                for d in data_directories:
+                    update_last_runtime_file(directory=d)
+            else:
+                d = "{}s".format(type.lower())
+                update_last_runtime_file(directory=d)
     else:
         # Only if valid value
         if object_type in obj_type_select:
             objs = retrieve_objects(request=obj_type_select[object_type], record_size_override=record_size)
-            export_objects_to_disk(objects=objs)
+
+            if object_type == 'DATA':
+               # last_data_run_epoch = None
+                for d in data_directories:
+                    last_run = read_last_runtime_file(directory=d)
+                    if last_run is not None and last_run_epoch is None:
+                        last_run_epoch = last_run
+                    elif last_run is not None:
+                        if last_run < last_run_epoch:
+                            last_run_epoch = last_run
+            else:
+                d = "{}s".format(object_type.lower())
+                last_run_epoch = read_last_runtime_file(directory=d)
+
+            export_objects_to_disk(objects=objs, last_run_epoch=last_run_epoch)
             print("Finished bringing all {} objects to disk".format(object_type))
+            if type == 'DATA':
+                for d in data_directories:
+                    update_last_runtime_file(directory=d)
+            else:
+                d = "{}s".format(type.lower())
+                update_last_runtime_file(directory=d)
 
 # Run the download routines based on the choices
 download_objects()
 
-current_epoch_time_utc_int = int(time.time()) * 1000  # ThoughtSpot uses JavaScript style long epoch
-print("Current epoch")
-print(current_epoch_time_utc_int)
-try: 
-    with open(file=last_run_filename, mode='w') as f:
-        f.write(str(current_epoch_time_utc_int))
-except:
-    pass
+
