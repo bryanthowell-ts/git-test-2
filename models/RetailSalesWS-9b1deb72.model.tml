@@ -28,10 +28,13 @@ model:
     formula_id: formula_Sales Tax (8%)
     properties:
       column_type: MEASURE
-      aggregation: SUM
+      aggregation: AVERAGE
       index_type: DONT_INDEX
+      synonyms:
+      - sale tax percent
       currency_type:
         iso_code: USD
+      synonym_type: USER_DEFINED
   - name: Product Type
     column_id: DIM_RETAPP_PRODUCTS::Product Type
     properties:
@@ -110,6 +113,7 @@ model:
       index_type: DONT_INDEX
       synonyms:
       - revenue
+      - sales
       currency_type:
         iso_code: USD
       synonym_type: USER_DEFINED
