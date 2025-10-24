@@ -283,60 +283,36 @@ def export_objects_to_disk(objects, last_run_epoch):
 
 # Main function to pull and download the variuos object types
 def download_objects():
-    if object_type == 'ALL':
-        for type in obj_type_select:
+    # Only look at select object_type if not ALL
+    if object_type != 'ALL':
+        obj_type_select = [object_type]
+    # Loop does all types on ALL condition
+    for type in obj_type_select:
 
-            objs = retrieve_objects(request=obj_type_select[type], record_size_override=record_size)
-            # Retrieve the last update for this object_type
-            last_run_epoch = None
-            if type == 'DATA':
-                # last_data_run_epoch = None
-                for d in data_directories:
-                    last_run = read_last_runtime_file(directory=d)
-                    if last_run is not None and last_run_epoch is None:
+        objs = retrieve_objects(request=obj_type_select[type], record_size_override=record_size)
+        # Retrieve the last update for this object_type
+        last_run_epoch = None
+        if type == 'DATA':
+            # last_data_run_epoch = None
+            for d in data_directories:
+                last_run = read_last_runtime_file(directory=d)
+                if last_run is not None and last_run_epoch is None:
+                    last_run_epoch = last_run
+                elif last_run is not None:
+                    if last_run < last_run_epoch:
                         last_run_epoch = last_run
-                    elif last_run is not None:
-                        if last_run < last_run_epoch:
-                            last_run_epoch = last_run
-            else:
-                d = "{}s".format(type.lower())
-                last_run_epoch = read_last_runtime_file(directory=d)
+        else:
+            d = "{}s".format(type.lower())
+            last_run_epoch = read_last_runtime_file(directory=d)
 
-            export_objects_to_disk(objects=objs, last_run_epoch=last_run_epoch)
-            
-            if type == 'DATA':
-                for d in data_directories:
-                    update_last_runtime_file(directory=d)
-            else:
-                d = "{}s".format(type.lower())
+        export_objects_to_disk(objects=objs, last_run_epoch=last_run_epoch)
+        
+        if type == 'DATA':
+            for d in data_directories:
                 update_last_runtime_file(directory=d)
-    else:
-        # Only if valid value
-        if object_type in obj_type_select:
-            objs = retrieve_objects(request=obj_type_select[object_type], record_size_override=record_size)
-            
-            last_run_epoch = None
-            if object_type == 'DATA':
-               # last_data_run_epoch = None
-                for d in data_directories:
-                    last_run = read_last_runtime_file(directory=d)
-                    if last_run is not None and last_run_epoch is None:
-                        last_run_epoch = last_run
-                    elif last_run is not None:
-                        if last_run < last_run_epoch:
-                            last_run_epoch = last_run
-            else:
-                d = "{}s".format(object_type.lower())
-                last_run_epoch = read_last_runtime_file(directory=d)
-
-            export_objects_to_disk(objects=objs, last_run_epoch=last_run_epoch)
-            print("Finished bringing all {} objects to disk".format(object_type))
-            if type == 'DATA':
-                for d in data_directories:
-                    update_last_runtime_file(directory=d)
-            else:
-                d = "{}s".format(type.lower())
-                update_last_runtime_file(directory=d)
+        else:
+            d = "{}s".format(type.lower())
+            update_last_runtime_file(directory=d)
 
 # Run the download routines based on the choices
 download_objects()
