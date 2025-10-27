@@ -40,7 +40,7 @@ except requests.exceptions.HTTPError as e:
 # If org_id is found, set environment variable to retrieve in the shell
 if len(search_resp) == 1:
     org_id = search_resp[0]['id']
-    print("org_id {} found".format(org_id))
-    os.environ['ORG_ID'] = "{}".format(org_id)
+    print("ORG_ID={}".format(org_id))
+    # os.environ['ORG_ID'] = "{}".format(org_id)
 else:
     exit(1)
