@@ -57,6 +57,6 @@ jobs:
        OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
  
       run: |
-        python .github/workflows/retreve_org_id_from_org_name.py
+        python .github/workflows/retrieve_org_id_from_org_name.py
         echo "Org Name $TS_ORG_NAME is Org_ID $ORG_ID"
         python .github/workflows/import_tml_to_org.py
