@@ -90,7 +90,7 @@ tml_strings = []
 for dir in directories_to_import:
     try:
         files_in_dir = os.listdir(dir)
-        print("These files in directory:")
+        print("These files in directory {}:".format(dir))
         print(files_in_dir)
         for filename in files_in_dir:
             # Skip files that aren't .tml
@@ -107,14 +107,14 @@ for dir in directories_to_import:
         print("Directory doesn't exist, skipping")
         print(e)
     
-    # Publish the TMLs
-    # Switch to Async
-    try:
-        print("Importing {} TMLs".format(len(tml_strings)))
-        results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy="ALL_OR_NONE", create_new=False)
-        print("Imported with following response:")
-        print(json.dumps(results, indent=2))
-    except requests.exceptions.HTTPError as e:
-        print(e)
-        print(e.response.content)
-        exit()
+# Publish the TMLs
+# Switch to Async
+try:
+    print("Importing {} TMLs".format(len(tml_strings)))
+    results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy="ALL_OR_NONE", create_new=False)
+    print("Imported with following response:")
+    print(json.dumps(results, indent=2))
+except requests.exceptions.HTTPError as e:
+    print(e)
+    print(e.response.content)
+    exit()

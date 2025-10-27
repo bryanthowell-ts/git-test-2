@@ -3,11 +3,6 @@ name: Import TML to Org
 on: 
   workflow_dispatch:
     inputs:
-      TS_ORG_NAME:
-        type: string
-        description: 'ThoughtSpot org name (not org_id)'
-        required: true
-        default: 'Primary'
       OBJECT_TYPE:
         type: choice
         description: Type of Objects to Import
@@ -20,6 +15,11 @@ on:
         - ANSWER
         - CONNECTION
         required: true
+      TS_ORG_NAME:
+        type: string
+        description: 'ThoughtSpot org name overide (not org_id)'
+        required: true
+        default: '{None}'
 
 permissions:
   contents: write
