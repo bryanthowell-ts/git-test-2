@@ -13,6 +13,7 @@ server = os.environ.get('TS_SERVER')
 username = os.environ.get('TS_USERNAME')
 secret_key = os.environ.get('TS_SECRET_KEY')
 org_name = os.environ.get('TS_ORG_NAME')
+org_id = os.environ.get('ORG_ID')  # Set via retrieve_org_id_from_org_name.py setting environment
 
 object_type = os.environ.get('OBJECT_TYPE')
 object_filename = os.environ.get('OBJECT_FILENAME')
@@ -30,6 +31,7 @@ directories_for_objects = {
 }
 
 ts: TSRestApiV2 = TSRestApiV2(server_url=server)
+"""
 # if full_access_token != "":
 #    ts.bearer_token = full_access_token
 
@@ -58,14 +60,15 @@ except requests.exceptions.HTTPError as e:
 if len(search_resp) == 1:
     org_id = search_resp[0]['id']
     print("org_id {} found".format(org_id))
-    try:
-        auth_resp = ts.auth_token_full(username=username, secret_key=secret_key,
-                                       validity_time_in_sec=3000, org_id=org_id)
-        ts.bearer_token = auth_resp['token']
-    except requests.exceptions.HTTPError as e:
-        print(e)
-        print(e.response.content)
-        exit()
+"""
+try:
+    auth_resp = ts.auth_token_full(username=username, secret_key=secret_key,
+                                    validity_time_in_sec=3000, org_id=org_id)
+    ts.bearer_token = auth_resp['token']
+except requests.exceptions.HTTPError as e:
+    print(e)
+    print(e.response.content)
+    exit()
 
 # Read the directories for the objects specified
 # We will build an upload with ALL of them, and let ThoughtSpot use the 'etags'
