@@ -41,6 +41,6 @@ except requests.exceptions.HTTPError as e:
 if len(search_resp) == 1:
     org_id = search_resp[0]['id']
     print("org_id {} found".format(org_id))
-    os.environ['ORG_ID'] = org_id
+    os.environ['ORG_ID'] = "{}".format(org_id)
 else:
     exit(1)
