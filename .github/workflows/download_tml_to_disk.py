@@ -42,11 +42,12 @@ def read_last_runtime_file(directory):
 
 def update_last_runtime_file(directory):
     current_epoch_time_utc_int = int(time.time()) * 1000  # ThoughtSpot uses JavaScript style long epoch
-    print("Current epoch")
-    print(current_epoch_time_utc_int)
     try: 
-        with open(file="{}/{}".format(directory,last_run_filename), mode='w') as f:
+        fn = "{}/{}".format(directory,last_run_filename)
+        with open(file=fn, mode='w') as f:
             f.write(str(current_epoch_time_utc_int))
+            print("Updated {} at {}".format(fn, current_epoch_time_utc_int))
+            
     except:
         pass
 
@@ -128,8 +129,11 @@ def export_tml_with_obj_id(guid:Optional[str] = None,
     try:
         yaml_tml = ts.metadata_tml_export(metadata_ids=[guid], edoc_format='YAML',
                                           export_options=exp_opt)
-        print(json.dumps(yaml_tml, indent=2))
+        
+        # Uncomment to see actual YAML retrieved
+        # print(json.dumps(yaml_tml, indent=2))
     except requests.exceptions.HTTPError as e:
+        print("Error with export TML REST API:")
         print(e)
         print(e.response.content)
         exit()
@@ -165,7 +169,7 @@ def export_tml_with_obj_id(guid:Optional[str] = None,
 
 
     else:
-        print("Skipped due to lack of edoc in yaml_tml response")
+        print("Skipped GUID {} due to lack of edoc in yaml_tml response".format(guid))
 
     return yaml_tml
 
@@ -274,7 +278,8 @@ def export_objects_to_disk(objects, last_run_epoch):
             export_tml_with_obj_id(guid=o["metadata_id"], save_to_disk=True)
             count_exported += 1
         else:
-            print("GUID {}: last modified {} vs. last run epoch time: {}".format(o["metadata_id"], o["metadata_header"]["modified"], last_run_epoch))
+            # Uncomment if trouble with the last_run_timestamps
+            # print("GUID {}: last modified {} vs. last run epoch time: {}".format(o["metadata_id"], o["metadata_header"]["modified"], last_run_epoch))
             if o["metadata_header"]["modified"] > last_run_epoch:
                 export_tml_with_obj_id(guid=o["metadata_id"], save_to_disk=True)
                 count_exported += 1
@@ -283,60 +288,38 @@ def export_objects_to_disk(objects, last_run_epoch):
 
 # Main function to pull and download the variuos object types
 def download_objects():
-    if object_type == 'ALL':
-        for type in obj_type_select:
-
-            objs = retrieve_objects(request=obj_type_select[type], record_size_override=record_size)
-            # Retrieve the last update for this object_type
-            last_run_epoch = None
-            if type == 'DATA':
-                # last_data_run_epoch = None
-                for d in data_directories:
-                    last_run = read_last_runtime_file(directory=d)
-                    if last_run is not None and last_run_epoch is None:
-                        last_run_epoch = last_run
-                    elif last_run is not None:
-                        if last_run < last_run_epoch:
-                            last_run_epoch = last_run
-            else:
-                d = "{}s".format(type.lower())
-                last_run_epoch = read_last_runtime_file(directory=d)
-
-            export_objects_to_disk(objects=objs, last_run_epoch=last_run_epoch)
-            
-            if type == 'DATA':
-                for d in data_directories:
-                    update_last_runtime_file(directory=d)
-            else:
-                d = "{}s".format(type.lower())
-                update_last_runtime_file(directory=d)
+    # Only look at select object_type if not ALL
+    if object_type != 'ALL':
+        final_obj_type_select = { object_type : obj_type_select[object_type]}
     else:
-        # Only if valid value
-        if object_type in obj_type_select:
-            objs = retrieve_objects(request=obj_type_select[object_type], record_size_override=record_size)
-            
-            last_run_epoch = None
-            if object_type == 'DATA':
-               # last_data_run_epoch = None
-                for d in data_directories:
-                    last_run = read_last_runtime_file(directory=d)
-                    if last_run is not None and last_run_epoch is None:
+        final_obj_type_select = obj_type_select
+    # Loop does all types on ALL condition
+    for type in final_obj_type_select:
+        print("Retrieving all objects of type: {}".format(type))
+        objs = retrieve_objects(request=obj_type_select[type], record_size_override=record_size)
+        # Retrieve the last update for this object_type
+        last_run_epoch = None
+        if type == 'DATA':
+            # last_data_run_epoch = None
+            for d in data_directories:
+                last_run = read_last_runtime_file(directory=d)
+                if last_run is not None and last_run_epoch is None:
+                    last_run_epoch = last_run
+                elif last_run is not None:
+                    if last_run < last_run_epoch:
                         last_run_epoch = last_run
-                    elif last_run is not None:
-                        if last_run < last_run_epoch:
-                            last_run_epoch = last_run
-            else:
-                d = "{}s".format(object_type.lower())
-                last_run_epoch = read_last_runtime_file(directory=d)
+        else:
+            d = "{}s".format(type.lower())
+            last_run_epoch = read_last_runtime_file(directory=d)
 
-            export_objects_to_disk(objects=objs, last_run_epoch=last_run_epoch)
-            print("Finished bringing all {} objects to disk".format(object_type))
-            if type == 'DATA':
-                for d in data_directories:
-                    update_last_runtime_file(directory=d)
-            else:
-                d = "{}s".format(type.lower())
+        export_objects_to_disk(objects=objs, last_run_epoch=last_run_epoch)
+        
+        if type == 'DATA':
+            for d in data_directories:
                 update_last_runtime_file(directory=d)
+        else:
+            d = "{}s".format(type.lower())
+            update_last_runtime_file(directory=d)
 
 # Run the download routines based on the choices
 download_objects()

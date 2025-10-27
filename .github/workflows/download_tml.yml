@@ -65,7 +65,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install thoughtspot_rest_api 
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Download and commit TML
+    - name: Download 
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
@@ -78,7 +78,7 @@ jobs:
       run: |
         git config --local user.email "${{ github.actor_id }}+${{ github.triggering_actor }}@users.noreply.github.com"
         git config --local user.name "${{ github.triggering_actor }}"
-        python .github/workflows/download_tml_to_disk.py > latest_download_run.log
+        python .github/workflows/download_tml_to_disk.py 
         git add *
         git diff-index --quiet HEAD || git commit -a -m "Run ID ${{ github.run_id }}/${{github.run_attempt}} export from Org ${{ vars.TS_ORG_NAME }}"
         git push
