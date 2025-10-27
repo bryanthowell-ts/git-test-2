@@ -27,7 +27,7 @@ except requests.exceptions.HTTPError as e:
 
 # Get token for the specified org_name
 try:
-    print("Searching for org_id for {}".format(org_name))
+    # print("Searching for org_id for {}".format(org_name))
     org_search_req = {
         "org_identifier": org_name
     }
