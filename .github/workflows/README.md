@@ -82,7 +82,7 @@ Secrets:
  ### Matching Environments to Branches
  Within each workflow YAML file, there is an environment section that looks like:
 
-  environment: |-
+    environment: |-
         ${{
           github.ref_name == 'prod' && 'production'
         || github.ref_name == 'dev'    && 'dev'
@@ -90,6 +90,7 @@ Secrets:
         || github.ref_name == 'uat' && 'uat'
         || 'default'
         }} 
+
 
 `github.ref_name` is the branch name, while the value after the `&&` is the GitHub environment name. Feel free to modify this to match your preferred branch and environment naming scheme.
 
