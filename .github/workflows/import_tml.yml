@@ -15,6 +15,21 @@ on:
         - ANSWER
         - CONNECTION
         required: true
+      IMPORT_TYPE:
+        type: choice
+        description: Import Type
+        options: 
+        - ALL_OR_NONE
+        - VALIDATE
+        - SOME
+        required: true
+      ASYNC:
+        type: choice
+        description: Sync or Async Import
+        options:
+          - SYNC
+          - ASYNC
+        required: true
       TS_ORG_NAME:
         type: string
         description: 'ThoughtSpot org name overide (not org_id)'
