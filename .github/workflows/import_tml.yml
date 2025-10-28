@@ -48,13 +48,20 @@ jobs:
         python -m pip install --upgrade pip
         pip install thoughtspot_rest_api 
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Get Org_ID from Org_Name ${{ vars.TS_ORG_NAME }}
+      env:
+       TS_SERVER: ${{ secrets.TS_SERVER }}
+       TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
+       TS_USERNAME: ${{ secrets.TS_INSTANCE_ADMIN_USERNAME }}
+       TS_ORG_NAME: ${{ vars.TS_ORG_NAME }}
+      run: |
+         python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
     - name: Import TML to ThoughtSpot Org ${{ vars.TS_ORG_NAME }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
        TS_USERNAME: ${{ secrets.TS_IMPORT_USERNAME }}
-       TS_ORG_NAME: ${{ vars.TS_ORG_NAME }}
        OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
- 
       run: |
+        echo "Org Name $TS_ORG_NAME is Org_ID $ORG_ID"
         python .github/workflows/import_tml_to_org.py
