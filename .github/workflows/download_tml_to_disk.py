@@ -17,11 +17,13 @@ username = os.environ.get('TS_USERNAME')
 secret_key = os.environ.get('TS_SECRET_KEY')
 
 # Variables from the workflow
-org_name = os.environ.get('TS_ORG_NAME')
+
 author_filter = os.environ.get('AUTHOR_FILTER')
 tag_filter = os.environ.get('TAG_FILTER')
 record_size = os.environ.get('RECORD_SIZE_LIMIT')
 object_type = os.environ.get('OBJECT_TYPE')
+
+org_id = os.environ.get('ORG_ID') # Set via retrieve_org_id_from_org_name.py setting environment
 
 #
 # Last run file for limiting file download
@@ -55,42 +57,15 @@ def update_last_runtime_file(directory):
 # full_access_token = os.environ.get('TS_TOKEN')  #  Tokens are tied to a particular Org, so useful in an environment with only a few Orgs but not single-tenant
 
 ts: TSRestApiV2 = TSRestApiV2(server_url=server)
-# if full_access_token != "":
-#    ts.bearer_token = full_access_token
 
-# First get Org_Id: 0 to request orgs list
 try:
-    auth_token_response = ts.auth_token_full(username=username, secret_key=secret_key,
-                                               validity_time_in_sec=3000, org_id=0)
-    ts.bearer_token = auth_token_response['token']
+    auth_resp = ts.auth_token_full(username=username, secret_key=secret_key,
+                                    validity_time_in_sec=3000, org_id=org_id)
+    ts.bearer_token = auth_resp['token']
 except requests.exceptions.HTTPError as e:
     print(e)
     print(e.response.content)
     exit()
-
-# Get token for the specified org_name
-try:
-    print("Searching for org_id for {}".format(org_name))
-    org_search_req = {
-        "org_identifier": org_name
-    }
-    search_resp = ts.orgs_search(request=org_search_req)
-except requests.exceptions.HTTPError as e:
-    print(e)
-    print(e.response.content)
-    exit()
-
-if len(search_resp) == 1:
-    org_id = search_resp[0]['id']
-    print("org_id {} found".format(org_id))
-    try:
-        auth_resp = ts.auth_token_full(username=username, secret_key=secret_key,
-                                       validity_time_in_sec=3000, org_id=org_id)
-        ts.bearer_token = auth_resp['token']
-    except requests.exceptions.HTTPError as e:
-        print(e)
-        print(e.response.content)
-        exit()
 
 # Wrapper of Export TML of a single item, with lookup via GUID or obj_id, and saving to disk with
 # standard naming pattern
