@@ -99,7 +99,7 @@ Secrets:
 
 download_tml.yml defines the 'name: Download TML from Org to Branch' Action. 
 
-This Action uses the TML Export REST API to get the current TML for a set of objects, into directories in the linked Git remote/<branch>, then it commits back to the origin/<branch>. It replaces the functionaltiy of the earlier ThoughtSpot REST API called 'Commit Branch'.
+This Action uses the TML Export REST API to get the current TML for a set of objects, into directories in the linked Git remote/<branch>, then it commits back to the origin/<branch>. It replaces the functionality of the earlier ThoughtSpot REST API called 'Commit Branch'.
 
 There are filter inputs for a single Author Username or Tag Name. Use these to export only certain sets of TML - both Author and Tag Name are useful mechanisms for identifying which content in a 'dev' Org should become part of the actual 'release' that is deployed through to other branches and Orgs within ThoughtSpot.
 
@@ -108,3 +108,22 @@ Directories are generated automatically for the various TML object types.
 Within each directory, the TML files are stored along with a `last_download_runtime.txt` file. The `last_download_runtime.txt` file allows the Action to only download items that have been modified since the timestamp stored within the file, preventing unnecessary generation of identical TML. 
 
 If you want all files to be retrieved, delete the `last_donwload_runtime.txt` file in a given directory (for data objects, delete in all the directories).
+
+#### Version control vs. Deployment
+ThoughtSpot has a Version Control capability, also linked to a GitHub repo, designed to make a commit automatically when any object has been changed within the UI. 
+
+You can replicate this functionality using the `Download TML for Org to Branch` Action (on a polling timer), by looking for all objects in a given Org.
+
+The workflow uses the TS_DOWNLOAD_USERNAME secret for the username within ThoughtSpot to do the REST API actions. This does not have to be an admin user, but the user must have Access to the objects that are being exported, along with the necessary Privileges via Roles. 
+
+What you actually want to Deploy out through the SDLC stages as a 'release' to Prod may only be a subset of the total content in your dev Org in ThoughtSpot. 
+
+You can use various stratgies for identifying which content will actually be part of the Release. As mentioned above, Tags ('release' or a version number scheme) or transferring the content to a particular Author username are two that are easily supported via the /metadata/search REST API which retrieves object listings. Other possibilities would be looking for all content that is linked to a given Connection or shared with certain Groups - those are slightly more complex API lookups but can be easily built out.
+
+### import_tml.yml
+
+import_tml.yml defines the `name: Import TML to Org` Action. 
+
+This action takes all of the TML in a branch and uses the TML Import REST API to import it into a linked ThoughtSpot Org. It replaces the functionality of the previous REST API called 'Deploy Commits'. 
+
+The workflow uses the TS_IMPORT_USERNAME
