@@ -12,7 +12,7 @@ gh_action_none = "{None}"
 server = os.environ.get('TS_SERVER') 
 username = os.environ.get('TS_USERNAME')
 secret_key = os.environ.get('TS_SECRET_KEY')
-org_name = os.environ.get('TS_ORG_NAME')
+
 org_id = os.environ.get('ORG_ID')  # Set via retrieve_org_id_from_org_name.py setting environment
 
 object_type = os.environ.get('OBJECT_TYPE')
@@ -31,36 +31,7 @@ directories_for_objects = {
 }
 
 ts: TSRestApiV2 = TSRestApiV2(server_url=server)
-"""
-# if full_access_token != "":
-#    ts.bearer_token = full_access_token
 
-# First get Org_Id: 0 to request orgs list
-try:
-    auth_token_response = ts.auth_token_full(username=username, secret_key=secret_key,
-                                               validity_time_in_sec=3000, org_id=0)
-    ts.bearer_token = auth_token_response['token']
-except requests.exceptions.HTTPError as e:
-    print(e)
-    print(e.response.content)
-    exit()
-
-# Get token for the specified org_name
-try:
-    print("Searching for org_id for {}".format(org_name))
-    org_search_req = {
-        "org_identifier": org_name
-    }
-    search_resp = ts.orgs_search(request=org_search_req)
-except requests.exceptions.HTTPError as e:
-    print(e)
-    print(e.response.content)
-    exit()
-
-if len(search_resp) == 1:
-    org_id = search_resp[0]['id']
-    print("org_id {} found".format(org_id))
-"""
 try:
     auth_resp = ts.auth_token_full(username=username, secret_key=secret_key,
                                     validity_time_in_sec=3000, org_id=org_id)
