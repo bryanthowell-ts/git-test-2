@@ -36,14 +36,14 @@ The workflow files use a number of variables and secrets to allow linking GitHub
 For those not used to building GitHub actions, there are numerous sources of 'context' flowing into a given job run.
 
 Inputs from a manually triggered event defined within the 'workflow_dispatch' section are referenced using:
-${{ github.event.inputs.<name> }}
+${{ github.event.inputs.InputName }}
 
 
 ### Variables and Secrets
 Variables and Secrets can from a defined Environment or the Repository (if they have the same name, Environment is used over Repository ):
 
-${{ vars.<name> }}
-${{ secrets.<name> }}
+${{ vars.VarName }}
+${{ secrets.SecretName }}
 
 If you have a simple setup, you may use Repository level secrets for the following:
 
@@ -100,7 +100,7 @@ Secrets:
 
 download_tml.yml defines the 'name: Download TML from Org to Branch' Action. 
 
-This Action uses the TML Export REST API to get the current TML for a set of objects, into directories in the linked Git remote/<branch>, then it commits back to the origin/<branch>. It replaces the functionality of the earlier ThoughtSpot REST API called 'Commit Branch'.
+This Action uses the TML Export REST API to get the current TML for a set of objects, into directories in the linked Git remote/branchName, then it commits back to the origin/branchName. It replaces the functionality of the earlier ThoughtSpot REST API called 'Commit Branch'.
 
 There are filter inputs for a single Author Username or Tag Name. Use these to export only certain sets of TML - both Author and Tag Name are useful mechanisms for identifying which content in a 'dev' Org should become part of the actual 'release' that is deployed through to other branches and Orgs within ThoughtSpot.
 
