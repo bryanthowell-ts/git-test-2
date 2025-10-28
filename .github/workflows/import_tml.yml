@@ -1,3 +1,4 @@
+name: Import TML to Org
 
 on: 
   workflow_dispatch:
