@@ -127,11 +127,11 @@ import_tml.yml defines the `name: Import TML to Org` Action.
 
 This action takes all of the TML in a branch and uses the TML Import REST API to import it into a linked ThoughtSpot Org. It replaces the functionality of the previous REST API called 'Deploy Commits'. 
 
-The workflow uses the `TS_IMPORT_USERNAME`, which will become the Author of the content in the Org it is imported to.
+The workflow uses the `TS_IMPORT_USERNAME` secret, which will become the Author of the content in the Org it is imported to.
 
 The results of the Python script are output to the console and are thus are available in the logs for the job run in GitHub. This includes the response from the TML Import command, which will show any warnings, errors, etc.
 
-The workflow does not handle any Sharing (access control assignment)
+The workflow does not handle any Sharing (access control assignment). The content that is imported will not be available to anyone other than the `TS_IMPORT_USERNAME` and admin accounts without sharing it to other groups.
 
 ### retrieve_org_id_from_org_name.py
 retrieve_org_id_from_org_name.py is a helper script to get the numeric `org_id` for any arbitrary string Org Name on a ThoughtSpot instance.
