@@ -36,14 +36,14 @@ The workflow files use a number of variables and secrets to allow linking GitHub
 For those not used to building GitHub actions, there are numerous sources of 'context' flowing into a given job run.
 
 Inputs from a manually triggered event defined within the 'workflow_dispatch' section are referenced using:
-${{ github.event.inputs.InputName }}
+`${{ github.event.inputs.InputName }}`
 
 
 ### Variables and Secrets
 Variables and Secrets can from a defined Environment or the Repository (if they have the same name, Environment is used over Repository ):
 
-${{ vars.VarName }}
-${{ secrets.SecretName }}
+`${{ vars.VarName }}`
+`${{ secrets.SecretName }}`
 
 If you have a simple setup, you may use Repository level secrets for the following:
 
