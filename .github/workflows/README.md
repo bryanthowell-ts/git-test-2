@@ -108,14 +108,14 @@ Directories are generated automatically for the various TML object types.
 
 Within each directory, the TML files are stored along with a `last_download_runtime.txt` file. The `last_download_runtime.txt` file allows the Action to only download items that have been modified since the timestamp stored within the file, preventing unnecessary generation of identical TML. 
 
-If you want all files to be retrieved, delete the `last_donwload_runtime.txt` file in a given directory (for data objects, delete in all the directories).
+If you want all files to be retrieved, delete the `last_download_runtime.txt` file in a given directory (for data objects, delete in all the directories).
 
 #### Version control vs. Deployment
 ThoughtSpot has a Version Control capability, also linked to a GitHub repo, designed to make a commit automatically when any object has been changed within the UI. 
 
 You can replicate this functionality using the `Download TML for Org to Branch` Action (on a polling timer), by looking for all objects in a given Org.
 
-The workflow uses the TS_DOWNLOAD_USERNAME secret for the username within ThoughtSpot to do the REST API actions. This does not have to be an admin user, but the user must have Access to the objects that are being exported, along with the necessary Privileges via Roles. 
+The workflow uses the `TS_DOWNLOAD_USERNAME` secret for the username within ThoughtSpot to do the REST API actions. This does not have to be an admin user, but the user must have Access to the objects that are being exported, along with the necessary Privileges via Roles. 
 
 What you actually want to Deploy out through the SDLC stages as a 'release' to Prod may only be a subset of the total content in your dev Org in ThoughtSpot. 
 
@@ -127,4 +127,8 @@ import_tml.yml defines the `name: Import TML to Org` Action.
 
 This action takes all of the TML in a branch and uses the TML Import REST API to import it into a linked ThoughtSpot Org. It replaces the functionality of the previous REST API called 'Deploy Commits'. 
 
-The workflow uses the TS_IMPORT_USERNAME
+The workflow uses the `TS_IMPORT_USERNAME`, which will become the Author of the content in the Org it is imported to.
+
+The results of the Python script are output to the console and are thus are available in the logs for the job run in GitHub. This includes the response from the TML Import command, which will show any warnings, errors, etc.
+
+The workflow does not handle any Sharing (access control assignment)
