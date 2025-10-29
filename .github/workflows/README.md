@@ -132,3 +132,10 @@ The workflow uses the `TS_IMPORT_USERNAME`, which will become the Author of the 
 The results of the Python script are output to the console and are thus are available in the logs for the job run in GitHub. This includes the response from the TML Import command, which will show any warnings, errors, etc.
 
 The workflow does not handle any Sharing (access control assignment)
+
+### retrieve_org_id_from_org_name.py
+retrieve_org_id_from_org_name.py is a helper script to get the numeric `org_id` for any arbitrary string Org Name on a ThoughtSpot instance.
+
+It is called as a step in other workflows, and introduces an `ORG_ID` environment variable in to the `$GITHUB_ENV` for any future steps, via the following:
+
+    python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
