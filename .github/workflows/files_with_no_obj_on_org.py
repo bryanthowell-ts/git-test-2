@@ -132,7 +132,7 @@ all_obj_ids = []
 for obj_type in objs_in_org:
     for o in objs_in_org[obj_type]:
         if o['metadata_obj_id'] is not None:
-            all_obj_ids.append(o['metadata_obj_ids'])
+            all_obj_ids.append(o['metadata_obj_id'])
 
 files_without_objects_in_org = []
 
