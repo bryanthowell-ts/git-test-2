@@ -108,7 +108,7 @@ obj_type_select = {
 def retrieve_objects(request, record_size_override=-1): 
     request["record_size"] = record_size_override
 
-    print("Requesting object listing")
+    # print("Requesting object listing")
     try:
         objs = ts.metadata_search(request=request)
     except requests.exceptions.HTTPError as e:
@@ -116,7 +116,7 @@ def retrieve_objects(request, record_size_override=-1):
         print(e.response.content)
         exit()
 
-    print("{} objects retrieved from API".format(len(objs)))
+    # print("{} objects retrieved from API".format(len(objs)))
     return objs
 
 # Perform metadata/search to get all the objects in the org
@@ -137,7 +137,7 @@ for obj_type in objs_in_org:
 files_without_objects_in_org = []
 
 for object_type in obj_type_select:
-    print("Getting directories for {}".format(object_type))
+   #  print("Getting directories for {}".format(object_type))
     directories_to_import = directories_for_objects[object_type]
 
     for dir in directories_to_import:
@@ -168,8 +168,10 @@ for object_type in obj_type_select:
                         files_without_objects_in_org.append(full_file_path)
 
         except FileNotFoundError as e:
-            print("Directory doesn't exist, skipping")
-            print(e)
+            # print("Directory doesn't exist, skipping")
+            # print(e)
+            pass
 
-print("Files that no longer have matching object in ThoughtSpot Org:")
-print(json.dumps(files_without_objects_in_org, indent=2))
+# print("Files that no longer have matching object in ThoughtSpot Org:")
+# print(json.dumps(files_without_objects_in_org, indent=2))
+print(" ".join(files_without_objects_in_org))
