@@ -89,9 +89,9 @@ try:
         print("No TML to import, exiting")
         exit()
     else:
-        print("Importing {} TMLs".format(len(tml_strings)))
+        print("Importing {} TMLs using Import Policy {}".format(len(tml_strings), import_policy))
         results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy=import_policy, create_new=False)
-        print("Imported with following response:")
+        print("Import API completed successfully with following response:")
         print(json.dumps(results, indent=2))
 except requests.exceptions.HTTPError as e:
     print(e)
