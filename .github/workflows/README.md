@@ -43,6 +43,7 @@ Inputs from a manually triggered event defined within the 'workflow_dispatch' se
 Variables and Secrets can from a defined Environment or the Repository (if they have the same name, Environment is used over Repository ):
 
 `${{ vars.VarName }}`
+
 `${{ secrets.SecretName }}`
 
 If you have a simple setup, you may use Repository level secrets for the following:
