@@ -20,7 +20,7 @@ on:
         description: Import Policy option of TML Import API
         options: 
         - ALL_OR_NONE
-        - VALIDATE
+        - VALIDATE_ONLY
         - PARTIAL
         - PARTIAL_OBJECT
         required: true
@@ -72,6 +72,7 @@ jobs:
        TS_ORG_NAME: ${{ github.event.inputs.TS_ORG_NAME != '{None}' && github.event.inputs.TS_ORG_NAME || vars.TS_ORG_NAME }}
       run: |
          python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
+         echo "$TS_ORG_NAME is org_id $ORG_ID"
     - name: Import TML to ThoughtSpot Org ${{ vars.TS_ORG_NAME }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
@@ -80,5 +81,5 @@ jobs:
        OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
        IMPORT_POLICY : ${{ github.event.inputs.IMPORT_POLICY }}
       run: |
-        echo "Org Name $TS_ORG_NAME is Org_ID $ORG_ID"
+        echo "Import to Org_ID $ORG_ID"
         python .github/workflows/import_tml_to_org.py
