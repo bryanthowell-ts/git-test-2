@@ -17,6 +17,7 @@ org_id = os.environ.get('ORG_ID')  # Set via retrieve_org_id_from_org_name.py se
 
 object_type = os.environ.get('OBJECT_TYPE')
 object_filename = os.environ.get('OBJECT_FILENAME')
+import_policy = os.environ.get('IMPORT_POLICY')
 
 # Define the directory names to link to the workflow 
 # If you don't use 's', fix em up here
@@ -85,7 +86,7 @@ for dir in directories_to_import:
 # Switch to Async
 try:
     print("Importing {} TMLs".format(len(tml_strings)))
-    results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy="ALL_OR_NONE", create_new=False)
+    results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy=import_policy, create_new=False)
     print("Imported with following response:")
     print(json.dumps(results, indent=2))
 except requests.exceptions.HTTPError as e:
