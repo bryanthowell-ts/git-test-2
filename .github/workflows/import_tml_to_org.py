@@ -85,10 +85,14 @@ for dir in directories_to_import:
 # Publish the TMLs
 # Switch to Async
 try:
-    print("Importing {} TMLs".format(len(tml_strings)))
-    results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy=import_policy, create_new=False)
-    print("Imported with following response:")
-    print(json.dumps(results, indent=2))
+    if len(tml_strings) == 0:
+        print("No TML to import, exiting")
+        exit()
+    else:
+        print("Importing {} TMLs".format(len(tml_strings)))
+        results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy=import_policy, create_new=False)
+        print("Imported with following response:")
+        print(json.dumps(results, indent=2))
 except requests.exceptions.HTTPError as e:
     print(e)
     print(e.response.content)
