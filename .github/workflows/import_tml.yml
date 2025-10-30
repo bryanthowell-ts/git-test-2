@@ -33,7 +33,7 @@ on:
         required: true
       TS_ORG_NAME:
         type: string
-        description: 'ThoughtSpot org name overide (not org_id)'
+        description: 'ThoughtSpot Org Name (not org_id) - override from environment'
         required: true
         default: '{None}'
 
@@ -64,7 +64,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install thoughtspot_rest_api 
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Get Org_ID from Org_Name ${{ vars.TS_ORG_NAME }}
+    - name: Get Org_ID from Org_Name ${{ github.event.inputs.TS_ORG_NAME != '{None}' && github.event.inputs.TS_ORG_NAME || vars.TS_ORG_NAME }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
@@ -81,5 +81,5 @@ jobs:
        OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
        IMPORT_POLICY : ${{ github.event.inputs.IMPORT_POLICY }}
       run: |
-        echo "Import to Org_ID $ORG_ID"
+        echo "Import to Org_ID $ORG_ID of $OBJECT_TYPE using Import Policy: $IMPORT_POLICY"
         python .github/workflows/import_tml_to_org.py
