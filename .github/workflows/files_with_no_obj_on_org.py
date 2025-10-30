@@ -152,9 +152,15 @@ for object_type in obj_type_select:
 
                     # Break out obj_id from filename
                     fn_split = filename.split('.')[0]
+                    print(fn_split)
                     # Remove the last two, which should be obj_type and tml
                     fn_slice = fn_split[0:-2]
-                    file_obj_id = '.'.join(fn_slice)
+                    print(fn_slice)
+                    if len(fn_slice) > 1:
+                      file_obj_id = '.'.join(fn_slice)
+                    else:
+                        file_obj_id = fn_slice[0]
+                    print(file_obj_id)
 
                     # See if it exist in the 
                     if file_obj_id in all_obj_ids:
