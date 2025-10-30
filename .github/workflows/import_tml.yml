@@ -50,7 +50,7 @@ jobs:
         || github.ref_name == 'dev'    && 'dev'
         || github.ref_name == 'test' && 'test'
         || github.ref_name == 'uat' && 'uat'
-        || 'default'
+        || github.ref_name
         }} 
 
     steps:
