@@ -19,6 +19,8 @@ object_type = os.environ.get('OBJECT_TYPE')
 object_filename = os.environ.get('OBJECT_FILENAME')
 import_policy = os.environ.get('IMPORT_POLICY')
 
+sync_or_async = os.environ.get('ASYNC')
+
 # Define the directory names to link to the workflow 
 # If you don't use 's', fix em up here
 directories_for_objects = {
@@ -89,9 +91,12 @@ try:
         print("No TML to import, exiting")
         exit()
     else:
-        print("Importing {} TMLs".format(len(tml_strings)))
-        results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy=import_policy, create_new=False)
-        print("Imported with following response:")
+        print("Importing {} TMLs using Import Policy {} via {}".format(len(tml_strings), import_policy, sync_or_async))
+        if sync_or_async == 'SYNC':
+            results = ts.metadata_tml_import(metadata_tmls=tml_strings, import_policy=import_policy, create_new=False)
+        elif sync_or_async == 'ASYNC':
+            results = ts.metadata_tml_async_import(metadata_tmls=tml_strings, import_policy=import_policy, create_new=False)
+        print("Import API completed successfully with following response:")
         print(json.dumps(results, indent=2))
 except requests.exceptions.HTTPError as e:
     print(e)
