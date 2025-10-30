@@ -1,3 +1,4 @@
+name: Import TML to Org
 
 on: 
   workflow_dispatch:
@@ -13,6 +14,22 @@ on:
         - LIVEBOARD
         - ANSWER
         - CONNECTION
+        required: true
+      IMPORT_POLICY:
+        type: choice
+        description: Import Policy option of TML Import API
+        options: 
+        - ALL_OR_NONE
+        - VALIDATE
+        - PARTIAL
+        - PARTIAL_OBJECT
+        required: true
+      ASYNC:
+        type: choice
+        description: Sync or Async Import
+        options:
+          - SYNC
+          - ASYNC
         required: true
       TS_ORG_NAME:
         type: string
@@ -52,7 +69,7 @@ jobs:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
        TS_USERNAME: ${{ secrets.TS_INSTANCE_ADMIN_USERNAME }}
-       TS_ORG_NAME: ${{ vars.TS_ORG_NAME }}
+       TS_ORG_NAME: ${{ github.event.inputs.TS_ORG_NAME != '{None}' && github.event.inputs.TS_ORG_NAME || vars.TS_ORG_NAME }}
       run: |
          python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
     - name: Import TML to ThoughtSpot Org ${{ vars.TS_ORG_NAME }}
@@ -61,6 +78,7 @@ jobs:
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
        TS_USERNAME: ${{ secrets.TS_IMPORT_USERNAME }}
        OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
+       IMPORT_POLICY : ${{ github.event.inputs.IMPORT_POLICY }}
       run: |
         echo "Org Name $TS_ORG_NAME is Org_ID $ORG_ID"
         python .github/workflows/import_tml_to_org.py

@@ -1,0 +1,142 @@
+# ThoughtSpot SDLC GitHub Actions
+
+This directory contains example GitHub Workflow .yml files and Python scripts to implement Actions to assist in do SDLC with ThoughtSpot TML files
+
+## Prereqs in ThoughtSpot
+Modern SDLC uses some newer ThoughtSpot features to make version control and deployment smooth across Orgs and instances.
+
+### Enable obj_id and Publishing
+Best practice for ThoughtSpot Cloud deployments involves setting the 'obj_id' property of every object, as well as using Parameters in TML, part of the Publishing feature. Both are features that must be enabled on your ThoughtSpot instances by support ticket.
+
+### Set obj_id for each object
+obj_id is a user-setable string identifier with uniqueness constraints per Org. Thus org_id.obj_id is equivalent to the unique GUID assigned to each object.
+
+When obj_id is first enabled, pre-existing objects will have an empty value, while new objects will be auto-assigned a guaranteed unique obj_id.
+
+Objects created via TML will have the obj_id provided in the TML file, but changes to an existing object's obj_id require a specific operation. 
+
+You can set obj_id for any object in the ThoughtSpot UI within the TML Editor's Edit Menu or using the REST API V2.0 /metadata/update-obj-id endpoint.
+
+### Create Variables and Variablize Connection and Table TML
+Connection and Table TML both have properties related to the underlying databases that may vary between different environments - for example, warehouse and keypair in a Connection, or the database name or schema in a Table.
+
+Variables provide a way to use identical TML files across different Orgs, where the actual values are stored securely in ThoughtSpot and updated via REST API calls.
+
+Steps to use variables:
+
+ 1. Create the Variable: This generates a unique Variable identifier, and sets the type and if it is Secure (for secrets)
+ 2. Set Variable Values per Org: Define the values for the variable on each desired Org (not every Org must have values defined)
+ 3. Variablize the TML for the desired properties: Open the TML Editor and replace the existing actual values with the Variable name, using the syntax: "${variableName}"
+
+Once the TML for an object has been 'variablized', it will always export with the variable reference rather than the actual value of the variable. This allows for complete re-use of the TML files across Orgs, while keeping any secrets safe.
+
+## Setting up GitHub Repo
+The workflow files use a number of variables and secrets to allow linking GitHub branches with ThoughtSpot Orgs (and multiple ThoughtSpot instances if you have them).
+
+For those not used to building GitHub actions, there are numerous sources of 'context' flowing into a given job run.
+
+Inputs from a manually triggered event defined within the 'workflow_dispatch' section are referenced using:
+`${{ github.event.inputs.InputName }}`
+
+
+### Variables and Secrets
+Variables and Secrets can from a defined Environment or the Repository (if they have the same name, Environment is used over Repository ):
+
+`${{ vars.VarName }}`
+
+`${{ secrets.SecretName }}`
+
+If you have a simple setup, you may use Repository level secrets for the following:
+
+Secrets:
+
+ - TS_SERVER
+ - TS_SECRET_KEY
+ - TS_INSTANCE_ADMIN_USERNAME
+ - TS_DOWNLOAD_USERNAME
+ - TS_IMPORT_USERNAME
+
+### Environment secrets and variables
+GitHub provides an Environments concept for defining different sets of secrets and variables.
+
+The following should be set at the Environment level:
+
+Variables:
+ 
+ - TS_ORG_NAME
+
+You may want to set the following for various environments / Orgs:
+
+Secrets:
+
+ - TS_DOWNLOAD_USERNAME
+ - TS_IMPORT_USERNAME
+
+If you have different instances, set the following per Environment to match your ThoughtSpot instance / Org config:
+
+Secrets:
+ 
+ - TS_SERVER
+ - TS_SECRET_KEY
+ - TS_INSTANCE_ADMIN_USERNAME
+
+ ### Matching Environments to Branches
+ Within each workflow YAML file, there is an environment section that looks like:
+
+    environment: |-
+        ${{
+          github.ref_name == 'prod' && 'production'
+        || github.ref_name == 'dev'    && 'dev'
+        || github.ref_name == 'test' && 'test'
+        || github.ref_name == 'uat' && 'uat'
+        || 'default'
+        }} 
+
+
+`github.ref_name` is the branch name, while the value after the `&&` is the GitHub environment name. Feel free to modify this to match your preferred branch and environment naming scheme.
+
+## Using the Workflows
+
+### download_tml.yml
+
+download_tml.yml defines the 'name: Download TML from Org to Branch' Action. 
+
+This Action uses the TML Export REST API to get the current TML for a set of objects, into directories in the linked Git remote/branchName, then it commits back to the origin/branchName. It replaces the functionality of the earlier ThoughtSpot REST API called 'Commit Branch'.
+
+There are filter inputs for a single Author Username or Tag Name. Use these to export only certain sets of TML - both Author and Tag Name are useful mechanisms for identifying which content in a 'dev' Org should become part of the actual 'release' that is deployed through to other branches and Orgs within ThoughtSpot.
+
+Directories are generated automatically for the various TML object types. 
+
+Within each directory, the TML files are stored along with a `last_download_runtime.txt` file. The `last_download_runtime.txt` file allows the Action to only download items that have been modified since the timestamp stored within the file, preventing unnecessary generation of identical TML. 
+
+If you want all files to be retrieved, delete the `last_download_runtime.txt` file in a given directory (for data objects, delete in all the directories).
+
+#### Version control vs. Deployment
+ThoughtSpot has a Version Control capability, also linked to a GitHub repo, designed to make a commit automatically when any object has been changed within the UI. 
+
+You can replicate this functionality using the `Download TML for Org to Branch` Action (on a polling timer), by looking for all objects in a given Org.
+
+The workflow uses the `TS_DOWNLOAD_USERNAME` secret for the username within ThoughtSpot to do the REST API actions. This does not have to be an admin user, but the user must have Access to the objects that are being exported, along with the necessary Privileges via Roles. 
+
+What you actually want to Deploy out through the SDLC stages as a 'release' to Prod may only be a subset of the total content in your dev Org in ThoughtSpot. 
+
+You can use various stratgies for identifying which content will actually be part of the Release. As mentioned above, Tags ('release' or a version number scheme) or transferring the content to a particular Author username are two that are easily supported via the /metadata/search REST API which retrieves object listings. Other possibilities would be looking for all content that is linked to a given Connection or shared with certain Groups - those are slightly more complex API lookups but can be easily built out.
+
+### import_tml.yml
+
+import_tml.yml defines the `name: Import TML to Org` Action. 
+
+This action takes all of the TML in a branch and uses the TML Import REST API to import it into a linked ThoughtSpot Org. It replaces the functionality of the previous REST API called 'Deploy Commits'. 
+
+The workflow uses the `TS_IMPORT_USERNAME` secret, which will become the Author of the content in the Org it is imported to.
+
+The results of the Python script are output to the console and are thus are available in the logs for the job run in GitHub. This includes the response from the TML Import command, which will show any warnings, errors, etc.
+
+The workflow does not handle any Sharing (access control assignment). The content that is imported will not be available to anyone other than the `TS_IMPORT_USERNAME` and admin accounts without sharing it to other groups.
+
+### retrieve_org_id_from_org_name.py
+retrieve_org_id_from_org_name.py is a helper script to get the numeric `org_id` for any arbitrary string Org Name on a ThoughtSpot instance.
+
+It is called as a step in other workflows, and introduces an `ORG_ID` environment variable in to the `$GITHUB_ENV` for any future steps, via the following:
+
+    python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
