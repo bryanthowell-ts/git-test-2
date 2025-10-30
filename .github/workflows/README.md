@@ -134,6 +134,16 @@ The results of the Python script are output to the console and are thus are avai
 
 The workflow does not handle any Sharing (access control assignment). The content that is imported will not be available to anyone other than the `TS_IMPORT_USERNAME` and admin accounts without sharing it to other groups.
 
+### import_tml_single_tenant_deploy.yml
+
+import_tml_single_tenant_deploy.yml defines the `Import TML - Single Tenant Deployment Matrix` Action, which is the matrix strategy form of import_tml.yml, used to deploy out from a single 'production' / 'release' branch to any number of ThoughtSpot Orgs.
+
+    strategy:
+      matrix: 
+        org_name: [customer_a, customer_b]
+
+Simply add to the org_name list under the strategy section, and each run of the Action will spawn jobs for each item in the list. When the action completes, you can check each job separately to check the logs. This utilizes the intentional feature within GitHub for running necessary variations on a job.
+
 ### retrieve_org_id_from_org_name.py
 retrieve_org_id_from_org_name.py is a helper script to get the numeric `org_id` for any arbitrary string Org Name on a ThoughtSpot instance.
 
