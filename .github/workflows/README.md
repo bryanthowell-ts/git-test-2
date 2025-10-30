@@ -36,14 +36,15 @@ The workflow files use a number of variables and secrets to allow linking GitHub
 For those not used to building GitHub actions, there are numerous sources of 'context' flowing into a given job run.
 
 Inputs from a manually triggered event defined within the 'workflow_dispatch' section are referenced using:
-${{ github.event.inputs.InputName }}
+`${{ github.event.inputs.InputName }}`
 
 
 ### Variables and Secrets
 Variables and Secrets can from a defined Environment or the Repository (if they have the same name, Environment is used over Repository ):
 
-${{ vars.VarName }}
-${{ secrets.SecretName }}
+`${{ vars.VarName }}`
+
+`${{ secrets.SecretName }}`
 
 If you have a simple setup, you may use Repository level secrets for the following:
 
@@ -108,14 +109,14 @@ Directories are generated automatically for the various TML object types.
 
 Within each directory, the TML files are stored along with a `last_download_runtime.txt` file. The `last_download_runtime.txt` file allows the Action to only download items that have been modified since the timestamp stored within the file, preventing unnecessary generation of identical TML. 
 
-If you want all files to be retrieved, delete the `last_donwload_runtime.txt` file in a given directory (for data objects, delete in all the directories).
+If you want all files to be retrieved, delete the `last_download_runtime.txt` file in a given directory (for data objects, delete in all the directories).
 
 #### Version control vs. Deployment
 ThoughtSpot has a Version Control capability, also linked to a GitHub repo, designed to make a commit automatically when any object has been changed within the UI. 
 
 You can replicate this functionality using the `Download TML for Org to Branch` Action (on a polling timer), by looking for all objects in a given Org.
 
-The workflow uses the TS_DOWNLOAD_USERNAME secret for the username within ThoughtSpot to do the REST API actions. This does not have to be an admin user, but the user must have Access to the objects that are being exported, along with the necessary Privileges via Roles. 
+The workflow uses the `TS_DOWNLOAD_USERNAME` secret for the username within ThoughtSpot to do the REST API actions. This does not have to be an admin user, but the user must have Access to the objects that are being exported, along with the necessary Privileges via Roles. 
 
 What you actually want to Deploy out through the SDLC stages as a 'release' to Prod may only be a subset of the total content in your dev Org in ThoughtSpot. 
 
@@ -127,4 +128,15 @@ import_tml.yml defines the `name: Import TML to Org` Action.
 
 This action takes all of the TML in a branch and uses the TML Import REST API to import it into a linked ThoughtSpot Org. It replaces the functionality of the previous REST API called 'Deploy Commits'. 
 
-The workflow uses the TS_IMPORT_USERNAME
+The workflow uses the `TS_IMPORT_USERNAME` secret, which will become the Author of the content in the Org it is imported to.
+
+The results of the Python script are output to the console and are thus are available in the logs for the job run in GitHub. This includes the response from the TML Import command, which will show any warnings, errors, etc.
+
+The workflow does not handle any Sharing (access control assignment). The content that is imported will not be available to anyone other than the `TS_IMPORT_USERNAME` and admin accounts without sharing it to other groups.
+
+### retrieve_org_id_from_org_name.py
+retrieve_org_id_from_org_name.py is a helper script to get the numeric `org_id` for any arbitrary string Org Name on a ThoughtSpot instance.
+
+It is called as a step in other workflows, and introduces an `ORG_ID` environment variable in to the `$GITHUB_ENV` for any future steps, via the following:
+
+    python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
