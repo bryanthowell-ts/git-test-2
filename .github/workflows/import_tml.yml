@@ -72,8 +72,8 @@ jobs:
        TS_ORG_NAME: ${{ github.event.inputs.TS_ORG_NAME != '{None}' && github.event.inputs.TS_ORG_NAME || vars.TS_ORG_NAME }}
       run: |
          python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
-         echo "$TS_ORG_NAME is org_id $ORG_ID"
-    - name: Import TML to ThoughtSpot Org ${{ vars.TS_ORG_NAME }}
+         echo "$TS_ORG_NAME org_id retrieved"
+    - name: Import TML to ThoughtSpot Org
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
