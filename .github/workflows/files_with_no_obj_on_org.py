@@ -151,7 +151,7 @@ for object_type in obj_type_select:
                     full_file_path = "{}/{}".format(dir, filename)
 
                     # Break out obj_id from filename
-                    fn_split = filename.split('.')[0]
+                    fn_split = filename.split('.')
                     print(fn_split)
                     # Remove the last two, which should be obj_type and tml
                     fn_slice = fn_split[0:-2]
