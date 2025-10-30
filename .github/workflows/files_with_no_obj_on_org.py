@@ -174,4 +174,5 @@ for object_type in obj_type_select:
 
 # print("Files that no longer have matching object in ThoughtSpot Org:")
 # print(json.dumps(files_without_objects_in_org, indent=2))
-print(" ".join(files_without_objects_in_org))
+for filename in files_without_objects_in_org:
+    print(filename)
