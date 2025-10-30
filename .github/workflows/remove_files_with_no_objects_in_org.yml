@@ -50,4 +50,4 @@ jobs:
       run: |
         git config --local user.email "${{ github.actor_id }}+${{ github.triggering_actor }}@users.noreply.github.com"
         git config --local user.name "${{ github.triggering_actor }}"
-        python .github/workflows/remove_files_with_no_objects_in_org.py 
+        python .github/workflows/files_with_no_obj_on_org.py 
