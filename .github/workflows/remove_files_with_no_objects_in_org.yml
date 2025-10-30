@@ -42,7 +42,7 @@ jobs:
        TS_ORG_NAME: ${{ vars.TS_ORG_NAME }}
       run: |
          python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
-    - name: Export and Download TML from ${{ vars.TS_ORG_NAME }}
+    - name: Delete files with no matching obj_id on ${{ vars.TS_ORG_NAME }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
@@ -60,6 +60,7 @@ jobs:
         git diff-index --quiet HEAD || git commit -a -m "Run ID ${{ github.run_id }}/${{github.run_attempt}} cleanup files from Org ${{ vars.TS_ORG_NAME }}"
         git push
         else
+        echo "No files found to remove"
         rm files_to_remove.txt
         fi
         
