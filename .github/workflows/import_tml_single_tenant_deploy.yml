@@ -1,4 +1,4 @@
-name: Import TML to Org
+name: Import TML - Single Tenant Deployment Matrix
 
 on: 
   workflow_dispatch:
@@ -24,18 +24,7 @@ on:
         - PARTIAL
         - PARTIAL_OBJECT
         required: true
-      ASYNC:
-        type: choice
-        description: Sync or Async Import
-        options:
-          - SYNC
-          - ASYNC
-        required: true
-      TS_ORG_NAME:
-        type: string
-        description: 'ThoughtSpot Org Name (not org_id) - override from environment'
-        required: true
-        default: '{None}'
+
 
 permissions:
   contents: write
@@ -44,14 +33,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    environment: |-
-        ${{
-          github.ref_name == 'prod' && 'production'
-        || github.ref_name == 'dev'    && 'dev'
-        || github.ref_name == 'test' && 'test'
-        || github.ref_name == 'uat' && 'uat'
-        || github.ref_name
-        }} 
+    environment: production
+    strategy:
+      matrix: 
+        org_name: [RD_test, RD_uat]
+
 
     steps:
     - uses: actions/checkout@v4
@@ -64,12 +50,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install thoughtspot_rest_api 
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Get Org_ID from Org_Name ${{ github.event.inputs.TS_ORG_NAME != '{None}' && github.event.inputs.TS_ORG_NAME || vars.TS_ORG_NAME }}
+    - name: Get Org_ID from Org_Name ${{ matrix.org_name }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
        TS_USERNAME: ${{ secrets.TS_INSTANCE_ADMIN_USERNAME }}
-       TS_ORG_NAME: ${{ github.event.inputs.TS_ORG_NAME != '{None}' && github.event.inputs.TS_ORG_NAME || vars.TS_ORG_NAME }}
+       TS_ORG_NAME: ${{ matrix.org_name }}
       run: |
          python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
          echo "$TS_ORG_NAME org_id retrieved"
@@ -80,7 +66,7 @@ jobs:
        TS_USERNAME: ${{ secrets.TS_IMPORT_USERNAME }}
        OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
        IMPORT_POLICY : ${{ github.event.inputs.IMPORT_POLICY }}
-       ASYNC : ${{ github.event.inputs.ASYNC }}
+       ASYNC : ASYNC
       run: |
         echo "Import to Org_ID $ORG_ID of $OBJECT_TYPE using Import Policy: $IMPORT_POLICY"
         python .github/workflows/import_tml_to_org.py
