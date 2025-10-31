@@ -69,4 +69,8 @@ jobs:
        NEW_OBJ_ID : ${{ github.event.inputs.NEW_OBJ_ID }}
       run: |
         echo "Import to Org_ID $ORG_ID rename $OLD_OBJ_ID to: $NEW_OBJ_ID"
-        python .github/workflows/update_obj_id.py
+        if find . -name "${{ github.event.inputs.OLD_OBJ_ID }}* -print -quit | grep -q.; then 
+        echo "file for ${{ github.event.inputs.OLD_OBJ_ID }} found" 
+        else 
+        echo "no file"
+        fi
