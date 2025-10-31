@@ -11,13 +11,6 @@ on:
         type: string
         description: 'New obj_id of object'
         required: true
-      ASYNC:
-        type: choice
-        description: Sync or Async Import
-        options:
-          - SYNC
-          - ASYNC
-        required: true
       TS_ORG_NAME:
         type: string
         description: 'ThoughtSpot Org Name (not org_id) - override from environment'
