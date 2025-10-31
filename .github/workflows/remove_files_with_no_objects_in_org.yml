@@ -63,7 +63,7 @@ jobs:
         if [ -s "files_to_remove.txt" ]; then
         echo "Files found to remove, no matching object found in ${{ vars.TS_ORG_NAME }}"
         cat files_to_remove.txt
-        if ["${{ github.event.inputs.DELETE_FLAG }}" = "DELETE"]; then
+        if [ "${{ github.event.inputs.DELETE_FLAG }}" = "DELETE" ]; then
         echo "Deleting the files"
         cat files_to_remove.txt | xargs git rm
         rm files_to_remove.txt
