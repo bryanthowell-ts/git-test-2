@@ -108,7 +108,7 @@ obj_type_select = {
 def retrieve_objects(request, record_size_override=-1): 
     request["record_size"] = record_size_override
 
-    print("Requesting object listing")
+    # print("Requesting object listing")
     try:
         objs = ts.metadata_search(request=request)
     except requests.exceptions.HTTPError as e:
@@ -116,7 +116,7 @@ def retrieve_objects(request, record_size_override=-1):
         print(e.response.content)
         exit()
 
-    print("{} objects retrieved from API".format(len(objs)))
+    # print("{} objects retrieved from API".format(len(objs)))
     return objs
 
 # Perform metadata/search to get all the objects in the org
@@ -132,12 +132,12 @@ all_obj_ids = []
 for obj_type in objs_in_org:
     for o in objs_in_org[obj_type]:
         if o['metadata_obj_id'] is not None:
-            all_obj_ids.append(o['metadata_obj_ids'])
+            all_obj_ids.append(o['metadata_obj_id'])
 
 files_without_objects_in_org = []
 
 for object_type in obj_type_select:
-    print("Getting directories for {}".format(object_type))
+   #  print("Getting directories for {}".format(object_type))
     directories_to_import = directories_for_objects[object_type]
 
     for dir in directories_to_import:
@@ -151,7 +151,15 @@ for object_type in obj_type_select:
                     full_file_path = "{}/{}".format(dir, filename)
 
                     # Break out obj_id from filename
-                    file_obj_id = filename.split('.')[0]
+                    fn_split = filename.split('.')
+
+                    # Remove the last two, which should be obj_type and tml
+                    fn_slice = fn_split[0:-2]
+
+                    if len(fn_slice) > 1:
+                      file_obj_id = '.'.join(fn_slice)
+                    else:
+                        file_obj_id = fn_slice[0]
 
                     # See if it exist in the 
                     if file_obj_id in all_obj_ids:
@@ -160,8 +168,11 @@ for object_type in obj_type_select:
                         files_without_objects_in_org.append(full_file_path)
 
         except FileNotFoundError as e:
-            print("Directory doesn't exist, skipping")
-            print(e)
+            # print("Directory doesn't exist, skipping")
+            # print(e)
+            pass
 
-print("Files that no longer have matching object in ThoughtSpot Org:")
-print(json.dumps(files_without_objects_in_org, indent=2))
+# print("Files that no longer have matching object in ThoughtSpot Org:")
+# print(json.dumps(files_without_objects_in_org, indent=2))
+for filename in files_without_objects_in_org:
+    print(filename)

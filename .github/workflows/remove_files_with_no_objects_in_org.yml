@@ -5,6 +5,14 @@ name: Remove Files with No Objects in Org
 
 on: 
   workflow_dispatch:
+    inputs:
+        DELETE_FLAG:
+            type: choice
+            description: Delete Files in Git?
+            options: 
+            - LIST_ONLY
+            - DELETE
+            required: true
       
 
 permissions:
@@ -42,12 +50,29 @@ jobs:
        TS_ORG_NAME: ${{ vars.TS_ORG_NAME }}
       run: |
          python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
-    - name: Export and Download TML from ${{ vars.TS_ORG_NAME }}
+    - name: ${{ github.event.inputs.DELETE_FLAG }} files with no matching obj_id on ${{ vars.TS_ORG_NAME }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
        TS_USERNAME: ${{ secrets.TS_DOWNLOAD_USERNAME }}
+       DELETE_FLAG: ${{ github.event.inputs.DELETE_FLAG }}
       run: |
         git config --local user.email "${{ github.actor_id }}+${{ github.triggering_actor }}@users.noreply.github.com"
         git config --local user.name "${{ github.triggering_actor }}"
-        python .github/workflows/remove_files_with_no_objects_in_org.py 
+        python .github/workflows/files_with_no_obj_on_org.py > files_to_remove.txt
+        if [ -s "files_to_remove.txt" ]; then
+        echo "Files found in Org: ${{ vars.TS_ORG_NAME }} for removal:"
+        cat files_to_remove.txt
+        if [ "${{ github.event.inputs.DELETE_FLAG }}" = "DELETE" ]; then
+        echo "Deleting the files"
+        cat files_to_remove.txt | xargs git rm
+        rm files_to_remove.txt
+        git add *
+        git diff-index --quiet HEAD || git commit -a -m "Run ID ${{ github.run_id }}/${{github.run_attempt}} cleanup files from Org ${{ vars.TS_ORG_NAME }}"
+        git push
+        fi
+        else
+        echo "No files found to remove"
+        rm files_to_remove.txt
+        fi
+        
