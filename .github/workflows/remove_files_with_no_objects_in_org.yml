@@ -61,7 +61,7 @@ jobs:
         git config --local user.name "${{ github.triggering_actor }}"
         python .github/workflows/files_with_no_obj_on_org.py > files_to_remove.txt
         if [ -s "files_to_remove.txt" ]; then
-        echo "Files found in Org: ${{ vars.TS_ORG_NAME }} for removal:
+        echo "Files found in Org: ${{ vars.TS_ORG_NAME }} for removal:"
         cat files_to_remove.txt
         if [ "${{ github.event.inputs.DELETE_FLAG }}" = "DELETE" ]; then
         echo "Deleting the files"
