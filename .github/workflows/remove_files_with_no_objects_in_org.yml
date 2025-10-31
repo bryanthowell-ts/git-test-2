@@ -50,7 +50,7 @@ jobs:
        TS_ORG_NAME: ${{ vars.TS_ORG_NAME }}
       run: |
          python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
-    - name: Delete files with no matching obj_id on ${{ vars.TS_ORG_NAME }}
+    - name: ${{ github.event.inputs.DELETE_FLAG }} files with no matching obj_id on ${{ vars.TS_ORG_NAME }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
@@ -63,7 +63,7 @@ jobs:
         if [ -s "files_to_remove.txt" ]; then
         echo "Files found to remove, no matching object found in ${{ vars.TS_ORG_NAME }}"
         cat files_to_remove.txt
-        if ["$DELETE_FLAG" = "DELETE"]; then
+        if ["${{ github.event.inputs.DELETE_FLAG }}" = "DELETE"]; then
         echo "Deleting the files"
         cat files_to_remove.txt | xargs git rm
         rm files_to_remove.txt
