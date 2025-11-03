@@ -21,7 +21,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  update_obj_id:
 
     runs-on: ubuntu-latest
     environment: |-

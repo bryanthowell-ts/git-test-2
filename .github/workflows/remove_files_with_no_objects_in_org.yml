@@ -19,7 +19,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  delete_files_not_found_in_org:
 
     runs-on: ubuntu-latest
     environment: |-
