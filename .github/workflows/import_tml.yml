@@ -1,4 +1,4 @@
-name: Import TML to Org
+name: Import TML to Single Org
 
 on: 
   workflow_dispatch:
@@ -41,7 +41,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  import_tml_single_org:
 
     runs-on: ubuntu-latest
     environment: |-
