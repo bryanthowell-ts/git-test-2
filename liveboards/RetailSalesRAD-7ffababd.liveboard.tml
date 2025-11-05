@@ -321,7 +321,7 @@ liveboard:
     display_name: ""
   layout:
     tabs:
-    - name: Tab 1
+    - name: Tab 1.0
       description: ""
       tiles:
       - visualization_id: Viz_1
@@ -353,13 +353,13 @@ liveboard:
           "y": 0
           height: 5
           width: 4
-        - visualization_id: Viz_5
-          x: 8
+        - visualization_id: Viz_3
+          x: 0
           "y": 0
           height: 5
           width: 4
-        - visualization_id: Viz_3
-          x: 0
+        - visualization_id: Viz_5
+          x: 8
           "y": 0
           height: 5
           width: 4
