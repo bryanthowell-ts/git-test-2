@@ -4,11 +4,11 @@ This directory contains example GitHub Workflow .yml files and Python scripts to
 
 Basic concepts these scripts support:
 
-    1. Export (Download) TML from an Org to a Branch
-    2. Import TML from a Branch to an Org
-    3. Release Branch: branch representing intentional subset of dev content to be deployed to other branches 
-    4. Deployment Branches: Receive Pull Requests / Merges from "Release Branch", where Import TML actions occur to their linked Org
-    5. Version Control Branches: Branches meant for All Content to be Downloaded, to provide version control of all content in a linked Org
+1. Export (Download) TML from an Org to a Branch
+2. Import TML from a Branch to an Org
+3. Release Branch: branch representing intentional subset of dev content to be deployed to other branches 
+4. Deployment Branches: Receive Pull Requests / Merges from "Release Branch", where Import TML actions occur to their linked Org
+5. Version Control Branches: Branches meant for All Content to be Downloaded, to provide version control of all content in a linked Org
 
 Each Org that will import the content from "release" will have a '{orgName}_deploy' branch to contain the most recent TML from the "release" branch that has been imported into the linked Org.
 
@@ -16,7 +16,7 @@ Pull requests / merges are made from 'release' branch into the "{}_deploy" branc
 
 Alternatively, you can use the Import TML Actions to Deploy from the "release" branch to any other Org - with the loss of the pull request / merge history provided by the "{}_deploy" branches.
 
-In a Single Tenant Deployment (a "prod Org per Customer" or otherwise), the "Import TML - Single Tenant Deployment Matrix" Action can be used to import to each of the "prod Orgs" in a single actoin run frm the "prod_deploy" branch.
+In a Single Tenant Deployment (a "prod Org per Customer" or otherwise), the "Import TML - Single Tenant Deployment Matrix" Action can be used to import to each of the "prod Orgs" in a single action run from the "prod_deploy" branch.
 
 
 
@@ -58,18 +58,18 @@ Inputs from a manually triggered event defined within the 'workflow_dispatch' se
 
 ### Branches
 
-- main / master: Actions / workflows / other shared assets
-- dev: Version Control for all content on Dev Org
-- release: Branch for Specific Content to go through deployment to other Orgs
-- test_deploy: Import TML from 'release' and do other Actions to Test Org
-- test: Version control for all content on Test Org
+- **main / master**: Actions / workflows / other shared assets
+- **dev**: Version Control for all content on Dev Org
+- **release**: Branch for Specific Content to go through deployment to other Orgs
+- **test_deploy**: Import TML from 'release' and do other Actions to Test Org
+- **test**: Version control for all content on Test Org
 - Optional UAT / etc.: 
-    - uat_deploy: Import TML from 'release' and do other Actions to UAT Org
-    - uat: Version control for all content on UAT Org
-- prod_deploy: Import TML from 'release' and do other Actions to Prod Org(s)
+    - **uat_deploy**: Import TML from 'release' and do other Actions to UAT Org
+    - **uat**: Version control for all content on UAT Org
+- **prod_deploy** Import TML from 'release' and do other Actions to Prod Org(s)
 - Version control for prod Orgs:
-    - prod: if single Prod, version control of all Content
-    - customer_orgs(s): version control branch for each Single Tenant Org
+    - **prod**: if single Prod, version control of all Content
+    - **customer_orgs(s)**: version control branch for each Single Tenant Org
 
 Pull requests / merges should be possible smoothly from "release" -> "test_deploy" -> "uat_deploy" -> "prod_deploy"
 
