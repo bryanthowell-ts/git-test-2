@@ -1,4 +1,4 @@
-name: Import TML to Org
+name: Import TML - Single Org
 
 on: 
   workflow_dispatch:
@@ -41,16 +41,20 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  import_tml_single_org:
 
     runs-on: ubuntu-latest
     environment: |-
         ${{
-          github.ref_name == 'prod' && 'production'
-        || github.ref_name == 'dev'    && 'dev'
+           github.ref_name == 'release' && 'dev'
+        || github.ref_name == 'dev' && 'dev'
+        || github.ref_name == 'prod_deploy' && 'prod'
+        || github.ref_name == 'prod' && 'prod'
+        || github.ref_name == 'test_deploy' && 'test'
         || github.ref_name == 'test' && 'test'
+        || github.ref_name == 'uat_deploy' && 'uat'
         || github.ref_name == 'uat' && 'uat'
-        || github.ref_name
+        || 'default'
         }} 
 
     steps:
