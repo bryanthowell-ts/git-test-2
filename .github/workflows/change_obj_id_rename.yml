@@ -1,35 +1,15 @@
-name: Import TML to Single Org
+name: Update obj_id and rename files
 
 on: 
   workflow_dispatch:
     inputs:
-      OBJECT_TYPE:
-        type: choice
-        description: Type of Objects to Import
-        options: 
-        - DATA_MODEL
-        - CONTENT
-        - TABLE
-        - MODEL
-        - LIVEBOARD
-        - ANSWER
-        - CONNECTION
+      OLD_OBJ_ID:
+        type: string
+        description: 'Current obj_id of object'
         required: true
-      IMPORT_POLICY:
-        type: choice
-        description: Import Policy option of TML Import API
-        options: 
-        - ALL_OR_NONE
-        - VALIDATE_ONLY
-        - PARTIAL
-        - PARTIAL_OBJECT
-        required: true
-      ASYNC:
-        type: choice
-        description: Sync or Async Import
-        options:
-          - SYNC
-          - ASYNC
+      NEW_OBJ_ID:
+        type: string
+        description: 'New obj_id of object'
         required: true
       TS_ORG_NAME:
         type: string
@@ -41,7 +21,7 @@ permissions:
   contents: write
 
 jobs:
-  import_tml_single_org:
+  update_obj_id:
 
     runs-on: ubuntu-latest
     environment: |-
@@ -54,7 +34,7 @@ jobs:
         || github.ref_name == 'test' && 'test'
         || github.ref_name == 'uat_deploy' && 'uat'
         || github.ref_name == 'uat' && 'uat'
-        || github.ref_name
+        || 'default'
         }} 
 
     steps:
@@ -82,9 +62,12 @@ jobs:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
        TS_USERNAME: ${{ secrets.TS_IMPORT_USERNAME }}
-       OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
-       IMPORT_POLICY : ${{ github.event.inputs.IMPORT_POLICY }}
-       ASYNC : ${{ github.event.inputs.ASYNC }}
+       OLD_OBJ_ID: ${{ github.event.inputs.OLD_OBJ_ID }}
+       NEW_OBJ_ID : ${{ github.event.inputs.NEW_OBJ_ID }}
       run: |
-        echo "Import to Org_ID $ORG_ID of $OBJECT_TYPE using Import Policy: $IMPORT_POLICY"
-        python .github/workflows/import_tml_to_org.py
+        echo "Import to Org_ID $ORG_ID rename $OLD_OBJ_ID to: $NEW_OBJ_ID"
+        if find . -name "${{ github.event.inputs.OLD_OBJ_ID }}*" -print -quit | grep -q .; then 
+        echo "file for ${{ github.event.inputs.OLD_OBJ_ID }} found" 
+        else 
+        echo "no file"
+        fi

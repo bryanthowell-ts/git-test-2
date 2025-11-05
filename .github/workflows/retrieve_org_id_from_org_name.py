@@ -23,7 +23,7 @@ try:
 except requests.exceptions.HTTPError as e:
     print(e)
     print(e.response.content)
-    exit()
+    exit(1)
 
 # Get token for the specified org_name
 try:

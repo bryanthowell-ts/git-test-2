@@ -1,48 +1,25 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Download TML from Org to Branch
+name: Remove Files with No Objects in Org
 
 on: 
   workflow_dispatch:
     inputs:
-      OBJECT_TYPE:
-        type: choice
-        description: Type of Objects to Download
-        options: 
-        - ALL
-        - LIVEBOARD
-        - ANSWER
-        - DATA
-        - CONNECTION
-        required: true
-      RECORD_SIZE_LIMIT:
-        type: number
-        description: Limit Number Objects Downloaded (-1 is All)
-        default: "-1"
-        required: true
-      FILTER_AUTHOR_NAME:
-        type: string
-        description: 'Filter to Author (Owner) Name'
-        required: true
-        default: "{None}"
-      FILTER_TAG_NAME:
-        type: string
-        description: 'Filter on Tag name'
-        required: true
-        default: "{None}"
-#      TS_ORG_NAME_OVERRIDE:
-#        type: string
-#        description: 'ThoughtSpot org name (not org_id)'
-#        required: true
-#        default: '{None}'
+        DELETE_FLAG:
+            type: choice
+            description: Delete Files in Git?
+            options: 
+            - LIST_ONLY
+            - DELETE
+            required: true
       
 
 permissions:
   contents: write
 
 jobs:
-  download_tml_and_commit:
+  delete_files_not_found_in_org:
 
     runs-on: ubuntu-latest
     environment: |-
@@ -77,19 +54,29 @@ jobs:
        TS_ORG_NAME: ${{ vars.TS_ORG_NAME }}
       run: |
          python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
-    - name: Export and Download TML from ${{ vars.TS_ORG_NAME }}
+    - name: ${{ github.event.inputs.DELETE_FLAG }} files with no matching obj_id on ${{ vars.TS_ORG_NAME }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
        TS_USERNAME: ${{ secrets.TS_DOWNLOAD_USERNAME }}
-       AUTHOR_FILTER: ${{ github.event.inputs.FILTER_AUTHOR_NAME }}
-       TAG_FILTER: ${{ github.event.inputs.FILTER_TAG_NAME }}
-       OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
-       RECORD_SIZE_LIMIT: ${{ github.event.inputs.RECORD_SIZE_LIMIT }}
+       DELETE_FLAG: ${{ github.event.inputs.DELETE_FLAG }}
       run: |
         git config --local user.email "${{ github.actor_id }}+${{ github.triggering_actor }}@users.noreply.github.com"
         git config --local user.name "${{ github.triggering_actor }}"
-        python .github/workflows/download_tml_to_disk.py 
+        python .github/workflows/files_with_no_obj_on_org.py > files_to_remove.txt
+        if [ -s "files_to_remove.txt" ]; then
+        echo "Files found in Org: ${{ vars.TS_ORG_NAME }} for removal:"
+        cat files_to_remove.txt
+        if [ "${{ github.event.inputs.DELETE_FLAG }}" = "DELETE" ]; then
+        echo "Deleting the files"
+        cat files_to_remove.txt | xargs git rm
+        rm files_to_remove.txt
         git add *
-        git diff-index --quiet HEAD || git commit -a -m "Run ID ${{ github.run_id }}/${{github.run_attempt}} export from Org ${{ vars.TS_ORG_NAME }}"
+        git diff-index --quiet HEAD || git commit -a -m "Run ID ${{ github.run_id }}/${{github.run_attempt}} cleanup files from Org ${{ vars.TS_ORG_NAME }}"
         git push
+        fi
+        else
+        echo "No files found to remove"
+        rm files_to_remove.txt
+        fi
+        

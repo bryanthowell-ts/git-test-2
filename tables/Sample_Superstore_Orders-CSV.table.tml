@@ -1,4 +1,4 @@
-obj_id: Sample-Superstore-Orders.csv-b03a6f0b
+obj_id: Sample_Superstore_Orders-CSV
 table:
   name: Sample - Superstore - Orders.csv
   db: CSVUPLOADS

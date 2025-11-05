@@ -30,14 +30,13 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  import_tml_matrix_to_orgs:
 
     runs-on: ubuntu-latest
-    environment: production
+    environment: prod
     strategy:
       matrix: 
-        org_name: [RD_test, RD_uat]
-
+        org_name: ${{ fromJson(vars.DEPLOY_ORGS_JSON_LIST) }}
 
     steps:
     - uses: actions/checkout@v4
