@@ -30,14 +30,13 @@ permissions:
   contents: write
 
 jobs:
-  import_tml_matrix_deploy:
+  import_tml_matrix_to_orgs:
 
     runs-on: ubuntu-latest
     environment: prod
     strategy:
       matrix: 
-        org_name: [RD_test, RD_uat]
-
+        org_name: ${{ fromJson(vars.DEPLOY_ORGS_JSON_LIST) }}
 
     steps:
     - uses: actions/checkout@v4
@@ -50,7 +49,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install thoughtspot_rest_api 
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Get Org_ID from Org_Name ${{ matrix.org_name }}
+    - name: Get Org_ID from Org_Name ${{ github.event.inputs.TS_ORG_NAME != '{None}' && github.event.inputs.TS_ORG_NAME || vars.TS_ORG_NAME }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}

@@ -180,7 +180,11 @@ import_tml_single_tenant_deploy.yml defines the `Import TML - Single Tenant Depl
 
     strategy:
       matrix: 
-        org_name: [customer_a, customer_b]
+        org_name: ${{ fromJson(vars.DEPLOY_ORGS_JSON_LIST) }}
+
+The DEPLOY_ORGS_JSON_LIST should be a JSON array of Org Names, stored in the 'prod' environment like:
+
+    ['Customer Org A', 'Customer Org B', ...]
 
 Simply add to the org_name list under the strategy section, and each run of the Action will spawn jobs for each item in the list. When the action completes, you can check each job separately to check the logs. This utilizes the intentional feature within GitHub for running necessary variations on a job.
 
