@@ -58,7 +58,7 @@ Inputs from a manually triggered event defined within the 'workflow_dispatch' se
 
 ### Branches
 
-- **main / master**: Actions / workflows / other shared assets
+- **main / master**: Actions / workflows / other shared assets, but **no TML files** from any Org
 - **dev**: Version Control for all content on Dev Org
 - **release**: Branch for Specific Content to go through deployment to other Orgs
 - **test_deploy**: Import TML from 'release' and do other Actions to Test Org
@@ -121,9 +121,13 @@ Secrets:
 
     environment: |-
         ${{
-          github.ref_name == 'prod' && 'prod'
-        || github.ref_name == 'dev'    && 'dev'
+           github.ref_name == 'release' && 'dev'
+        || github.ref_name == 'dev' && 'dev'
+        || github.ref_name == 'prod_deploy' && 'prod'
+        || github.ref_name == 'prod' && 'prod'
+        || github.ref_name == 'test_deploy' && 'test'
         || github.ref_name == 'test' && 'test'
+        || github.ref_name == 'uat_deploy' && 'uat'
         || github.ref_name == 'uat' && 'uat'
         || 'default'
         }} 

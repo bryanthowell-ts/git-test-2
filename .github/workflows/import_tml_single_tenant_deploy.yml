@@ -33,7 +33,7 @@ jobs:
   import_tml_matrix_deploy:
 
     runs-on: ubuntu-latest
-    environment: production
+    environment: prod
     strategy:
       matrix: 
         org_name: [RD_test, RD_uat]
