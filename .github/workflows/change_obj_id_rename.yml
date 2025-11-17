@@ -68,10 +68,16 @@ jobs:
         echo "Import to Org_ID $ORG_ID rename $OLD_OBJ_ID to: $NEW_OBJ_ID"
         if find . -name "${{ github.event.inputs.OLD_OBJ_ID }}*" -print -quit | grep -q .; then 
         echo "file for ${{ github.event.inputs.OLD_OBJ_ID }} found" 
+        echo "Updating obj_id in org from ${{ github.event.inputs.OLD_OBJ_ID }} to ${{ github.event.inputs.NEW_OBJ_ID }}"
+        python .github/workflows/update_obj_id.py
+        echo "obj_id updated, now renaming file in repo"
         O_FILE=$(find . -name "${{ github.event.inputs.OLD_OBJ_ID }}*" -print)
         N_FILE="${O_FILE//${{ github.event.inputs.OLD_OBJ_ID }}/${{ github.event.inputs.NEW_OBJ_ID }}}"
-        echo "$O_FILE"
-        echo "rename to $N_FILE"
+        echo "$O_FILE rename to $N_FILE"
+        git mv $O_FILE $N_FILE
+        git diff-index --quiet HEAD || git commit -a -m "Run ID ${{ github.run_id }}/${{github.run_attempt}} changed obj_id"
+        git push
+        echo "File rename succesful"
         else 
-        echo "no file"
+        echo "no file found matching ${{ github.event.inputs.OLD_OBJ_ID }}, no action taken"
         fi
