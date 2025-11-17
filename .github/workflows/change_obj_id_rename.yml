@@ -61,10 +61,12 @@ jobs:
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
-       TS_USERNAME: ${{ secrets.TS_IMPORT_USERNAME }}
+       TS_USERNAME: ${{ secrets.TS_INSTANCE_ADMIN_USERNAME }}
        OLD_OBJ_ID: ${{ github.event.inputs.OLD_OBJ_ID }}
        NEW_OBJ_ID : ${{ github.event.inputs.NEW_OBJ_ID }}
       run: |
+        git config --local user.email "${{ github.actor_id }}+${{ github.triggering_actor }}@users.noreply.github.com"
+        git config --local user.name "${{ github.triggering_actor }}"
         echo "Import to Org_ID $ORG_ID rename $OLD_OBJ_ID to: $NEW_OBJ_ID"
         if find . -name "${{ github.event.inputs.OLD_OBJ_ID }}*" -print -quit | grep -q .; then 
         echo "file for ${{ github.event.inputs.OLD_OBJ_ID }} found" 
