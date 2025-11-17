@@ -68,6 +68,10 @@ jobs:
         echo "Import to Org_ID $ORG_ID rename $OLD_OBJ_ID to: $NEW_OBJ_ID"
         if find . -name "${{ github.event.inputs.OLD_OBJ_ID }}*" -print -quit | grep -q .; then 
         echo "file for ${{ github.event.inputs.OLD_OBJ_ID }} found" 
+        O_FILE=$(find . -name "${{ github.event.inputs.OLD_OBJ_ID }}*" -print)
+        N_FILE="${O_FILE//${{ github.event.inputs.OLD_OBJ_ID }}/${{ github.event.inputs.NEW_OBJ_ID }}}"
+        echo "$O_FILE"
+        echo "rename to N_FILE"
         else 
         echo "no file"
         fi
