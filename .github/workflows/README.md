@@ -188,6 +188,13 @@ The DEPLOY_ORGS_JSON_LIST should be a JSON array of Org Names, stored in the 'pr
 
 Simply add to the org_name list under the strategy section, and each run of the Action will spawn jobs for each item in the list. When the action completes, you can check each job separately to check the logs. This utilizes the intentional feature within GitHub for running necessary variations on a job.
 
+### change_obj_id_rename.yml
+obj_id is used for filenames in the repo, but obj_id can be updated on ThoughtSpot via REST API or UI. This Action changes the appropriate filename to match the new obj_id, and updates the obj_id at the same time.
+
+When the next Download TML Action is run, the TML file will be saved with the new filename, and the exported TML will contain the new obj_id, creating two commmits - first a filename change, then the obj_id changing at the top of the TML file.
+
+These commits will merge smoothly into any other branches. The obj_id in other Orgs will need to be updated as well - see the other actions for changing obj_id across multiple Orgs at once.
+
 ### retrieve_org_id_from_org_name.py
 retrieve_org_id_from_org_name.py is a helper script to get the numeric `org_id` for any arbitrary string Org Name on a ThoughtSpot instance.
 
