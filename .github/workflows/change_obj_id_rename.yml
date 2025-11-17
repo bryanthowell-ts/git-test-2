@@ -57,7 +57,7 @@ jobs:
       run: |
          python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
          echo "$TS_ORG_NAME org_id retrieved"
-    - name: Import TML to ThoughtSpot Org
+    - name: Change obj_id and rename file
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
@@ -71,7 +71,7 @@ jobs:
         O_FILE=$(find . -name "${{ github.event.inputs.OLD_OBJ_ID }}*" -print)
         N_FILE="${O_FILE//${{ github.event.inputs.OLD_OBJ_ID }}/${{ github.event.inputs.NEW_OBJ_ID }}}"
         echo "$O_FILE"
-        echo "rename to N_FILE"
+        echo "rename to $N_FILE"
         else 
         echo "no file"
         fi
