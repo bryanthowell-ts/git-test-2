@@ -1,4 +1,4 @@
-name: Import TML to Single Org
+name: Import TML - Single Org
 
 on: 
   workflow_dispatch:

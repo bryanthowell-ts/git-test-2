@@ -1,4 +1,4 @@
-name: Import TML - Single Tenant Deployment Matrix
+name: Matrix Import TML - Deploy to Prod Tenants
 
 on: 
   workflow_dispatch:
