@@ -1,0 +1,74 @@
+name: Matrix update obj_id on multiple Orgs
+
+on: 
+  workflow_dispatch:
+    inputs:
+      OLD_OBJ_ID:
+        type: string
+        description: 'Current obj_id of object'
+        required: true
+      NEW_OBJ_ID:
+        type: string
+        description: 'New obj_id of object'
+        required: true
+      TS_ORG_NAME:
+        type: string
+        description: 'ThoughtSpot Org Name (not org_id) - override from environment'
+        required: true
+        default: '{None}'
+
+permissions:
+  contents: write
+
+jobs:
+  update_obj_id:
+
+    runs-on: ubuntu-latest
+    environment: |-
+        ${{
+           github.ref_name == 'release' && 'dev'
+        || github.ref_name == 'dev' && 'dev'
+        || github.ref_name == 'prod_deploy' && 'prod'
+        || github.ref_name == 'prod' && 'prod'
+        || github.ref_name == 'test_deploy' && 'test'
+        || github.ref_name == 'test' && 'test'
+        || github.ref_name == 'uat_deploy' && 'uat'
+        || github.ref_name == 'uat' && 'uat'
+        || 'default'
+        }}
+    strategy:
+      matrix: 
+        org_name: ${{ fromJson(vars.DEPLOY_ORGS_JSON_LIST) }} 
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install thoughtspot_rest_api 
+        # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Get Org_ID from Org_Name ${{ github.event.inputs.TS_ORG_NAME != '{None}' && github.event.inputs.TS_ORG_NAME || vars.TS_ORG_NAME }}
+      env:
+       TS_SERVER: ${{ secrets.TS_SERVER }}
+       TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
+       TS_USERNAME: ${{ secrets.TS_INSTANCE_ADMIN_USERNAME }}
+       TS_ORG_NAME: ${{ matrix.org_name }}
+      run: |
+         python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
+         echo "$TS_ORG_NAME org_id retrieved"
+    - name: Change obj_id
+      env:
+       TS_SERVER: ${{ secrets.TS_SERVER }}
+       TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
+       TS_USERNAME: ${{ secrets.TS_INSTANCE_ADMIN_USERNAME }}
+       OLD_OBJ_ID: ${{ github.event.inputs.OLD_OBJ_ID }}
+       NEW_OBJ_ID : ${{ github.event.inputs.NEW_OBJ_ID }}
+      run: |
+        echo "Updating obj_id in org from ${{ github.event.inputs.OLD_OBJ_ID }} to ${{ github.event.inputs.NEW_OBJ_ID }}"
+        python .github/workflows/update_obj_id.py
+        echo "obj_id updated, no files renamed"
+  
