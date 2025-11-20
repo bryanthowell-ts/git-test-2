@@ -132,6 +132,7 @@ def retrieve_objects(request, record_size_override=-1):
         exit()
 
     print("{} objects retrieved from API".format(len(objs)))
+    print("")
     return objs
 
 # Main function to pull and download the variuos object types
@@ -147,9 +148,33 @@ def download_objects():
         print("Retrieving all objects of type: {}".format(type))
         objs = retrieve_objects(request=obj_type_select[type], record_size_override=record_size)
         all_objs.append(objs)
+        print("")
     
     return all_objs
-      
+
+# Create suggestions for null
+def suggest_obj_id_for_null(objs):
+    final_list = []
+    for o in objs:
+        obj_id = o['metadata_obj_id']
+        guid = o['metadata_id']
+        obj_name = o['metadata_name']
+
+        suggestion = "{}-{}".format(o['metadata_name'], guid[0:8])
+        final_list.append([obj_name, guid, suggestion])
+    return final_list
+
+# Simply list the auto-created + GUID (except for Tables?)
+
+def list_auto_created(objs):
+    final_list = []
+    for o in objs:
+        obj_id = o['metadata_obj_id']
+        guid = o['metadata_id']
+        obj_name = o['metadata_name']
+        final_list.append([obj_id, guid, obj_name])
+    return final_list
+
 def analyze_obj_ids(obj_resp):
     # Two types of "not ready": objects with null obj_id and those that were auto generated
     null_obj_ids = []
@@ -158,6 +183,7 @@ def analyze_obj_ids(obj_resp):
     for o in obj_resp:
         obj_id = o['metadata_obj_id']
         obj_type = o['metadata_type']
+
 
         # Determine if None, objects from before obj_id turned on in instance
         if obj_id is None:
@@ -172,9 +198,18 @@ def analyze_obj_ids(obj_resp):
                 auto_created_obj_ids.append(o)
     
     print("Analyzed {} objects of type {}".format(len(obj_resp), obj_type))
+
     print("{} objects without obj_id".format(len(null_obj_ids)))
+    print("Objects without obj_id and suggested obj_id:")
+    print(json.dumps(suggest_obj_id_for_null(null_obj_ids), indent=2))
+
     print("{} objects with auto-created obj_ids".format(len(auto_created_obj_ids)))
-        
+    print("Objects with auto-created obj_ids:")
+    print(json.dumps(list_auto_created(auto_created_obj_ids), indent=2))
+
+    print("")
+
+
 
 # Run the download routines based on the choices
 all_objs_list = download_objects()
