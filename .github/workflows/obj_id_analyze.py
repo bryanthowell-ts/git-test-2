@@ -163,12 +163,13 @@ def analyze_obj_ids(obj_resp):
         if obj_id is None:
             null_obj_ids.append(o)
         
-        # Determine if obj_id ends with the -{8 UUID chars from GUID} pattern
-        re_pattern_auto_created_obj_id = r"-[0-9a-fA-F]{8}$"
-        match = re.search(re_pattern_auto_created_obj_id, obj_id)
+        else: 
+            # Determine if obj_id ends with the -{8 UUID chars from GUID} pattern
+            re_pattern_auto_created_obj_id = r"-[0-9a-fA-F]{8}$"
+            match = re.search(re_pattern_auto_created_obj_id, obj_id)
 
-        if match:
-            auto_created_obj_ids.append(o)
+            if match:
+                auto_created_obj_ids.append(o)
     
     print("Analyzed {} objects of type {}".format(len(obj_resp), obj_type))
     print("{} objects without obj_id".format(len(null_obj_ids)))
