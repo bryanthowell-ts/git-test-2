@@ -4,6 +4,7 @@ import csv
 import json
 import time
 import re
+from urllib import parse
 
 from thoughtspot_rest_api import *
 
@@ -160,7 +161,14 @@ def suggest_obj_id_for_null(objs):
         guid = o['metadata_id']
         obj_name = o['metadata_name']
 
-        suggestion = "{}-{}".format(o['metadata_name'], guid[0:8])
+        # suggestion = "{}-{}".format(o['metadata_name'], guid[0:8])
+
+        # This is simple, without special rule for tables
+        suggestion = obj_name.replace(" ", "_")   # Need more transformation
+        suggestion = parse.quote(obj_name)
+        # After parse quoting, there characters are in form %XX , replace with _ or blank space
+        suggestion = re.sub(r"%..", "", suggestion)
+
         final_list.append([obj_name, guid, suggestion])
     return final_list
 
@@ -200,12 +208,16 @@ def analyze_obj_ids(obj_resp):
     print("Analyzed {} objects of type {}".format(len(obj_resp), obj_type))
 
     print("{} objects without obj_id".format(len(null_obj_ids)))
-    print("Objects without obj_id and suggested obj_id:")
-    print(json.dumps(suggest_obj_id_for_null(null_obj_ids), indent=2))
+    if len(null_obj_ids) > 0:
+        print("Objects without obj_id and suggested obj_id:")
+        print(json.dumps(suggest_obj_id_for_null(null_obj_ids), indent=1))
+
+    print("")
 
     print("{} objects with auto-created obj_ids".format(len(auto_created_obj_ids)))
-    print("Objects with auto-created obj_ids:")
-    print(json.dumps(list_auto_created(auto_created_obj_ids), indent=2))
+    if len(auto_created_obj_ids) > 0:
+        print("Objects with auto-created obj_ids:")
+        print(json.dumps(list_auto_created(auto_created_obj_ids), indent=1))
 
     print("")
 
