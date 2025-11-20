@@ -1,0 +1,90 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Download TML from Org to Branch
+
+on: 
+  workflow_dispatch:
+    inputs:
+      OBJECT_TYPE:
+        type: choice
+        description: Type of Objects to Download
+        options: 
+        - ALL
+        - LIVEBOARD
+        - ANSWER
+        - DATA
+        - CONNECTION
+        required: true
+      RECORD_SIZE_LIMIT:
+        type: number
+        description: Limit Number Objects Downloaded (-1 is All)
+        default: "-1"
+        required: true
+      FILTER_AUTHOR_NAME:
+        type: string
+        description: 'Filter to Author (Owner) Name'
+        required: true
+        default: "{None}"
+      FILTER_TAG_NAME:
+        type: string
+        description: 'Filter on Tag name'
+        required: true
+        default: "{None}"
+#      TS_ORG_NAME_OVERRIDE:
+#        type: string
+#        description: 'ThoughtSpot org name (not org_id)'
+#        required: true
+#        default: '{None}'
+      
+
+permissions:
+  contents: write
+
+jobs:
+  analyze_obj_ids:
+
+    runs-on: ubuntu-latest
+    environment: |-
+        ${{
+           github.ref_name == 'release' && 'dev'
+        || github.ref_name == 'dev' && 'dev'
+        || github.ref_name == 'prod_deploy' && 'prod'
+        || github.ref_name == 'prod' && 'prod'
+        || github.ref_name == 'test_deploy' && 'test'
+        || github.ref_name == 'test' && 'test'
+        || github.ref_name == 'uat_deploy' && 'uat'
+        || github.ref_name == 'uat' && 'uat'
+        || 'default'
+        }} 
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install thoughtspot_rest_api 
+        # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Get Org_ID from Org_Name ${{ vars.TS_ORG_NAME }}
+      env:
+       TS_SERVER: ${{ secrets.TS_SERVER }}
+       TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
+       TS_USERNAME: ${{ secrets.TS_INSTANCE_ADMIN_USERNAME }}
+       TS_ORG_NAME: ${{ vars.TS_ORG_NAME }}
+      run: |
+         python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
+    - name: Analyze obj_id assignment from ${{ vars.TS_ORG_NAME }}
+      env:
+       TS_SERVER: ${{ secrets.TS_SERVER }}
+       TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
+       TS_USERNAME: ${{ secrets.TS_DOWNLOAD_USERNAME }}
+       AUTHOR_FILTER: ${{ github.event.inputs.FILTER_AUTHOR_NAME }}
+       TAG_FILTER: ${{ github.event.inputs.FILTER_TAG_NAME }}
+       OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
+       RECORD_SIZE_LIMIT: ${{ github.event.inputs.RECORD_SIZE_LIMIT }}
+      run: |
+        python .github/workflows/obj_id_analyze.py 
