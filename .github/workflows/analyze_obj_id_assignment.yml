@@ -1,14 +1,14 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Download TML from Org to Branch
+name: Analyze obj_id assignment in Org
 
 on: 
   workflow_dispatch:
     inputs:
       OBJECT_TYPE:
         type: choice
-        description: Type of Objects to Download
+        description: Type of Objects to Analyze
         options: 
         - ALL
         - LIVEBOARD
@@ -18,7 +18,7 @@ on:
         required: true
       RECORD_SIZE_LIMIT:
         type: number
-        description: Limit Number Objects Downloaded (-1 is All)
+        description: Limit Number Objects Analyzed (-1 is All)
         default: "-1"
         required: true
       FILTER_AUTHOR_NAME:
