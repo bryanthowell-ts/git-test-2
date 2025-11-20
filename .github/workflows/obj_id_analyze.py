@@ -210,14 +210,14 @@ def analyze_obj_ids(obj_resp):
     print("{} objects without obj_id".format(len(null_obj_ids)))
     if len(null_obj_ids) > 0:
         print("Objects without obj_id and suggested obj_id:")
-        print(json.dumps(suggest_obj_id_for_null(null_obj_ids), indent=1))
+        print(json.dumps(suggest_obj_id_for_null(null_obj_ids)))
 
     print("")
 
     print("{} objects with auto-created obj_ids".format(len(auto_created_obj_ids)))
     if len(auto_created_obj_ids) > 0:
         print("Objects with auto-created obj_ids:")
-        print(json.dumps(list_auto_created(auto_created_obj_ids), indent=1))
+        print(json.dumps(list_auto_created(auto_created_obj_ids)))
 
     print("")
 
