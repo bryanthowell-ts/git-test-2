@@ -76,12 +76,14 @@ answer_search_request = {
 
 # Request for Data Objects (Tables, Models, etc.)
 # Not differentiated in request, all are "LOGICAL_TABLE
+# request metadata_details to allow more complex fully-qualified name variations in obj_id generation
 data_object_search_request = {
     "metadata": [
     {
       "type": "LOGICAL_TABLE"
     }
   ],
+  "include_details": True,
   "sort_options": {
     "field_name": order_field,
     "order": "DESC"
@@ -163,11 +165,16 @@ def suggest_obj_id_for_null(objs):
 
         # suggestion = "{}-{}".format(o['metadata_name'], guid[0:8])
 
+        # Special rule for Tables, which don't have much of a name
+        # But could be fully qualified or at least have Connection appended at the front
+
         # This is simple, without special rule for tables
         suggestion = obj_name.replace(" ", "_")   # Need more transformation
         suggestion = parse.quote(obj_name)
         # After parse quoting, there characters are in form %XX , replace with _ or blank space
         suggestion = re.sub(r"%..", "", suggestion)
+
+        
 
         final_list.append([obj_name, guid, suggestion])
     return final_list
@@ -210,14 +217,16 @@ def analyze_obj_ids(obj_resp):
     print("{} objects without obj_id".format(len(null_obj_ids)))
     if len(null_obj_ids) > 0:
         print("Objects without obj_id and suggested obj_id:")
-        print(json.dumps(suggest_obj_id_for_null(null_obj_ids)))
+        for o in suggest_obj_id_for_null(null_obj_ids):
+            print(json.dumps(o))
 
     print("")
 
     print("{} objects with auto-created obj_ids".format(len(auto_created_obj_ids)))
     if len(auto_created_obj_ids) > 0:
         print("Objects with auto-created obj_ids:")
-        print(json.dumps(list_auto_created(auto_created_obj_ids)))
+        for o in list_auto_created(auto_created_obj_ids):
+            print(json.dumps(o))
 
     print("")
 
