@@ -1,47 +1,48 @@
-name: Import TML - Single Org
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Analyze obj_id assignment in Org
 
 on: 
   workflow_dispatch:
     inputs:
       OBJECT_TYPE:
         type: choice
-        description: Type of Objects to Import
+        description: Type of Objects to Analyze
         options: 
-        - DATA_MODEL
-        - CONTENT
-        - TABLE
-        - MODEL
+        - ALL
         - LIVEBOARD
         - ANSWER
+        - DATA
         - CONNECTION
         required: true
-      IMPORT_POLICY:
-        type: choice
-        description: Import Policy option of TML Import API
-        options: 
-        - ALL_OR_NONE
-        - VALIDATE_ONLY
-        - PARTIAL
-        - PARTIAL_OBJECT
+      RECORD_SIZE_LIMIT:
+        type: number
+        description: Limit Number Objects Analyzed (-1 is All)
+        default: "-1"
         required: true
-      ASYNC:
-        type: choice
-        description: Sync or Async Import
-        options:
-          - SYNC
-          - ASYNC
-        required: true
-      TS_ORG_NAME:
+      FILTER_AUTHOR_NAME:
         type: string
-        description: 'ThoughtSpot Org Name (not org_id) - override from environment'
+        description: 'Filter to Author (Owner) Name'
         required: true
-        default: '{None}'
+        default: "{None}"
+      FILTER_TAG_NAME:
+        type: string
+        description: 'Filter on Tag name'
+        required: true
+        default: "{None}"
+#      TS_ORG_NAME_OVERRIDE:
+#        type: string
+#        description: 'ThoughtSpot org name (not org_id)'
+#        required: true
+#        default: '{None}'
+      
 
 permissions:
   contents: write
 
 jobs:
-  import_tml_single_org:
+  analyze_obj_ids:
 
     runs-on: ubuntu-latest
     environment: |-
@@ -54,7 +55,7 @@ jobs:
         || github.ref_name == 'test' && 'test'
         || github.ref_name == 'uat_deploy' && 'uat'
         || github.ref_name == 'uat' && 'uat'
-        || github.ref_name
+        || 'default'
         }} 
 
     steps:
@@ -68,23 +69,22 @@ jobs:
         python -m pip install --upgrade pip
         pip install thoughtspot_rest_api 
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Get Org_ID from Org_Name ${{ github.event.inputs.TS_ORG_NAME != '{None}' && github.event.inputs.TS_ORG_NAME || vars.TS_ORG_NAME }}
+    - name: Get Org_ID from Org_Name ${{ vars.TS_ORG_NAME }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
        TS_USERNAME: ${{ secrets.TS_INSTANCE_ADMIN_USERNAME }}
-       TS_ORG_NAME: ${{ github.event.inputs.TS_ORG_NAME != '{None}' && github.event.inputs.TS_ORG_NAME || vars.TS_ORG_NAME }}
+       TS_ORG_NAME: ${{ vars.TS_ORG_NAME }}
       run: |
          python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
-         echo "$TS_ORG_NAME org_id retrieved"
-    - name: Import TML to ThoughtSpot Org
+    - name: Analyze obj_id assignment from ${{ vars.TS_ORG_NAME }}
       env:
        TS_SERVER: ${{ secrets.TS_SERVER }}
        TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
-       TS_USERNAME: ${{ secrets.TS_IMPORT_USERNAME }}
+       TS_USERNAME: ${{ secrets.TS_DOWNLOAD_USERNAME }}
+       AUTHOR_FILTER: ${{ github.event.inputs.FILTER_AUTHOR_NAME }}
+       TAG_FILTER: ${{ github.event.inputs.FILTER_TAG_NAME }}
        OBJECT_TYPE: ${{ github.event.inputs.OBJECT_TYPE }}
-       IMPORT_POLICY : ${{ github.event.inputs.IMPORT_POLICY }}
-       ASYNC : ${{ github.event.inputs.ASYNC }}
+       RECORD_SIZE_LIMIT: ${{ github.event.inputs.RECORD_SIZE_LIMIT }}
       run: |
-        echo "Import to Org_ID $ORG_ID of $OBJECT_TYPE using Import Policy: $IMPORT_POLICY"
-        python .github/workflows/import_tml_to_org.py
+        python .github/workflows/obj_id_analyze.py 

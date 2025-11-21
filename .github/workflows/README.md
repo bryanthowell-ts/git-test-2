@@ -164,7 +164,7 @@ You can use various stratgies for identifying which content will actually be par
 
 ### import_tml.yml
 
-import_tml.yml defines the `name: Import TML to Org` Action. 
+import_tml.yml defines the `Import TML - Single Org` Action. 
 
 This action takes all of the TML in a branch and uses the TML Import REST API to import it into a linked ThoughtSpot Org. It replaces the functionality of the previous REST API called 'Deploy Commits'. 
 
@@ -176,7 +176,7 @@ The workflow does not handle any Sharing (access control assignment). The conten
 
 ### import_tml_single_tenant_deploy.yml
 
-import_tml_single_tenant_deploy.yml defines the `Import TML - Single Tenant Deployment Matrix` Action, which is the matrix strategy form of import_tml.yml, used to deploy out from a single 'production' / 'release' branch to any number of ThoughtSpot Orgs.
+import_tml_single_tenant_deploy.yml defines the `Matrix Import TML - Deploy to Prod Tenants` Action, which is the matrix strategy form of import_tml.yml, used to deploy out from a single 'production' / 'release' branch to any number of ThoughtSpot Orgs.
 
     strategy:
       matrix: 
@@ -187,6 +187,26 @@ The DEPLOY_ORGS_JSON_LIST should be a JSON array of Org Names, stored in the 'pr
     ['Customer Org A', 'Customer Org B', ...]
 
 Simply add to the org_name list under the strategy section, and each run of the Action will spawn jobs for each item in the list. When the action completes, you can check each job separately to check the logs. This utilizes the intentional feature within GitHub for running necessary variations on a job.
+
+### change_obj_id_rename.yml
+obj_id is used for filenames in the repo, but obj_id can be updated on ThoughtSpot via REST API or UI. This Action changes the appropriate filename to match the new obj_id, and updates the obj_id at the same time.
+
+When the next Download TML Action is run, the TML file will be saved with the new filename, and the exported TML will contain the new obj_id, creating two commmits - first a filename change, then the obj_id changing at the top of the TML file.
+
+These commits will merge smoothly into any other branches. The obj_id in other Orgs will need to be updated as well - see the other actions for changing obj_id across multiple Orgs at once.
+
+### change_obj_id_matrix.yml
+Matrix update obj_id on multiple Orgs defines `Matrix update obj_id on multiple Orgs`, which is used to sync obj_id updates to all orgs other than the `dev` Org. `dev` Org changes, which will go into the `release` branch, should use the `Update obj_id and rename files` Action above, which will update the filenames in the repo. 
+
+The matrix strategy is defined like:
+
+    strategy:
+      matrix: 
+        org_name: ${{ fromJson(vars.DEPLOY_ORGS_JSON_LIST) }}
+
+The DEPLOY_ORGS_JSON_LIST should be a JSON array of Org Names, stored in the 'release' environment like, defining all Orgs other than `dev` which should have the update command sent. This includes 'test, 'uat', and 'prod' or the list of single-tenant customer prod Orgs:
+
+    ['test', 'uat', 'prod_deploy', 'Customer Org A', 'Customer Org B', ...]
 
 ### retrieve_org_id_from_org_name.py
 retrieve_org_id_from_org_name.py is a helper script to get the numeric `org_id` for any arbitrary string Org Name on a ThoughtSpot instance.
