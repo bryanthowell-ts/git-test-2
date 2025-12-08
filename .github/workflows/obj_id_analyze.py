@@ -4,6 +4,7 @@ import csv
 import json
 import time
 import re
+from urllib import parse
 
 from thoughtspot_rest_api import *
 
@@ -75,12 +76,14 @@ answer_search_request = {
 
 # Request for Data Objects (Tables, Models, etc.)
 # Not differentiated in request, all are "LOGICAL_TABLE
+# request metadata_details to allow more complex fully-qualified name variations in obj_id generation
 data_object_search_request = {
     "metadata": [
     {
       "type": "LOGICAL_TABLE"
     }
   ],
+  "include_details": True,
   "sort_options": {
     "field_name": order_field,
     "order": "DESC"
@@ -132,6 +135,7 @@ def retrieve_objects(request, record_size_override=-1):
         exit()
 
     print("{} objects retrieved from API".format(len(objs)))
+    print("")
     return objs
 
 # Main function to pull and download the variuos object types
@@ -147,9 +151,45 @@ def download_objects():
         print("Retrieving all objects of type: {}".format(type))
         objs = retrieve_objects(request=obj_type_select[type], record_size_override=record_size)
         all_objs.append(objs)
+        print("")
     
     return all_objs
-      
+
+# Create suggestions for null
+def suggest_obj_id_for_null(objs):
+    final_list = []
+    for o in objs:
+        obj_id = o['metadata_obj_id']
+        guid = o['metadata_id']
+        obj_name = o['metadata_name']
+
+        # suggestion = "{}-{}".format(o['metadata_name'], guid[0:8])
+
+        # Special rule for Tables, which don't have much of a name
+        # But could be fully qualified or at least have Connection appended at the front
+
+        # This is simple, without special rule for tables
+        suggestion = obj_name.replace(" ", "_")   # Need more transformation
+        suggestion = parse.quote(obj_name)
+        # After parse quoting, there characters are in form %XX , replace with _ or blank space
+        suggestion = re.sub(r"%..", "", suggestion)
+
+        
+
+        final_list.append([obj_name, guid, suggestion])
+    return final_list
+
+# Simply list the auto-created + GUID (except for Tables?)
+
+def list_auto_created(objs):
+    final_list = []
+    for o in objs:
+        obj_id = o['metadata_obj_id']
+        guid = o['metadata_id']
+        obj_name = o['metadata_name']
+        final_list.append([obj_id, guid, obj_name])
+    return final_list
+
 def analyze_obj_ids(obj_resp):
     # Two types of "not ready": objects with null obj_id and those that were auto generated
     null_obj_ids = []
@@ -158,6 +198,7 @@ def analyze_obj_ids(obj_resp):
     for o in obj_resp:
         obj_id = o['metadata_obj_id']
         obj_type = o['metadata_type']
+
 
         # Determine if None, objects from before obj_id turned on in instance
         if obj_id is None:
@@ -172,9 +213,24 @@ def analyze_obj_ids(obj_resp):
                 auto_created_obj_ids.append(o)
     
     print("Analyzed {} objects of type {}".format(len(obj_resp), obj_type))
+
     print("{} objects without obj_id".format(len(null_obj_ids)))
+    if len(null_obj_ids) > 0:
+        print("Objects without obj_id and suggested obj_id:")
+        for o in suggest_obj_id_for_null(null_obj_ids):
+            print(json.dumps(o))
+
+    print("")
+
     print("{} objects with auto-created obj_ids".format(len(auto_created_obj_ids)))
-        
+    if len(auto_created_obj_ids) > 0:
+        print("Objects with auto-created obj_ids:")
+        for o in list_auto_created(auto_created_obj_ids):
+            print(json.dumps(o))
+
+    print("")
+
+
 
 # Run the download routines based on the choices
 all_objs_list = download_objects()
