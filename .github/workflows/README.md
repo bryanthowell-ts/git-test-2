@@ -1,6 +1,24 @@
 # ThoughtSpot SDLC GitHub Actions
 
-This directory contains example GitHub Workflow .yml files and Python scripts to implement Actions to assist in do SDLC with ThoughtSpot TML files
+This directory contains example GitHub Workflow .yml files and Python scripts to implement Actions to assist in do SDLC with ThoughtSpot TML files.
+
+Basic concepts these scripts support:
+
+1. Export (Download) TML from an Org to a Branch
+2. Import TML from a Branch to an Org
+3. Release Branch: branch representing intentional subset of dev content to be deployed to other branches 
+4. Deployment Branches: Receive Pull Requests / Merges from "Release Branch", where Import TML actions occur to their linked Org
+5. Version Control Branches: Branches meant for All Content to be Downloaded, to provide version control of all content in a linked Org
+
+Each Org that will import the content from "release" will have a '{orgName}_deploy' branch to contain the most recent TML from the "release" branch that has been imported into the linked Org.
+
+Pull requests / merges are made from 'release' branch into the "{}_deploy" branches, then the Import TML is used.
+
+Alternatively, you can use the Import TML Actions to Deploy from the "release" branch to any other Org - with the loss of the pull request / merge history provided by the "{}_deploy" branches.
+
+In a Single Tenant Deployment (a "prod Org per Customer" or otherwise), the "Import TML - Single Tenant Deployment Matrix" Action can be used to import to each of the "prod Orgs" in a single action run from the "prod_deploy" branch.
+
+
 
 ## Prereqs in ThoughtSpot
 Modern SDLC uses some newer ThoughtSpot features to make version control and deployment smooth across Orgs and instances.
@@ -38,6 +56,24 @@ For those not used to building GitHub actions, there are numerous sources of 'co
 Inputs from a manually triggered event defined within the 'workflow_dispatch' section are referenced using:
 `${{ github.event.inputs.InputName }}`
 
+### Branches
+
+- **main / master**: Actions / workflows / other shared assets, but **no TML files** from any Org
+- **dev**: Version Control for all content on Dev Org
+- **release**: Branch for Specific Content to go through deployment to other Orgs
+- **test_deploy**: Import TML from 'release' and do other Actions to Test Org
+- **test**: Version control for all content on Test Org
+- Optional UAT / etc.: 
+    - **uat_deploy**: Import TML from 'release' and do other Actions to UAT Org
+    - **uat**: Version control for all content on UAT Org
+- **prod_deploy** Import TML from 'release' and do other Actions to Prod Org(s)
+- Version control for prod Orgs:
+    - **prod**: if single Prod, version control of all Content
+    - **customer_orgs(s)**: version control branch for each Single Tenant Org
+
+Pull requests / merges should be possible smoothly from "release" -> "test_deploy" -> "uat_deploy" -> "prod_deploy"
+
+The version control branches should be made originally from the empty "main"/"master" so that the TML unique to their linked Org can be downloaded.
 
 ### Variables and Secrets
 Variables and Secrets can from a defined Environment or the Repository (if they have the same name, Environment is used over Repository ):
@@ -85,9 +121,13 @@ Secrets:
 
     environment: |-
         ${{
-          github.ref_name == 'prod' && 'production'
-        || github.ref_name == 'dev'    && 'dev'
+           github.ref_name == 'release' && 'dev'
+        || github.ref_name == 'dev' && 'dev'
+        || github.ref_name == 'prod_deploy' && 'prod'
+        || github.ref_name == 'prod' && 'prod'
+        || github.ref_name == 'test_deploy' && 'test'
         || github.ref_name == 'test' && 'test'
+        || github.ref_name == 'uat_deploy' && 'uat'
         || github.ref_name == 'uat' && 'uat'
         || 'default'
         }} 
@@ -124,7 +164,7 @@ You can use various stratgies for identifying which content will actually be par
 
 ### import_tml.yml
 
-import_tml.yml defines the `name: Import TML to Org` Action. 
+import_tml.yml defines the `Import TML - Single Org` Action. 
 
 This action takes all of the TML in a branch and uses the TML Import REST API to import it into a linked ThoughtSpot Org. It replaces the functionality of the previous REST API called 'Deploy Commits'. 
 
@@ -136,13 +176,37 @@ The workflow does not handle any Sharing (access control assignment). The conten
 
 ### import_tml_single_tenant_deploy.yml
 
-import_tml_single_tenant_deploy.yml defines the `Import TML - Single Tenant Deployment Matrix` Action, which is the matrix strategy form of import_tml.yml, used to deploy out from a single 'production' / 'release' branch to any number of ThoughtSpot Orgs.
+import_tml_single_tenant_deploy.yml defines the `Matrix Import TML - Deploy to Prod Tenants` Action, which is the matrix strategy form of import_tml.yml, used to deploy out from a single 'production' / 'release' branch to any number of ThoughtSpot Orgs.
 
     strategy:
       matrix: 
-        org_name: [customer_a, customer_b]
+        org_name: ${{ fromJson(vars.DEPLOY_ORGS_JSON_LIST) }}
+
+The DEPLOY_ORGS_JSON_LIST should be a JSON array of Org Names, stored in the 'prod' environment like:
+
+    ['Customer Org A', 'Customer Org B', ...]
 
 Simply add to the org_name list under the strategy section, and each run of the Action will spawn jobs for each item in the list. When the action completes, you can check each job separately to check the logs. This utilizes the intentional feature within GitHub for running necessary variations on a job.
+
+### change_obj_id_rename.yml
+obj_id is used for filenames in the repo, but obj_id can be updated on ThoughtSpot via REST API or UI. This Action changes the appropriate filename to match the new obj_id, and updates the obj_id at the same time.
+
+When the next Download TML Action is run, the TML file will be saved with the new filename, and the exported TML will contain the new obj_id, creating two commmits - first a filename change, then the obj_id changing at the top of the TML file.
+
+These commits will merge smoothly into any other branches. The obj_id in other Orgs will need to be updated as well - see the other actions for changing obj_id across multiple Orgs at once.
+
+### change_obj_id_matrix.yml
+Matrix update obj_id on multiple Orgs defines `Matrix update obj_id on multiple Orgs`, which is used to sync obj_id updates to all orgs other than the `dev` Org. `dev` Org changes, which will go into the `release` branch, should use the `Update obj_id and rename files` Action above, which will update the filenames in the repo. 
+
+The matrix strategy is defined like:
+
+    strategy:
+      matrix: 
+        org_name: ${{ fromJson(vars.DEPLOY_ORGS_JSON_LIST) }}
+
+The DEPLOY_ORGS_JSON_LIST should be a JSON array of Org Names, stored in the 'release' environment like, defining all Orgs other than `dev` which should have the update command sent. This includes 'test, 'uat', and 'prod' or the list of single-tenant customer prod Orgs:
+
+    ['test', 'uat', 'prod_deploy', 'Customer Org A', 'Customer Org B', ...]
 
 ### retrieve_org_id_from_org_name.py
 retrieve_org_id_from_org_name.py is a helper script to get the numeric `org_id` for any arbitrary string Org Name on a ThoughtSpot instance.

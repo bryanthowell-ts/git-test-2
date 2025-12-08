@@ -246,8 +246,16 @@ def retrieve_objects(request, record_size_override=-1):
     return objs
 
 def export_objects_to_disk(objects, last_run_epoch):
+    system_user_name = 'system'
+    # Additional users to skip if needed
+    exclude_author_names = []
+    exclude_author_names.append(system_user_name)
     count_exported = 0
     for o in objects:
+        # Skip any object with ['metadata_header']['authorName'] of system user (automatically in each org)
+        if o['metadata_header']['authorName'] in exclude_author_names:
+            continue
+
         if last_run_epoch is None:
             print("No last_run file found, exporting all")
             export_tml_with_obj_id(guid=o["metadata_id"], save_to_disk=True)
