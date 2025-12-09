@@ -24,7 +24,7 @@ model:
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: Sales Tax %
+  - name: Sales Tax Percentage
     formula_id: formula_Sales Tax (8%)
     properties:
       column_type: MEASURE
@@ -45,7 +45,7 @@ model:
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: City
+  - name: City Name
     column_id: DIM_RETAPP_STORES::City
     properties:
       column_type: ATTRIBUTE
@@ -129,7 +129,7 @@ model:
       is_spotter_enabled: true
   parameters:
   - id: b8c424dd-a897-49be-b460-8feaa2a7d27d
-    name: Data Security
+    name: Data Security PARAM
     data_type: CHAR
     default_value: Secured
     description: ''
