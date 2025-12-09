@@ -35,6 +35,8 @@ Objects created via TML will have the obj_id provided in the TML file, but chang
 
 You can set obj_id for any object in the ThoughtSpot UI within the TML Editor's Edit Menu or using the REST API V2.0 /metadata/update-obj-id endpoint.
 
+Use the `Analyze obj_id Assignment in Org` Action to get a read out of objects that have no obj_id or an automatically assignd obj_id, for use in initial naming process.
+
 ### Create Variables and Variablize Connection and Table TML
 Connection and Table TML both have properties related to the underlying databases that may vary between different environments - for example, warehouse and keypair in a Connection, or the database name or schema in a Table.
 
@@ -59,16 +61,16 @@ Inputs from a manually triggered event defined within the 'workflow_dispatch' se
 ### Branches
 
 - **main / master**: Actions / workflows / other shared assets, but **no TML files** from any Org
-- **dev**: Version Control for all content on Dev Org
+- **dev_vc**: Version Control for all content on Dev Org
 - **release**: Branch for Specific Content to go through deployment to other Orgs
 - **test_deploy**: Import TML from 'release' and do other Actions to Test Org
-- **test**: Version control for all content on Test Org
+- **test_vc**: Version control for all content on Test Org
 - Optional UAT / etc.: 
     - **uat_deploy**: Import TML from 'release' and do other Actions to UAT Org
-    - **uat**: Version control for all content on UAT Org
+    - **uat_vc**: Version control for all content on UAT Org
 - **prod_deploy** Import TML from 'release' and do other Actions to Prod Org(s)
 - Version control for prod Orgs:
-    - **prod**: if single Prod, version control of all Content
+    - **prod_vc**: if single Prod, version control of all Content
     - **customer_orgs(s)**: version control branch for each Single Tenant Org
 
 Pull requests / merges should be possible smoothly from "release" -> "test_deploy" -> "uat_deploy" -> "prod_deploy"
