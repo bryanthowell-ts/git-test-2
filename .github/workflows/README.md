@@ -210,6 +210,17 @@ The DEPLOY_ORGS_JSON_LIST should be a JSON array of Org Names, stored in the 're
 
     ['test', 'uat', 'prod_deploy', 'Customer Org A', 'Customer Org B', ...]
 
+### analyze_obj_id_assignment.yml
+analyze_obj_id_assignment.yml defines `Analyze obj_id assignment in Org` Action, which is intended to help with initial assignment of obj_ids. 
+
+Existing objects on clusters have an empty/null obj_id property until they are modified, while the automatic naming pattern is easily detected, which can create a list of objects to be given more intentional names.
+
+After you run this action, go into the logs from the Run within the GitHub Actions menu. The console output of the `obj_id_analyze.py` will be displayed in the logs for the `Analyze obj_id assignment from ${{ vars.TS_ORG_NAME }}` step of the job run. 
+
+`obj_id_analyze.py` is meant as a template - you can modify the functions that generate the output to give suggestions for new obj_ids based on your preferred business rules. You can then use the `change_obj_id_rename.yml` action or another script to do a bulk update. 
+
+The `change_obj_id_rename.yml`  action is able to change filenames and obj_ids in a way that maintains all previous versioning. You may instead prefer to clear any previous files, then do a bulk obj_id renaming, then use `download_tml.yml` action to create a new start with all the files named with the intended obj_ids.
+
 ### retrieve_org_id_from_org_name.py
 retrieve_org_id_from_org_name.py is a helper script to get the numeric `org_id` for any arbitrary string Org Name on a ThoughtSpot instance.
 
