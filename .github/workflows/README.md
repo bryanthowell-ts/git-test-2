@@ -94,6 +94,10 @@ Secrets:
  - TS_DOWNLOAD_USERNAME
  - TS_IMPORT_USERNAME
 
+The `TS_SECRET_KEY` must be the "All Orgs" secret_key retrieved from the Primary Org, because it is used for generating access tokens into any specified org in the SDLC process.
+
+Similarly the `TS_INSTANCE_USERNAME` should be an instance level admin account, able to request details about Orgs from the entire ThoughtSpot instance.
+
 ### Environment secrets and variables
 GitHub provides an Environments concept for defining different sets of secrets and variables.
 
