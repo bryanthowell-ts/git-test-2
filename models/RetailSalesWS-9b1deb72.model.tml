@@ -1,7 +1,7 @@
 obj_id: RetailSalesWS-9b1deb72
 model:
   name: Retail Sales WS
-  description: The Retail Sales WS worksheet provides a comprehensive overview of retail transactions, capturing details about the products sold, including their names, types, and prices, along with the quantity purchased. It also includes geographical information such as city, county, state, region, and specific store locations, represented by store names and zip codes. Additionally, the worksheet records the sales amount, sales date, and applicable sales tax percentage, along with a unique identifier for each transaction. (AI generated)
+  description: The Retail Sales WS worksheet is a sheet of work
   model_tables:
   - name: DIM_RETAPP_PRODUCTS
     obj_id: DIM_RETAPP_PRODUCTS-fe481140
@@ -24,7 +24,7 @@ model:
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: Sales Tax Percentage
+  - name: Sales Tax Percent
     formula_id: formula_Sales Tax (8%)
     properties:
       column_type: MEASURE
@@ -59,7 +59,7 @@ model:
         region_name:
           country: UNITED STATES
           region_name: state
-  - name: Zip Code
+  - name: ZIP Code
     column_id: DIM_RETAPP_STORES::Zip Code
     properties:
       column_type: ATTRIBUTE
