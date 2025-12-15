@@ -45,7 +45,7 @@ model:
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: City Name
+  - name: City
     column_id: DIM_RETAPP_STORES::City
     properties:
       column_type: ATTRIBUTE
@@ -77,12 +77,12 @@ model:
         region_name:
           country: UNITED STATES
           region_name: county
-  - name: Latitude
+  - name: Lat
     column_id: DIM_RETAPP_STORES::Latitude
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
-  - name: Longitude
+  - name: Lon
     column_id: DIM_RETAPP_STORES::Longitude
     properties:
       column_type: ATTRIBUTE
