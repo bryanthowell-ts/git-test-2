@@ -1,0 +1,90 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Version Control vc_dev branch
+
+on: 
+  schedule:
+    - cron: '*/15 * * * *' # Example: Runs every 15 minutes
+#  workflow_dispatch:
+#    inputs:
+#      OBJECT_TYPE:
+#        type: choice
+#        description: Type of Objects to Download
+#        options: 
+#        - ALL
+#        - LIVEBOARD
+#        - ANSWER
+#        - DATA
+#        - CONNECTION
+#        required: true
+#      RECORD_SIZE_LIMIT:
+#        type: number
+#        description: Limit Number Objects Downloaded (-1 is All)
+#        default: "-1"
+#        required: true
+#      FILTER_AUTHOR_NAME:
+#        type: string
+#        description: 'Filter to Author (Owner) Name'
+#        required: true
+#        default: "{None}"
+#      FILTER_TAG_NAME:
+#        type: string
+#        description: 'Filter on Tag name'
+#        required: true
+#        default: "{None}"
+#      TS_ORG_NAME_OVERRIDE:
+#        type: string
+#        description: 'ThoughtSpot org name (not org_id)'
+#        required: true
+#        default: '{None}'
+      
+
+permissions:
+  contents: write
+
+jobs:
+  download_tml_and_commit:
+
+    runs-on: ubuntu-latest
+    # Maps a Git branch (the == '{branchName}' to a GitHub environment ( the && '{envName}')
+    # These are the suggested best practice names in a simple multi-tenant deployment
+    environment: 'dev'
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: 'vc_dev'
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install thoughtspot_rest_api 
+        # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Get Org_ID from Org_Name ${{ vars.TS_ORG_NAME }}
+      env:
+       TS_SERVER: ${{ secrets.TS_SERVER }}
+       TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
+       TS_USERNAME: ${{ secrets.TS_INSTANCE_ADMIN_USERNAME }}
+       TS_ORG_NAME: ${{ vars.TS_ORG_NAME }}
+      run: |
+         python .github/workflows/retrieve_org_id_from_org_name.py >> $GITHUB_ENV
+    - name: Export and Download TML from ${{ vars.TS_ORG_NAME }}
+      env:
+       TS_SERVER: ${{ secrets.TS_SERVER }}
+       TS_SECRET_KEY: ${{ secrets.TS_SECRET_KEY }}
+       TS_USERNAME: ${{ secrets.TS_DOWNLOAD_USERNAME }}
+       AUTHOR_FILTER: "{None}"
+       TAG_FILTER: "{None}"
+       OBJECT_TYPE: "ALL"
+       RECORD_SIZE_LIMIT: "-1"
+      run: |
+        git config --local user.email "${{ github.actor_id }}+${{ github.triggering_actor }}@users.noreply.github.com"
+        git config --local user.name "${{ github.triggering_actor }}"
+        python .github/workflows/download_tml_to_disk.py 
+        git add *
+        git diff-index --quiet HEAD || git commit -a -m "Run ID ${{ github.run_id }}/${{github.run_attempt}} export from Org ${{ vars.TS_ORG_NAME }}"
+        git push
