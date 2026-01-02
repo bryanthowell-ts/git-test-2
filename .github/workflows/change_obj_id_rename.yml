@@ -24,16 +24,18 @@ jobs:
   update_obj_id:
 
     runs-on: ubuntu-latest
+    # Maps a Git branch (the == '{branchName}' to a GitHub environment ( the && '{envName}')
+    # These are the suggested best practice names in a simple multi-tenant deployment
     environment: |-
         ${{
            github.ref_name == 'release' && 'dev'
-        || github.ref_name == 'dev' && 'dev'
+        || github.ref_name == 'dev_vc' && 'dev'
         || github.ref_name == 'prod_deploy' && 'prod'
-        || github.ref_name == 'prod' && 'prod'
+        || github.ref_name == 'prod_vc' && 'prod'
         || github.ref_name == 'test_deploy' && 'test'
-        || github.ref_name == 'test' && 'test'
+        || github.ref_name == 'test_vc' && 'test'
         || github.ref_name == 'uat_deploy' && 'uat'
-        || github.ref_name == 'uat' && 'uat'
+        || github.ref_name == 'uat_vc' && 'uat'
         || 'default'
         }} 
 
