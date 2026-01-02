@@ -1,0 +1,93 @@
+obj_id: StudentScorecard-30c6e44d
+liveboard:
+  name: Student Scorecard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Student Scorecard
+      tables:
+      - id: Student Scores
+        name: Student Scores
+        obj_id: StudentScores-6d6340b0
+      search_query: "[Student] [Type] [Score] sort by [Score] descending"
+      answer_columns:
+      - name: Student
+      - name: Total Score
+        format:
+          category: NUMBER
+          numberFormatConfig:
+            unit: AUTO
+            decimals: 0.0
+            negativeValueFormat: PREFIX_DASH
+            toSeparateThousands: true
+          isCategoryEditable: true
+        sort_info:
+          category: DEFAULT
+      - name: Type
+      table:
+        table_columns:
+        - column_id: Student
+          show_headline: false
+        - column_id: Total Score
+          show_headline: false
+        - column_id: Type
+          show_headline: false
+        ordered_column_ids:
+        - Student
+        - Type
+        - Total Score
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Student
+        - column_id: Total Score
+        - column_id: Type
+        axis_configs:
+        - x:
+          - Student
+          "y":
+          - Total Score
+          color:
+          - Type
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": false},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"isStackedAsPercent\": false,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false},\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true,\\\"borderWidth\\\":\\\"1\\\",\\\"opacity\\\":\\\"100\\\",\\\"label\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"value\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"regression\\\":{\\\"lineWidth\\\":\\\"2\\\",\\\"dashStyle\\\":\\\"Solid\\\"},\\\"gridlines\\\":{\\\"xAxis\\\":{\\\"gridLineColor\\\":\\\"#FFFFFF\\\",\\\"gridLineWidth\\\":\\\"5\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"},\\\"yAxis\\\":{\\\"gridLineColor\\\":\\\"#FFFFFF\\\",\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"}},\\\"answerLevelSettings\\\":{\\\"dashStyle\\\":\\\"Solid\\\",\\\"lineWidth\\\":\\\"\\\",\\\"markerType\\\":\\\"Circle\\\",\\\"markerRadius\\\":\\\"\\\",\\\"borderWidth\\\":\\\"0\\\",\\\"connectingLines\\\":false}}}\",\"pivotSummariesState\": {}},\"showStackedLabels\": false,\"allLabels\": false},\"columnProperties\": [{\"columnId\": \"Student\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Type\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total Score\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"ba456bb0-18ff-4a63-9a2f-fb4253d5b081\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Score\"],\"isOpposite\": false}},{\"id\": \"dc718842-d12b-4c75-b6f0-9de5c82002fd\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Student\"]}}],\"seriesColors\": [{\"serieName\": \"Total Score\",\"color\": \"#2E75F0\"},{\"serieName\": \"exam1\",\"color\": \"#ABC7F9\"},{\"serieName\": \"exam2\",\"color\": \"#2E75F0\"},{\"serieName\": \"quiz1\",\"color\": \"#BEC6D0\"},{\"serieName\": \"quiz2\",\"color\": \"#A2ACBA\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Score\",\"color\": \"#2E75F0\"},{\"serieName\": \"exam1\",\"color\": \"#ABC7F9\"},{\"serieName\": \"exam2\",\"color\": \"#2E75F0\"},{\"serieName\": \"quiz1\",\"color\": \"#BEC6D0\"},{\"serieName\": \"quiz2\",\"color\": \"#A2ACBA\"},{\"serieName\": \"adam\",\"color\": \"#56D3A8\"},{\"serieName\": \"allie\",\"color\": \"#06BF7F\"},{\"serieName\": \"angela\",\"color\": \"#FCD977\"},{\"serieName\": \"ben\",\"color\": \"#FCC838\"},{\"serieName\": \"joel\",\"color\": \"#82DFE9\"},{\"serieName\": \"kori\",\"color\": \"#48D1E0\"},{\"serieName\": \"marcy\",\"color\": \"#71A1F4\"},{\"serieName\": \"sam\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+      dynamic_name: Student Scorecard
+    viz_guid: 87d44248-6da6-4404-b736-ca0bcffdb7fd
+  filters:
+  - column:
+    - Type
+    oper: in
+    values:
+    - EXAM2
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 9
+      width: 12
+  ordered_chips:
+  - name: Type
+    type: FILTER
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "false"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M

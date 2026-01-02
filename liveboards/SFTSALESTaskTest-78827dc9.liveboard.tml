@@ -1,0 +1,41 @@
+obj_id: SFTSALESTaskTest-78827dc9
+liveboard:
+  name: SF TSALES Task Test
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Event Id, Event Subject"
+      tables:
+      - id: TSALES TASKS
+        name: TSALES TASKS
+        obj_id: TSALESTASKS-ff23ff1f
+      search_query: "[Event Id] [Event Subject]"
+      answer_columns:
+      - name: Event Id
+      - name: Event Subject
+      table:
+        table_columns:
+        - column_id: Event Id
+          show_headline: false
+        - column_id: Event Subject
+          show_headline: false
+        ordered_column_ids:
+        - Event Id
+        - Event Subject
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Event Id
+        - column_id: Event Subject
+        axis_configs:
+        - x:
+          - Event Id
+          "y":
+          - Event Subject
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: a06358d4-335d-4e35-be03-16b9d2eda308
+  layout:
+    tiles:
+    - visualization_id: Viz_1

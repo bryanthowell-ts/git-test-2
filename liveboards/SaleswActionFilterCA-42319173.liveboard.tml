@@ -1,0 +1,141 @@
+obj_id: SaleswActionFilterCA-42319173
+liveboard:
+  name: Sales w Action Filter CA (Date)
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Sales by Region
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      search_query: "[Sales] sort by [Sales] descending [Order Date].'month of year' [Order Month Name]"
+      answer_columns:
+      - name: MONTH_OF_YEAR(Order Date)
+      - name: Order Month Name
+      - name: Total Sales
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: MONTH_OF_YEAR(Order Date)
+          show_headline: false
+        - column_id: Order Month Name
+          show_headline: false
+        - column_id: Total Sales
+          show_headline: false
+        ordered_column_ids:
+        - MONTH_OF_YEAR(Order Date)
+        - Order Month Name
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"Order Month Name\",\"Total Sales\",\"MONTH_OF_YEAR(Order Date)\"],\"columnProperties\": [{\"columnId\": \"Order Month Name\",\"columnProperty\": {\"isHidden\": false}},{\"columnId\": \"MONTH_OF_YEAR(Order Date)\",\"columnProperty\": {\"isHidden\": true}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: MONTH_OF_YEAR(Order Date)
+        - column_id: Order Month Name
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Order Month Name
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"MONTH_OF_YEAR(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Order Month Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b2da1dbc-c331-473a-947d-49754358a6b7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"73b8eb14-f2b4-43ad-935c-5b36ec58ef62\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Order Month Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: f1ce9d10-02e6-40a2-a3cf-93cb089dd058
+  - id: Viz_2
+    answer:
+      name: Total Sales by Region
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      search_query: "[Sales] sort by [Sales] descending [Category] [Region] [State] [Order Date].'month of year' [Order Month Name]"
+      answer_columns:
+      - name: Category
+      - name: MONTH_OF_YEAR(Order Date)
+      - name: Order Month Name
+      - name: Region
+      - name: State
+      - name: Total Sales
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Category
+          show_headline: false
+        - column_id: MONTH_OF_YEAR(Order Date)
+          show_headline: false
+        - column_id: Order Month Name
+          show_headline: false
+        - column_id: Region
+          show_headline: false
+        - column_id: State
+          show_headline: false
+        - column_id: Total Sales
+          show_headline: false
+        ordered_column_ids:
+        - Category
+        - Region
+        - State
+        - MONTH_OF_YEAR(Order Date)
+        - Order Month Name
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Category
+        - column_id: MONTH_OF_YEAR(Order Date)
+        - column_id: Order Month Name
+        - column_id: Region
+        - column_id: State
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Category
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d6699827-36f3-4a7c-b6da-e238b3352a67\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"b2d67327-3664-43e3-b58b-d428319c075c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#2E75F0\"}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 24c0903b-07d8-4ff7-8e89-0219f37e55be
+  layout:
+    tabs:
+    - name: Sales Summary
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 2
+        height: 8
+        width: 6
+      id: f50c3bcd-2c08-481e-9136-d26e3b3d93dc
+    - name: Detail
+      description: ""
+      tiles:
+      - visualization_id: Viz_2
+        x: 0
+        "y": 0
+        height: 8
+        width: 12
+      id: e41e405f-d6b5-4c1c-8a7e-ece08414e391
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "false"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M

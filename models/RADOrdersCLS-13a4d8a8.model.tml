@@ -1,0 +1,131 @@
+obj_id: RADOrdersCLS-13a4d8a8
+model:
+  name: RAD Orders CLS
+  model_tables:
+  - name: ORDERS RLS VAR
+    obj_id: ORDERS-897a0638
+  formulas:
+  - id: formula__Category_mask
+    name: _Category_mask
+    expr: if ( ts_groups = 'administrator' or 'secure' in ts_groups ) then [ORDERS RLS VAR::category] else '*****'
+  columns:
+  - name: Category
+    column_id: ORDERS RLS VAR::category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: _Category_mask
+    formula_id: formula__Category_mask
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: City
+    column_id: ORDERS RLS VAR::city
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Country
+    column_id: ORDERS RLS VAR::country
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Customer Id
+    column_id: ORDERS RLS VAR::customer_id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Customer Name
+    column_id: ORDERS RLS VAR::customer_name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Discount
+    column_id: ORDERS RLS VAR::discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Order Date
+    column_id: ORDERS RLS VAR::order_date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Order Id
+    column_id: ORDERS RLS VAR::order_id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Postal Code
+    column_id: ORDERS RLS VAR::postal_code
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Product Id
+    column_id: ORDERS RLS VAR::product_id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Product Name
+    column_id: ORDERS RLS VAR::product_name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Profit
+    column_id: ORDERS RLS VAR::profit
+    properties:
+      column_type: MEASURE
+      aggregation: AVERAGE
+      index_type: DONT_INDEX
+  - name: Quantity
+    column_id: ORDERS RLS VAR::quantity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Region
+    column_id: ORDERS RLS VAR::region
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Row Id
+    column_id: ORDERS RLS VAR::row_id
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Sales
+    column_id: ORDERS RLS VAR::sales
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Segment
+    column_id: ORDERS RLS VAR::segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Ship Date
+    column_id: ORDERS RLS VAR::ship_date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Ship Mode
+    column_id: ORDERS RLS VAR::ship_mode
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: State
+    column_id: ORDERS RLS VAR::state
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Sub Category
+    column_id: ORDERS RLS VAR::sub_category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true

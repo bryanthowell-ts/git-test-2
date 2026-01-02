@@ -1,0 +1,320 @@
+obj_id: Roblox-b6dda372
+liveboard:
+  name: Roblox
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Top 10 Games
+      tables:
+      - id: Roblox
+        name: Roblox
+        obj_id: Roblox-fddc311e
+      search_query: "top 10 [Name] sort by [Active]"
+      answer_columns:
+      - name: Name
+      - name: Total Active
+      table:
+        table_columns:
+        - column_id: Name
+          show_headline: false
+        - column_id: Total Active
+          show_headline: false
+        ordered_column_ids:
+        - Name
+        - Total Active
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Name
+        - column_id: Total Active
+        axis_configs:
+        - x:
+          - Name
+          "y":
+          - Total Active
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Name\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total Active\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"9accdc23-22ed-4513-b3a0-7f913953500a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Active\"],\"isOpposite\": false}},{\"id\": \"1ff0e9d5-afb8-4cc2-8521-c7fd411b6e33\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Name\"]}}],\"seriesColors\": [{\"serieName\": \"blox fruits\",\"color\": \"#B094F8\"},{\"serieName\": \"brookhaven 🏡rp\",\"color\": \"#8C62F5\"},{\"serieName\": \"dress to impress 💜\",\"color\": \"#56D3A8\"},{\"serieName\": \"pets go! ✨ [new]\",\"color\": \"#06BF7F\"},{\"serieName\": \"murder mystery 2\",\"color\": \"#FCD977\"},{\"serieName\": \"[update 1] anime vanguards\",\"color\": \"#FCC838\"},{\"serieName\": \"the strongest battlegrounds\",\"color\": \"#82DFE9\"},{\"serieName\": \"pet simulator 99! 🎃\",\"color\": \"#48D1E0\"},{\"serieName\": \"adopt me!\",\"color\": \"#71A1F4\"},{\"serieName\": \"berry avenue 🏠 rp\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Active\",\"color\": \"#F04152\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Active\",\"color\": \"#2E75F0\"},{\"serieName\": \"blox fruits\",\"color\": \"#B094F8\"},{\"serieName\": \"brookhaven 🏡rp\",\"color\": \"#8C62F5\"},{\"serieName\": \"dress to impress 💜\",\"color\": \"#56D3A8\"},{\"serieName\": \"pets go! ✨ [new]\",\"color\": \"#06BF7F\"},{\"serieName\": \"murder mystery 2\",\"color\": \"#FCD977\"},{\"serieName\": \"[update 1] anime vanguards\",\"color\": \"#FCC838\"},{\"serieName\": \"the strongest battlegrounds\",\"color\": \"#82DFE9\"},{\"serieName\": \"pet simulator 99! 🎃\",\"color\": \"#48D1E0\"},{\"serieName\": \"adopt me!\",\"color\": \"#71A1F4\"},{\"serieName\": \"berry avenue 🏠 rp\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+      dynamic_name: Top 10 Games
+    viz_guid: 3b73068d-5341-42bd-b783-35ebbb41b173
+    action_object_associations:
+    - action_name: Back
+      context: PRIMARY
+      enabled: false
+  - id: Viz_2
+    answer:
+      name: Players
+      tables:
+      - id: Roblox
+        name: Roblox
+        obj_id: Roblox-fddc311e
+      search_query: "[Active]"
+      answer_columns:
+      - name: Total Active
+      table:
+        table_columns:
+        - column_id: Total Active
+          show_headline: false
+        ordered_column_ids:
+        - Total Active
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Active
+        axis_configs:
+        - "y":
+          - Total Active
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Active\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5060796c-a66b-43e7-9200-671d9ab46879\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Active\"],\"isOpposite\": false}},{\"id\": \"3640255c-8859-4597-8800-241b9fc5c42e\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Total Active\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+      dynamic_name: Players
+    viz_guid: 797f22e3-685b-4189-a091-ee5d26fa9cfc
+  - id: Viz_3
+    answer:
+      name: Favorites
+      tables:
+      - id: Roblox
+        name: Roblox
+        obj_id: Roblox-fddc311e
+      search_query: "[Favourites]"
+      answer_columns:
+      - name: Total Favourites
+      table:
+        table_columns:
+        - column_id: Total Favourites
+          show_headline: false
+        ordered_column_ids:
+        - Total Favourites
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Favourites\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Favourites
+        axis_configs:
+        - "y":
+          - Total Favourites
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Favourites\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5651e21f-aa27-4eba-b461-62428f09a6e5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Favourites\"],\"isOpposite\": false}},{\"id\": \"c50c5263-eb77-4e15-a2bb-dc0bff8830ca\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+      dynamic_name: Favorites
+    viz_guid: 6c2e0718-98fc-4464-8b68-1062ded0ca04
+  - id: Viz_4
+    answer:
+      name: Likes
+      tables:
+      - id: Roblox
+        name: Roblox
+        obj_id: Roblox-fddc311e
+      search_query: "[Likes]"
+      answer_columns:
+      - name: Total Likes
+      table:
+        table_columns:
+        - column_id: Total Likes
+          show_headline: false
+        ordered_column_ids:
+        - Total Likes
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Likes\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Likes
+        axis_configs:
+        - "y":
+          - Total Likes
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Likes\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"02fc2c3e-9739-4e45-ba68-63706752d5b1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Likes\"],\"isOpposite\": false}},{\"id\": \"77292dc0-0701-413d-983f-7c51bc6d71f6\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+      dynamic_name: Likes
+    viz_guid: 411e7713-f406-443e-a20c-eec48d998b23
+  - id: Viz_5
+    answer:
+      name: Dislikes
+      tables:
+      - id: Roblox
+        name: Roblox
+        obj_id: Roblox-fddc311e
+      search_query: "[Dislikes]"
+      answer_columns:
+      - name: Total Dislikes
+      table:
+        table_columns:
+        - column_id: Total Dislikes
+          show_headline: false
+        ordered_column_ids:
+        - Total Dislikes
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Dislikes\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Dislikes
+        axis_configs:
+        - "y":
+          - Total Dislikes
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Dislikes\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9a8c5253-4380-431a-afe2-aaa817342fa2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Dislikes\"],\"isOpposite\": false}},{\"id\": \"4a7bc681-d8bd-421f-9383-92e72e175ee0\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+      dynamic_name: Dislikes
+    viz_guid: 30cfe4b2-c72a-4321-9799-c0795f05f160
+  - id: Viz_6
+    answer:
+      name: Avg Rating
+      tables:
+      - id: Roblox
+        name: Roblox
+        obj_id: Roblox-fddc311e
+      search_query: "average [Rating]"
+      answer_columns:
+      - name: Average Rating
+      table:
+        table_columns:
+        - column_id: Average Rating
+          show_headline: false
+        ordered_column_ids:
+        - Average Rating
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Average Rating
+        axis_configs:
+        - "y":
+          - Average Rating
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"Average Rating\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8b3cef59-babd-48f4-9a85-5649bb463c9d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Rating\"],\"isOpposite\": false}},{\"id\": \"418a286b-1516-4b72-9c25-5214510d8614\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+      dynamic_name: Avg Rating
+    viz_guid: 414e06f9-8ae9-43f9-b902-484b351a9722
+  - id: Viz_7
+    answer:
+      name: Visits
+      tables:
+      - id: Roblox
+        name: Roblox
+        obj_id: Roblox-fddc311e
+      search_query: "[Visits]"
+      answer_columns:
+      - name: Total Visits
+      table:
+        table_columns:
+        - column_id: Total Visits
+          show_headline: false
+        ordered_column_ids:
+        - Total Visits
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Visits\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Visits
+        axis_configs:
+        - "y":
+          - Total Visits
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Visits\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9f97f1ef-5503-46fa-8b84-6e515f9dc243\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Visits\"],\"isOpposite\": false}},{\"id\": \"56a7f609-6b39-42a4-bc38-f51eda49ed75\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+      dynamic_name: Visits
+    viz_guid: 4f8fad23-d549-4724-a5d8-e5eff88a02be
+  - id: Viz_8
+    answer:
+      name: Total Games
+      tables:
+      - id: Roblox
+        name: Roblox
+        obj_id: Roblox-fddc311e
+      search_query: "unique count [Name]"
+      answer_columns:
+      - name: Unique Number of Name
+      table:
+        table_columns:
+        - column_id: Unique Number of Name
+          show_headline: false
+        ordered_column_ids:
+        - Unique Number of Name
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Unique Number of Name
+        axis_configs:
+        - "y":
+          - Unique Number of Name
+        client_state: ""
+      display_mode: CHART_MODE
+      dynamic_name: Total Games
+    viz_guid: de48b6e7-3ee5-490d-93e1-f5c9d551e2c6
+  filters:
+  - column:
+    - Name
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 8
+    - visualization_id: Viz_2
+      x: 8
+      "y": 4
+      height: 2
+      width: 2
+    - visualization_id: Viz_3
+      x: 8
+      "y": 6
+      height: 2
+      width: 2
+    - visualization_id: Viz_4
+      x: 8
+      "y": 2
+      height: 2
+      width: 2
+    - visualization_id: Viz_5
+      x: 10
+      "y": 2
+      height: 2
+      width: 2
+    - visualization_id: Viz_6
+      x: 10
+      "y": 4
+      height: 2
+      width: 2
+    - visualization_id: Viz_7
+      x: 10
+      "y": 0
+      height: 2
+      width: 2
+    - visualization_id: Viz_8
+      x: 8
+      "y": 0
+      height: 2
+      width: 2
+  ordered_chips:
+  - name: Name
+    type: FILTER
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "false"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M

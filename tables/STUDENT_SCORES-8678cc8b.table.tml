@@ -1,0 +1,35 @@
+obj_id: STUDENT_SCORES-8678cc8b
+table:
+  name: STUDENT_SCORES
+  db: RAD
+  schema: SUPERSTORE
+  db_table: STUDENT_SCORES
+  connection:
+    name: RAD - Snow
+    obj_id: RAD-Snow-f707479f
+  columns:
+  - name: STUDENT
+    db_column_name: STUDENT
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: TYPE
+    db_column_name: TYPE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SCORE
+    db_column_name: SCORE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  properties:
+    spotter_config:
+      is_spotter_enabled: true

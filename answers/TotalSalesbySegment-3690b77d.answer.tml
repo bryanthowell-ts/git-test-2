@@ -1,0 +1,41 @@
+obj_id: TotalSalesbySegment-3690b77d
+answer:
+  name: Total Sales by Segment
+  tables:
+  - id: RAD Orders CLS
+    name: RAD Orders CLS
+    obj_id: RADOrdersCLS-13a4d8a8
+  search_query: "[Sales] [Ship Mode] [Segment]"
+  answer_columns:
+  - name: Segment
+  - name: Ship Mode
+  - name: Total Sales
+  table:
+    table_columns:
+    - column_id: Segment
+      show_headline: false
+    - column_id: Ship Mode
+      show_headline: false
+    - column_id: Total Sales
+      show_headline: false
+    ordered_column_ids:
+    - Ship Mode
+    - Segment
+    - Total Sales
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Segment
+    - column_id: Ship Mode
+    - column_id: Total Sales
+    axis_configs:
+    - x:
+      - Segment
+      "y":
+      - Total Sales
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Ship Mode\",\"columnProperty\": {}},{\"columnId\": \"Segment\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"3989c279-7d7e-404e-927b-393f0360cf01\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"f238ce8a-3b1f-4d3f-a8d9-cc52d5f4782f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Segment\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
+  dynamic_name: Total Sales by Segment
