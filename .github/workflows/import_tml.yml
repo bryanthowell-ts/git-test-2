@@ -1,4 +1,4 @@
-name: Import TML to Single Org
+name: Import TML - Single Org
 
 on: 
   workflow_dispatch:
@@ -44,13 +44,19 @@ jobs:
   import_tml_single_org:
 
     runs-on: ubuntu-latest
+    # Maps a Git branch (the == '{branchName}' to a GitHub environment ( the && '{envName}')
+    # These are the suggested best practice names in a simple multi-tenant deployment
     environment: |-
         ${{
-          github.ref_name == 'prod' && 'production'
-        || github.ref_name == 'dev'    && 'dev'
-        || github.ref_name == 'test' && 'test'
-        || github.ref_name == 'uat' && 'uat'
-        || github.ref_name
+           github.ref_name == 'release' && 'dev'
+        || github.ref_name == 'vc_dev' && 'dev'
+        || github.ref_name == 'prod_deploy' && 'prod'
+        || github.ref_name == 'vc_prod' && 'prod'
+        || github.ref_name == 'test_deploy' && 'test'
+        || github.ref_name == 'vc_test' && 'test'
+        || github.ref_name == 'uat_deploy' && 'uat'
+        || github.ref_name == 'vc_uat' && 'uat'
+        || 'default'
         }} 
 
     steps:
