@@ -363,6 +363,9 @@ liveboard:
           "y": 0
           height: 5
           width: 4
+    - name: Tab 2
+      description: ""
+      id: 4aa1b9ae-1b2e-4358-b725-f8f631f3cdf8
   ordered_chips:
   - name: Product Type
     type: FILTER
