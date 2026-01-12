@@ -14,7 +14,6 @@ model:
     column_id: ORDERS::category
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: Order Month Name
     formula_id: formula_Order Month Name
     properties:
@@ -24,22 +23,18 @@ model:
     column_id: ORDERS::city
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: Country
     column_id: ORDERS::country
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: Customer Id
     column_id: ORDERS::customer_id
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: Customer Name
     column_id: ORDERS::customer_name
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: Discount
     column_id: ORDERS::discount
     properties:
@@ -55,7 +50,6 @@ model:
     column_id: ORDERS::order_id
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: Postal Code
     column_id: ORDERS::postal_code
     properties:
@@ -66,12 +60,10 @@ model:
     column_id: ORDERS::product_id
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: Product Name
     column_id: ORDERS::product_name
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: Profit
     column_id: ORDERS::profit
     properties:
@@ -88,13 +80,12 @@ model:
     column_id: ORDERS::region
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: Row Id
     column_id: ORDERS::row_id
     properties:
-      column_type: MEASURE
-      aggregation: SUM
+      column_type: ATTRIBUTE
       index_type: DONT_INDEX
+      is_additive: true
   - name: Sales
     column_id: ORDERS::sales
     properties:
@@ -105,7 +96,6 @@ model:
     column_id: ORDERS::segment
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: Ship Date
     column_id: ORDERS::ship_date
     properties:
@@ -115,17 +105,14 @@ model:
     column_id: ORDERS::ship_mode
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: State
     column_id: ORDERS::state
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   - name: Sub Category
     column_id: ORDERS::sub_category
     properties:
       column_type: ATTRIBUTE
-      index_type: DONT_INDEX
   properties:
     is_bypass_rls: false
     join_progressive: true
