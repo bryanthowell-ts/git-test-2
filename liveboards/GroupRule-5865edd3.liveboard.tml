@@ -1,0 +1,84 @@
+obj_id: GroupRule-5865edd3
+liveboard:
+  name: Group Rule
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Sales by Region
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      formulas:
+      - id: formula_Group Filter
+        name: Group Filter
+        expr: "ts_groups = [Region] "
+        was_auto_generated: false
+      search_query: "[Region] [Sales] [formula_Group Filter]"
+      answer_columns:
+      - name: Group Filter
+      - name: Region
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Group Filter
+          show_headline: false
+        - column_id: Region
+          show_headline: false
+        - column_id: Total Sales
+          show_headline: false
+        ordered_column_ids:
+        - Region
+        - Group Filter
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Group Filter
+        - column_id: Region
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales
+          color:
+          - Group Filter
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Total Sales\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Group Filter\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ce960245-b06a-4b24-9bb8-2eb00d63c838\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"81e42c3a-e502-4978-be18-f9ecb73497ee\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Sales\",\"color\": \"#2E75F0\"},{\"serieName\": \"false\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: de182036-4629-4fdb-beb7-3536c7f89839
+  filters:
+  - column:
+    - Region
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+  ordered_chips:
+  - name: Region
+    type: FILTER
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "true"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M
