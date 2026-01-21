@@ -17,3 +17,5 @@ connection:
   - key: passphrase
     value: "${se_snow_passphrase}"
   description: ""
+  selected_databases:
+  - RAD
