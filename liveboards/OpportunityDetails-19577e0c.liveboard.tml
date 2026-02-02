@@ -548,66 +548,6 @@ liveboard:
       display_mode: TABLE_MODE
       dynamic_name: Data Table
     viz_guid: 07f69f16-9f07-45a0-ad37-90d05ecdd7b7
-  - id: Viz_9
-    answer:
-      name: Copy of Pipeline Drilldown
-      tables:
-      - id: TSEMBED
-        name: TSEMBED
-        obj_id: TSEMBED-5f92ed57
-      formulas:
-      - id: formula_Opp Link
-        name: Opp Link
-        expr: "concat ( \"{caption}\" , [Id] , \"{/caption}\" , \"https://tsembed-dev-ed.develop.lightning.force.com/lightning/r/opportunity/\" , [Id] , \"/view\" )"
-        was_auto_generated: false
-      search_query: "[Amount] [Account Name] [Account Type] [Stagename] [Account Name].'burlington textiles corp of america' [Account Name].'dickenson plc' [Account Name].'edge communications' [Account Name].'express logistics and transport' [Account Name].genepoint [Account Name].'grand hotels & resorts ltd' [Account Name].'pyramid construction inc.' [Account Name].'sample account for entitlements' [Account Name].sforce [Account Name].'united oil & gas corp.' [Account Name].'united oil & gas, singapore' [Account Name].'united oil & gas, uk' [Account Name].'university of arizona' [Account Name].{null}"
-      answer_columns:
-      - name: Account Name
-      - name: Account Type
-      - name: Stagename
-        custom_name: Stagename
-        dynamic_title: Stagename
-      - name: Total Amount
-      table:
-        table_columns:
-        - column_id: Account Name
-          show_headline: false
-        - column_id: Account Type
-          show_headline: false
-        - column_id: Stagename
-          show_headline: false
-        - column_id: Total Amount
-          show_headline: false
-        ordered_column_ids:
-        - Account Name
-        - Account Type
-        - Stagename
-        - Total Amount
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"theme\": \"ZEBRA\",\"orderedColumnIds\": [\"Account Name\",\"Account Type\",\"Stagename\",\"Total Amount\"]}"
-      chart:
-        type: MUZE_STUDIO
-        chart_columns:
-        - column_id: Account Name
-        - column_id: Account Type
-        - column_id: Stagename
-        - column_id: Total Amount
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"chartSpecific\": {\"pivotState\": {},\"isHeatmapOverlayed\": false,\"isStackedAsPercent\": false,\"dataFieldArea\": \"column\"},\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Account Name\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Account Type\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Stagename\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Total Amount\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"2067b806-6bdc-450d-94e8-7dcf10423eed\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Amount\"],\"isOpposite\": false}},{\"id\": \"8b32241b-72e3-46ae-b4ba-cd06ccf6b994\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Account Name\",\"Account Type\",\"Stagename\"]}}]}"
-        custom_chart_config:
-        - key: basic
-          dimensions:
-          - key: fields
-            columns:
-            - Stagename
-            - Account Name
-            - Account Type
-            - Total Amount
-            mode: COLUMN_DRIVEN
-        custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"LyoqCiAqIEF2YWlsYWJsZSBDb2x1bW5zOgogKiAiQWNjb3VudCBOYW1lIgogKiAiQWNjb3VudCBUeXBlIgogKiAiU3RhZ2VuYW1lIgogKiAiVG90YWwgQW1vdW50IgogKiAiTWVhc3VyZSBuYW1lcyIgLy8gSWYgJ21lYXN1cmVWYWx1ZXMnIGlzIGVuYWJsZWQuCiAqICJNZWFzdXJlIHZhbHVlcyIgLy8gSWYgJ21lYXN1cmVWYWx1ZXMnIGlzIGVuYWJsZWQuCiAqIC0tLSBFTkQgLS0tIAogKi8KCmNvbnN0IHsKICAgIG11emUsCiAgICBnZXREYXRhRnJvbVNlYXJjaFF1ZXJ5Cn0gPSB2aXo7Cgpjb25zdCBkYXRhID0gZ2V0RGF0YUZyb21TZWFyY2hRdWVyeSgpOwoKbXV6ZS5jYW52YXMoKQoucm93cyhbIlRvdGFsIEFtb3VudCJdKQouY29sdW1ucyhbIkFjY291bnQgTmFtZSJdKQouZGF0YShkYXRhKQoubW91bnQoIiNjaGFydCIpOwo\\u003d\\\",\\\"cssCodeBase64\\\":\\\"aHRtbCwgYm9keSB7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7CiAgd2lkdGg6IDEwMHZ3OwogIGhlaWdodDogMTAwdmg7CiAgb3ZlcmZsb3c6IGhpZGRlbjsKfQoKI2NoYXJ0IHsKICB3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDEwMCU7Cn0\\u003d\\\",\\\"htmlCodeBase64\\\":\\\"PGRpdiBpZD0iY2hhcnQiPjwvZGl2Pg\\u003d\\u003d\\\"},\\\"splitSizes\\\":[55,45],\\\"editorConsoleSplitSizes\\\":[99,1]}}\",\"axisVisualProps\":{},\"columnVisualProps\":{},\"dataLabelVisualProps\":{},\"tooltipVisualProps\":{},\"legendVisualProps\":{},\"displayVisualProps\":{}}"
-      display_mode: CHART_MODE
-      dynamic_name: Copy of Pipeline Drilldown
-    viz_guid: dc92505d-2e74-4b35-a7b4-634e9eff8b82
   layout:
     tabs:
     - name: Tab 1
@@ -648,7 +588,6 @@ liveboard:
         "y": 0
         height: 2
         width: 3
-      - visualization_id: Viz_9
       id: 78c13d53-3c57-435e-a3ec-317049ab8517
     - name: Tab 2
       description: ""
