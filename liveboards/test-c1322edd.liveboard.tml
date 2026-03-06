@@ -145,42 +145,6 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"chartSpecific\": {\"pivotState\": {\"rowExpandedPaths\": [{\"paths\": [\"Id. Decision Makers\"]},{\"paths\": [\"Id. Decision Makers\",\"Grand Hotels & Resorts Ltd\"]}],\"fields\": [{\"dataField\": \"Month(Closedate)\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Month(Closedate)\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"}]},\"isHeatmapOverlayed\": false,\"isStackedAsPercent\": false,\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"Account Type\",\"columnProperty\": {}},{\"columnId\": \"Stagename\",\"columnProperty\": {}},{\"columnId\": \"Id\",\"columnProperty\": {}},{\"columnId\": \"Forecastcategory\",\"columnProperty\": {}},{\"columnId\": \"Month(Closedate)\",\"columnProperty\": {}},{\"columnId\": \"Month(Createddate)\",\"columnProperty\": {}},{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Name\",\"columnProperty\": {}},{\"columnId\": \"Total Amount\",\"columnProperty\": {}},{\"columnId\": \"Account Id\",\"columnProperty\": {}},{\"columnId\": \"Opp Link\",\"columnProperty\": {}},{\"columnId\": \"SF Opp Link\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9aaf2c74-9dd0-495a-9d00-3208a4a3f25f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Amount\"],\"isOpposite\": false}},{\"id\": \"8b2a6373-2993-4d8d-9724-a22485980697\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Stagename\",\"Account Name\",\"SF Opp Link\",\"Name\"]}}]}"
       display_mode: TABLE_MODE
     viz_guid: 8b6b538e-582f-4762-814a-0bb971835159
-  - id: Viz_2
-    answer:
-      name: Total sales by region
-      tables:
-      - id: (Sample) Retail - Apparel
-        name: (Sample) Retail - Apparel
-        obj_id: SampleRetail-Apparel-cd252e5c
-      search_query: "[sales] [region]"
-      answer_columns:
-      - name: Total sales
-      - name: region
-      table:
-        table_columns:
-        - column_id: Total sales
-          headline_aggregation: SUM
-        - column_id: region
-          headline_aggregation: COUNT_DISTINCT
-        ordered_column_ids:
-        - region
-        - Total sales
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: COLUMN
-        chart_columns:
-        - column_id: Total sales
-        - column_id: region
-        axis_configs:
-        - x:
-          - region
-          "y":
-          - Total sales
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true,\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"1db04401-1d22-4609-8f4d-52c4377a024b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"5a321256-3149-4190-8a1b-eafbd4a6fb15\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#2E75F0\"}]}"
-      display_mode: CHART_MODE
-    viz_guid: e26b1171-e7f1-4fe2-8ad6-aafd6be79abf
   layout:
     tiles:
     - visualization_id: Viz_1
@@ -188,7 +152,6 @@ liveboard:
       "y": 0
       height: 8
       width: 12
-    - visualization_id: Viz_2
   style:
     style_properties:
     - name: lb_border_type
