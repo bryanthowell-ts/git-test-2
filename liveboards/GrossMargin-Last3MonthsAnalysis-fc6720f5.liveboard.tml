@@ -1,0 +1,132 @@
+obj_id: GrossMargin-Last3MonthsAnalysis-fc6720f5
+liveboard:
+  name: Gross Margin - Last 3 Months Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: 9b14778c-e875-4014-acb3-5ab5a099c3f2
+    note_tile:
+      html_parsed_string: "<h2 class=\"theme-module__editor-h2\" dir=\"ltr\" style=\"text-align: center; color: #2E7D32; margin-bottom: 20px;\"><span style=\"white-space: pre-wrap;\">📊 Gross Margin Analysis - Q2 2026</span></h2><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"text-align: center; margin-bottom: 15px;\"><span style=\"white-space: pre-wrap; font-size: 12px; color: #666;\">Generated on March 27, 2026</span></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"margin-bottom: 20px;\"><span style=\"white-space: pre-wrap;\">🎯 <strong>Analysis Summary:</strong><br><tab>This liveboard provides a comprehensive view of your gross margin performance across the last three months (April, May, and June 2026). Each visualization shows the monthly gross margin data extracted from your Orders Raw dataset, allowing you to track profitability trends and identify patterns in your business performance.</span></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"margin-bottom: 15px;\"><span style=\"white-space: pre-wrap;\">📈 <strong style=\"color: #1976D2;\">Key Insights:</strong><br><tab>• Monthly gross margin breakdown for Q2 2026<br><tab>• Data sourced from comprehensive order transactions<br><tab>• Filtered by specific date ranges for accurate month-over-month comparison</span></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">💡 <strong style=\"color: #F57C00;\">Use Case:</strong> Monitor profitability trends, identify seasonal patterns, and make data-driven decisions to optimize your gross margin performance.</span></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div>"
+  - id: Viz_2
+    answer:
+      name: What is the gross margin for the month of April 2026?
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      formulas:
+      - id: formula_gross margin
+        name: gross margin
+        expr: "sum ( [Profit] ) / sum ( [Sales] )"
+        was_auto_generated: false
+      search_query: "[formula_gross margin] [Order Date] = 'april 2026'"
+      answer_columns:
+      - name: gross margin
+      table:
+        table_columns:
+        - column_id: gross margin
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - gross margin
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"gross margin\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: gross margin
+        axis_configs:
+        - "y":
+          - gross margin
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"gross margin\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"68675d52-ef54-4d57-9c79-e79e14e2818d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"gross margin\"],\"isOpposite\": false}},{\"id\": \"b9575ab2-047e-4150-bebb-159badc2f180\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2d900be1-6d00-49b1-bd5e-bd3b815f3fe4
+  - id: Viz_3
+    answer:
+      name: What is the gross margin for the month of May 2026?
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      formulas:
+      - id: formula_gross margin
+        name: gross margin
+        expr: "sum ( [Profit] ) / sum ( [Sales] )"
+        was_auto_generated: false
+      search_query: "[formula_gross margin] [Order Date] = 'may 2026'"
+      answer_columns:
+      - name: gross margin
+      table:
+        table_columns:
+        - column_id: gross margin
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - gross margin
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"gross margin\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: gross margin
+        axis_configs:
+        - "y":
+          - gross margin
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"gross margin\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"3d92370b-bee0-47f1-b553-11a4127ff0f2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"gross margin\"],\"isOpposite\": false}},{\"id\": \"538b9e3b-d084-4f91-80fc-839ff35aaafc\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 787f21e5-4eca-4225-89ae-ba09b3dfe50e
+  - id: Viz_4
+    answer:
+      name: What is the gross margin for the month of June 2026?
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      formulas:
+      - id: formula_gross margin
+        name: gross margin
+        expr: "( sum ( [Profit] ) / sum ( [Sales] ) ) * 100"
+        was_auto_generated: false
+      search_query: "[formula_gross margin] [Order Date] = 'june 2026'"
+      answer_columns:
+      - name: gross margin
+      table:
+        table_columns:
+        - column_id: gross margin
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - gross margin
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"gross margin\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: gross margin
+        axis_configs:
+        - "y":
+          - gross margin
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"gross margin\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ae875f99-3a72-473b-aeb2-020486c08e5c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"gross margin\"],\"isOpposite\": false}},{\"id\": \"89efb8aa-9ffd-4458-b209-fbe153985a60\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 292b1f02-e026-456e-bf55-8ac29b9cddee
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 12
+      height: 4
+      width: 6

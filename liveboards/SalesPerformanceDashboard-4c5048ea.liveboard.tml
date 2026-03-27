@@ -1,0 +1,179 @@
+obj_id: SalesPerformanceDashboard-4c5048ea
+liveboard:
+  name: Sales Performance Dashboard
+  visualizations:
+  - id: Viz_1
+    viz_guid: ea6c9710-7c7b-44cd-a226-839eddd9c359
+    note_tile:
+      html_parsed_string: "<h2 class=\"theme-module__editor-h2\" dir=\"ltr\" style=\"text-align: center; color: #1a73e8; padding: 20px 0; margin: 0;\"><span style=\"white-space: pre-wrap;\">📊 Sales Performance Dashboard Analysis</span></h2><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"text-align: center; color: #666; font-size: 14px; margin: 10px 0; padding: 0 20px;\"><span style=\"white-space: pre-wrap;\">Generated on March 27, 2026 20:23 UTC</span></p><div style=\"padding: 20px; margin: 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 10px; line-height: 1.6;\"><h3 style=\"color: #2d3748; margin: 0 0 15px 0;\">📈 Key Performance Insights</h3><div style=\"margin: 10px 0;\"><strong style=\"color: #2b6cb0;\">🔄 Monthly Trends:</strong> Sales show seasonal patterns with peak months in 2023 (Aug: $24.6M, Jul: $24.7M) and recent stabilization around $13-18M monthly range in 2024-2026.</div><div style=\"margin: 10px 0;\"><strong style=\"color: #2b6cb0;\">📅 Year-over-Year Growth:</strong> Strong initial growth of 9.8% in 2021, followed by minimal growth (0.1%) in 2022 and peak growth (99.4%) in 2023, with recent decline trends of -34.8% (2024) and -0.3% (2025).</div><div style=\"margin: 10px 0;\"><strong style=\"color: #2b6cb0;\">🌍 Regional Performance:</strong> West region dominates with $335.9M total sales, followed by East ($252.4M) and Midwest ($224.7M), while South trails at $40.9M.</div><div style=\"margin: 10px 0;\"><strong style=\"color: #2b6cb0;\">🏪 Top Performing Stores:</strong> Nevada (89145) leads individual store performance at $67.3M, followed by Montana (59718) at $62.9M and Nevada (89052) at $62.4M.</div></div><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div>"
+  - id: Viz_2
+    answer:
+      name: Show total sales for each month as a time series.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [date].monthly"
+      answer_columns:
+      - name: Month(date)
+      - name: Total sales
+      table:
+        table_columns:
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(date)
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total sales
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f1b4c4d5-4637-4d64-bda7-7a03b5938f3c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"de37d572-106d-4f9b-b18d-9905770a2e74\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 339fb119-5bf1-49e1-8a7c-cf3f37b524cc
+  - id: Viz_3
+    answer:
+      name: What was the percentage change in total sales from one year to the next?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "growth of [sales] by [date] [date].yearly"
+      answer_columns:
+      - name: Growth of Total sales
+      - name: Year(date)
+      table:
+        table_columns:
+        - column_id: Growth of Total sales
+          headline_aggregation: MIN
+        - column_id: Year(date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Year(date)
+        - Growth of Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Year(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Growth of Total sales
+        - column_id: Year(date)
+        axis_configs:
+        - x:
+          - Year(date)
+          "y":
+          - Growth of Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}},{\"columnId\": \"Year(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"af6427fb-540b-421d-a8cf-d644774509a2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total sales\"],\"isOpposite\": false}},{\"id\": \"f943a183-c20f-4611-bfae-fe96f7498566\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2bfe2fad-39b0-4b86-95b1-a26d42e1270a
+  - id: Viz_4
+    answer:
+      name: What is the total sales by region?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [region]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        axis_configs:
+        - x:
+          - region
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"55dd82d9-6040-43da-95ba-a0a6ab53155c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"93c22a20-bb34-41b1-b521-1a2b2bcaf76d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 8c9c1417-4175-454f-b53d-4c9eea60ef41
+  - id: Viz_5
+    answer:
+      name: What is the total sales by store?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [store]"
+      answer_columns:
+      - name: Total sales
+      - name: store
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: store
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - store
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: store
+        axis_configs:
+        - x:
+          - store
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5b1f6b89-b214-451e-9698-56e01a7fcf48\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"360f6097-773b-451d-bb16-5d43cdffafbd\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"store\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 34c27800-d2f9-42a1-9771-ce577521835d
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 12
+      height: 4
+      width: 6

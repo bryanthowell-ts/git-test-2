@@ -29,7 +29,7 @@ liveboard:
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}]}"
       chart:
-        type: LINE
+        type: KPI
         chart_columns:
         - column_id: Growth of Total sales
         - column_id: Month(date)
@@ -39,7 +39,7 @@ liveboard:
           "y":
           - Growth of Total sales
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bdfded44-b9bf-4cd8-9065-3225f211687a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total sales\"],\"isOpposite\": false}},{\"id\": \"51f3e52a-c0a6-4b26-bb36-82e785254899\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Month(date)\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"bdfded44-b9bf-4cd8-9065-3225f211687a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total sales\"],\"isOpposite\": false}},{\"id\": \"51f3e52a-c0a6-4b26-bb36-82e785254899\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Growth of Total sales\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 2e33752c-98d0-4024-b8f2-0ef758bbdbd8
   - id: Viz_3
@@ -65,7 +65,7 @@ liveboard:
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Year(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
       chart:
-        type: LINE
+        type: KPI
         chart_columns:
         - column_id: Total sales
         - column_id: Year(date)
@@ -75,7 +75,7 @@ liveboard:
           "y":
           - Total sales
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Year(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8e8ba261-f55c-4b07-ae0e-079c79f2f89e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"4a9f920e-a586-4ec0-a73a-6872af04c525\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(date)\"]}}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Year(date)\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"8e8ba261-f55c-4b07-ae0e-079c79f2f89e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"4a9f920e-a586-4ec0-a73a-6872af04c525\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 2c8900dc-ee49-42ce-ab9d-9bc3bee76161
   - id: Viz_4
