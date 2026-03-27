@@ -1,0 +1,179 @@
+obj_id: SalesPerformanceDashboard-aefcb97f
+liveboard:
+  name: Sales Performance Dashboard
+  visualizations:
+  - id: Viz_1
+    viz_guid: 114d6ae3-4505-4f0b-963c-9166b379e8f5
+    note_tile:
+      html_parsed_string: "<h2 class=\"theme-module__editor-h2\" dir=\"ltr\" style=\"text-align: center; color: #2E86AB; margin-bottom: 15px;\"><span style=\"white-space: pre-wrap;\">📊 Sales Performance Dashboard Summary</span></h2><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"margin-bottom: 10px;\"><span style=\"white-space: pre-wrap; color: #666; font-size: 12px;\">Generated on March 27, 2026 19:33 UTC</span></p><div style=\"background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 15px; border-radius: 8px; margin: 10px 0;\"><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"margin-bottom: 12px;\"><span style=\"white-space: pre-wrap; font-weight: bold; color: #2E86AB;\">🔄 Month-over-Month Sales Trends:</span><br><span style=\"white-space: pre-wrap; color: #333;\">Sales showed volatility throughout 2025 with notable growth in Jul (+9.8%), Aug (+12.1%), and Oct (+8.8%). The year ended with slight positive momentum in December (+0.3%).</span></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"margin-bottom: 12px;\"><span style=\"white-space: pre-wrap; font-weight: bold; color: #2E86AB;\">📈 Year-over-Year Performance:</span><br><span style=\"white-space: pre-wrap; color: #333;\">Peak performance was in 2023 ($282M), with 2025 ($183M) showing recovery from 2024 levels. Current 2026 trajectory shows $43M through Q1.</span></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"margin-bottom: 12px;\"><span style=\"white-space: pre-wrap; font-weight: bold; color: #2E86AB;\">🌍 Regional Performance (2025):</span><br><span style=\"white-space: pre-wrap; color: #333;\">Midwest leads with $53.5M, followed by East ($47.1M) and West ($44.8M). Southwest contributed $27.9M while South region needs attention at $9.8M.</span></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span style=\"white-space: pre-wrap; font-weight: bold; color: #2E86AB;\">🏪 Top Store Performance:</span><br><span style=\"white-space: pre-wrap; color: #333;\">Colorado (80301) leads at $8.2M, followed by Illinois (60642) at $7.6M and Michigan (49512) at $7.4M. Strong performance across multiple states demonstrates healthy geographic distribution.</span></p></div><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div>"
+  - id: Viz_2
+    answer:
+      name: How do total sales change month over month for the past year?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "growth of [sales] by [date] [date].monthly [date] = 'last year'"
+      answer_columns:
+      - name: Growth of Total sales
+      - name: Month(date)
+      table:
+        table_columns:
+        - column_id: Growth of Total sales
+          headline_aggregation: MIN
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Month(date)
+        - Growth of Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Growth of Total sales
+        - column_id: Month(date)
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Growth of Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bdfded44-b9bf-4cd8-9065-3225f211687a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total sales\"],\"isOpposite\": false}},{\"id\": \"51f3e52a-c0a6-4b26-bb36-82e785254899\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2e33752c-98d0-4024-b8f2-0ef758bbdbd8
+  - id: Viz_3
+    answer:
+      name: What are the yearly sales trends for the past several years?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [date].yearly"
+      answer_columns:
+      - name: Total sales
+      - name: Year(date)
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: Year(date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Year(date)
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Year(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Total sales
+        - column_id: Year(date)
+        axis_configs:
+        - x:
+          - Year(date)
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Year(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8e8ba261-f55c-4b07-ae0e-079c79f2f89e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"4a9f920e-a586-4ec0-a73a-6872af04c525\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2c8900dc-ee49-42ce-ab9d-9bc3bee76161
+  - id: Viz_4
+    answer:
+      name: What is the sales performance by region for the past year?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [region] [date] = 'last year'"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        axis_configs:
+        - x:
+          - region
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"baf2e24d-81e1-4dab-8a3e-594232e32d1c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"22b5f7c7-f776-4c28-a781-8eb4fcdb7a1f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 1a83209a-e129-4a75-9889-cf4d2327034f
+  - id: Viz_5
+    answer:
+      name: What is the sales performance by store for the past year?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [store] [date] = 'last year'"
+      answer_columns:
+      - name: Total sales
+      - name: store
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: store
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - store
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: store
+        axis_configs:
+        - x:
+          - store
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"50813e47-eb72-49de-9722-f89380e5f392\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"2d651379-bc2f-4e30-8636-96c5accefeb3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"store\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7784d626-90a0-437b-ab8b-27039a706c81
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 12
+      height: 4
+      width: 6
