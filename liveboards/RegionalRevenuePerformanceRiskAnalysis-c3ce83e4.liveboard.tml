@@ -1,0 +1,249 @@
+obj_id: RegionalRevenuePerformanceRiskAnalysis-c3ce83e4
+liveboard:
+  name: Regional Revenue Performance Risk Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: 78864e82-ca51-44cf-8b6b-17599a236a4a
+    note_tile:
+      html_parsed_string: "<h2 class=\"theme-module__editor-h2\" dir=\"ltr\" style=\"text-align: center; color: #c41e3a; margin-bottom: 20px;\"><span style=\"white-space: pre-wrap;\">⚠️ Regional Revenue Performance Risk Analysis</span></h2><p class=\"theme-module__editor-paragraph\" dir=\"ltr\" style=\"margin-bottom: 15px; color: #333;\"><span style=\"white-space: pre-wrap; font-weight: bold;\">Generated on March 30, 2026 at 15:13 UTC</span></p><div style=\"background-color: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; margin: 10px 0; border-radius: 5px;\"><h3 style=\"color: #856404; margin: 0 0 10px 0;\">🎯 Key Risk Findings:</h3><ul style=\"margin: 0; padding-left: 20px; color: #856404;\"><li><strong>Critical Risk - South Region:</strong> Only contributes 4.2% of total revenue ($41M) and is 79% below the regional average ($194M)</li><li><strong>Volatility Risk - All Regions:</strong> Sharp revenue declines in Feb 2026 across all regions (-13% to -22%)</li><li><strong>Concentration Risk:</strong> West region dominates with 34.6% of total revenue, creating dependency risk</li></ul></div><div style=\"background-color: #d1ecf1; border: 1px solid #bee5eb; padding: 15px; margin: 10px 0; border-radius: 5px;\"><h3 style=\"color: #0c5460; margin: 0 0 10px 0;\">📊 Revenue Distribution Analysis:</h3><ul style=\"margin: 0; padding-left: 20px; color: #0c5460;\"><li><strong>West:</strong> $336M (34.6%) - Above average performance</li><li><strong>East:</strong> $252M (26.0%) - Above average performance</li><li><strong>Midwest:</strong> $225M (23.1%) - Above average performance</li><li><strong>Southwest:</strong> $117M (12.0%) - Below average performance</li><li><strong>South:</strong> $41M (4.2%) - Significantly underperforming</li></ul></div><div style=\"background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 15px; margin: 10px 0; border-radius: 5px;\"><h3 style=\"color: #721c24; margin: 0 0 10px 0;\">⚡ Immediate Action Required:</h3><p style=\"margin: 0; color: #721c24; font-weight: bold;\">South region requires urgent intervention - investigate market conditions, competitive landscape, and operational efficiency to address the significant underperformance gap.</p></div><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\"></div>"
+  - id: Viz_2
+    answer:
+      name: What is my total revenue broken down by region?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales] [region]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        axis_configs:
+        - x:
+          - region
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"87ac6e5f-1c67-4a57-a056-b512cb7ea724\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"d81081b8-bd23-41d0-8596-f463cd05a8a3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 1883ee46-71ef-4fcd-ac94-dd09f9eac201
+  - id: Viz_3
+    answer:
+      name: Which region has the lowest total revenue?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "bottom 1 [region] sort by [sales]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        axis_configs:
+        - x:
+          - region
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bca794b5-b728-4ff4-a15a-f2be1b664edc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"2ee336f8-786f-4303-8b2d-bc0b232ce2c5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 176dfe17-3a8d-4231-ae92-411f1fe35882
+  - id: Viz_4
+    answer:
+      name: What is the percentage contribution of each region to the total revenue?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      formulas:
+      - id: formula_percentage contribution
+        name: percentage contribution
+        expr: "[formula_sales by region] / [formula_total sales] * 100"
+        was_auto_generated: false
+      - id: formula_sales by region
+        name: sales by region
+        expr: "group_aggregate ( sum ( [sales] ) , query_groups ( ) , query_filters ( ) )"
+        was_auto_generated: false
+      - id: formula_total sales
+        name: total sales
+        expr: "group_aggregate ( sum ( [sales] ) , query_groups ( ) - { [region] } , query_filters ( ) )"
+        was_auto_generated: false
+      search_query: "[formula_percentage contribution] [region]"
+      answer_columns:
+      - name: percentage contribution
+      - name: region
+      table:
+        table_columns:
+        - column_id: percentage contribution
+          headline_aggregation: TABLE_AGGR
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - percentage contribution
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"percentage contribution\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: percentage contribution
+        - column_id: region
+        axis_configs:
+        - x:
+          - region
+          "y":
+          - percentage contribution
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"percentage contribution\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e8553c04-fa55-4aa4-9d47-98cfd0449b6c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"percentage contribution\"],\"isOpposite\": false}},{\"id\": \"b0d14296-5260-446c-84ef-8043bcb6edd5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: f4628df8-7290-4157-9c9a-67d8bf17d394
+  - id: Viz_5
+    answer:
+      name: How does the total revenue for each region compare to the average regional revenue?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      formulas:
+      - id: formula_average regional revenue
+        name: average regional revenue
+        expr: "group_aggregate ( sum ( [sales] ) , { } , { } ) / group_aggregate ( unique count ( [region] ) , { } , { } )"
+        was_auto_generated: false
+      search_query: "[sales] [formula_average regional revenue] [region]"
+      answer_columns:
+      - name: Total sales
+      - name: average regional revenue
+      - name: region
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: average regional revenue
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - Total sales
+        - average regional revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"average regional revenue\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: average regional revenue
+        - column_id: region
+        axis_configs:
+        - x:
+          - region
+          "y":
+          - Total sales
+          - average regional revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"average regional revenue\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fd5a33e8-f2ff-4f69-9fec-559bdaa3ce2d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"804bb6e7-728f-4262-b69e-38ad0ee6e32e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"average regional revenue\"],\"isOpposite\": true}},{\"id\": \"7990a8c5-012f-4af4-a8b1-37136883d3b3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 065a761d-7c22-406e-a7b0-57cea4f93bbd
+  - id: Viz_6
+    answer:
+      name: Are there any regions with declining revenue trends over the past 12 months?
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "growth of [sales] by [date] [date].monthly [region] [date] = 'last 12 months'"
+      answer_columns:
+      - name: Growth of Total sales
+      - name: Month(date)
+      - name: region
+      table:
+        table_columns:
+        - column_id: Growth of Total sales
+          headline_aggregation: MIN
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - Month(date)
+        - Growth of Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Growth of Total sales
+        - column_id: Month(date)
+        - column_id: region
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Growth of Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"16dadfc0-fecd-4d08-b95c-861582551427\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total sales\"],\"isOpposite\": false}},{\"id\": \"72860c01-eda4-4501-ae67-5893c8a58091\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: b710d33d-b5fd-434d-afa5-52cd46c3f7e0
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_6
+      x: 0
+      "y": 16
+      height: 4
+      width: 6
