@@ -1,7 +1,7 @@
 obj_id: TSEMBED-5f92ed57
 model:
   name: TSEMBED
-  description: The TSEMBED worksheet is a comprehensive dataset that includes a variety of information related to accounts, such as account creation details, identification, ownership, and type. It also encompasses financial data like annual revenue, expected revenue, and specific transaction amounts. Additionally, the worksheet provides geographical information for both billing and shipping addresses, including city, country, postal code, and precise geolocation coordinates. (AI generated)
+  description: The TSEMBED worksheet is a comprehensive dataset that includes a variety of information related to accounts, such as account creation details, identification, ownership, and type. All data originates from the TSEMEB salesforce org. It also encompasses financial data like annual revenue, expected revenue, and specific transaction amounts. Additionally, the worksheet provides geographical information for both billing and shipping addresses, including city, country, postal code, and precise geolocation coordinates. (AI generated)
   model_tables:
   - name: TSEMBED Dev Org Export - Account
     joins:
