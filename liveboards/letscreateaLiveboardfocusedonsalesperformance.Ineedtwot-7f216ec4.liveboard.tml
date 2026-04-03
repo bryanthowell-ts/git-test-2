@@ -1,0 +1,206 @@
+obj_id: letscreateaLiveboardfocusedonsalesperformance.Ineedtwot-7f216ec4
+liveboard:
+  name: let's create a Liveboard focused on sales performance. I need two time series kp
+  visualizations:
+  - id: Viz_1
+    viz_guid: 489ab8b7-252d-4af1-9c43-40cbc3ee49e7
+    note_tile:
+      html_parsed_string: <h2 style="text-align:center;">let's create a Liveboard focused on sales performance. I need two time series kp</h2><p style="white-space:pre-wrap;">Dashboard created from ThoughtSpot analysis. Contains 4 visualization(s).</p><div class="pinboard-note-tile-module__noteTileBg editor-module__bgNode"></div>
+  - id: Viz_2
+    answer:
+      name: Total sales by region ranked by highest sales
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      formulas:
+      - id: formula_sales rank
+        name: sales rank
+        expr: "rank ( sum ( [sales] ) , 'desc' )"
+        was_auto_generated: false
+      search_query: "[sales] [formula_sales rank] [region]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      - name: sales rank
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: sales rank
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - sales rank
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"sales rank\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        - column_id: sales rank
+        axis_configs:
+        - x:
+          - region
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"sales rank\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"819518f6-2e88-4f7d-945e-0be4f8950cf2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"944202b1-17e0-45f5-9b5a-d99309748d82\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: ce9bed0c-0cc4-4dc8-8edd-8b02036c226b
+  - id: Viz_3
+    answer:
+      name: Total sales by store and region ranked by highest sales top 15
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      formulas:
+      - id: formula_sales rank
+        name: sales rank
+        expr: "rank ( sum ( [sales] ) , 'desc' )"
+        was_auto_generated: false
+      search_query: "top 15 [region] [store] [sales] [formula_sales rank] sort by [sales]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      - name: sales rank
+      - name: store
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: sales rank
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: store
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - region
+        - store
+        - sales rank
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"sales rank\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        - column_id: sales rank
+        - column_id: store
+        axis_configs:
+        - x:
+          - store
+          "y":
+          - Total sales
+          color:
+          - region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"sales rank\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f41a9a07-9071-4c7c-a6b8-08d45e667325\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"d1ee5d26-9125-4af5-8cec-53c5d818b474\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"store\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: d2fd5e0f-0900-4385-85ce-d3026ed82267
+  - id: Viz_4
+    answer:
+      name: Total sales by month showing month over month trend
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "growth of [sales] by [date] [date].monthly"
+      answer_columns:
+      - name: Growth of Total sales
+      - name: Month(date)
+      table:
+        table_columns:
+        - column_id: Growth of Total sales
+          headline_aggregation: MIN
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Month(date)
+        - Growth of Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Growth of Total sales
+        - column_id: Month(date)
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Growth of Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c6f4b235-bf1c-4226-9c02-8eef102e42b7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total sales\"],\"isOpposite\": false}},{\"id\": \"6b12f4ad-7be4-478e-bfd0-7d286b9fd6c5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: e2d519d0-1d43-4496-a093-c49926ed6562
+  - id: Viz_5
+    answer:
+      name: Total sales by year showing year over year trend
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "growth of [sales] by [date] [date].yearly"
+      answer_columns:
+      - name: Growth of Total sales
+      - name: Year(date)
+      table:
+        table_columns:
+        - column_id: Growth of Total sales
+          headline_aggregation: MIN
+        - column_id: Year(date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Year(date)
+        - Growth of Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Year(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Growth of Total sales
+        - column_id: Year(date)
+        axis_configs:
+        - x:
+          - Year(date)
+          "y":
+          - Growth of Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}},{\"columnId\": \"Year(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"54a5b09d-ebdd-4fdc-b770-a30fde15bc6a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total sales\"],\"isOpposite\": false}},{\"id\": \"aac1fd38-1147-443b-9fbc-e8c1add933d6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 501df1ae-1baa-4d4c-a745-12544c34e53d
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 12
+      height: 4
+      width: 6

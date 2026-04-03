@@ -1,0 +1,56 @@
+obj_id: TestDemo-9d794be2
+liveboard:
+  name: Test Demo
+  visualizations:
+  - id: Viz_1
+    viz_guid: f46e8fa0-3767-4cf7-b103-a2ff47d00eca
+    note_tile:
+      html_parsed_string: <h2 style="text-align:center;white-space:pre-wrap;">Test Demo</h2><p style="white-space:pre-wrap;">Dashboard created from ThoughtSpot analysis with 1 visualization(s).</p><div class="pinboard-note-tile-module__noteTileBg editor-module__bgNode"></div>
+  - id: Viz_2
+    answer:
+      name: Show monthly Sales by year using Order Date
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Order Date].monthly"
+      answer_columns:
+      - name: Month(Order Date)
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Month(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Order Date)
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(Order Date)
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Month(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"17af29ea-d141-46e3-90ff-9f991ac22936\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"4ebdf82b-2c0c-4fa2-9253-ad051bd5b964\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 9d346e4a-f054-4b35-81dc-0cae168fcd18
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
