@@ -1,0 +1,367 @@
+obj_id: BannerTest4-6d814cc2
+liveboard:
+  name: Banner Test 4
+  visualizations:
+  - id: Viz_1
+    viz_guid: 04a68f30-9e76-40aa-9bbb-b1b6fb855b6e
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Central region shows concerning 7.9% profit margin vs 14.9% in West region despite $501K in sales
+        • South region has lowest sales volume at $392K, representing significant market opportunity
+        • West and East regions drive 61% of total revenue ($1.4M of $2.3M) with strong 13-15% margins
+
+        Recommendations:
+        • Investigate Central region cost structure and pricing to improve 7.9% margin toward company average of 12.5%
+        • Expand sales efforts in South region given healthy 11.9% margin but low $392K volume
+  - id: Viz_2
+    answer:
+      name: Average Discount by Region
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      search_query: "average [Discount] [Region]"
+      answer_columns:
+      - name: Average Discount
+      - name: Region
+      table:
+        table_columns:
+        - column_id: Average Discount
+          headline_aggregation: TABLE_AGGR
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Region
+        - Average Discount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Average Discount\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Average Discount
+        - column_id: Region
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Average Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Average Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2ed5e9ed-9ed9-49b2-8d95-52bda327946e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Discount\"],\"isOpposite\": false}},{\"id\": \"b601eaaa-032d-4f67-86eb-6817f31287da\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4358d1c4-ea0f-4c44-919f-718855a8ebed
+  - id: Viz_3
+    answer:
+      name: Total Profit and Total Sales by Region
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      search_query: "[Profit] [Sales] [Region]"
+      answer_columns:
+      - name: Region
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Profit
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Profit
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d18ac990-bc84-4bc1-ad95-74c8b64b2884\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": false}},{\"id\": \"ca70158b-bcc2-494b-b4d0-3358a23b4a5a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": true}},{\"id\": \"f2f66b5d-4991-458b-b65c-f7c5bacb7f69\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2bd7efc8-efe8-4528-ade3-bfdd8eadeb28
+  - id: Viz_4
+    answer:
+      name: Total Profit by Region
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      search_query: "[Profit] [Region]"
+      answer_columns:
+      - name: Region
+      - name: Total Profit
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Profit
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"59c6bdf9-6485-4879-abd2-18f06baa693f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": false}},{\"id\": \"c69b3980-ab5f-4124-8776-0bf370e49e12\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: bd4b00ca-a9fd-462a-aebf-0b9d24ad5da4
+  - id: Viz_5
+    answer:
+      name: Average Discount by Sub Category where Region is Central or South sorted by Discount descending
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      search_query: "average [Discount] [Sub Category] [Region] = 'central' [Region] = 'south' sort by [Discount] descending"
+      answer_columns:
+      - name: Average Discount
+      - name: Sub Category
+      - name: Total Discount
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Average Discount
+          headline_aggregation: TABLE_AGGR
+        - column_id: Sub Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Sub Category
+        - Average Discount
+        - Total Discount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Average Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Average Discount
+        - column_id: Sub Category
+        - column_id: Total Discount
+        axis_configs:
+        - x:
+          - Sub Category
+          "y":
+          - Average Discount
+          - Total Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Average Discount\",\"columnProperty\": {}},{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2b26710f-4f57-417d-8958-344d99bf0235\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Discount\"],\"isOpposite\": false}},{\"id\": \"118cc238-0abb-4488-8399-10be1c247f9c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": true}},{\"id\": \"a643a97c-7854-40c6-b070-41abbd9c52c6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Sub Category\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: d011e27d-3a67-400c-8c20-a954e7cd8dfc
+  - id: Viz_6
+    answer:
+      name: Bottom 10 products by total Profit where Region is Central or South
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      search_query: "bottom 10 [Product Name] [Region] = 'central' [Region] = 'south' sort by [Profit]"
+      answer_columns:
+      - name: Product Name
+      - name: Total Profit
+      table:
+        table_columns:
+        - column_id: Product Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Product Name
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Product Name
+        - column_id: Total Profit
+        axis_configs:
+        - x:
+          - Product Name
+          "y":
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Product Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"17a7c3cd-dcee-452b-a1cf-176d594a87f9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": false}},{\"id\": \"8374a313-d211-4167-8154-3693779ab192\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: aafea66e-89dc-413e-99f5-216d18c74f2d
+  - id: Viz_7
+    answer:
+      name: Total Profit by Category where Region is Central or South
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      search_query: "[Profit] [Category] [Region] = 'central' [Region] = 'south'"
+      answer_columns:
+      - name: Category
+      - name: Total Profit
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Category
+        - column_id: Total Profit
+        axis_configs:
+        - x:
+          - Category
+          "y":
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1708ff76-049b-4c35-af88-255f88da98b5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": false}},{\"id\": \"e2f82aae-3b1b-4717-81f7-b6c935f186df\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: b05212f9-05e7-40a7-bda6-84a89c2fc22f
+  - id: Viz_8
+    answer:
+      name: Total Profit by Segment where Region is Central or South
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      search_query: "[Profit] [Segment] [Region] = 'central' [Region] = 'south'"
+      answer_columns:
+      - name: Segment
+      - name: Total Profit
+      table:
+        table_columns:
+        - column_id: Segment
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Segment
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Segment\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Segment
+        - column_id: Total Profit
+        axis_configs:
+        - x:
+          - Segment
+          "y":
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Segment\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"01143825-8ecd-438e-b394-9dedc8203782\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": false}},{\"id\": \"e3f14516-0129-4bdb-9096-868bcbbc47a1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Segment\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: d2eeef60-fb66-4396-8dc9-12a96a68d16f
+  - id: Viz_9
+    answer:
+      name: Total Profit by Sub Category where Region is Central or South sorted by Profit ascending
+      tables:
+      - id: Orders Raw
+        name: Orders Raw
+        obj_id: OrdersRaw-f75c466a
+      search_query: "[Profit] [Sub Category] [Region] = 'central' [Region] = 'south' sort by [Profit]"
+      answer_columns:
+      - name: Sub Category
+      - name: Total Profit
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Sub Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Sub Category
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Sub Category
+        - column_id: Total Profit
+        axis_configs:
+        - x:
+          - Sub Category
+          "y":
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bea19a2c-110f-47a1-9aee-b29a338193e7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": false}},{\"id\": \"29e40e0a-3893-4e00-b01a-293748325e66\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Sub Category\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: fcb638c7-e5d9-4a8f-b64f-7edbc5c5fc1c
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_6
+      x: 0
+      "y": 16
+      height: 4
+      width: 6
+    - visualization_id: Viz_7
+      x: 6
+      "y": 16
+      height: 4
+      width: 6
+    - visualization_id: Viz_8
+      x: 0
+      "y": 20
+      height: 4
+      width: 6
+    - visualization_id: Viz_9
+      x: 6
+      "y": 20
+      height: 4
+      width: 6
