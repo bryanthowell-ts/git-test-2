@@ -1,0 +1,64 @@
+obj_id: Whataremytop10citiesbyrevenueusingtheRADSuperstoredatas-de6b6699
+liveboard:
+  name: What are my top 10 cities by revenue using the RAD Superstore dataset
+  visualizations:
+  - id: Viz_1
+    viz_guid: e74c8ff7-0891-47e5-895f-0a44dffcbfb9
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • NYC leads with $256K sales, 46% higher than LA's $176K
+        • Top 5 cities generate majority of revenue with steep drop-off after Philadelphia ($109K)
+        • Strong market concentration in NY and LA creates significant revenue gap vs other cities
+
+        Recommendations:
+        • Focus expansion efforts on underperforming major markets like Chicago ($49K) to close revenue gaps
+        • Replicate NYC's successful strategies in other high-potential metropolitan areas
+  - id: Viz_2
+    answer:
+      name: Top 10 cities by Sales
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "top 10 [City] sort by [Sales]"
+      answer_columns:
+      - name: City
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: City
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - City
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"City\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: City
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - City
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"City\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"eb80b826-21aa-4c7f-8138-db540714a9e8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"35f83171-cc43-40b5-a2fb-8c5bd3588235\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"City\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2b83e1f7-3319-43e6-bb1e-4646e6ab81d0
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
