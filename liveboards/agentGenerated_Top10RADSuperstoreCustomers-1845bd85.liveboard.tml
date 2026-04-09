@@ -1,0 +1,66 @@
+obj_id: agentGenerated_Top10RADSuperstoreCustomers-1845bd85
+liveboard:
+  name: agentGenerated_Top 10 RAD Superstore Customers
+  visualizations:
+  - id: Viz_1
+    viz_guid: 8994daac-9f94-4104-af1d-74d3cafe0f21
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Sean Miller leads with $25,043 in sales, 32% higher than second-ranked customer
+        • Top 3 customers (Miller, Chand, Buch) drive disproportionate revenue concentration
+        • Sales drop significantly after top 3, with remaining customers clustered $12K-$14.6K
+        • Clear tiered customer structure indicates concentrated high-value relationships
+
+        Recommendations:
+        • Develop VIP retention program for top 3 customers to protect concentrated revenue
+        • Analyze purchase patterns of top performers to replicate with mid-tier customers
+        • Create upselling strategy for $12K-$14K segment to move them into higher tiers
+  - id: Viz_2
+    answer:
+      name: Top 10 customers by total sales
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "top 10 [Customer Name] sort by [Sales]"
+      answer_columns:
+      - name: Customer Name
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Customer Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Customer Name
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Customer Name\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Customer Name
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Customer Name
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Customer Name\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9fd3500c-d188-427d-8659-0eacd925ab9c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"bf6c5ffa-bbb0-4785-8da4-3750f91c8a9d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Customer Name\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7b9780cb-bc86-4a80-a4c2-1bab4688e603
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
