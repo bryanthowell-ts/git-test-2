@@ -1,0 +1,70 @@
+obj_id: CreateamapvisualizationofsalesintheUSbycityandstateusin-4935fbf8
+liveboard:
+  name: Create a map visualization of sales in the US by city and state using the RAD…
+  visualizations:
+  - id: Viz_1
+    viz_guid: 47f4ff04-2311-4741-b135-879fd35789ad
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Coastal states drive majority of sales with California at $457,688 and New York at $310,876
+        • Geographic concentration in major population centers while central/northern plains underperform
+        • Bottom 5 states average only $1,264 in sales vs top 5 averaging $238,781
+        • Current discount strategy averages 15.62% across all transactions
+
+        Recommendations:
+        • Increase marketing investment in underperforming central states (North Dakota, Wyoming, South Dakota)
+        • Optimize discount strategy as 15.62% average may be reducing profit margins
+  - id: Viz_2
+    answer:
+      name: Sales by City and State
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [State] [City]"
+      answer_columns:
+      - name: City
+      - name: State
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: City
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: State
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - State
+        - City
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"City\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: GEO_BUBBLE
+        chart_columns:
+        - column_id: City
+        - column_id: State
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - State
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"City\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"422936ec-61e0-4b47-ad32-7a7d6957b47a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"97b48171-08a0-488e-8fb0-86a8a84ca1af\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: dc978420-22d7-4d12-8a6c-63103d77cc38
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6

@@ -1,0 +1,65 @@
+obj_id: CreateamapvisualizationofsalesintheUSusingtheRADSuperst-39ff445d
+liveboard:
+  name: Create a map visualization of sales in the US using the RAD Superstore dataset
+  visualizations:
+  - id: Viz_1
+    viz_guid: ec9debba-72c9-4a24-a46a-b7f97838fffe
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Overall average discount of 15.62% applied across all transactions
+        • Discount strategy appears consistent across the dataset
+        • Current discount level represents baseline pricing approach
+
+        Recommendations:
+        • Analyze discount effectiveness by product category to optimize pricing
+        • Test lower discount thresholds to improve profit margins
+        • Segment discount strategy by customer type and purchase behavior
+  - id: Viz_2
+    answer:
+      name: Sales by State
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [State]"
+      answer_columns:
+      - name: State
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: State
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - State
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: State
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - State
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9693dbe2-c33a-4d93-a2bd-d124e49dd039\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"3314b3f0-5f51-4b0e-a53f-15a2c8fcfb2b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 9f4fcf2c-3aa1-4389-97ae-048a09bcbe24
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6

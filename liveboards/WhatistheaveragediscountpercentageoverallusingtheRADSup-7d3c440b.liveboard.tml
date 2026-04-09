@@ -1,0 +1,58 @@
+obj_id: WhatistheaveragediscountpercentageoverallusingtheRADSup-7d3c440b
+liveboard:
+  name: What is the average discount percentage overall using the RAD Superstore dataset
+  visualizations:
+  - id: Viz_1
+    viz_guid: 784283c9-57eb-4c24-8fae-30385680552c
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • No specific analysis was performed - only dataset exploration showing 21 columns available
+        • Dataset contains sales, profit, quantity and discount measures across product categories
+        • Geographic data spans regions, states and cities with customer segment information
+        • Time-based data includes order and ship dates for trend analysis
+
+        Recommendations:
+        • Run actual analysis on sales performance by region and product category
+        • Analyze profit margins and discount impacts on key customer segments
+  - id: Viz_2
+    answer:
+      name: Average Discount
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "average [Discount]"
+      answer_columns:
+      - name: Average Discount
+      table:
+        table_columns:
+        - column_id: Average Discount
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Average Discount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Average Discount\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Average Discount
+        axis_configs:
+        - "y":
+          - Average Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Average Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"06121099-599c-4527-8467-6bb88ef5c3f5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Discount\"],\"isOpposite\": false}},{\"id\": \"9414dbe1-7dd8-4574-a6d6-39f57a52cb0d\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: bbc5ce28-12c1-46d0-9ad8-cf2518e0166f
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6

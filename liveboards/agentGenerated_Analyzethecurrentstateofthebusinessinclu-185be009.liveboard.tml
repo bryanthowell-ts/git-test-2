@@ -1,0 +1,444 @@
+obj_id: agentGenerated_Analyzethecurrentstateofthebusinessinclu-185be009
+liveboard:
+  name: agentGenerated_Analyze the current state of the business including key performance metrics s…
+  visualizations:
+  - id: Viz_1
+    viz_guid: f852054d-6ef2-4a35-a367-234b9d39053b
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Furniture category severely underperforming with only 2.5% profit margin despite 32% of sales
+        • Tables sub-category losing $17,725 and Bookcases losing $3,473 on substantial revenue
+        • Technology category excelling with 17.4% margins while generating highest sales volume
+        • Home Office segment achieving 14% margins vs Consumer's 11.5% despite smaller scale
+
+        Recommendations:
+        • Immediately review furniture pricing strategy and supplier costs to address negative margins
+        • Expand Technology product offerings given strong 17.4% profitability performance
+        • Focus growth efforts on Home Office segment given superior 14% margin efficiency
+  - id: Viz_2
+    answer:
+      name: Show count of distinct customer ids as total customers
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      formulas:
+      - id: formula_total customers
+        name: total customers
+        expr: "unique count ( [Customer Id] )"
+        was_auto_generated: false
+      search_query: "[formula_total customers]"
+      answer_columns:
+      - name: total customers
+      table:
+        table_columns:
+        - column_id: total customers
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - total customers
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"total customers\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: total customers
+        axis_configs:
+        - "y":
+          - total customers
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"total customers\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b6f9bfb1-b853-4d6e-a792-49df19c981b8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"total customers\"],\"isOpposite\": false}},{\"id\": \"0b57a593-35bd-413b-94d9-94973d2b3fe2\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: ebb0b89a-00bd-4889-80c1-f8010082fe2c
+  - id: Viz_3
+    answer:
+      name: "Show total sales and total profit by order date yearly, sorted by order date ascending"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] sum [Profit] [Order Date].yearly sort by [Order Date]"
+      answer_columns:
+      - name: Total Profit
+      - name: Total Sales
+      - name: Year(Order Date)
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        - column_id: Year(Order Date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Year(Order Date)
+        - Total Sales
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Year(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Total Profit
+        - column_id: Total Sales
+        - column_id: Year(Order Date)
+        axis_configs:
+        - x:
+          - Year(Order Date)
+          "y":
+          - Total Sales
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Year(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"08050449-6895-4bd0-9637-ec5eaae8a4bd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"85bffa2c-e788-442c-a280-2170247f12b1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"66654206-c749-4803-8025-f9a3df007aa4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 3d556dc9-2485-4d22-adb8-e44dd4898855
+  - id: Viz_4
+    answer:
+      name: "Show total sales, total profit, total quantity, and count of distinct order ids as total orders"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] sum [Profit] sum [Quantity] unique count [Order Id]"
+      answer_columns:
+      - name: Total Profit
+      - name: Total Quantity
+      - name: Total Sales
+      - name: Unique Number of Order Id
+      table:
+        table_columns:
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        - column_id: Unique Number of Order Id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Total Sales
+        - Total Profit
+        - Total Quantity
+        - Unique Number of Order Id
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of Order Id\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Profit
+        - column_id: Total Quantity
+        - column_id: Total Sales
+        - column_id: Unique Number of Order Id
+        axis_configs:
+        - "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of Order Id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8e0fb931-aacf-4942-9d9b-f12cda2fe302\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"9d4bf5df-0c49-454a-9b9d-b748b82a076a\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: d99d569e-386d-4029-b142-b723a482a86a
+  - id: Viz_5
+    answer:
+      name: "Show total sales, total profit, and profit margin (total profit / total sales * 100) by region, sorted by total sales descending"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      formulas:
+      - id: formula_Profit Margin
+        name: Profit Margin
+        expr: "sum ( [Profit] ) / sum ( [Sales] ) * 100"
+        was_auto_generated: false
+      search_query: "sum [Sales] sum [Profit] [formula_Profit Margin] [Region] sort by [Sales] descending"
+      answer_columns:
+      - name: Profit Margin
+      - name: Region
+      - name: Total Profit
+      - name: Total Sales
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Profit Margin
+          headline_aggregation: TABLE_AGGR
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Sales
+        - Total Profit
+        - Profit Margin
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Profit Margin\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Profit Margin
+        - column_id: Region
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales
+          - Total Profit
+          - Profit Margin
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Profit Margin\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ac2f5b30-7017-4992-9a84-06d6cf68855f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"81d53d9d-d1b7-4d80-87cd-f1fd8160811a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"dec00f3b-8f7a-4141-81e1-e607b202558c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Profit Margin\"],\"isOpposite\": true}},{\"id\": \"971c2bf1-b6ca-4822-adff-d3787029246d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 26c53a85-e230-4000-83c3-0c3a380fff00
+  - id: Viz_6
+    answer:
+      name: "Show total sales, total profit, and profit margin (total profit / total sales * 100) by category, sorted by total sales descending"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      formulas:
+      - id: formula_Profit Margin
+        name: Profit Margin
+        expr: "sum ( [Profit] ) / sum ( [Sales] ) * 100"
+        was_auto_generated: false
+      search_query: "[Sales] [Profit] [formula_Profit Margin] [Category] sort by [Sales] descending"
+      answer_columns:
+      - name: Category
+      - name: Profit Margin
+      - name: Total Profit
+      - name: Total Sales
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Profit Margin
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Total Sales
+        - Total Profit
+        - Profit Margin
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Profit Margin\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Category
+        - column_id: Profit Margin
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Category
+          "y":
+          - Total Sales
+          - Total Profit
+          - Profit Margin
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Profit Margin\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"14cc8267-0573-4a9a-b7eb-f1d7ffddda12\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"de476272-5046-4ead-a51a-fac91eb3dcdc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"dc82bad5-56a1-4163-9de5-fb5524c9f4ea\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Profit Margin\"],\"isOpposite\": true}},{\"id\": \"0c58eba8-3f2b-4c4c-8273-84e936a0c440\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 31d6cbde-84cc-4ddc-bfa1-5c01b09e7d2a
+  - id: Viz_7
+    answer:
+      name: "Show total sales, total profit by sub category, sorted by total profit ascending, top 10"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "bottom 10 [Sub Category] sum [Sales] sum [Profit] sort by [Profit]"
+      answer_columns:
+      - name: Sub Category
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Sub Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Sub Category
+        - Total Sales
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Sub Category
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Sub Category
+          "y":
+          - Total Sales
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e552f84a-8630-497f-9342-61805759ff4d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"34212303-563f-43c9-a89d-f6b84611fafc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"46d6b431-16f5-4714-bfb4-46c5b972759d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Sub Category\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 67fcab56-1e07-4458-9add-86483c180718
+  - id: Viz_8
+    answer:
+      name: "Show total sales, total profit, count of distinct order ids as total orders by ship mode, sorted by total sales descending"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] sum [Profit] unique count [Order Id] [Ship Mode] sort by [Sales] descending"
+      answer_columns:
+      - name: Ship Mode
+      - name: Total Profit
+      - name: Total Sales
+        sort_info:
+          category: DEFAULT
+      - name: Unique Number of Order Id
+      table:
+        table_columns:
+        - column_id: Ship Mode
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        - column_id: Unique Number of Order Id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Ship Mode
+        - Total Sales
+        - Total Profit
+        - Unique Number of Order Id
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Ship Mode\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of Order Id\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Ship Mode
+        - column_id: Total Profit
+        - column_id: Total Sales
+        - column_id: Unique Number of Order Id
+        axis_configs:
+        - x:
+          - Ship Mode
+          "y":
+          - Total Sales
+          - Total Profit
+          - Unique Number of Order Id
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Ship Mode\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of Order Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8bd7f463-fe8f-4424-9b3d-3ea05d4de5e9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"daab9f44-edc4-44b9-a4c9-a0408552f039\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"8c9bed11-002a-4131-b56c-dacfa98f5780\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of Order Id\"],\"isOpposite\": true}},{\"id\": \"9bbce81a-e63c-4aba-95b4-a3255c474184\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Ship Mode\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 35a93d16-5a42-4736-bc4d-b8eb09ba56f4
+  - id: Viz_9
+    answer:
+      name: "Show total sales, total profit, and profit margin (total profit / total sales * 100) by customer segment, sorted by total sales descending"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      formulas:
+      - id: formula_Profit Margin
+        name: Profit Margin
+        expr: "sum ( [Profit] ) / sum ( [Sales] ) * 100"
+        was_auto_generated: false
+      search_query: "[Sales] [Profit] [formula_Profit Margin] [Segment] sort by [Sales] descending"
+      answer_columns:
+      - name: Profit Margin
+      - name: Segment
+      - name: Total Profit
+      - name: Total Sales
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Profit Margin
+          headline_aggregation: TABLE_AGGR
+        - column_id: Segment
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Segment
+        - Total Sales
+        - Total Profit
+        - Profit Margin
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Segment\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Profit Margin\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Profit Margin
+        - column_id: Segment
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Segment
+          "y":
+          - Total Sales
+          - Total Profit
+          - Profit Margin
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Profit Margin\",\"columnProperty\": {}},{\"columnId\": \"Segment\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5380ea1e-4bfe-4ba1-a529-c9f1e89c4498\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"351433f4-03eb-43e0-9c7d-d48decac0312\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"be4a7f74-a7c1-4d84-b5d4-f7f28fd06033\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Profit Margin\"],\"isOpposite\": true}},{\"id\": \"24944477-014e-4f41-9910-5f2b0501bb3f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Segment\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 8ac484b3-66f7-459c-8678-3a3fc87f4ac5
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_6
+      x: 0
+      "y": 16
+      height: 4
+      width: 6
+    - visualization_id: Viz_7
+      x: 6
+      "y": 16
+      height: 4
+      width: 6
+    - visualization_id: Viz_8
+      x: 0
+      "y": 20
+      height: 4
+      width: 6
+    - visualization_id: Viz_9
+      x: 6
+      "y": 20
+      height: 4
+      width: 6

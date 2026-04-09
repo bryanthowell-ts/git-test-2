@@ -1,0 +1,76 @@
+obj_id: CreateamapvisualizationofsalesintheUSbycitystateandpost-041979f3
+liveboard:
+  name: "Create a map visualization of sales in the US by city, state and postal code …"
+  visualizations:
+  - id: Viz_1
+    viz_guid: 417fc787-844a-4098-a823-d35fb38d91bc
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Coastal states drive majority of sales - California ($457K) and New York ($310K) represent top performers
+        • Major metro concentration - NYC ($256K) and LA ($175K) alone account for significant portion of total sales
+        • Geographic disparity evident - plains states like North Dakota ($920) and Wyoming ($1,603) show minimal sales
+        • West Coast dominance with multiple California cities in top performers
+
+        Recommendations:
+        • Expand marketing and distribution focus in underperforming central/northern plains regions
+        • Leverage successful coastal market strategies in mid-tier cities like Detroit and Chicago
+        • Increase sales team presence in high-potential metros currently underperforming relative to population size
+  - id: Viz_2
+    answer:
+      name: "Sales by City, State and Postal Code"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [City] [Postal Code] [State]"
+      answer_columns:
+      - name: City
+      - name: Postal Code
+      - name: State
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: City
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Postal Code
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: State
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - City
+        - Postal Code
+        - State
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"City\",\"columnProperty\": {}},{\"columnId\": \"Postal Code\",\"columnProperty\": {}},{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: GEO_BUBBLE
+        chart_columns:
+        - column_id: City
+        - column_id: Postal Code
+        - column_id: State
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - City
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Postal Code\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"City\",\"columnProperty\": {}},{\"columnId\": \"State\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f0272a99-0396-4d3e-b9b5-b8a18feda610\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"cfdbe48f-fd77-415d-99a8-a5c850d85c60\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"City\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 41e382d2-5015-44bb-9e00-eb567f95bcd7
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
+    - visualization_id: Viz_2
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
