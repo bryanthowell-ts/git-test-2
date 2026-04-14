@@ -1,0 +1,58 @@
+obj_id: agentGenerated_TotalRevenueRADSuperstoreAnalysis-9688b4fb
+liveboard:
+  name: agentGenerated_Total Revenue RAD Superstore Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: 5214878d-08b6-4b06-a6e5-a64fe1a2846f
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Total revenue across all transactions: $2,297,200.86
+        • Revenue sourced from complete RAD Superstore dataset
+        • Sales measure represents all business transactions
+
+        Recommendations:
+        • Break down revenue by region, category, or segment for deeper insights
+        • Analyze revenue trends over time periods to identify patterns
+        • Compare performance across different business dimensions
+  - id: Viz_2
+    answer:
+      name: Total Sales
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales]"
+      answer_columns:
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales
+        axis_configs:
+        - "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e36f2a18-8364-4958-9dc7-0ad331c64aca\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"9052291d-3bb6-4fad-b0e5-0b7e4a447bc0\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7376f37b-93bf-4e2c-a9a5-2d93612892e3
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6

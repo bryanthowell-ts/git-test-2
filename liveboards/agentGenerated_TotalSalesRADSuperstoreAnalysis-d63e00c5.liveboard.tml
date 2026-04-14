@@ -1,0 +1,56 @@
+obj_id: agentGenerated_TotalSalesRADSuperstoreAnalysis-d63e00c5
+liveboard:
+  name: agentGenerated_Total Sales RAD Superstore Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: 30ec174f-4a07-4da8-bcde-0e562c98bb20
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Total sales reached $2,297,200.86 across all transactions in the dataset
+        • Sales data encompasses multiple regions, product categories, and time periods
+
+        Recommendations:
+        • Analyze sales breakdown by region and product category to identify top performers
+        • Examine sales trends over time to spot growth opportunities and seasonal patterns
+  - id: Viz_2
+    answer:
+      name: Total Sales
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales]"
+      answer_columns:
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales
+        axis_configs:
+        - "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"cef68533-08ef-41b5-9863-a11e156fb80d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"bdc53a71-64ee-40bc-8d3b-7cde6a483a6b\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7bc50509-b8c1-4297-90dc-2aaa5647e0d0
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6

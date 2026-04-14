@@ -1,0 +1,56 @@
+obj_id: agentGenerated_TotalRevenueFromRADSuperstore-a2d8cf1c
+liveboard:
+  name: agentGenerated_Total Revenue From RAD Superstore
+  visualizations:
+  - id: Viz_1
+    viz_guid: 3098fd06-5d63-4178-bf9c-1bcb0adfc425
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Total revenue of $2.3 million from all sales transactions in dataset
+        • Revenue data sourced from Sales column in RAD Superstore dataset
+
+        Recommendations:
+        • Analyze revenue breakdown by region, segment, and product category to identify top performers
+        • Review time period trends to understand revenue patterns and growth opportunities
+  - id: Viz_2
+    answer:
+      name: Total Sales
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales]"
+      answer_columns:
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales
+        axis_configs:
+        - "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"59c25065-23a0-4458-8caf-cc228a58c3bb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"41e91094-f477-46b2-a66b-5bb744ddf813\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: fe40f053-189f-455e-9af0-35a2360c4d51
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6

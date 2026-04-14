@@ -48,8 +48,7 @@ model:
   - name: Postal Code
     column_id: ORDERS_UDF::postal_code
     properties:
-      column_type: MEASURE
-      aggregation: SUM
+      column_type: ATTRIBUTE
       index_type: DONT_INDEX
   - name: Product Id
     column_id: ORDERS_UDF::product_id
