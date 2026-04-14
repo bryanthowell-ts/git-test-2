@@ -1,0 +1,58 @@
+obj_id: agentGenerated_TotalRevenueRADSuperstoreAnalysis-bcbec227
+liveboard:
+  name: agentGenerated_Total Revenue RAD Superstore Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: 037d6865-3edb-4a41-8529-66ec2747677f
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Total revenue reached $2,297,200.86 from all sales transactions
+        • Sales column captures complete revenue stream across all product categories
+        • Revenue figure represents cumulative performance from entire dataset period
+
+        Recommendations:
+        • Analyze revenue breakdown by product categories to identify top performers
+        • Compare current total against historical periods to assess growth trends
+        • Investigate sales patterns by time periods to optimize future revenue strategies
+  - id: Viz_2
+    answer:
+      name: total Sales
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales]"
+      answer_columns:
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales
+        axis_configs:
+        - "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8175b45e-c7b3-4e91-b661-51534dfd5a24\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"a533dc6b-e28b-4ffe-9ae7-e8007f0ff179\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 85923f94-d14a-4429-a807-da50cf3f013e
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6

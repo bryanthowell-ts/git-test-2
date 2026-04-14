@@ -1,0 +1,64 @@
+obj_id: agentGenerated_RevenueByProductCategoryAnalysis-51814fbc
+liveboard:
+  name: agentGenerated_Revenue By Product Category Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: 96f64f97-8b4e-4496-8cc5-dfbd68cd1726
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Technology category leads with $836K sales, 16% higher than lowest category
+        • Furniture generates $742K in revenue, positioning as strong middle performer
+        • Office Supplies trails at $719K but maintains competitive position with only $117K gap from leader
+
+        Recommendations:
+        • Expand Technology product lines and marketing given strongest performance
+        • Investigate Office Supplies optimization opportunities to close revenue gap
+  - id: Viz_2
+    answer:
+      name: Show Sales by Category
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Category]"
+      answer_columns:
+      - name: Category
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Category
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e24a731d-0128-4f89-83ad-e65ca0e55049\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"26b54f50-e8be-4562-85b0-8f4835dca64e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 09c5c4b9-ba38-40ae-8b03-95f1a031bbdb
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
