@@ -1,0 +1,49 @@
+obj_id: whataremytotalsales-03bda861
+liveboard:
+  name: what are my total sales?
+  visualizations:
+  - id: Viz_1
+    viz_guid: 73dc251b-af13-4353-8d5d-e6672396b4b8
+    note_tile:
+      html_parsed_string: "<p>Generated from: what are my total sales?</p>"
+  - id: Viz_2
+    answer:
+      name: Answer 1
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        obj_id: SampleRetail-Apparel-cd252e5c
+      search_query: "[sales]"
+      answer_columns:
+      - name: Total sales
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total sales
+        axis_configs:
+        - "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0df11015-73d6-4be7-9170-f2494a10170d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"8e118c52-7c57-4f00-adf0-465d90448e87\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 9cfbc0f6-052c-43a4-ad74-135b9dab20a7
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
