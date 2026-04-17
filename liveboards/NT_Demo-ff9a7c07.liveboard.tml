@@ -4,7 +4,7 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: "Total Sales by Region, State, City and Measure names"
+      name: Region Pivot
       tables:
       - id: RAD Superstore
         name: RAD Superstore
@@ -35,6 +35,7 @@ liveboard:
         - Postal Code
         - Total Sales
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"City\",\"columnProperty\": {}},{\"columnId\": \"Postal Code\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
       chart:
         type: ADVANCED_PIVOT_TABLE
         chart_columns:
@@ -46,7 +47,7 @@ liveboard:
         - column_id: State
         - column_id: Total Sales
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"State\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"City\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Postal Code\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total Sales\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"e2f9d9ac-8566-495b-8506-10980055bf9e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"506df49a-5f98-4b8c-b9f1-4b28a80e923c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Postal Code\"]}}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"State\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"City\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Postal Code\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total Sales\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"dfd85cda-fabf-4789-bfc7-2a5a8498d628\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"563477c2-ecd2-473f-a4bc-abe26ef01371\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\",\"State\",\"City\"]}}]}"
         custom_chart_config:
         - key: basic
           dimensions:
@@ -66,8 +67,146 @@ liveboard:
             mode: COLUMN_DRIVEN
           - key: split-by-color
             mode: COLUMN_DRIVEN
+        custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"columnWidths\\\":{\\\"rows\\\":{\\\"widths\\\":[],\\\"fields\\\":null},\\\"columns\\\":{\\\"widths\\\":[],\\\"fields\\\":null}},\\\"expandCollapse\\\":{\\\"rows\\\":{\\\"state\\\":[{\\\"field\\\":\\\"Region\\\",\\\"value\\\":\\\"East\\\",\\\"collapsed\\\":true,\\\"children\\\":[{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Connecticut\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Delaware\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"District of Columbia\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Maine\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Maryland\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Massachusetts\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"New Hampshire\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"New Jersey\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"New York\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Ohio\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Pennsylvania\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Rhode Island\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Vermont\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"West Virginia\\\",\\\"collapsed\\\":true,\\\"children\\\":[]}]},{\\\"field\\\":\\\"Region\\\",\\\"value\\\":\\\"South\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"Region\\\",\\\"value\\\":\\\"West\\\",\\\"collapsed\\\":true,\\\"children\\\":[{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Arizona\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"California\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Colorado\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Idaho\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Montana\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Nevada\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"New Mexico\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Oregon\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Utah\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Washington\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Wyoming\\\",\\\"collapsed\\\":true,\\\"children\\\":[]}]},{\\\"field\\\":\\\"Region\\\",\\\"value\\\":\\\"Central\\\",\\\"collapsed\\\":true,\\\"children\\\":[{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Illinois\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Indiana\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Iowa\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Kansas\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Michigan\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Minnesota\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Missouri\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Nebraska\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"North Dakota\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Oklahoma\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"South Dakota\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Texas\\\",\\\"collapsed\\\":true,\\\"children\\\":[]},{\\\"field\\\":\\\"State\\\",\\\"value\\\":\\\"Wisconsin\\\",\\\"collapsed\\\":true,\\\"children\\\":[]}]}],\\\"fields\\\":[\\\"Region\\\",\\\"State\\\",\\\"City\\\"]},\\\"columns\\\":{\\\"state\\\":[],\\\"fields\\\":null}},\\\"pagination\\\":{\\\"currentPageIdx\\\":1,\\\"fields\\\":null},\\\"sort\\\":{\\\"rows\\\":{},\\\"columns\\\":{},\\\"axis\\\":{}},\\\"legend\\\":{\\\"state\\\":{},\\\"colorFieldId\\\":null}}\",\"axisVisualProps\":{},\"columnVisualProps\":{\"Region\":{\"column-sort\":{}},\"State\":{\"column-sort\":{}},\"City\":{\"column-sort\":{}},\"Total Sales\":{}},\"dataLabelVisualProps\":{},\"tooltipVisualProps\":{\"global-tooltip\":{\"show-tooltip\":true,\"tooltipBackground\":{\"backgroundColor\":\"#1d232f\",\"borderColor\":\"#1d232f\",\"backgroundOpacity\":\"100\"},\"tooltip-column-name\":{\"size\":\"12\",\"color\":\"#ffffff\",\"style\":[]},\"tooltip-column-value\":{\"size\":\"12\",\"color\":\"#ffffff\",\"style\":[]}}},\"legendVisualProps\":{\"legend\":{\"show-legend\":false,\"position\":\"Right\"}},\"displayVisualProps\":{\"values\":{},\"totals-summary\":{\"show-grand-totals\":{\"show-row-grand-totals\":false,\"show-column-grand-totals\":true},\"show-sub-totals\":{\"show-row-sub-totals\":false,\"show-column-sub-totals\":true},\"totals-position\":\"End\"},\"heatmap-mode-section\":{\"heatmap-mode-enable\":false,\"includeTotalDomain\":false,\"heatmap-mode-radio\":\"Background\"},\"pagination\":{\"pagination-enable\":true}}}"
       display_mode: CHART_MODE
+      dynamic_name: Region Pivot
     viz_guid: ce14c3db-cb65-4e0a-a3c5-4ee3d56b4206
+  - id: Viz_2
+    answer:
+      name: Postal Cd Details
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Postal Code] [Sales] [Product Name] [Quantity]"
+      answer_columns:
+      - name: Postal Code
+      - name: Product Name
+      - name: Total Quantity
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Postal Code
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Product Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Postal Code
+        - Product Name
+        - Total Sales
+        - Total Quantity
+        client_state: ""
+      chart:
+        type: ADVANCED_PIVOT_TABLE
+        chart_columns:
+        - column_id: Measure names
+          type: MEASURE_NAMES
+        - column_id: Postal Code
+        - column_id: Product Name
+        - column_id: Total Quantity
+        - column_id: Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"23114209-0aef-45fd-b57f-6f7940e3dc7d\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"16bac228-24f0-4b63-9784-c1970730bae0\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"0999bcd4-0da6-4a6d-b47a-20ccfd5d0a5b\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Postal Code\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total Sales\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"e2f9d9ac-8566-495b-8506-10980055bf9e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"506df49a-5f98-4b8c-b9f1-4b28a80e923c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Postal Code\"]}}]}"
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: rows
+            columns:
+            - Postal Code
+            mode: COLUMN_DRIVEN
+          - key: values
+            columns:
+            - Total Sales
+            mode: COLUMN_DRIVEN
+          - key: columns
+            columns:
+            - Measure names
+            mode: COLUMN_DRIVEN
+          - key: split-by-color
+            mode: COLUMN_DRIVEN
+      display_mode: TABLE_MODE
+      dynamic_name: Postal Cd Details
+    viz_guid: b55efca0-a2ea-4635-95ce-945a440fb877
+  - id: Viz_3
+    answer:
+      name: Product Details
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Quantity] [Product Id] [Customer Name] [Customer Id]"
+      answer_columns:
+      - name: Customer Id
+      - name: Customer Name
+      - name: Product Id
+      - name: Total Quantity
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Customer Id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Customer Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Product Id
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Product Id
+        - Customer Name
+        - Customer Id
+        - Total Sales
+        - Total Quantity
+        client_state: ""
+      chart:
+        type: ADVANCED_PIVOT_TABLE
+        chart_columns:
+        - column_id: Customer Id
+        - column_id: Customer Name
+        - column_id: Product Id
+        - column_id: Total Quantity
+        - column_id: Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"23114209-0aef-45fd-b57f-6f7940e3dc7d\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"16bac228-24f0-4b63-9784-c1970730bae0\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"0999bcd4-0da6-4a6d-b47a-20ccfd5d0a5b\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"2db5da62-eb93-47e9-a458-5b184db1f8fc\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total Sales\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"e2f9d9ac-8566-495b-8506-10980055bf9e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"506df49a-5f98-4b8c-b9f1-4b28a80e923c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"2db5da62-eb93-47e9-a458-5b184db1f8fc\"]}}]}"
+      display_mode: TABLE_MODE
+      dynamic_name: Product Details
+    viz_guid: b764e723-3e25-4858-84ab-c9f690c45314
   layout:
     tiles:
     - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 7
+      width: 4
+    - visualization_id: Viz_2
+      x: 4
+      "y": 0
+      height: 7
+      width: 8
+    - visualization_id: Viz_3
+      x: 0
+      "y": 7
+      height: 8
+      width: 12
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "true"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M
