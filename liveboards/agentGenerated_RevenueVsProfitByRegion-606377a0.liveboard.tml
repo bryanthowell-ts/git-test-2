@@ -1,0 +1,71 @@
+obj_id: agentGenerated_RevenueVsProfitByRegion-606377a0
+liveboard:
+  name: agentGenerated_Revenue Vs Profit By Region
+  visualizations:
+  - id: Viz_1
+    viz_guid: b8812cf8-e4f2-455b-91ff-dabca7a203e0
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Total sales reached $2.3M but profit margin remains at only 12.5%
+        • High cost structure consuming 87.5% of revenue before reaching profit
+        • Gap of $2M between gross sales and final profit indicates significant operational expenses
+
+        Recommendations:
+        • Analyze cost structure to identify expense reduction opportunities
+        • Focus on higher-margin products to improve overall profitability
+        • Review pricing strategy to optimize profit margins without losing sales volume
+  - id: Viz_2
+    answer:
+      name: Total Sales and Total Profit by Region
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] sum [Profit] [Region]"
+      answer_columns:
+      - name: Region
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Sales
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a7e4686c-f2fa-4cf7-a748-872b8ff9c756\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"b15bae7e-453f-48fd-9a8d-f5707f17ea75\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"1c914fef-fdc8-4f71-84cd-175ddde47216\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4dcba91e-9153-402b-bae0-7877f9714bd2
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6

@@ -1,0 +1,63 @@
+obj_id: agentGenerated_TotalRevenuevsProfitAnalysis-b050960b
+liveboard:
+  name: agentGenerated_Total Revenue vs Profit Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: 23e9e932-a566-4225-9420-1dafe96e5d26
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Total profit of $286K represents only 12.5% margin on $2.3M revenue
+        • High cost structure consuming 87.5% of total sales revenue
+        • Revenue generation strong but profit conversion efficiency low
+
+        Recommendations:
+        • Analyze cost structure by category to identify reduction opportunities
+        • Focus on higher-margin products and customer segments
+        • Implement pricing optimization to improve profit margins
+  - id: Viz_2
+    answer:
+      name: Total Sales vs Total Profit
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Profit]"
+      answer_columns:
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Sales
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6993a1fa-9136-460a-a4b0-a567e6eae36f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"34dac579-496e-47cf-8579-30eeade8b69d\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 76605b23-1ca8-42f2-9723-3b09d84cd383
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
