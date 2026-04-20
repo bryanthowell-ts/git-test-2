@@ -1,0 +1,56 @@
+obj_id: agentGenerated_SalesPerformanceByRegionalDistribution-ddbe59bf
+liveboard:
+  name: agentGenerated_Sales Performance By Regional Distribution
+  visualizations:
+  - id: Viz_1
+    viz_guid: e011c6e3-bed2-4d98-9862-9e7b62ca1242
+    note_tile:
+      html_parsed_string: "Key Drivers:\n• West region leads with $725K sales, 85% higher than lowest performer\n• East region strong at $679K, showing consistent performance  \n• South region significantly underperforms at $392K, 46% below average\n• Central region at $501K shows moderate performance\n\nRecommendations:\n• Focus growth initiatives on South region to address 46% performance gap\n• Replicate West region's successful strategies across other territories\n• Investigate East region best practices for scaling"
+  - id: Viz_2
+    answer:
+      name: Total sales by region
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Region]"
+      answer_columns:
+      - name: Region
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6936424d-ce42-4764-9746-ebb052ed840b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"fb9aa08c-e8df-414a-adb8-635d42b5138e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: b8a5ef54-5be3-44c4-a3a0-552ca752158f
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
