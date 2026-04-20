@@ -1,0 +1,71 @@
+obj_id: agentGenerated_RegionalSalesVersusProfitAnalysis-6cb1dca6
+liveboard:
+  name: agentGenerated_Regional Sales Versus Profit Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: f8777007-a1d5-4a8c-89bb-2ced12190870
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Holiday seasonality drives peak sales with November 2024 reaching 118,448
+        • February 2021 shows lowest performance at 4,520 total sales
+        • November and December consistently outperform other months across all years
+        • 48-month trend shows overall growth from 2021 baseline
+
+        Recommendations:
+        • Increase marketing spend in Q4 to capitalize on holiday shopping patterns
+        • Investigate February performance gaps and develop winter promotion strategies
+  - id: Viz_2
+    answer:
+      name: Total Sales and Total Profit by Region
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Profit] [Region]"
+      answer_columns:
+      - name: Region
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Sales
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0637c6a4-a2ed-48ae-9981-b081f9fe64de\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"a04a4e3e-008c-48bb-b969-f260324d8262\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"4464b361-4b0a-408b-9f15-c8836cfbc12a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: b784ce55-5128-44f7-ae95-f6d9001498f0
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
