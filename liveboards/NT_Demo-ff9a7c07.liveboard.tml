@@ -138,11 +138,12 @@ liveboard:
       - id: RAD Superstore
         name: RAD Superstore
         obj_id: RADSuperstoreProd
-      search_query: "[Sales] [Quantity] [Product Id] [Customer Name] [Customer Id]"
+      search_query: "[Sales] [Quantity] [Product Id] [Customer Name] [Customer Id] [State]"
       answer_columns:
       - name: Customer Id
       - name: Customer Name
       - name: Product Id
+      - name: State
       - name: Total Quantity
       - name: Total Sales
       table:
@@ -153,6 +154,8 @@ liveboard:
           headline_aggregation: COUNT_DISTINCT
         - column_id: Product Id
           headline_aggregation: COUNT_DISTINCT
+        - column_id: State
+          headline_aggregation: COUNT_DISTINCT
         - column_id: Total Quantity
           headline_aggregation: SUM
         - column_id: Total Sales
@@ -161,19 +164,23 @@ liveboard:
         - Product Id
         - Customer Name
         - Customer Id
+        - State
         - Total Sales
         - Total Quantity
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Product Id\",\"columnProperty\": {}},{\"columnId\": \"Customer Name\",\"columnProperty\": {}},{\"columnId\": \"Customer Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}]}"
       chart:
         type: ADVANCED_PIVOT_TABLE
         chart_columns:
         - column_id: Customer Id
         - column_id: Customer Name
         - column_id: Product Id
+        - column_id: State
         - column_id: Total Quantity
         - column_id: Total Sales
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"23114209-0aef-45fd-b57f-6f7940e3dc7d\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"16bac228-24f0-4b63-9784-c1970730bae0\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"0999bcd4-0da6-4a6d-b47a-20ccfd5d0a5b\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"2db5da62-eb93-47e9-a458-5b184db1f8fc\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total Sales\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"e2f9d9ac-8566-495b-8506-10980055bf9e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"506df49a-5f98-4b8c-b9f1-4b28a80e923c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"2db5da62-eb93-47e9-a458-5b184db1f8fc\"]}}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"5937c8a2-ab08-41a9-9278-b45270e6b64f\",\"properties\": {\"axisType\": \"X\"}}]}"
+        custom_visual_props: "{}"
       display_mode: TABLE_MODE
       dynamic_name: Product Details
     viz_guid: b764e723-3e25-4858-84ab-c9f690c45314
