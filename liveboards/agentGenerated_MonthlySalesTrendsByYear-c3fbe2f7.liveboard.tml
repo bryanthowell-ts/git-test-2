@@ -1,0 +1,114 @@
+obj_id: agentGenerated_MonthlySalesTrendsByYear-c3fbe2f7
+liveboard:
+  name: agentGenerated_Monthly Sales Trends By Year
+  visualizations:
+  - id: Viz_1
+    viz_guid: 55d85cf6-55d9-4d0f-8a00-e0b7f43fd2f0
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • March consistently shows strongest MoM growth across all years (+1132% in 2021, +224% in 2022, +125% in 2023, +190% in 2024)
+        • September and November are reliable high-growth months with September averaging +165% growth
+        • January-February consistently show negative MoM growth due to post-holiday sales decline
+        • Q4 months maintain higher sales volumes despite variable growth rates
+
+        Recommendations:
+        • Increase inventory and marketing spend ahead of March peak season to maximize revenue opportunity
+        • Develop targeted promotions for January-February to counteract seasonal decline
+        • Leverage September momentum with back-to-school campaigns and November with pre-holiday pushes
+  - id: Viz_2
+    answer:
+      name: "Total Sales by month and year using Order Date, showing month over month comparison for each year"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "growth of [Sales] by [Order Date] [Order Date].monthly"
+      answer_columns:
+      - name: Growth of Total Sales
+      - name: Month(Order Date)
+      table:
+        table_columns:
+        - column_id: Growth of Total Sales
+          headline_aggregation: MIN
+        - column_id: Month(Order Date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Month(Order Date)
+        - Growth of Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Growth of Total Sales
+        - column_id: Month(Order Date)
+        axis_configs:
+        - x:
+          - Month(Order Date)
+          "y":
+          - Growth of Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"3d096dd7-e835-4a06-af28-4e09bde4962a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total Sales\"],\"isOpposite\": false}},{\"id\": \"ec727e74-25f0-4457-8cdf-d22d37870633\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: dd1a3ca4-7dbc-4d1c-b520-d4c8a9004d64
+  - id: Viz_3
+    answer:
+      name: Total Sales by monthly Order Date and yearly Order Date
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Order Date].monthly [Order Date].yearly"
+      answer_columns:
+      - name: Month(Order Date)
+      - name: Total Sales
+      - name: Year(Order Date)
+      table:
+        table_columns:
+        - column_id: Month(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        - column_id: Year(Order Date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Month(Order Date)
+        - Year(Order Date)
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Year(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(Order Date)
+        - column_id: Total Sales
+        - column_id: Year(Order Date)
+        axis_configs:
+        - x:
+          - Month(Order Date)
+          "y":
+          - Total Sales
+          color:
+          - Year(Order Date)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Year(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"17d7c42d-2902-433f-9466-cca2f529eaa4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"7faef897-c895-42e3-aab9-ee069dcce4f2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 6254709c-47d0-46dc-ab26-0666a1e592bf
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 4
+      height: 4
+      width: 6

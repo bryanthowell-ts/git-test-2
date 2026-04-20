@@ -1,0 +1,65 @@
+obj_id: agentGenerated_MonthlySalesTrendsKPIDashboard-a25bbc79
+liveboard:
+  name: agentGenerated_Monthly Sales Trends KPI Dashboard
+  visualizations:
+  - id: Viz_1
+    viz_guid: 18c18cb3-600f-433a-9432-fd2d6c17f36e
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • March consistently shows highest growth across all years (1,132% in 2021, 224% in 2022, 125% in 2023, 190% in 2024)
+        • September demonstrates strong seasonal pattern with 193% growth in 2021 and 136% in 2023
+        • Sales volatility decreased from 2021 to 2024, indicating more predictable business patterns
+        • November shows consistent holiday season strength with 142% growth in 2022
+
+        Recommendations:
+        • Increase inventory and marketing spend in February to capitalize on March growth pattern
+        • Develop September promotional campaigns to amplify existing seasonal momentum
+  - id: Viz_2
+    answer:
+      name: Total Sales by Order Date monthly with month-over-month growth comparison
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "growth of [Sales] by [Order Date] [Order Date].monthly"
+      answer_columns:
+      - name: Growth of Total Sales
+      - name: Month(Order Date)
+      table:
+        table_columns:
+        - column_id: Growth of Total Sales
+          headline_aggregation: MIN
+        - column_id: Month(Order Date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Month(Order Date)
+        - Growth of Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Growth of Total Sales
+        - column_id: Month(Order Date)
+        axis_configs:
+        - x:
+          - Month(Order Date)
+          "y":
+          - Growth of Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Growth of Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"52c28004-1f9c-4747-820f-6ca91cec7142\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total Sales\"],\"isOpposite\": false}},{\"id\": \"7659640b-88f2-4cfa-8b15-5affaa0c2bcf\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 30d757f4-9303-4853-b0f3-e742a168910f
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
