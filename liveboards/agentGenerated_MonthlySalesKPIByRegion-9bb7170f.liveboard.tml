@@ -1,0 +1,71 @@
+obj_id: agentGenerated_MonthlySalesKPIByRegion-9bb7170f
+liveboard:
+  name: agentGenerated_Monthly Sales KPI By Region
+  visualizations:
+  - id: Viz_1
+    viz_guid: a9bf988a-4b17-4a1b-967f-e042ce9e31da
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Nov 2024 achieved highest sales at $118,448, indicating strong recent performance
+        • Dec 2023 reached $96,999, showing consistent holiday season strength
+        • Sep 2021 hit $81,777, suggesting seasonal patterns in Q3-Q4 periods
+        • 48-month data span reveals cyclical trends with peak performance in late-year months
+
+        Recommendations:
+        • Focus marketing efforts on replicating Nov 2024 success factors in upcoming months
+        • Strengthen Q4 holiday campaigns given consistent Dec performance
+        • Analyze Q1-Q2 underperformance to boost off-season sales
+  - id: Viz_2
+    answer:
+      name: total Sales monthly by Order Date by Region
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Order Date].monthly [Region]"
+      answer_columns:
+      - name: Month(Order Date)
+      - name: Region
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Month(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Order Date)
+        - Region
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Order Date)
+        - column_id: Region
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Month(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5ff2d615-59ea-48e6-ba8f-8cd4741bfedc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"37499df2-6674-4cff-9bb1-ab080aa51a15\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 0d6ef9e9-e237-4843-a81a-3ee8fa2d558e
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6

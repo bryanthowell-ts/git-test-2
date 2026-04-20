@@ -1,0 +1,65 @@
+obj_id: agentGenerated_TotalSalesByRegionAnalysis-6eb459a8
+liveboard:
+  name: agentGenerated_Total Sales By Region Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: e75725e3-c131-44bc-b36f-ec1965414d38
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • East region leads with $45,634 in Nov 2024, significantly outperforming other regions
+        • November 2024 achieved highest monthly sales at $118,448 across all regions
+        • Strong seasonal performance pattern with Dec 2023 ($96,999) and Sep 2021 ($81,777) as top months
+        • Regional performance varies significantly, with East consistently stronger than Central
+
+        Recommendations:
+        • Investigate East region's success strategies for replication in underperforming Central region
+        • Capitalize on November seasonal trends with targeted campaigns in Oct-Nov timeframe
+  - id: Viz_2
+    answer:
+      name: total Sales by Region
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Region]"
+      answer_columns:
+      - name: Region
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"751735dd-6a68-425d-947c-53b415934872\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"bfa181de-dc72-4828-89ac-5fdcf0dbdd95\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 20f0a618-5854-4fba-99b8-ca627e726534
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6

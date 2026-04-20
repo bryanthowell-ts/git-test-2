@@ -1,0 +1,66 @@
+obj_id: agentGenerated_MonthlySalesKPIPerformanceChart-47e67b77
+liveboard:
+  name: agentGenerated_Monthly Sales KPI Performance Chart
+  visualizations:
+  - id: Viz_1
+    viz_guid: d2a2b876-8d63-42c2-9811-7570a8994181
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Nov 2024 achieved highest sales at ~$118,448, indicating strong recent performance
+        • Dec 2023 hit ~$97K showing seasonal holiday sales patterns
+        • Sep 2021 reached ~$82K suggesting early strong performance in dataset timeframe
+        • 48-month data span reveals cyclical sales patterns across multiple years
+
+        Recommendations:
+        • Analyze Nov 2024 success factors to replicate high performance strategies
+        • Prepare for seasonal peaks by increasing inventory before holiday periods
+        • Investigate factors behind Sep 2021 peak to apply learnings to current operations
+  - id: Viz_2
+    answer:
+      name: total Sales monthly by Order Date
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Order Date].monthly"
+      answer_columns:
+      - name: Month(Order Date)
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Month(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Order Date)
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Order Date)
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Month(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6924988d-bd10-466d-89c4-6c78b97148ba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"1968994c-a098-4b64-b546-b48fd81350af\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: abb9488e-bd47-48af-9c07-a05da891fb36
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
