@@ -1,0 +1,66 @@
+obj_id: agentGenerated_MonthlySalesPerformanceKPIChart-d3728e39
+liveboard:
+  name: agentGenerated_Monthly Sales Performance KPI Chart
+  visualizations:
+  - id: Viz_1
+    viz_guid: 91fcb1cb-1eb9-4580-968b-dde07663c078
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • West region leads with $725K sales, 85% higher than lowest performer
+        • East region strong at $679K, only 7% behind West
+        • South region underperforms at $392K, representing 54% of West's volume
+        • $333K gap exists between top (West) and bottom (South) performing regions
+
+        Recommendations:
+        • Focus growth initiatives on South region to close $333K performance gap
+        • Analyze West region best practices for replication in underperforming areas
+        • Investigate Central region opportunities to bridge toward East/West performance levels
+  - id: Viz_2
+    answer:
+      name: Total sales monthly by Order Date
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Order Date].monthly"
+      answer_columns:
+      - name: Month(Order Date)
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Month(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Order Date)
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(Order Date)
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Month(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"67bbf577-e144-4cd5-9772-e8bbad469635\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"492c74e3-a593-4885-806c-b495e6c32a7d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: be8e2ed4-189e-4cd8-813c-53493296fc51
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
