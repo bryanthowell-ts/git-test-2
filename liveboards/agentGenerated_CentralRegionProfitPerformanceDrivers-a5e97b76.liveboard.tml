@@ -1,0 +1,74 @@
+obj_id: agentGenerated_CentralRegionProfitPerformanceDrivers-a5e97b76
+liveboard:
+  name: agentGenerated_Central Region Profit Performance Drivers
+  visualizations:
+  - id: Viz_1
+    viz_guid: c76133d9-908f-48d1-ba7d-e159dfc92c95
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • West region achieves highest profit margin at 14.9% vs Central's 7.9%
+        • Central region has efficiency issues - higher sales than South but lowest profit margin
+        • November 2024 hit peak monthly sales of 118,448 units
+        • Holiday seasonality drives November-December sales spikes consistently
+
+        Recommendations:
+        • Investigate Central region's cost structure to improve 7.9% profit margin
+        • Replicate West region's high-margin strategies across other territories
+        • Optimize inventory for November-December seasonal peaks
+  - id: Viz_2
+    answer:
+      name: total Profit by Category and Sub Category where Region is Central sorted by total Profit descending
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Profit] [Sub Category] [Category] [Region] = 'central' sort by [Profit] descending"
+      answer_columns:
+      - name: Category
+      - name: Sub Category
+      - name: Total Profit
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Sub Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Sub Category
+        - Category
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Category
+        - column_id: Sub Category
+        - column_id: Total Profit
+        axis_configs:
+        - x:
+          - Category
+          - Sub Category
+          "y":
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"de2f341e-3534-47ff-b690-c5568f84a8b4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": false}},{\"id\": \"8c7b799c-6e55-4baa-a4da-23e63deda850\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\",\"Sub Category\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 3363910c-746f-4f18-9392-811aeb45927f
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
