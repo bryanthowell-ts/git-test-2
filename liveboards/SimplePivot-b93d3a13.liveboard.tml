@@ -1,0 +1,152 @@
+obj_id: SimplePivot-b93d3a13
+liveboard:
+  name: Simple Pivot
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Pipeline Drilldown
+      tables:
+      - id: TSEMBED
+        name: TSEMBED
+        obj_id: TSEMBED-5f92ed57
+      formulas:
+      - id: formula_Opp Link
+        name: Opp Link
+        expr: "concat ( \"{caption}\" , [Id] , \"{/caption}\" , \"https://tsembed-dev-ed.develop.lightning.force.com/lightning/r/opportunity/\" , [Id] , \"/view\" )"
+        was_auto_generated: false
+      search_query: "[Amount] [Account Name] [Account Type] [Stagename] [Id] [Forecastcategory] [Closedate] [Closedate].monthly [Createddate] [Createddate].monthly [Type] [Name] [Account Name].'burlington textiles corp of america' [Account Name].'dickenson plc' [Account Name].'edge communications' [Account Name].'express logistics and transport' [Account Name].genepoint [Account Name].'grand hotels & resorts ltd' [Account Name].'pyramid construction inc.' [Account Name].'sample account for entitlements' [Account Name].sforce [Account Name].'united oil & gas corp.' [Account Name].'united oil & gas, singapore' [Account Name].'united oil & gas, uk' [Account Name].'university of arizona' [Account Name].{null} [Account Id] [formula_Opp Link] [SF Opp Link]"
+      answer_columns:
+      - name: Account Id
+      - name: Account Name
+      - name: Account Type
+      - name: Forecastcategory
+      - name: Id
+      - name: Month(Closedate)
+      - name: Month(Createddate)
+      - name: Name
+      - name: Opp Link
+      - name: SF Opp Link
+      - name: Stagename
+        custom_name: Stagename
+        dynamic_title: Stagename
+      - name: Total Amount
+      - name: Type
+      table:
+        table_columns:
+        - column_id: Account Id
+          show_headline: false
+        - column_id: Account Name
+          show_headline: false
+        - column_id: Account Type
+          show_headline: false
+        - column_id: Forecastcategory
+          show_headline: false
+        - column_id: Id
+          show_headline: false
+        - column_id: Month(Closedate)
+          show_headline: false
+        - column_id: Month(Createddate)
+          show_headline: false
+        - column_id: Name
+          show_headline: false
+        - column_id: Opp Link
+          show_headline: false
+        - column_id: SF Opp Link
+          show_headline: false
+        - column_id: Stagename
+          show_headline: false
+        - column_id: Total Amount
+          show_headline: false
+        - column_id: Type
+          show_headline: false
+        ordered_column_ids:
+        - Account Name
+        - Account Type
+        - Stagename
+        - Id
+        - Forecastcategory
+        - Month(Closedate)
+        - Month(Createddate)
+        - Type
+        - Name
+        - Account Id
+        - Opp Link
+        - SF Opp Link
+        - Total Amount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Account Id\",\"width\": 192.0}],\"theme\": \"ZEBRA\",\"orderedColumnIds\": [\"Account Name\",\"Name\",\"Account Type\",\"Stagename\",\"Forecastcategory\",\"Month(Closedate)\",\"Type\",\"Total Amount\",\"Id\",\"Month(Createddate)\",\"Account Id\"],\"columnProperties\": [{\"columnId\": \"Id\",\"columnProperty\": {\"isHidden\": true}},{\"columnId\": \"Account Id\",\"columnProperty\": {\"isHidden\": true}},{\"columnId\": \"Month(Createddate)\",\"columnProperty\": {\"isHidden\": true}}]}"
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: Account Id
+        - column_id: Account Name
+        - column_id: Account Type
+        - column_id: Forecastcategory
+        - column_id: Id
+        - column_id: Month(Closedate)
+        - column_id: Month(Createddate)
+        - column_id: Name
+        - column_id: Opp Link
+        - column_id: SF Opp Link
+        - column_id: Stagename
+        - column_id: Total Amount
+        - column_id: Type
+        axis_configs:
+        - x:
+          - Stagename
+          - Account Name
+          - SF Opp Link
+          - Name
+          "y":
+          - Total Amount
+          color:
+          - Month(Closedate)
+        - "y":
+          - Total Amount
+        - x:
+          - Stagename
+          "y":
+          - Total Amount
+        - x:
+          - Stagename
+          - Account Name
+          "y":
+          - Total Amount
+        - "y":
+          - Total Amount
+          color:
+          - Month(Closedate)
+        - x:
+          - Stagename
+          "y":
+          - Total Amount
+          color:
+          - Month(Closedate)
+        - x:
+          - Stagename
+          - Account Name
+          "y":
+          - Total Amount
+          color:
+          - Month(Closedate)
+        - x:
+          - Stagename
+          - Account Name
+          - SF Opp Link
+          "y":
+          - Total Amount
+        - x:
+          - Stagename
+          - Account Name
+          - SF Opp Link
+          "y":
+          - Total Amount
+          color:
+          - Month(Closedate)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"chartSpecific\": {\"pivotState\": {\"rowExpandedPaths\": [{\"paths\": [\"Id. Decision Makers\"]},{\"paths\": [\"Id. Decision Makers\",\"Grand Hotels & Resorts Ltd\"]}],\"fields\": [{\"dataField\": \"Month(Closedate)\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Month(Closedate)\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"}]},\"isHeatmapOverlayed\": false,\"isStackedAsPercent\": false,\"dataFieldArea\": \"column\"},\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Account Name\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Account Type\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Stagename\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Id\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Forecastcategory\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Month(Closedate)\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Month(Createddate)\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Type\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Name\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Total Amount\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Account Id\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Opp Link\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"SF Opp Link\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"9aaf2c74-9dd0-495a-9d00-3208a4a3f25f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Amount\"],\"isOpposite\": false}},{\"id\": \"8b2a6373-2993-4d8d-9724-a22485980697\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Stagename\",\"Account Name\",\"SF Opp Link\",\"Name\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2aec2b81-1fd5-4483-9092-5a7a22df0e4b
+  layout:
+    tiles:
+    - visualization_id: Viz_1
