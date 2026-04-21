@@ -1,6 +1,7 @@
 obj_id: AMAOrders-f3555af9
 model:
   name: AMA Orders
+  description: The AMA Orders worksheet provides a comprehensive overview of customer orders, including details about the products purchased, sales performance, and shipping information. It captures essential aspects such as customer demographics, order timelines, and regional distribution. This resource helps stakeholders understand purchasing trends, profitability, and delivery methods across various locations. (AI generated)
   model_tables:
   - name: ORDERS_VAR
     obj_id: ORDERS_VAR-8211d8dd
@@ -82,9 +83,9 @@ model:
   - name: Row Id
     column_id: ORDERS_VAR::row_id
     properties:
-      column_type: MEASURE
-      aggregation: SUM
+      column_type: ATTRIBUTE
       index_type: DONT_INDEX
+      is_additive: true
   - name: Sales
     column_id: ORDERS_VAR::sales
     properties:
@@ -120,4 +121,4 @@ model:
     is_bypass_rls: false
     join_progressive: true
     spotter_config:
-      is_spotter_enabled: false
+      is_spotter_enabled: true
