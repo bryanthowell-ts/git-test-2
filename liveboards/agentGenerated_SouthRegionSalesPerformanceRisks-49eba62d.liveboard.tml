@@ -1,0 +1,338 @@
+obj_id: agentGenerated_SouthRegionSalesPerformanceRisks-49eba62d
+liveboard:
+  name: agentGenerated_South Region Sales Performance Risks
+  visualizations:
+  - id: Viz_1
+    viz_guid: 3cbd9f16-325a-4075-a66f-22a0b8efe20a
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • South region has lowest sales volume at $391,722 (54% of West region's performance)
+        • Tables and Machines sub-categories are loss-making with -$4,623 and -$1,439 profit respectively
+        • Excessive discounting pattern: Machines at 33.3% average discount correlates with negative profit
+        • Three states showing significant profit losses creating geographic risk concentration
+
+        Recommendations:
+        • Immediately review pricing strategy for Tables and Machines to eliminate losses
+        • Implement discount controls - cap Machines discounts below 25% threshold
+        • Focus sales efforts on profitable sub-categories like Phones and Copiers in underperforming states
+  - id: Viz_2
+    answer:
+      name: Bottom 10 states by Profit where Region is South
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "bottom 10 [State] [Region] = 'south' sort by [Profit]"
+      answer_columns:
+      - name: State
+      - name: Total Profit
+      table:
+        table_columns:
+        - column_id: State
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - State
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"State\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: ADVANCED_BAR
+        chart_columns:
+        - column_id: State
+        - column_id: Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"State\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"98f20538-4f51-472a-a1a6-d34a3efdd137\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": false}},{\"id\": \"ebf120bd-993d-47b2-ab8b-70a461a780cd\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State\"]}}]}"
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: Total Profit
+            mode: AXIS_DRIVEN
+          - key: y-axis
+            axes:
+            - type: FLAT
+              column: State
+            mode: AXIS_DRIVEN
+          - key: slice-with-color
+            mode: AXIS_DRIVEN
+          - key: trellis-by
+            mode: AXIS_DRIVEN
+      display_mode: TABLE_MODE
+    viz_guid: 4a9fa587-c254-41a3-a429-968cd85aa7b0
+  - id: Viz_3
+    answer:
+      name: "Average Discount, total Sales, Profit by Sub Category where Region is South, sorted by average Discount descending to find heavily discounted products"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "average [Discount] sum [Sales] sum [Profit] [Sub Category] [Region] = 'south' sort by average [Discount] descending"
+      answer_columns:
+      - name: Average Discount
+        sort_info:
+          category: DEFAULT
+      - name: Sub Category
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Average Discount
+          headline_aggregation: TABLE_AGGR
+        - column_id: Sub Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Sub Category
+        - Average Discount
+        - Total Sales
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Average Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: ADVANCED_COLUMN
+        chart_columns:
+        - column_id: Average Discount
+        - column_id: Sub Category
+        - column_id: Total Profit
+        - column_id: Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Average Discount\",\"columnProperty\": {}},{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9bce716a-4faa-4501-9566-4fd11d86883a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Discount\"],\"isOpposite\": false}},{\"id\": \"fe7fdaf8-eb56-49ef-aca5-c87341752369\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": true}},{\"id\": \"175d1479-469c-46c5-8721-c76f8da5703b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"f5feab21-3d0c-42bd-bb44-00563cd84cb9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Sub Category\"]}}]}"
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: Sub Category
+            mode: AXIS_DRIVEN
+          - key: y-axis
+            axes:
+            - type: FLAT
+              column: Average Discount
+            - type: FLAT
+              column: Total Sales
+            - type: FLAT
+              column: Total Profit
+            mode: AXIS_DRIVEN
+          - key: slice-with-color
+            mode: AXIS_DRIVEN
+          - key: trellis-by
+            mode: AXIS_DRIVEN
+      display_mode: TABLE_MODE
+    viz_guid: 9de592b0-5336-4f7e-a925-e09987fb171c
+  - id: Viz_4
+    answer:
+      name: "Sales, Profit by Sub Category where Region is South, sorted by Profit ascending to identify loss-making sub-categories"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Profit] [Sub Category] [Region] = 'south' sort by [Profit]"
+      answer_columns:
+      - name: Sub Category
+      - name: Total Profit
+        sort_info:
+          category: DEFAULT
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Sub Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Sub Category
+        - Total Sales
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: ADVANCED_COLUMN
+        chart_columns:
+        - column_id: Sub Category
+        - column_id: Total Profit
+        - column_id: Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"992b2d42-59ab-4e93-9861-19f04ef6e00b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"44173e6a-ec09-4e4e-9627-79aee7ae8631\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"cd785063-daa1-4c06-8d85-cf4dfb94a5c1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Sub Category\"]}}]}"
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: Sub Category
+            mode: AXIS_DRIVEN
+          - key: y-axis
+            axes:
+            - type: MERGED
+              columns:
+              - Total Sales
+              - Total Profit
+            mode: AXIS_DRIVEN
+          - key: slice-with-color
+            mode: AXIS_DRIVEN
+          - key: trellis-by
+            mode: AXIS_DRIVEN
+      display_mode: TABLE_MODE
+    viz_guid: 80f21e25-4425-4238-ba06-78b5890aad85
+  - id: Viz_5
+    answer:
+      name: "Sales, Profit by Category where Region is South"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Profit] [Category] [Region] = 'south'"
+      answer_columns:
+      - name: Category
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Total Sales
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: ADVANCED_COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Total Profit
+        - column_id: Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b5986d9c-4f65-43ed-99eb-0584b6e6139b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"78eeeba6-ce97-4389-b164-00727d503252\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"003c8079-63a1-4b45-9a74-a3317fda0f3b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}]}"
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: Category
+            mode: AXIS_DRIVEN
+          - key: y-axis
+            axes:
+            - type: MERGED
+              columns:
+              - Total Sales
+              - Total Profit
+            mode: AXIS_DRIVEN
+          - key: slice-with-color
+            mode: AXIS_DRIVEN
+          - key: trellis-by
+            mode: AXIS_DRIVEN
+      display_mode: TABLE_MODE
+    viz_guid: 889ebb8c-950a-49ed-8d77-0611e58e9468
+  - id: Viz_6
+    answer:
+      name: "Sales, Profit, and average Discount by Region to compare South region performance against all other regions"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Profit] average [Discount] [Region] = 'south' vs [Region] != 'south' [Region]"
+      answer_columns:
+      - name: Avg Discount(region != south)
+      - name: Avg Discount(region = south)
+      - name: Profit(region != south)
+      - name: Profit(region = south)
+      - name: Region
+      - name: Sales(region != south)
+      - name: Sales(region = south)
+      table:
+        table_columns:
+        - column_id: Avg Discount(region != south)
+          headline_aggregation: TABLE_AGGR
+        - column_id: Avg Discount(region = south)
+          headline_aggregation: TABLE_AGGR
+        - column_id: Profit(region != south)
+          headline_aggregation: TABLE_AGGR
+        - column_id: Profit(region = south)
+          headline_aggregation: TABLE_AGGR
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Sales(region != south)
+          headline_aggregation: TABLE_AGGR
+        - column_id: Sales(region = south)
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Region
+        - Profit(region != south)
+        - Avg Discount(region != south)
+        - Profit(region = south)
+        - Sales(region != south)
+        - Sales(region = south)
+        - Avg Discount(region = south)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Sales(region != south)\",\"columnProperty\": {}},{\"columnId\": \"Profit(region != south)\",\"columnProperty\": {}},{\"columnId\": \"Sales(region = south)\",\"columnProperty\": {}},{\"columnId\": \"Avg Discount(region != south)\",\"columnProperty\": {}},{\"columnId\": \"Profit(region = south)\",\"columnProperty\": {}},{\"columnId\": \"Avg Discount(region = south)\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Avg Discount(region != south)
+        - column_id: Avg Discount(region = south)
+        - column_id: Profit(region != south)
+        - column_id: Profit(region = south)
+        - column_id: Region
+        - column_id: Sales(region != south)
+        - column_id: Sales(region = south)
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Profit(region != south)
+          - Avg Discount(region != south)
+          - Profit(region = south)
+          - Sales(region != south)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"5f07d29e-a4a0-49aa-b59c-e6f00d4cd658\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Sales(region != south)\",\"Profit(region = south)\",\"Avg Discount(region != south)\",\"Profit(region != south)\"],\"yAxisRange\": {},\"isOpposite\": false}},{\"id\": \"d61a8b05-23f0-40ef-9844-7a04afc0d3ca\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"],\"yAxisRange\": {},\"isOpposite\": false}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: fdbec6fe-a173-4238-8234-7d9da1ff4c00
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 4
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_6
+      x: 0
+      "y": 12
+      height: 4
+      width: 6

@@ -150,3 +150,23 @@ liveboard:
   layout:
     tiles:
     - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "true"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M
