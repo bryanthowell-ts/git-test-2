@@ -1,0 +1,87 @@
+obj_id: agentGenerated_searchsalesforceformyaccounts-9df8678e
+liveboard:
+  name: agentGenerated_search salesforce for my accounts
+  visualizations:
+  - id: Viz_1
+    viz_guid: cc899917-a27a-4fb5-b002-c8c56cb9fb89
+    note_tile:
+      html_parsed_string: |-
+        Based on the datasets I have access to in your environment, I can see **retail sales and orders data** (Retail Sales WS, Orders Raw, ORDERS UDF) — which is what I just used to analyze the South region risks.
+
+        **I don't see a Salesforce dataset currently available in your connected data sources.**
+
+        To query Salesforce data, you would need to:
+        1. **Connect your Salesforce instance** to this analytics platform
+        2. Once connected, Salesforce objects (Opportunities, Accounts, Leads, etc.) would appear as queryable datasets
+
+        If you believe Salesforce should already be connected, I can search for it specifically. Would you like me to:
+        - **Search for Salesforce-related datasets** that might be available under a different name?
+        - **Continue the South region analysis** with the current orders/sale…
+  - id: Viz_2
+    answer:
+      name: "List all accounts showing Account Name, Account Type, Annual Revenue, Number of Employees, Billing City, Billing State, and Billing Country"
+      tables:
+      - id: TSEMBED
+        name: TSEMBED
+        obj_id: TSEMBED-5f92ed57
+      search_query: "[Annualrevenue] [Numberofemployees] [Billingcountry] [Billingstate] [Account Name] [Billingcity] [Account Type]"
+      answer_columns:
+      - name: Account Name
+      - name: Account Type
+      - name: Billingcity
+      - name: Billingcountry
+      - name: Billingstate
+      - name: Total Annualrevenue
+      - name: Total Numberofemployees
+      table:
+        table_columns:
+        - column_id: Account Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Account Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Billingcity
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Billingcountry
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Billingstate
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Annualrevenue
+          headline_aggregation: SUM
+        - column_id: Total Numberofemployees
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Billingcountry
+        - Billingstate
+        - Account Name
+        - Billingcity
+        - Account Type
+        - Total Annualrevenue
+        - Total Numberofemployees
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Billingcountry\",\"columnProperty\": {}},{\"columnId\": \"Billingstate\",\"columnProperty\": {}},{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"Billingcity\",\"columnProperty\": {}},{\"columnId\": \"Account Type\",\"columnProperty\": {}},{\"columnId\": \"Total Annualrevenue\",\"columnProperty\": {}},{\"columnId\": \"Total Numberofemployees\",\"columnProperty\": {}}]}"
+      chart:
+        type: ADVANCED_PIVOT_TABLE
+        chart_columns:
+        - column_id: Account Name
+        - column_id: Account Type
+        - column_id: Billingcity
+        - column_id: Billingcountry
+        - column_id: Billingstate
+        - column_id: Total Annualrevenue
+        - column_id: Total Numberofemployees
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Billingcity\",\"columnProperty\": {}},{\"columnId\": \"Billingcountry\",\"columnProperty\": {}},{\"columnId\": \"Account Type\",\"columnProperty\": {}},{\"columnId\": \"Billingstate\",\"columnProperty\": {}},{\"columnId\": \"Account Name\",\"columnProperty\": {}},{\"columnId\": \"Total Numberofemployees\",\"columnProperty\": {}},{\"columnId\": \"Total Annualrevenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"65a6a1fb-3cf4-427b-94ae-cf37840af102\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: f48b2846-6324-48e1-80d7-240d7b4741d0
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
