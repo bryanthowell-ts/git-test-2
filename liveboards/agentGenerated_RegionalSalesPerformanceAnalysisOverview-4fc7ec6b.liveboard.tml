@@ -1,0 +1,68 @@
+obj_id: agentGenerated_RegionalSalesPerformanceAnalysisOverview-4fc7ec6b
+liveboard:
+  name: agentGenerated_Regional Sales Performance Analysis Overview
+  visualizations:
+  - id: Viz_1
+    viz_guid: 54146ce8-69bc-4716-9e08-c99a9b920f4b
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • West region dominates with 32% of total sales (725K), while South underperforms at only 17% (392K)
+        • Central region has critical 7.9% profit margin vs healthier regions due to excessive 24% average discounting
+        • Furniture category bleeding money with -2,871 profit and -1.8% margin from 30% discounts
+        • Binders showing severe losses and 62% profit decline from 2023 to 2024
+
+        Recommendations:
+        • Reduce discounting in Central region, especially 51% on Binders and 45% on Appliances
+        • Investigate and replicate West region's success model in underperforming South region
+        • Restructure or discontinue loss-making Furniture sub-categories (Furnishings, Tables, Bookcases)
+  - id: Viz_2
+    answer:
+      name: Total Sales by Region sorted by Sales descending
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Region] sort by [Sales] descending"
+      answer_columns:
+      - name: Region
+      - name: Total Sales
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"63eea3b3-5abe-4e12-9cf5-ab004c409ae5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"8c57ec22-7910-4f71-ad70-99f3bfd497bc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 6d0df99a-443e-4a01-8191-ecaab0dfec2a
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6

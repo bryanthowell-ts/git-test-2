@@ -1,0 +1,452 @@
+obj_id: agentGenerated_RegionalSalesAndProfitabilityRiskAnalysi-7fa451d1
+liveboard:
+  name: agentGenerated_Regional Sales And Profitability Risk Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: ae8f3670-fc13-4182-9bef-652bf2a2c18a
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Central region shows highest risk with 7.9% profit margin vs 14.9% in West, driven by excessive 24% average discounting
+        • South region has smallest sales volume and heavy losses in Tables & Machines categories
+        • East region suffers large losses in Machines & Tables despite solid overall profitability
+        • Central's profit margin is nearly half of West's despite higher sales than South
+
+        Recommendations:
+        • Immediately reduce Central region discounting from 24% to under 15% to improve margins
+        • Restructure Tables & Machines product lines in South and East regions to stop losses
+        • Focus growth investments on West region given strongest 14.9% margins and lowest risk profile
+  - id: Viz_2
+    answer:
+      name: "Average Discount, Total Profit, Total Sales by Region"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "average [Discount] [Profit] [Sales] [Region]"
+      answer_columns:
+      - name: Average Discount
+      - name: Region
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Average Discount
+          headline_aggregation: TABLE_AGGR
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Average Discount
+        - Total Profit
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Average Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Average Discount
+        - column_id: Region
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Average Discount
+          - Total Profit
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Average Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34b176a5-25b7-4bf3-9bd7-5d88cad5590f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Discount\"],\"isOpposite\": false}},{\"id\": \"edbb573e-ced6-4254-a079-67cd8df6adfa\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"dae35983-f21b-4d6e-b991-b8d4cf8c9d33\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": true}},{\"id\": \"e4dd9b9f-8f42-42ff-96cb-b2a892fab448\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: aeb9f57f-4add-4383-98cc-94b4ae7e4fd8
+  - id: Viz_3
+    answer:
+      name: Sub Categories with negative profit by Region sorted by Profit ascending
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Region] [Sub Category] [Profit] < 0 sort by [Profit]"
+      answer_columns:
+      - name: Region
+      - name: Sub Category
+      - name: Total Profit
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Sub Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Sub Category
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Region
+        - column_id: Sub Category
+        - column_id: Total Profit
+        axis_configs:
+        - x:
+          - Sub Category
+          - Region
+          "y":
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Sub Category\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"514cf305-fbf0-466e-80da-1c65d4466b80\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": false}},{\"id\": \"f22b91f2-5975-4d20-b2ae-0625752065b3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Sub Category\",\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7fd6cb2f-5ed5-4c63-8a9c-79850281efd2
+  - id: Viz_4
+    answer:
+      name: Sales by Region by Quarter for the last 2 years
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Order Date].quarterly [Region] [Order Date] = 'last 2 years'"
+      answer_columns:
+      - name: Quarter(Order Date)
+      - name: Region
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Quarter(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter(Order Date)
+        - Region
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(Order Date)
+        - column_id: Region
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Quarter(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7080d838-e04a-4782-9701-e8584ee8f334\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"31b6ca10-37ce-446e-9130-5a919e9ef896\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: cd57f41d-ee00-467d-be32-f9a8cdd392ae
+  - id: Viz_5
+    answer:
+      name: "Total Sales, Total Profit, Profit Margin (Profit/Sales) by Region"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      formulas:
+      - id: formula_Profit Margin
+        name: Profit Margin
+        expr: "sum ( [Profit] ) / sum ( [Sales] )"
+        was_auto_generated: false
+      search_query: "[Sales] [Profit] [formula_Profit Margin] [Region]"
+      answer_columns:
+      - name: Profit Margin
+      - name: Region
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Profit Margin
+          headline_aggregation: TABLE_AGGR
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Sales
+        - Total Profit
+        - Profit Margin
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Profit Margin\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Profit Margin
+        - column_id: Region
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales
+          - Total Profit
+          - Profit Margin
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Profit Margin\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a8f04ec1-2ea1-4d51-a154-6dba6ba9ce76\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"65f46916-6638-4ab4-93f2-641600136e5a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"ecccc8cc-f648-44d3-bdea-87c972df96d7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Profit Margin\"],\"isOpposite\": true}},{\"id\": \"13d0390f-7614-47e7-bfc6-e54895d8d0fc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: f43f1822-9a7e-4a1a-a8bd-1f7d232d96bc
+  - id: Viz_6
+    answer:
+      name: "Total Profit, Total Sales, Count of Orders by Region and Category"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Profit] sum [Sales] count [Order Id] [Category] [Region]"
+      answer_columns:
+      - name: Category
+      - name: Number of Order Id
+      - name: Region
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Order Id
+          headline_aggregation: AVERAGE
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Region
+        - Total Profit
+        - Total Sales
+        - Number of Order Id
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Number of Order Id\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_BAR
+        chart_columns:
+        - column_id: Category
+        - column_id: Number of Order Id
+        - column_id: Region
+        - column_id: Total Profit
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Region
+          - Category
+          "y":
+          - Total Profit
+          - Total Sales
+          - Number of Order Id
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Number of Order Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0f5fb6d3-1835-48b7-88ef-89bb8e33788e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\",\"Total Sales\",\"Number of Order Id\"],\"isOpposite\": false}},{\"id\": \"bb0b2a83-965f-47dd-9f20-9b9b090b26af\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\",\"Category\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 75dc44e3-0f24-49ac-b94f-c8eb1577af4d
+  - id: Viz_7
+    answer:
+      name: Year-over-year Sales growth percentage by Region for this year vs last year
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      formulas:
+      - id: formula_YoY growth percentage
+        name: YoY growth percentage
+        expr: "( [formula_Sales this year] - [formula_Sales last year] ) / [formula_Sales last year] * 100"
+        was_auto_generated: false
+      - id: formula_Sales last year
+        name: Sales last year
+        expr: "group_aggregate ( sum ( [Sales] ) , query_groups ( ) , query_filters ( ) + { diff_years ( [Order Date] , today ( ) ) = - 1 } )"
+        was_auto_generated: false
+      - id: formula_Sales this year
+        name: Sales this year
+        expr: "group_aggregate ( sum ( [Sales] ) , query_groups ( ) , query_filters ( ) + { diff_years ( [Order Date] , today ( ) ) = 0 } )"
+        was_auto_generated: false
+      search_query: "[formula_YoY growth percentage] [formula_Sales this year] [formula_Sales last year] [Region]"
+      answer_columns:
+      - name: Region
+      - name: Sales last year
+      - name: Sales this year
+      - name: YoY growth percentage
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Sales last year
+          headline_aggregation: TABLE_AGGR
+        - column_id: Sales this year
+          headline_aggregation: TABLE_AGGR
+        - column_id: YoY growth percentage
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Region
+        - YoY growth percentage
+        - Sales this year
+        - Sales last year
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"YoY growth percentage\",\"columnProperty\": {}},{\"columnId\": \"Sales this year\",\"columnProperty\": {}},{\"columnId\": \"Sales last year\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Region
+        - column_id: Sales last year
+        - column_id: Sales this year
+        - column_id: YoY growth percentage
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - YoY growth percentage
+          - Sales this year
+          - Sales last year
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Sales last year\",\"columnProperty\": {}},{\"columnId\": \"Sales this year\",\"columnProperty\": {}},{\"columnId\": \"YoY growth percentage\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5609324b-d8a7-4d24-b823-084ead43f6bb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"YoY growth percentage\"],\"isOpposite\": false}},{\"id\": \"0623c4db-1d0f-4ed6-8e68-2314eda683d7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Sales this year\"],\"isOpposite\": true}},{\"id\": \"e3615adc-71da-4473-9123-f9568bafa229\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Sales last year\"],\"isOpposite\": true}},{\"id\": \"fb6758f7-6d67-4272-ad02-54da5fcb41f9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Region\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4ec6aa6e-4887-4e1f-966f-0ba23f83514c
+  - id: Viz_8
+    answer:
+      name: Sales by Region by Year sorted by Order Date
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Order Date].yearly [Region] sort by [Order Date]"
+      answer_columns:
+      - name: Region
+      - name: Total Sales
+      - name: Year(Order Date)
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        - column_id: Year(Order Date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Year(Order Date)
+        - Region
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Year(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Sales
+        - column_id: Year(Order Date)
+        axis_configs:
+        - x:
+          - Year(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Year(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e3c36d95-a81f-490f-968f-204c204aea65\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"85795781-e356-435d-9fcd-2e176e712048\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Order Date)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 1a7e98f5-1266-496e-a305-64ba04fb4c2f
+  - id: Viz_9
+    answer:
+      name: Profit by Region by Year sorted by Order Date
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Profit] [Order Date].yearly [Region] sort by [Order Date]"
+      answer_columns:
+      - name: Region
+      - name: Total Profit
+      - name: Year(Order Date)
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Year(Order Date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Year(Order Date)
+        - Region
+        - Total Profit
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Year(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Profit
+        - column_id: Year(Order Date)
+        axis_configs:
+        - x:
+          - Year(Order Date)
+          "y":
+          - Total Profit
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Year(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"13f9683f-9979-4c25-8046-9ff3f7b8caf0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": false}},{\"id\": \"58e4b985-e8e2-47e4-b277-e69154346684\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Order Date)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 27120755-ed8e-4714-924a-df6b1bc2b704
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 4
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_6
+      x: 0
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_7
+      x: 6
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_8
+      x: 0
+      "y": 16
+      height: 4
+      width: 6
+    - visualization_id: Viz_9
+      x: 6
+      "y": 16
+      height: 4
+      width: 6

@@ -1,0 +1,49 @@
+obj_id: agentGenerated_TotalSalesAcrossAllRegions-42a5b27f
+liveboard:
+  name: agentGenerated_Total Sales Across All Regions
+  visualizations:
+  - id: Viz_1
+    viz_guid: 514cdf24-5ccc-45d6-a58a-7dc466526527
+    note_tile:
+      html_parsed_string: "Key Drivers:\n• Excessive discounting at 24% average vs other regions - 51% on Binders, 45% on Appliances, 40% on Furnishings destroying margins\n• 7 of 17 sub-categories operating at losses totaling -15,293, led by Furnishings (-3,906) and Tables (-3,560) \n• Furniture category bleeding -2,871 with -1.8% margin while Technology carries 85% of total regional profit\n• 62% profit decline from 2023-2024 with structural deterioration across Office Supplies\n\nRecommendations:\n• Immediately reduce discounting on loss-making sub-categories - cap Furnishings at 25%, Binders at 30%\n• Discontinue or restructure worst-performing SKUs in Tables and Appliances categories\n• Implement pricing controls to prevent margins below 10% on any sub-category"
+  - id: Viz_2
+    answer:
+      name: Total Sales across all regions
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales]"
+      answer_columns:
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales
+        axis_configs:
+        - "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"199cc40a-b386-4008-a88f-193cd798d550\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"de27535b-f1f8-455c-bfb2-a1cea3776288\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: cc640636-4000-42b7-a0e0-d7345231c465
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
