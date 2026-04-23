@@ -1,0 +1,59 @@
+obj_id: agentGenerated_WestRegionTotalSalesAnalysis-23990e54
+liveboard:
+  name: agentGenerated_West Region Total Sales Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: bbccb894-56c2-41f0-afa1-4c788011d584
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Tables and Machines sub-categories generating -$6,062 in combined losses despite $97,807 in sales
+        • Three states (NC, TN, FL) operating at -$16,231 combined loss, with NC at -13.5% margin
+        • Top 5 worst products account for -$11,802 losses, mostly high-ticket items like 3D printers and conference tables
+        • South region has lowest total sales at $391K vs $725K for top-performing West region
+
+        Recommendations:
+        • Discontinue or reprice loss-making Tables and Machines products, focus on break-even analysis
+        • Implement state-specific profit recovery plans for NC, TN, and FL markets
+        • Review pricing strategy for high-ticket items generating largest losses
+  - id: Viz_2
+    answer:
+      name: Total Sales where Region is West
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Region] = 'west'"
+      answer_columns:
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales
+        axis_configs:
+        - "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"57b59424-29a0-4a12-bb8c-b8305288e7b0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"0dec52a1-5bb4-4d25-ab30-bf7e062266e5\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 9d04f75f-d172-46ba-af55-952bb47d615b
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
