@@ -1,0 +1,59 @@
+obj_id: agentGenerated_TotalSalesRADSuperstoreAnalysis-b86a0260
+liveboard:
+  name: agentGenerated_Total Sales RAD Superstore Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: 873a58b1-9875-459a-ba59-6a7e406a4089
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Three states operating at losses: North Carolina (-$7,491), Tennessee (-$5,342), Florida (-$3,399)
+        • Tables and Machines sub-categories losing $6,060 combined with Tables at -10.5% margin
+        • Top 5 loss-making products account for $11,802 in losses (25% of regional profit)
+        • Furniture category severely underperforming at 5.8% profit margin vs 13-16% for other categories
+
+        Recommendations:
+        • Discontinue or reprice loss-making Tables and Machines products, especially in NC, TN, FL
+        • Review pricing strategy for Furniture category to improve 5.8% margin
+        • Focus sales efforts on profitable Office Supplies and Technology categories
+  - id: Viz_2
+    answer:
+      name: Total Sales
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales]"
+      answer_columns:
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales
+        axis_configs:
+        - "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"012e6145-8aee-4ae2-8977-d0b83186427b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"345a5831-ab41-4ac3-b001-bd3ca0a1fba2\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 226da727-f3b5-4e64-ba22-f8763d109f4e
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6

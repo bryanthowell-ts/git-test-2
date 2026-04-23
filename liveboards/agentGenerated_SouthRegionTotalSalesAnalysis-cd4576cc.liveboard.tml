@@ -1,0 +1,76 @@
+obj_id: agentGenerated_SouthRegionTotalSalesAnalysis-cd4576cc
+liveboard:
+  name: agentGenerated_South Region Total Sales Analysis
+  visualizations:
+  - id: Viz_1
+    viz_guid: c29e4504-a6d9-4034-aed8-d8d2a1922b9b
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • South region ranks 4th in sales with 46% less revenue than top-performing West region
+        • Tables and Machines sub-categories are losing money with -10.5% and -2.7% profit margins respectively
+        • 2024 shows collapsing profitability: despite 31% sales growth, profit dropped 50% and margin fell to 7.2%
+        • Excessive discounting in loss-making categories: Tables (22.3%) and Machines (33.3%) average discounts
+
+        Recommendations:
+        • Immediately review pricing strategy for Tables and Machines or consider discontinuing in South region
+        • Implement discount controls, especially for categories with margins below 10%
+        • Analyze 2024 cost structure changes driving profit margin collapse from 18.9% to 7.2%
+  - id: Viz_2
+    answer:
+      name: "Sales, Profit, average Discount, and count of Order Id by Region"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Profit] average [Discount] count [Order Id] [Region]"
+      answer_columns:
+      - name: Average Discount
+      - name: Number of Order Id
+      - name: Region
+      - name: Total Profit
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Average Discount
+          headline_aggregation: TABLE_AGGR
+        - column_id: Number of Order Id
+          headline_aggregation: AVERAGE
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Sales
+        - Total Profit
+        - Average Discount
+        - Number of Order Id
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Average Discount\",\"columnProperty\": {}},{\"columnId\": \"Number of Order Id\",\"columnProperty\": {}}]}"
+      chart:
+        type: ADVANCED_PIVOT_TABLE
+        chart_columns:
+        - column_id: Average Discount
+        - column_id: Number of Order Id
+        - column_id: Region
+        - column_id: Total Profit
+        - column_id: Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Average Discount\",\"columnProperty\": {}},{\"columnId\": \"Number of Order Id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"73f794f0-1ada-4859-81b0-d45b5c01cfb5\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 41170ccd-d517-4686-bc90-130f3b3c3b36
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
