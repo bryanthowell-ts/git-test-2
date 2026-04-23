@@ -1,0 +1,87 @@
+obj_id: agentGenerated_ArkansasSalesPerformanceRADSuperstore-87d29d22
+liveboard:
+  name: agentGenerated_Arkansas Sales Performance RAD Superstore
+  visualizations:
+  - id: Viz_1
+    viz_guid: 2ff86635-2f22-4d0a-ab26-f2ceb040cdcc
+    note_tile:
+      html_parsed_string: "Key Drivers:\n• Office Supplies dominates with 4,565.33 sales and 43% profit margin from 36 orders\n• Technology shows highest order value (~261.68) but limited volume with only 15 orders  \n• Furniture underperforms with just 9 orders and lowest 24.5% profit margin\n• Arkansas total performance: 11,678.13 sales, 4,008.69 profit across 60 orders\n\nRecommendations:\n• Focus marketing on Technology segment to increase order frequency while maintaining high order values\n• Investigate Furniture category barriers - expand product mix or improve pricing strategy\n• Leverage Office Supplies success by increasing inventory and promotional activities"
+  - id: Viz_2
+    answer:
+      name: "Show total Sales, total Profit, total Quantity, and count of Order Id by Category where State is Arkansas"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] sum [Profit] sum [Quantity] count [Order Id] [Category] [State] = 'arkansas'"
+      answer_columns:
+      - name: Category
+      - name: Number of Order Id
+      - name: Total Profit
+      - name: Total Quantity
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Order Id
+          headline_aggregation: AVERAGE
+        - column_id: Total Profit
+          headline_aggregation: SUM
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Category
+        - Total Sales
+        - Total Profit
+        - Total Quantity
+        - Number of Order Id
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Number of Order Id\",\"columnProperty\": {}}]}"
+      chart:
+        type: ADVANCED_COLUMN
+        chart_columns:
+        - column_id: Category
+        - column_id: Number of Order Id
+        - column_id: Total Profit
+        - column_id: Total Quantity
+        - column_id: Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Profit\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Number of Order Id\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5cb8419c-512f-47ed-be2e-657399648a3c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"b59e37f3-db8a-44cc-8b3d-57f15c027762\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Profit\"],\"isOpposite\": true}},{\"id\": \"43262e12-ea24-4888-97d7-6684f0865f69\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": true}},{\"id\": \"96e6d370-b44e-4641-85d6-4f3f3c880c43\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}]}"
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: Category
+            mode: AXIS_DRIVEN
+          - key: y-axis
+            axes:
+            - type: FLAT
+              column: Total Sales
+            - type: FLAT
+              column: Total Profit
+            - type: FLAT
+              column: Total Quantity
+            mode: AXIS_DRIVEN
+          - key: slice-with-color
+            mode: AXIS_DRIVEN
+          - key: trellis-by
+            mode: AXIS_DRIVEN
+      display_mode: TABLE_MODE
+    viz_guid: 4a7417fe-0c89-4ff5-9f6a-83e16142e2e0
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
