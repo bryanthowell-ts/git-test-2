@@ -10,113 +10,221 @@ model:
     column_id: ORDERS_VAR::category
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Type
+      - Classification
+      synonym_type: AUTO_GENERATED
+      ai_context: High-level product classification that groups related items into major business divisions for portfolio management and strategic product analysis across the organization.
   - name: City
     column_id: ORDERS_VAR::city
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Town
+      - Municipality
+      synonym_type: AUTO_GENERATED
+      ai_context: Municipal-level geographic location for local market analysis and city-specific customer distribution patterns within regional sales territory management strategies.
   - name: Country
     column_id: ORDERS_VAR::country
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Nation
       geo_config:
         country: true
+      synonym_type: AUTO_GENERATED
+      ai_context: National geographic location of the customer's delivery address for international market analysis and regional sales performance evaluation across global territories.
   - name: Custom 1
     column_id: ORDERS_VAR::CUSTOM_1
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - User Defined Field
+      - Custom Field
+      synonym_type: AUTO_GENERATED
+      ai_context: Configurable text field for storing additional order-specific attributes or business metadata that extends standard transaction data with custom organizational requirements.
   - name: Customer Id
     column_id: ORDERS_VAR::customer_id
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Client Identifier
+      - Buyer ID
+      synonym_type: AUTO_GENERATED
+      ai_context: Unique alphanumeric code assigned to each customer account for identification and linking multiple transactions to the same buyer across the customer relationship management system.
   - name: Customer Name
     column_id: ORDERS_VAR::customer_name
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Client Name
+      - Buyer Name
+      synonym_type: AUTO_GENERATED
+      ai_context: Full business or individual name of the purchasing customer as registered in the customer database for account identification and communication purposes.
   - name: Discount
     column_id: ORDERS_VAR::discount
     properties:
       column_type: MEASURE
       aggregation: SUM
       index_type: DONT_INDEX
+      synonyms:
+      - Price Reduction
+      - Markdown
+      synonym_type: AUTO_GENERATED
+      ai_context: Monetary reduction applied to the original product price as promotional pricing strategy for customer incentives and sales volume optimization analysis.
   - name: Order Date
     column_id: ORDERS_VAR::order_date
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
+      synonyms:
+      - Purchase Date
+      - Transaction Date
+      synonym_type: AUTO_GENERATED
+      ai_context: Calendar date when the customer purchase transaction was officially placed and recorded in the order management system for processing and fulfillment tracking.
   - name: Order Id
     column_id: ORDERS_VAR::order_id
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Transaction ID
+      - Purchase Number
+      synonym_type: AUTO_GENERATED
+      ai_context: Unique alphanumeric identifier assigned to each customer transaction, serving as the primary reference key for tracking individual purchase orders throughout the business system.
   - name: Postal Code
     column_id: ORDERS_VAR::postal_code
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
+      synonyms:
+      - ZIP Code
+      - Area Code
       geo_config:
         region_name:
           country: UNITED STATES
           region_name: zip code
+      synonym_type: AUTO_GENERATED
+      ai_context: Numeric geographic code identifying specific delivery areas for precise location-based analysis and micro-market segmentation within urban and suburban territories.
   - name: Product Id
     column_id: ORDERS_VAR::product_id
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Item Identifier
+      - Product Code
+      synonym_type: AUTO_GENERATED
+      ai_context: Unique alphanumeric code assigned to each distinct product item in the catalog for inventory tracking and product identification across all business operations.
   - name: Product Name
     column_id: ORDERS_VAR::product_name
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Item Name
+      - Product Title
+      synonym_type: AUTO_GENERATED
+      ai_context: Descriptive title or label of the purchased product item as listed in the product catalog for customer recognition and inventory management purposes.
   - name: Profit
     column_id: ORDERS_VAR::profit
     properties:
       column_type: MEASURE
       aggregation: SUM
       index_type: DONT_INDEX
+      synonyms:
+      - Earnings
+      - Net Income
+      synonym_type: AUTO_GENERATED
+      ai_context: Net financial gain calculated after deducting costs from sales revenue for profitability analysis and business performance evaluation across products and customers.
   - name: Quantity
     column_id: ORDERS_VAR::quantity
     properties:
       column_type: MEASURE
       aggregation: SUM
       index_type: DONT_INDEX
+      synonyms:
+      - Amount
+      - Count
+      synonym_type: AUTO_GENERATED
+      ai_context: Numeric count of product units purchased in the transaction for volume analysis and inventory demand forecasting across product categories and time periods.
   - name: Region
     column_id: ORDERS_VAR::region
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Zone
+      - Area
+      synonym_type: AUTO_GENERATED
+      ai_context: Broad geographic territory designation that groups multiple states or areas for macro-level market analysis and regional business strategy development and implementation.
   - name: Row Id
     column_id: ORDERS_VAR::row_id
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
+      synonyms:
+      - Record Number
+      - Entry ID
       is_additive: true
+      synonym_type: AUTO_GENERATED
+      ai_context: Sequential numeric record identifier that uniquely distinguishes each data entry row within the order dataset for database indexing and data integrity purposes.
   - name: Sales
     column_id: ORDERS_VAR::sales
     properties:
       column_type: MEASURE
       aggregation: SUM
       index_type: DONT_INDEX
+      synonyms:
+      - Revenue
+      - Turnover
+      synonym_type: AUTO_GENERATED
+      ai_context: Total monetary revenue amount generated from the transaction including all product costs before discounts for financial performance analysis and revenue tracking.
   - name: Segment
     column_id: ORDERS_VAR::segment
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Division
+      - Sector
+      synonym_type: AUTO_GENERATED
+      ai_context: Strategic customer classification category that groups buyers based on business characteristics for targeted marketing and customer relationship management strategies.
   - name: Ship Date
     column_id: ORDERS_VAR::ship_date
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
+      synonyms:
+      - Delivery Date
+      - Dispatch Date
+      synonym_type: AUTO_GENERATED
+      ai_context: Calendar date when the order was dispatched from fulfillment center for delivery performance analysis and supply chain efficiency measurement and optimization.
   - name: Ship Mode
     column_id: ORDERS_VAR::ship_mode
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Delivery Method
+      - Shipping Type
+      synonym_type: AUTO_GENERATED
+      ai_context: Selected delivery method or shipping service type chosen for order fulfillment to analyze logistics costs and customer delivery preferences across shipping options.
   - name: State
     column_id: ORDERS_VAR::state
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Province
       geo_config:
         region_name:
           country: UNITED STATES
           region_name: state
+      synonym_type: AUTO_GENERATED
+      ai_context: Provincial or state-level geographic location within the country for mid-level market analysis and state-specific sales performance tracking and regional planning.
   - name: Sub Category
     column_id: ORDERS_VAR::sub_category
     properties:
       column_type: ATTRIBUTE
+      synonyms:
+      - Subgroup
+      - Subdivision
+      synonym_type: AUTO_GENERATED
+      ai_context: Detailed product classification within the broader category that provides granular grouping for focused product analysis and targeted inventory management strategies.
   properties:
     is_bypass_rls: false
     join_progressive: true
