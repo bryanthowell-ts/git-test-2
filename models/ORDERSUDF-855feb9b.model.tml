@@ -10,26 +10,34 @@ model:
     column_id: ORDERS_UDF::category
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   - name: City
     column_id: ORDERS_UDF::city
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   - name: Country
     column_id: ORDERS_UDF::country
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
+      geo_config:
+        country: true
   - name: Custom 1
     column_id: ORDERS_UDF::CUSTOM_1
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   - name: Customer Id
     column_id: ORDERS_UDF::customer_id
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   - name: Customer Name
     column_id: ORDERS_UDF::customer_name
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   - name: Discount
     column_id: ORDERS_UDF::discount
     properties:
@@ -45,19 +53,26 @@ model:
     column_id: ORDERS_UDF::order_id
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   - name: Postal Code
     column_id: ORDERS_UDF::postal_code
     properties:
       column_type: ATTRIBUTE
       index_type: DONT_INDEX
+      geo_config:
+        region_name:
+          country: UNITED STATES
+          region_name: zip code
   - name: Product Id
     column_id: ORDERS_UDF::product_id
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   - name: Product Name
     column_id: ORDERS_UDF::product_name
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   - name: Profit
     column_id: ORDERS_UDF::profit
     properties:
@@ -74,6 +89,7 @@ model:
     column_id: ORDERS_UDF::region
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   - name: Row Id
     column_id: ORDERS_UDF::row_id
     properties:
@@ -90,6 +106,7 @@ model:
     column_id: ORDERS_UDF::segment
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   - name: Ship Date
     column_id: ORDERS_UDF::ship_date
     properties:
@@ -99,14 +116,21 @@ model:
     column_id: ORDERS_UDF::ship_mode
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   - name: State
     column_id: ORDERS_UDF::state
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
+      geo_config:
+        region_name:
+          country: UNITED STATES
+          region_name: state
   - name: Sub Category
     column_id: ORDERS_UDF::sub_category
     properties:
       column_type: ATTRIBUTE
+      index_type: PREFIX_ONLY
   properties:
     is_bypass_rls: false
     join_progressive: true
