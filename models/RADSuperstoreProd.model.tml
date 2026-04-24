@@ -1,0 +1,142 @@
+obj_id: RADSuperstoreProd
+model:
+  name: RAD Superstore
+  model_tables:
+  - name: ORDERS
+    obj_id: ORDERS_RAD_SUPERSTORE
+  columns:
+  - name: Category
+    column_id: ORDERS::category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: High-level product classification grouping items into broad merchandise divisions for strategic inventory and market analysis.
+  - name: City
+    column_id: ORDERS::city
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Municipal location of customer transaction providing local market identification for urban analysis and targeted marketing campaigns.
+  - name: Country
+    column_id: ORDERS::country
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: National territory where the customer transaction originated, enabling international market analysis and global business expansion tracking.
+  - name: Customer Id
+    column_id: ORDERS::customer_id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Unique alphanumeric code assigned to each individual customer for identification and relationship management across multiple transactions.
+  - name: Customer Name
+    column_id: ORDERS::customer_name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Full name of the purchasing customer as recorded in the business system for personal identification and customer service purposes.
+  - name: Discount
+    column_id: ORDERS::discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      ai_context: Promotional price reduction amount applied to transactions, representing marketing incentives and pricing strategy impacts on revenue.
+  - name: Order Date
+    column_id: ORDERS::order_date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Calendar date when the customer initially placed their purchase order, marking the beginning of the sales transaction lifecycle.
+  - name: Order Id
+    column_id: ORDERS::order_id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Unique alphanumeric identifier assigned to each sales transaction for tracking and referencing individual customer orders throughout the business process.
+  - name: Postal Code
+    column_id: ORDERS::postal_code
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Numeric geographic identifier providing precise location targeting for demographic analysis and local market penetration strategies.
+  - name: Product Id
+    column_id: ORDERS::product_id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Unique alphanumeric code assigned to each distinct product item in the catalog for inventory management and product identification.
+  - name: Product Name
+    column_id: ORDERS::product_name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Descriptive title of the specific merchandise item purchased, providing detailed product identification for catalog and sales analysis.
+  - name: Profit
+    column_id: ORDERS::profit
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      ai_context: Net financial gain calculated after deducting costs from sales revenue, indicating actual profitability of each business transaction.
+  - name: Quantity
+    column_id: ORDERS::quantity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      ai_context: Number of product units purchased in each transaction, representing the volume of items ordered by customers for inventory and demand analysis.
+  - name: Region
+    column_id: ORDERS::region
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Large geographic area grouping multiple states or territories for regional market performance analysis and sales territory management.
+  - name: Row Id
+    column_id: ORDERS::row_id
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Sequential numeric identifier providing unique record numbering for each transaction entry to ensure data integrity and row-level tracking.
+  - name: Sales
+    column_id: ORDERS::sales
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      ai_context: Total monetary revenue generated from each transaction before deducting costs, representing gross income from customer purchases.
+  - name: Segment
+    column_id: ORDERS::segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Business classification category grouping customers by market type or organizational characteristics for targeted marketing and strategic analysis.
+  - name: Ship Date
+    column_id: ORDERS::ship_date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Calendar date when the ordered products were dispatched from warehouse to customer, indicating fulfillment completion timing.
+  - name: Ship Mode
+    column_id: ORDERS::ship_mode
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Delivery method selected for order fulfillment, specifying the logistics service level and transportation type chosen by customer.
+  - name: State
+    column_id: ORDERS::state
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Administrative division or province where customer transaction occurred, enabling state-level market penetration and regulatory analysis.
+  - name: Sub Category
+    column_id: ORDERS::sub_category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      ai_context: Detailed product classification providing specific groupings within broader categories for granular merchandising and performance analysis.
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true
