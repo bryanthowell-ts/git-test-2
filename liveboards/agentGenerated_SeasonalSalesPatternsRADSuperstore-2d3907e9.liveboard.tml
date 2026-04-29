@@ -1,0 +1,204 @@
+obj_id: agentGenerated_SeasonalSalesPatternsRADSuperstore-2d3907e9
+liveboard:
+  name: agentGenerated_Seasonal Sales Patterns RAD Superstore
+  visualizations:
+  - id: Viz_1
+    viz_guid: 156fd0f1-2411-48dc-b158-a585b4b2bd39
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • End-of-year surge drives peak performance with November (352K) and December (325K) sales, representing 38% of annual revenue in Q4
+        • Winter slump creates major vulnerability with February generating only 59K in sales - lowest month
+        • Weekend purchasing behavior dominates with Sunday leading at 411K vs Friday's 186K
+        • Year-over-year growth trend shows consistent seasonal pattern amplification
+
+        Recommendations:
+        • Maximize Q4 momentum through targeted holiday campaigns and inventory planning for Nov-Dec peak
+        • Combat winter slump with February promotions and new product launches to boost Q1 performance
+        • Shift marketing spend to weekends, especially Sunday campaigns, while reducing Friday advertising investment
+  - id: Viz_2
+    answer:
+      name: "Total Sales by quarter of Order Date for all years, ordered by quarter"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Order Date].'quarter of year'"
+      answer_columns:
+      - name: Quarter in Year(Order Date)
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Quarter in Year(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Quarter in Year(Order Date)
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Quarter in Year(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Quarter in Year(Order Date)
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Quarter in Year(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Quarter in Year(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5fe806bf-6748-4351-9f0f-5a9884e2b91e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"9f95dddd-e3c8-4f75-87f8-13bed78f5ec6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter in Year(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 5eeaeb46-bed9-44f4-986f-81bc025993a9
+  - id: Viz_3
+    answer:
+      name: "Total Sales by day of week of Order Date, ordered by day of week"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      formulas:
+      - id: formula_Day Number
+        name: Day Number
+        expr: "day_number_of_week ( [Order Date] )"
+        was_auto_generated: false
+      search_query: "sum [Sales] [Order Date].'day of week' sort by [formula_Day Number]"
+      answer_columns:
+      - name: Day of Week(Order Date)
+      - name: Total Day Number
+        sort_info:
+          category: DEFAULT
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Day of Week(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Day Number
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Day of Week(Order Date)
+        - Total Sales
+        - Total Day Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Total Day Number\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Day of Week(Order Date)
+        - column_id: Total Day Number
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Day of Week(Order Date)
+          "y":
+          - Total Sales
+          - Total Day Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Day Number\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1d879915-3565-49c6-98f8-a458c666d537\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"06f3ae32-184e-4571-9979-ce818df708c7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Day Number\"],\"isOpposite\": true}},{\"id\": \"96a1fdf5-2fc3-4aa2-ab64-b3eed498363d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: bb1d7a70-e2c8-4b38-8ea4-e90307adaa4d
+  - id: Viz_4
+    answer:
+      name: "Total Sales by year and month of Order Date, ordered by year and month"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Order Date].monthly sort by [Order Date]"
+      answer_columns:
+      - name: Month(Order Date)
+        sort_info:
+          category: DEFAULT
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Month(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Order Date)
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(Order Date)
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Month(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0788ec02-e13a-4a68-a9ac-09ce1152e122\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"91cc50ce-40b9-4a9e-a2b4-eee33f1fa1c9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: c36c43cc-04ac-422d-8df6-b5241cc2bb60
+  - id: Viz_5
+    answer:
+      name: "Total Sales by month of Order Date for all years, ordered by month"
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Order Date].'month of year'"
+      answer_columns:
+      - name: MONTH_OF_YEAR(Order Date)
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: MONTH_OF_YEAR(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - MONTH_OF_YEAR(Order Date)
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"MONTH_OF_YEAR(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: MONTH_OF_YEAR(Order Date)
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - MONTH_OF_YEAR(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"MONTH_OF_YEAR(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"091492f6-db8d-4887-b2ff-166c9e75bcf1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"9b17c8b2-7e2d-47a5-a88c-364f8433a7e1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"MONTH_OF_YEAR(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: dedfbd7a-3c81-4d9c-90ff-c2e94751b076
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 4
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 8
+      height: 4
+      width: 6

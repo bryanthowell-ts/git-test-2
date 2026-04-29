@@ -1,0 +1,290 @@
+obj_id: agentGenerated_WeeklySalesPerformanceImprovementStrateg-b23a1aa9
+liveboard:
+  name: agentGenerated_Weekly Sales Performance Improvement Strategy
+  visualizations:
+  - id: Viz_1
+    viz_guid: 4ab7688f-7dbb-4a46-8a5a-a22434d7b507
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Friday sales are 186,407 (only 8.1% of total weekly sales) - lowest performing day
+        • Current gap between Friday and next lowest day (Thursday) is ~47K
+        • Friday contributes significantly less than weekend days (Sunday: 410K, Saturday: 334K)
+
+        Recommendations:
+        • Implement Friday flash sales or limited-time promotions to capture weekend shoppers early
+        • Launch "Weekend Preview" campaigns Friday afternoons to drive immediate purchases
+        • Target 25-30% improvement instead of 15% to meaningfully close gap to Thursday performance
+  - id: Viz_2
+    answer:
+      name: Count of Order Id by day of week of Order Date
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "unique count [Order Id] [Order Date].'day of week'"
+      answer_columns:
+      - name: Day of Week(Order Date)
+      - name: Unique Number of Order Id
+      table:
+        table_columns:
+        - column_id: Day of Week(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Unique Number of Order Id
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Day of Week(Order Date)
+        - Unique Number of Order Id
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of Order Id\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Day of Week(Order Date)
+        - column_id: Unique Number of Order Id
+        axis_configs:
+        - x:
+          - Day of Week(Order Date)
+          "y":
+          - Unique Number of Order Id
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of Order Id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"37cd6fc5-970d-41c9-9aa0-a5c140a4b4f4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of Order Id\"],\"isOpposite\": false}},{\"id\": \"695a8612-746a-4b85-a8a3-f36b548f4326\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: f461746e-f078-4001-b4ea-3be8ea0dbe51
+  - id: Viz_3
+    answer:
+      name: Average Discount by day of week of Order Date
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "average [Discount] [Order Date].'day of week'"
+      answer_columns:
+      - name: Average Discount
+      - name: Day of Week(Order Date)
+      table:
+        table_columns:
+        - column_id: Average Discount
+          headline_aggregation: TABLE_AGGR
+        - column_id: Day of Week(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Day of Week(Order Date)
+        - Average Discount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Average Discount\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Average Discount
+        - column_id: Day of Week(Order Date)
+        axis_configs:
+        - x:
+          - Day of Week(Order Date)
+          "y":
+          - Average Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Average Discount\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"db381f06-d3c1-45f3-8df4-e5ca9f2e181a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Discount\"],\"isOpposite\": false}},{\"id\": \"816ae913-dbd9-47b0-9ac0-6097cc53a6ef\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: adfcffd3-aaf8-496d-95cd-83a9bb20a9a2
+  - id: Viz_4
+    answer:
+      name: Total Sales by day of week of Order Date and Category
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Order Date].'day of week' [Category]"
+      answer_columns:
+      - name: Category
+      - name: Day of Week(Order Date)
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Day of Week(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Day of Week(Order Date)
+        - Category
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Category
+        - column_id: Day of Week(Order Date)
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Day of Week(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"84c32877-52ac-43cd-b4b9-6b3c6b8f658b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"75a28bb4-94aa-4902-8ad4-76fa770b5f94\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: deb53285-9f27-4b15-b65d-20d2a28f028d
+  - id: Viz_5
+    answer:
+      name: Total Sales by day of week of Order Date and Ship Mode
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Sales] [Order Date].'day of week' [Ship Mode]"
+      answer_columns:
+      - name: Day of Week(Order Date)
+      - name: Ship Mode
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Day of Week(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Ship Mode
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Day of Week(Order Date)
+        - Ship Mode
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Ship Mode\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Day of Week(Order Date)
+        - column_id: Ship Mode
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Day of Week(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Ship Mode\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"92b76ebb-1961-45b0-8de6-73e9501fc610\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"828c250c-ecde-4a7f-9458-467bdb9bae82\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 5bb05aa1-06d0-4917-9c10-3be625b5bf89
+  - id: Viz_6
+    answer:
+      name: Total Sales by day of week of Order Date and Segment
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Order Date].'day of week' [Segment]"
+      answer_columns:
+      - name: Day of Week(Order Date)
+      - name: Segment
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Day of Week(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Segment
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Day of Week(Order Date)
+        - Segment
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Segment\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Day of Week(Order Date)
+        - column_id: Segment
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Day of Week(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Segment\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"64bc35fa-1082-4804-8916-d6183d963adf\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"b70ce39b-903c-4fa0-a475-e46c49993342\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 0bae3dac-35a0-4ecc-8de1-61ec3685695c
+  - id: Viz_7
+    answer:
+      name: Total Sales by day of week of Order Date and Region
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Order Date].'day of week' [Region]"
+      answer_columns:
+      - name: Day of Week(Order Date)
+      - name: Region
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Day of Week(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Day of Week(Order Date)
+        - Region
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Day of Week(Order Date)
+        - column_id: Region
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Day of Week(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dbc60876-7f97-4307-bc0e-cdd5f884edf8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"795073cb-ef7b-4320-8380-95b7f711935e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: e1dd4f6a-5801-40e8-a1fd-18e12a61bd3d
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 4
+      height: 4
+      width: 6
+    - visualization_id: Viz_4
+      x: 0
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_5
+      x: 6
+      "y": 8
+      height: 4
+      width: 6
+    - visualization_id: Viz_6
+      x: 0
+      "y": 12
+      height: 4
+      width: 6
+    - visualization_id: Viz_7
+      x: 6
+      "y": 12
+      height: 4
+      width: 6

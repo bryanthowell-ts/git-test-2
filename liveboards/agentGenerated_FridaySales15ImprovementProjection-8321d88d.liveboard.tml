@@ -1,0 +1,100 @@
+obj_id: agentGenerated_FridaySales15ImprovementProjection-8321d88d
+liveboard:
+  name: agentGenerated_Friday Sales 15% Improvement Projection
+  visualizations:
+  - id: Viz_1
+    viz_guid: aa8ed570-9466-4e5a-92e1-ee0f8cab11d8
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Q4 dominance generates 38% of annual revenue vs 16% in Q1
+        • November ($352K) and December ($325K) create clear holiday shopping surge
+        • Sunday leads weekly sales at $411K while Friday drops to lowest at $186K
+        • February consistently weakest month across all years at only $60K
+
+        Recommendations:
+        • Stock inventory heavily before Q4 and concentrate marketing spend September-November
+        • Launch weekend promotions targeting Saturday-Sunday peak shopping periods
+        • Deploy promotional campaigns in January-February to counter seasonal slowdown
+  - id: Viz_2
+    answer:
+      name: Total Sales by day of week of Order Date
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales] [Order Date].'day of week'"
+      answer_columns:
+      - name: Day of Week(Order Date)
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Day of Week(Order Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Day of Week(Order Date)
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Day of Week(Order Date)
+        - column_id: Total Sales
+        axis_configs:
+        - x:
+          - Day of Week(Order Date)
+          "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"22c77e04-7176-4e7b-b259-54e0cf2e08ca\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"ff8ae0c3-4b1c-44ec-a6c5-9a3e000ab2fd\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 41622de8-3918-4095-afac-f691a06bb6fb
+  - id: Viz_3
+    answer:
+      name: Total Sales
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales]"
+      answer_columns:
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales
+        axis_configs:
+        - "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bc2572ea-b0a6-4929-8410-babc487d9e89\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"612ca399-0fbc-4f12-b426-e7206358491d\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 01353ea7-d812-468f-b72c-39aea6023d3a
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 4
+      height: 4
+      width: 6
