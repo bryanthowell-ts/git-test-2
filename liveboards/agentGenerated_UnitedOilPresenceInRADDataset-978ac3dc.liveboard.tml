@@ -1,0 +1,93 @@
+obj_id: agentGenerated_UnitedOilPresenceInRADDataset-978ac3dc
+liveboard:
+  name: agentGenerated_United Oil Presence In RAD Dataset
+  visualizations:
+  - id: Viz_1
+    viz_guid: 39fe50ab-c326-49b7-be7d-237b9c0a90cf
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • West region generates $725,458 (32% of total revenue) - highest performing market
+        • South region significantly underperforms at $391,722 - 46% below West region
+        • East region shows strong performance at $678,781, closely trailing West
+        • Central region at $501,240 represents untapped middle-market potential
+
+        Recommendations:
+        • Investigate South region's low performance and implement targeted growth initiatives
+        • Replicate West region's successful strategies in underperforming markets
+        • Focus expansion efforts in Central region to bridge the revenue gap
+  - id: Viz_2
+    answer:
+      name: Customer Name where Customer Name contains 'United Oil'
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Customer Name] contains 'united oil'"
+      answer_columns:
+      - name: Customer Name
+      table:
+        table_columns:
+        - column_id: Customer Name
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Customer Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Customer Name\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Customer Name
+        axis_configs:
+        - "y":
+          - Customer Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Customer Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8b95865a-0186-4994-9ff3-456702ebbf1f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Customer Name\"],\"isOpposite\": false}},{\"id\": \"332ce403-c9bd-4ee2-a64a-5c0ef1895ebb\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 9b7db09e-ceb3-4472-83b5-72dc9aa10a96
+  - id: Viz_3
+    answer:
+      name: Product Name where Product Name contains 'United Oil'
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "[Product Name] contains 'united oil'"
+      answer_columns:
+      - name: Product Name
+      table:
+        table_columns:
+        - column_id: Product Name
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Product Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Product Name
+        axis_configs:
+        - "y":
+          - Product Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"3800274e-5531-4cbc-921f-06b009b9d052\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Product Name\"],\"isOpposite\": false}},{\"id\": \"33919161-579a-48e2-bccb-92cbc26ad4c1\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 0fc55650-054a-47a5-9a89-ff6f9d26d536
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
+    - visualization_id: Viz_3
+      x: 6
+      "y": 4
+      height: 4
+      width: 6

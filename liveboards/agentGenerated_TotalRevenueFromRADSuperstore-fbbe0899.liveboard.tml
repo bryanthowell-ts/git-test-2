@@ -1,0 +1,57 @@
+obj_id: agentGenerated_TotalRevenueFromRADSuperstore-fbbe0899
+liveboard:
+  name: agentGenerated_Total Revenue From RAD Superstore
+  visualizations:
+  - id: Viz_1
+    viz_guid: af4185ec-3cf6-4999-be23-d21eacf4dba7
+    note_tile:
+      html_parsed_string: |-
+        Key Drivers:
+        • Total gross revenue of $2,297,200.86 from all transactions in RAD Superstore dataset
+        • Revenue represents sales before cost deductions
+
+        Recommendations:
+        • Analyze revenue by product categories to identify top performers
+        • Compare revenue against costs to determine net profitability
+        • Track revenue trends over time to spot growth patterns
+  - id: Viz_2
+    answer:
+      name: Total Sales
+      tables:
+      - id: RAD Superstore
+        name: RAD Superstore
+        obj_id: RADSuperstoreProd
+      search_query: "sum [Sales]"
+      answer_columns:
+      - name: Total Sales
+      table:
+        table_columns:
+        - column_id: Total Sales
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Sales
+        axis_configs:
+        - "y":
+          - Total Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dc678792-feaf-4be9-a394-d67a67e7ba7d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": false}},{\"id\": \"bed8c867-5baa-4dbb-9419-29ab055a395c\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 6aa82050-d322-413f-ba18-f1422aaa04a4
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 6
+      "y": 0
+      height: 4
+      width: 6
