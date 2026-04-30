@@ -1,6 +1,6 @@
-obj_id: RAD-Snow-f707479f
+obj_id: RAD-Snow2
 connection:
-  name: RAD - Snow
+  name: RAD - Snow2
   type: RDBMS_SNOWFLAKE
   authentication_type: SERVICE_ACCOUNT
   properties:
