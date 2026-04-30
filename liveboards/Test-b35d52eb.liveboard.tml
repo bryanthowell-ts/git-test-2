@@ -1,0 +1,323 @@
+obj_id: Test-b35d52eb
+liveboard:
+  name: Store Performance Dashboard
+  description: "Track store performance with key sales metrics, time-series trends, and regional breakdowns to identify top-performing stores and regions."
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Sales Amount Time Series KPI
+      description: Total sales tracked over time periods.
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Sales Date].daily"
+      answer_columns:
+      - name: Day(Sales Date)
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: Day(Sales Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Sales Amount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Day(Sales Date)
+        - Total Sales Amount
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day(Sales Date)
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - Day(Sales Date)
+          "y":
+          - Total Sales Amount
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: ff96f12a-c546-4950-8062-e055c1774dbe
+  - id: Viz_2
+    answer:
+      name: Quantity Purchased Time Series KPI
+      description: Total quantity purchased over time trends.
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Quantity Purchased] [Sales Date].daily"
+      answer_columns:
+      - name: Day(Sales Date)
+      - name: Total Quantity Purchased
+      table:
+        table_columns:
+        - column_id: Day(Sales Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Quantity Purchased
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Day(Sales Date)
+        - Total Quantity Purchased
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day(Sales Date)
+        - column_id: Total Quantity Purchased
+        axis_configs:
+        - x:
+          - Day(Sales Date)
+          "y":
+          - Total Quantity Purchased
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 438bdc5e-bc60-459b-b9f6-52cf3ea6e4aa
+  - id: Viz_3
+    answer:
+      name: Average Item Price Time Series
+      description: Daily average item price KPI trend.
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "average [Item Price] [Sales Date].daily"
+      answer_columns:
+      - name: Average Item Price
+      - name: Day(Sales Date)
+      table:
+        table_columns:
+        - column_id: Average Item Price
+          headline_aggregation: TABLE_AGGR
+        - column_id: Day(Sales Date)
+          headline_aggregation: MIN-MAX
+        ordered_column_ids:
+        - Day(Sales Date)
+        - Average Item Price
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Average Item Price
+        - column_id: Day(Sales Date)
+        axis_configs:
+        - x:
+          - Day(Sales Date)
+          "y":
+          - Average Item Price
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 595a337b-9c1a-4b76-849c-f01eb79f2b2d
+  - id: Viz_4
+    answer:
+      name: Total Sales by Region
+      description: Regional breakdown of total sales amount.
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "[Sales Amount] [Region]"
+      answer_columns:
+      - name: Region
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Sales Amount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Sales Amount
+        client_state: ""
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales Amount
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: cca3edea-88a0-43d0-8e90-088d74c242ea
+  - id: Viz_5
+    answer:
+      name: Sales and Quantity by Store
+      description: Total sales and purchases per store.
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "sum [Sales Amount] [Quantity Purchased] [Store Name]"
+      answer_columns:
+      - name: Store Name
+      - name: Total Quantity Purchased
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: Store Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Quantity Purchased
+          headline_aggregation: SUM
+        - column_id: Total Sales Amount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Store Name
+        - Total Sales Amount
+        - Total Quantity Purchased
+        client_state: ""
+      chart:
+        type: ADVANCED_LINE_COLUMN
+        chart_columns:
+        - column_id: Store Name
+        - column_id: Total Quantity Purchased
+        - column_id: Total Sales Amount
+        client_state: ""
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: Store Name
+            mode: AXIS_DRIVEN
+          - key: y-axis-column
+            axes:
+            - type: MERGED
+              columns:
+              - Total Sales Amount
+            mode: AXIS_DRIVEN
+          - key: y-axis-line
+            axes:
+            - type: MERGED
+              columns:
+              - Total Quantity Purchased
+            mode: AXIS_DRIVEN
+          - key: trellis-by
+            mode: AXIS_DRIVEN
+      display_mode: TABLE_MODE
+    viz_guid: ac606496-17e4-470c-adab-49f95253a4ed
+  - id: Viz_6
+    answer:
+      name: Sales and Quantity by Region
+      description: Regional sales amount and quantity comparison.
+      tables:
+      - id: Retail Sales WS
+        name: Retail Sales WS
+        obj_id: RetailSalesWS-9b1deb72
+      search_query: "[Sales Amount] [Quantity Purchased] [Region]"
+      answer_columns:
+      - name: Region
+      - name: Total Quantity Purchased
+      - name: Total Sales Amount
+      table:
+        table_columns:
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Quantity Purchased
+          headline_aggregation: SUM
+        - column_id: Total Sales Amount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Region
+        - Total Sales Amount
+        - Total Quantity Purchased
+        client_state: ""
+      chart:
+        type: STACKED_BAR
+        chart_columns:
+        - column_id: Region
+        - column_id: Total Quantity Purchased
+        - column_id: Total Sales Amount
+        axis_configs:
+        - x:
+          - Region
+          "y":
+          - Total Sales Amount
+          - Total Quantity Purchased
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 684f58e2-9d5d-4a82-ab5f-e7625b066006
+  groups:
+  - id: Group_1
+    name: Key Performance Indicators
+    description: "Time-series KPIs showing sales, quantity, and pricing trends"
+    visualizations:
+    - Viz_1
+    - Viz_2
+    - Viz_3
+    group_guid: 0ba83786-d365-44a0-a4c9-dfc33951f155
+  - id: Group_2
+    name: Regional Store Performance
+    description: Sales and quantity metrics broken down by region and store
+    visualizations:
+    - Viz_4
+    - Viz_5
+    - Viz_6
+    group_guid: 76d7d962-7ac0-4e08-a60e-60d489a4187a
+  layout:
+    tiles:
+    - visualization_id: Group_1
+      x: 0
+      "y": 0
+      height: 5
+      width: 12
+    - visualization_id: Group_2
+      x: 0
+      "y": 5
+      height: 10
+      width: 12
+    group_layouts:
+    - id: Group_1
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 0
+        height: 5
+        width: 4
+      - visualization_id: Viz_2
+        x: 4
+        "y": 0
+        height: 5
+        width: 4
+      - visualization_id: Viz_3
+        x: 8
+        "y": 0
+        height: 5
+        width: 4
+    - id: Group_2
+      tiles:
+      - visualization_id: Viz_4
+        x: 0
+        "y": 0
+        height: 10
+        width: 4
+      - visualization_id: Viz_5
+        x: 4
+        "y": 0
+        height: 10
+        width: 4
+      - visualization_id: Viz_6
+        x: 8
+        "y": 0
+        height: 10
+        width: 4
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "true"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M
